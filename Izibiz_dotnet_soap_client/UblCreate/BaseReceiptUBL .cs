@@ -34,7 +34,7 @@ namespace Izibiz_dotnet_soap_client.UblCreate
         public void createDespatchHeader()
         {
             Random random = new Random();
-            var receiptId = random.Next(000000000, 999999999);
+            var receiptId = random.Next(100000000, 999999999);
             baseReceiptUBL.UBLVersionID = new UBLVersionIDType { Value = "2.1" };
             baseReceiptUBL.CustomizationID = new CustomizationIDType { Value = "TR1.2.1" };
             //uluslararası fatura standardı 2.1
