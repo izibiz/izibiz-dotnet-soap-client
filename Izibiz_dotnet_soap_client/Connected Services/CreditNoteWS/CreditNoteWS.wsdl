@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://schemas.i2i.com/ei/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CreditNoteWS" targetNamespace="http://schemas.i2i.com/ei/wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CreditNotePortBinding_MTOM_Policy-CreditNotePortBinding_MTOM_Policy">
+    <ns1:OptimizedMimeSerialization xmlns:ns1="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+  </wsp:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/CreditNoteWS/CreditNote?xsd=1" namespace="http://www.w3.org/2005/05/xmlmime" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/CreditNoteWS/CreditNote?xsd=2" namespace="http://schemas.i2i.com/ei/wsdl" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/CreditNoteWS/CreditNote?xsd=3" namespace="http://schemas.i2i.com/ei/entity" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/CreditNoteWS/CreditNote?xsd=4" namespace="http://schemas.i2i.com/ei/common" />
+    </xsd:schema>
+  </types>
+  <message name="GetCreditNoteReport">
+    <part name="request" element="tns:GetCreditNoteReportRequest" />
+  </message>
+  <message name="GetCreditNoteReportResponse">
+    <part name="response" element="tns:GetCreditNoteReportResponse" />
+  </message>
+  <message name="RequestFaultMessage">
+    <part name="fault" element="tns:RequestFault" />
+  </message>
+  <message name="GetCreditNote">
+    <part name="request" element="tns:GetCreditNoteRequest" />
+  </message>
+  <message name="GetCreditNoteResponse">
+    <part name="response" element="tns:GetCreditNoteResponse" />
+  </message>
+  <message name="CancelCreditNote">
+    <part name="request" element="tns:CancelCreditNoteRequest" />
+  </message>
+  <message name="CancelCreditNoteResponse">
+    <part name="response" element="tns:CancelCreditNoteResponse" />
+  </message>
+  <message name="LoadCreditNote">
+    <part name="request" element="tns:LoadCreditNoteRequest" />
+  </message>
+  <message name="LoadCreditNoteResponse">
+    <part name="response" element="tns:LoadCreditNoteResponse" />
+  </message>
+  <message name="MarkCreditNote">
+    <part name="request" element="tns:MarkCreditNoteRequest" />
+  </message>
+  <message name="MarkCreditNoteResponse">
+    <part name="response" element="tns:MarkCreditNoteResponse" />
+  </message>
+  <message name="GetCreditNoteStatus">
+    <part name="request" element="tns:GetCreditNoteStatusRequest" />
+  </message>
+  <message name="GetCreditNoteStatusResponse">
+    <part name="response" element="tns:GetCreditNoteStatusResponse" />
+  </message>
+  <message name="SendCreditNote">
+    <part name="request" element="tns:SendCreditNoteRequest" />
+  </message>
+  <message name="SendCreditNoteResponse">
+    <part name="response" element="tns:SendCreditNoteResponse" />
+  </message>
+  <portType name="CreditNoteServicePort">
+    <operation name="GetCreditNoteReport">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteReportRequest" message="tns:GetCreditNoteReport" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteReportResponse" message="tns:GetCreditNoteReportResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteReport/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="GetCreditNote">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteRequest" message="tns:GetCreditNote" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteResponse" message="tns:GetCreditNoteResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNote/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="CancelCreditNote">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/CancelCreditNoteRequest" message="tns:CancelCreditNote" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/CancelCreditNoteResponse" message="tns:CancelCreditNoteResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/CancelCreditNote/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="LoadCreditNote">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/LoadCreditNoteRequest" message="tns:LoadCreditNote" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/LoadCreditNoteResponse" message="tns:LoadCreditNoteResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/LoadCreditNote/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="MarkCreditNote">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/MarkCreditNoteRequest" message="tns:MarkCreditNote" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/MarkCreditNoteResponse" message="tns:MarkCreditNoteResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/MarkCreditNote/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="GetCreditNoteStatus">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteStatusRequest" message="tns:GetCreditNoteStatus" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteStatusResponse" message="tns:GetCreditNoteStatusResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteStatus/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="SendCreditNote">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/SendCreditNoteRequest" message="tns:SendCreditNote" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/SendCreditNoteResponse" message="tns:SendCreditNoteResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/SendCreditNote/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+  </portType>
+  <binding name="CreditNotePortBinding" type="tns:CreditNoteServicePort">
+    <wsp:PolicyReference URI="#CreditNotePortBinding_MTOM_Policy-CreditNotePortBinding_MTOM_Policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetCreditNoteReport">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GetCreditNote">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="CancelCreditNote">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="LoadCreditNote">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="MarkCreditNote">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GetCreditNoteStatus">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="SendCreditNote">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="CreditNoteWS">
+    <port name="CreditNotePort" binding="tns:CreditNotePortBinding">
+      <soap:address location="https://efaturatest.izibiz.com.tr:443/CreditNoteWS/CreditNote" />
+    </port>
+  </service>
+</definitions>

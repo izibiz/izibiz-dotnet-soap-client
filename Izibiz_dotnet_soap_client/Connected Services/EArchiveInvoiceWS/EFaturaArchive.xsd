@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://uri.etsi.org/01903/v1.4.1#" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" elementFormDefault="qualified" targetNamespace="http://uri.etsi.org/01903/v1.4.1#" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/EIArchiveWS/EFaturaArchive?xsd=1" namespace="http://uri.etsi.org/01903/v1.3.2#" />
+  <xsd:element name="TimeStampValidationData" type="ValidationDataType" />
+  <xsd:complexType name="ValidationDataType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" ref="xades:CertificateValues" />
+      <xsd:element minOccurs="0" ref="xades:RevocationValues" />
+    </xsd:sequence>
+    <xsd:attribute name="Id" type="xsd:ID" use="optional" />
+    <xsd:attribute name="UR" type="xsd:anyURI" use="optional" />
+  </xsd:complexType>
+  <xsd:element name="ArchiveTimeStampV2" type="xades:XAdESTimeStampType" />
+</xsd:schema>

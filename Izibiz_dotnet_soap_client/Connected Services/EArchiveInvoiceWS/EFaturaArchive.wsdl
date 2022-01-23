@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://schemas.i2i.com/ei/wsdl/archive" name="EFaturaArchive" targetNamespace="http://schemas.i2i.com/ei/wsdl/archive" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/EIArchiveWS/EFaturaArchive?xsd=5" namespace="http://schemas.i2i.com/ei/wsdl/archive" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ArchiveInvoiceWriteRequestMessage">
+    <wsdl:part name="request" element="tns:ArchiveInvoiceWriteRequest" />
+  </wsdl:message>
+  <wsdl:message name="ArchiveInvoiceWriteResponseMessage">
+    <wsdl:part name="response" element="tns:ArchiveInvoiceWriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArchiveInvoiceReadRequestMessage">
+    <wsdl:part name="request" element="tns:ArchiveInvoiceReadRequest" />
+  </wsdl:message>
+  <wsdl:message name="ArchiveInvoiceReadResponseMessage">
+    <wsdl:part name="response" element="tns:ArchiveInvoiceReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArchiveInvoiceCopyRequestMessage">
+    <wsdl:part name="request" element="tns:ArchiveInvoiceCopyRequest" />
+  </wsdl:message>
+  <wsdl:message name="ArchiveInvoiceCopyResponseMessage">
+    <wsdl:part name="response" element="tns:ArchiveInvoiceCopyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArchiveGenericDocumentRequestMessage">
+    <wsdl:part name="request" element="tns:ArchiveGenericDocumentRequest" />
+  </wsdl:message>
+  <wsdl:message name="ArchiveGenericDocumentResponseMessage">
+    <wsdl:part name="response" element="tns:ArchiveGenericDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenericReadRequestMessage">
+    <wsdl:part name="request" element="tns:GenericReadRequest" />
+  </wsdl:message>
+  <wsdl:message name="GenericReadResponseMessage">
+    <wsdl:part name="response" element="tns:GenericReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArchiveInvoiceWriteExtendedRequestMessage">
+    <wsdl:part name="request" element="tns:ArchiveInvoiceExtendedRequest" />
+  </wsdl:message>
+  <wsdl:message name="ArchiveInvoiceWriteExtendedResponseMessage">
+    <wsdl:part name="response" element="tns:ArchiveInvoiceExtendedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArchiveGetInvoiceInfoRequestMessage">
+    <wsdl:part name="request" element="tns:ArchiveGetInvoiceInfoRequest" />
+  </wsdl:message>
+  <wsdl:message name="ArchiveGetInvoiceInfoResponseMessage">
+    <wsdl:part name="response" element="tns:ArchiveGetInvoiceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReadEArchiveReportRequestMessage">
+    <wsdl:part name="request" element="tns:ReadEArchiveReportRequest" />
+  </wsdl:message>
+  <wsdl:message name="ReadEArchiveReportResponseMessage">
+    <wsdl:part name="response" element="tns:ReadEArchiveReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelEArchiveInvoiceRequestMessage">
+    <wsdl:part name="request" element="tns:CancelEArchiveInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelEArchiveInvoiceResponseMessage">
+    <wsdl:part name="response" element="tns:CancelEArchiveInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEArchiveReportRequestMessage">
+    <wsdl:part name="request" element="tns:GetEArchiveReportRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEArchiveReportResponseMessage">
+    <wsdl:part name="response" element="tns:GetEArchiveReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEArchiveInvoiceRequestMessage">
+    <wsdl:part name="request" element="tns:GetEArchiveInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEArchiveInvoiceResponseMessage">
+    <wsdl:part name="response" element="tns:GetEArchiveInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEArchiveInvoiceStatusRequestMessage">
+    <wsdl:part name="request" element="tns:GetEArchiveInvoiceStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEArchiveInvoiceStatusResponseMessage">
+    <wsdl:part name="response" element="tns:GetEArchiveInvoiceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelEDefterRequestMessage">
+    <wsdl:part name="request" element="tns:CancelEDefterRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelEDefterResponseMessage">
+    <wsdl:part name="response" element="tns:CancelEDefterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenericArchiveByPeriodRequestMessage">
+    <wsdl:part name="request" element="tns:GetGenericArchiveByPeriodRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetGenericArchiveByPeriodResponseMessage">
+    <wsdl:part name="response" element="tns:GetGenericArchiveByPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGenericArchiveStatusRequestMessage">
+    <wsdl:part name="request" element="tns:GetGenericArchiveStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetGenericArchiveStatusResponseMessage">
+    <wsdl:part name="response" element="tns:GetGenericArchiveStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailEarchiveInvoiceRequestMessage">
+    <wsdl:part name="request" element="tns:GetEmailEarchiveInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEmailEarchiveInvoiceResponseMessage">
+    <wsdl:part name="response" element="tns:GetEmailEarchiveInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSmsEarchiveInvoiceRequestMessage">
+    <wsdl:part name="request" element="tns:SendSmsEarchiveInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="SendSmsEarchiveInvoiceResponseMessage">
+    <wsdl:part name="response" element="tns:SendSmsEarchiveInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEArchiveInvoiceListRequestMessage">
+    <wsdl:part name="request" element="tns:GetEArchiveInvoiceListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEArchiveInvoiceListResponseMessage">
+    <wsdl:part name="response" element="tns:GetEArchiveInvoiceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="MarkEArchiveInvoiceRequestMessage">
+    <wsdl:part name="request" element="tns:MarkEArchiveInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="MarkEArchiveInvoiceResponseMessage">
+    <wsdl:part name="response" element="tns:MarkEArchiveInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="EArchiveInvoiceCountRequestMessage">
+    <wsdl:part name="request" element="tns:EArchiveInvoiceCountRequest" />
+  </wsdl:message>
+  <wsdl:message name="EArchiveInvoiceCountResponseMessage">
+    <wsdl:part name="response" element="tns:EArchiveInvoiceCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetELedgerStatusRequestMessage">
+    <wsdl:part name="request" element="tns:GetELedgerStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetELedgerStatusResponseMessage">
+    <wsdl:part name="response" element="tns:GetELedgerStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestFaultMessage">
+    <wsdl:part name="parameters" element="tns:RequestFault" />
+  </wsdl:message>
+  <wsdl:portType name="EFaturaArchivePort">
+    <wsdl:operation name="WriteToArchive">
+      <wsdl:input message="tns:ArchiveInvoiceWriteRequestMessage" />
+      <wsdl:output message="tns:ArchiveInvoiceWriteResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadFromArchive">
+      <wsdl:input message="tns:ArchiveInvoiceReadRequestMessage" />
+      <wsdl:output message="tns:ArchiveInvoiceReadResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyToArchive">
+      <wsdl:input message="tns:ArchiveInvoiceCopyRequestMessage" />
+      <wsdl:output message="tns:ArchiveInvoiceCopyResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ArchiveGenericDocument">
+      <wsdl:input message="tns:ArchiveGenericDocumentRequestMessage" />
+      <wsdl:output message="tns:ArchiveGenericDocumentResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenericRead">
+      <wsdl:input message="tns:GenericReadRequestMessage" />
+      <wsdl:output message="tns:GenericReadResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteToArchiveExtended">
+      <wsdl:input message="tns:ArchiveInvoiceWriteExtendedRequestMessage" />
+      <wsdl:output message="tns:ArchiveInvoiceWriteExtendedResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ArchiveGetInvoiceInfo">
+      <wsdl:input message="tns:ArchiveGetInvoiceInfoRequestMessage" />
+      <wsdl:output message="tns:ArchiveGetInvoiceInfoResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadEArchiveReport">
+      <wsdl:input message="tns:ReadEArchiveReportRequestMessage" />
+      <wsdl:output message="tns:ReadEArchiveReportResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelEArchiveInvoice">
+      <wsdl:input message="tns:CancelEArchiveInvoiceRequestMessage" />
+      <wsdl:output message="tns:CancelEArchiveInvoiceResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEArchiveReport">
+      <wsdl:input message="tns:GetEArchiveReportRequestMessage" />
+      <wsdl:output message="tns:GetEArchiveReportResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEArchiveInvoice">
+      <wsdl:input message="tns:GetEArchiveInvoiceRequestMessage" />
+      <wsdl:output message="tns:GetEArchiveInvoiceResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEArchiveInvoiceStatus">
+      <wsdl:input message="tns:GetEArchiveInvoiceStatusRequestMessage" />
+      <wsdl:output message="tns:GetEArchiveInvoiceStatusResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelEDefter">
+      <wsdl:input message="tns:CancelEDefterRequestMessage" />
+      <wsdl:output message="tns:CancelEDefterResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenericArchiveByPeriod">
+      <wsdl:input message="tns:GetGenericArchiveByPeriodRequestMessage" />
+      <wsdl:output message="tns:GetGenericArchiveByPeriodResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenericArchiveStatus">
+      <wsdl:input message="tns:GetGenericArchiveStatusRequestMessage" />
+      <wsdl:output message="tns:GetGenericArchiveStatusResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailEarchiveInvoice">
+      <wsdl:input message="tns:GetEmailEarchiveInvoiceRequestMessage" />
+      <wsdl:output message="tns:GetEmailEarchiveInvoiceResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSmsEarchiveInvoice">
+      <wsdl:input message="tns:SendSmsEarchiveInvoiceRequestMessage" />
+      <wsdl:output message="tns:SendSmsEarchiveInvoiceResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEArchiveInvoiceList">
+      <wsdl:input message="tns:GetEArchiveInvoiceListRequestMessage" />
+      <wsdl:output message="tns:GetEArchiveInvoiceListResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkEArchiveInvoice">
+      <wsdl:input message="tns:MarkEArchiveInvoiceRequestMessage" />
+      <wsdl:output message="tns:MarkEArchiveInvoiceResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EArchiveInvoiceCount">
+      <wsdl:input message="tns:EArchiveInvoiceCountRequestMessage" />
+      <wsdl:output message="tns:EArchiveInvoiceCountResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetELedgerStatus">
+      <wsdl:input message="tns:GetELedgerStatusRequestMessage" />
+      <wsdl:output message="tns:GetELedgerStatusResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EFaturaArchivePortBinding" type="tns:EFaturaArchivePort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WriteToArchive">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadFromArchive">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CopyToArchive">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ArchiveGenericDocument">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GenericRead">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="WriteToArchiveExtended">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ArchiveGetInvoiceInfo">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReadEArchiveReport">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelEArchiveInvoice">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEArchiveReport">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEArchiveInvoice">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEArchiveInvoiceStatus">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelEDefter">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenericArchiveByPeriod">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenericArchiveStatus">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailEarchiveInvoice">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendSmsEarchiveInvoice">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEArchiveInvoiceList">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MarkEArchiveInvoice">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EArchiveInvoiceCount">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetELedgerStatus">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EFaturaArchive">
+    <wsdl:port name="EFaturaArchivePort" binding="tns:EFaturaArchivePortBinding">
+      <soap:address location="https://efaturatest.izibiz.com.tr:443/EIArchiveWS/EFaturaArchive" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:hr="http://www.hr-xml.org/3" xmlns:c="http://schemas.i2i.com/ei/common" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns="http://schemas.i2i.com/ei/wsdl" xmlns:e="http://schemas.i2i.com/ei/entity" xmlns:pck="http://www.efatura.gov.tr/package-namespace" targetNamespace="http://schemas.i2i.com/ei/wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/EInvoiceWS?xsd=1" namespace="http://schemas.i2i.com/ei/common" />
+  <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/EInvoiceWS?xsd=2" namespace="http://schemas.i2i.com/ei/entity" />
+  <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/EInvoiceWS?xsd=3" namespace="http://www.w3.org/2005/05/xmlmime" />
+  <xsd:element name="RequestFault" type="e:REQUEST_ERRORType" />
+  <xsd:complexType name="INVOICE">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="HEADER">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="SENDER" type="xsd:token" />
+            <xsd:element minOccurs="0" name="RECEIVER" type="xsd:token" />
+            <xsd:element minOccurs="0" name="SUPPLIER" type="xsd:string" />
+            <xsd:element minOccurs="0" name="CUSTOMER" type="xsd:string" />
+            <xsd:element minOccurs="0" name="ISSUE_DATE" type="xsd:date" />
+            <xsd:element minOccurs="0" name="PAYABLE_AMOUNT" type="c:AmountType" />
+            <xsd:element minOccurs="0" name="FROM" type="xsd:token" />
+            <xsd:element minOccurs="0" name="TO" type="xsd:token" />
+            <xsd:element minOccurs="0" name="PROFILEID" type="xsd:token" />
+            <xsd:element minOccurs="0" name="INVOICE_TYPE_CODE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="STATUS" type="xsd:string" />
+            <xsd:element minOccurs="0" name="STATUS_DESCRIPTION" type="xsd:string" />
+            <xsd:element minOccurs="0" name="GIB_STATUS_CODE" type="xsd:int" />
+            <xsd:element minOccurs="0" name="GIB_STATUS_DESCRIPTION" type="xsd:string" />
+            <xsd:element minOccurs="0" name="DIRECTION" type="xsd:string" />
+            <xsd:element minOccurs="0" name="RESPONSE_CODE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="RESPONSE_DESCRIPTION" type="xsd:string" />
+            <xsd:element minOccurs="0" name="FILENAME" type="xsd:string" />
+            <xsd:element minOccurs="0" name="HASH" type="xsd:string" />
+            <xsd:element minOccurs="0" name="CDATE" type="xsd:dateTime" />
+            <xsd:element minOccurs="0" name="ENVELOPE_IDENTIFIER" type="xsd:token" />
+            <xsd:element minOccurs="0" name="GTB_REFNO" type="xsd:string" />
+            <xsd:element minOccurs="0" name="GTB_GCB_TESCILNO" type="xsd:string" />
+            <xsd:element minOccurs="0" name="GTB_FIILI_IHRACAT_TARIHI" type="xsd:string" />
+            <xsd:element minOccurs="0" name="STATUS_CODE" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CONTENT" type="xmime:base64Binary" />
+    </xsd:sequence>
+    <xsd:attribute name="ID" type="xsd:token" use="optional" />
+    <xsd:attribute name="UUID" type="xsd:token" use="optional" />
+    <xsd:attribute name="LIST_ID" type="xsd:int" use="optional" />
+  </xsd:complexType>
+  <xsd:complexType name="ENVELOPE">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="HEADER">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="SENDER" type="xsd:token" />
+            <xsd:element minOccurs="0" name="RECEIVER" type="xsd:token" />
+            <xsd:element minOccurs="0" name="FROM" type="xsd:token" />
+            <xsd:element minOccurs="0" name="TO" type="xsd:token" />
+            <xsd:element minOccurs="0" name="DATE" type="xsd:date" />
+            <xsd:element minOccurs="0" name="STATUS" type="xsd:string" />
+            <xsd:element minOccurs="0" name="STATUS_DESCRIPTION" type="xsd:string" />
+            <xsd:element minOccurs="0" name="GIB_STATUS_CODE" type="xsd:int" />
+            <xsd:element minOccurs="0" name="GIB_STATUS_DESCRIPTION" type="xsd:string" />
+            <xsd:element minOccurs="0" name="TYPE" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CONTENT" type="xmime:base64Binary" />
+    </xsd:sequence>
+    <xsd:attribute name="INSTANCEIDENTIFIER" type="xsd:token" use="optional" />
+  </xsd:complexType>
+  <xsd:simpleType name="USERTYPE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="USER" />
+      <xsd:enumeration value="ARCHIVE" />
+      <xsd:enumeration value="EARCHIVE" />
+      <xsd:enumeration value="EARCHIVE_ARCHIVE" />
+      <xsd:enumeration value="EDESPATCH" />
+      <xsd:enumeration value="EDESPATCH_ARCHIVE" />
+      <xsd:enumeration value="SERBEST_MESLEK" />
+      <xsd:enumeration value="MUSTAHSIL" />
+      <xsd:enumeration value="CHANGECUSTOMER" />
+      <xsd:enumeration value="ZREPORT" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SIGNTYPE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="HSM_CUSTOMER" />
+      <xsd:enumeration value="HSM_ENTEGRATOR" />
+      <xsd:enumeration value="HSM_CLIENT_SIGNED" />
+      <xsd:enumeration value="TOKEN_CUSTOMER" />
+      <xsd:enumeration value="TOKEN_ENTEGRATOR" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="USERCONTENTTYPE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="PROCESSUSER" />
+      <xsd:enumeration value="CANCELUSER" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DATE_TYPE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ISSUE" />
+      <xsd:enumeration value="CREATE" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="LoginRequest" type="LoginRequest" />
+  <xsd:complexType name="LoginRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element name="USER_NAME" type="xsd:string" />
+          <xsd:element name="PASSWORD" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LoginResponse" type="LoginResponse" />
+  <xsd:complexType name="LoginResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element name="SESSION_ID" type="xsd:token" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="LogoutRequest" type="LogoutRequest" />
+  <xsd:complexType name="LogoutRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LogoutResponse" type="LogoutResponse" />
+  <xsd:complexType name="LogoutResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="USERCONTENT">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="xmime:base64Binary">
+        <xsd:attribute name="USERID" type="xsd:string" />
+        <xsd:attribute name="USERTYPE" type="USERTYPE" />
+        <xsd:attribute name="SIGNTYPE" type="SIGNTYPE" use="optional" />
+        <xsd:attribute name="TYPE" type="USERCONTENTTYPE" use="optional" />
+        <xsd:attribute name="ALIAS_TYPE" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="UserRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="USERCONTENT" type="USERCONTENT" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="UserResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="USERCONTENT" type="USERCONTENT" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="PrepareProcessUserRequest" type="UserRequest" />
+  <xsd:element name="PrepareProcessUserResponse" type="UserResponse" />
+  <xsd:element name="PrepareCancelUserRequest" type="UserRequest" />
+  <xsd:element name="PrepareCancelUserResponse" type="UserResponse" />
+  <xsd:element name="ProcessUserRequest" type="UserRequest" />
+  <xsd:element name="ProcessUserResponse" type="e:REQUEST_RETURNType" />
+  <xsd:element name="CancelUserRequest" type="UserRequest" />
+  <xsd:element name="CancelUserResponse" type="e:REQUEST_RETURNType" />
+  <xsd:element name="SendInvoiceRequest" type="SendInvoiceRequest" />
+  <xsd:complexType name="SendInvoiceRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="SENDER">
+            <xsd:complexType>
+              <xsd:attribute name="vkn" type="xsd:string" use="optional" />
+              <xsd:attribute name="alias" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="RECEIVER">
+            <xsd:complexType>
+              <xsd:attribute name="vkn" type="xsd:string" use="optional" />
+              <xsd:attribute name="alias" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="XSLT_NAME" type="xsd:string" />
+          <xsd:element minOccurs="0" name="SERI_PREFIX" type="c:SERI_PREFIX" />
+          <xsd:element minOccurs="0" default="N" name="DISABLE_DATE_CONTROL" type="c:FLAG_VALUE" />
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="INVOICE" type="INVOICE" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SendInvoiceResponse" type="SendInvoiceResponse" />
+  <xsd:complexType name="SendInvoiceResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+      <xsd:element minOccurs="0" name="INVOICE_ID" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetInvoiceRequest" type="GetInvoiceRequest" />
+  <xsd:complexType name="GetInvoiceRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element name="INVOICE_SEARCH_KEY">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="LIMIT" type="xsd:int" />
+                <xsd:element minOccurs="0" name="ID" type="xsd:normalizedString" />
+                <xsd:element minOccurs="0" name="UUID" type="xsd:normalizedString" />
+                <xsd:element minOccurs="0" name="FROM" type="xsd:token" />
+                <xsd:element minOccurs="0" name="TO" type="xsd:token" />
+                <xsd:element minOccurs="0" name="DATE_TYPE" type="DATE_TYPE" />
+                <xsd:element minOccurs="0" name="START_DATE" type="xsd:date" />
+                <xsd:element minOccurs="0" name="END_DATE" type="xsd:date" />
+                <xsd:element minOccurs="0" name="READ_INCLUDED" type="xsd:boolean" />
+                <xsd:element minOccurs="0" name="DIRECTION" type="xsd:token" />
+                <xsd:element minOccurs="0" name="SENDER" type="xsd:token" />
+                <xsd:element minOccurs="0" name="RECEIVER" type="xsd:token" />
+                <xsd:element minOccurs="0" name="DRAFT_FLAG" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" default="N" name="HEADER_ONLY" type="xsd:token" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GetInvoiceResponse" type="GetInvoiceResponse" />
+  <xsd:complexType name="GetInvoiceResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="INVOICE" type="INVOICE" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="MarkInvoiceRequest" type="MarkInvoiceRequest" />
+  <xsd:complexType name="MarkInvoiceRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" name="MARK">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="unbounded" name="INVOICE" type="INVOICE" />
+              </xsd:sequence>
+              <xsd:attribute name="value">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:token">
+                    <xsd:enumeration value="READ" />
+                    <xsd:enumeration value="UNREAD" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MarkInvoiceResponse" type="MarkInvoiceResponse" />
+  <xsd:complexType name="MarkInvoiceResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="PrepareInvoiceResponseRequest" type="PrepareInvoiceResponseRequest" />
+  <xsd:complexType name="PrepareInvoiceResponseRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element name="STATUS" type="xsd:token" />
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="INVOICE" type="INVOICE" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="DESCRIPTION" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PrepareInvoiceResponseResponse" type="PrepareInvoiceResponseResponse" />
+  <xsd:complexType name="PrepareInvoiceResponseResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="APPRESPONSE" type="xmime:base64Binary" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="SendInvoiceResponseRequest" type="SendInvoiceResponseRequest" />
+  <xsd:complexType name="SendInvoiceResponseRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="APPRESPONSE" type="xmime:base64Binary" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SendInvoiceResponseResponse" type="SendInvoiceResponseResponse" />
+  <xsd:complexType name="SendInvoiceResponseResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="SendInvoiceResponseWithServerSignRequest" type="SendInvoiceResponseWithServerSignRequest" />
+  <xsd:complexType name="SendInvoiceResponseWithServerSignRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element name="STATUS" type="xsd:token" />
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="INVOICE" type="INVOICE" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="DESCRIPTION" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SendInvoiceResponseWithServerSignResponse" type="SendInvoiceResponseWithServerSignResponse" />
+  <xsd:complexType name="SendInvoiceResponseWithServerSignResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetUserListRequest" type="GetUserListRequest" />
+  <xsd:complexType name="GetUserListRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="REGISTER_TIME_START" type="xsd:dateTime" />
+          <xsd:element minOccurs="0" name="DOCUMENT_TYPE" type="xsd:normalizedString" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GetUserListResponse" type="GetUserListResponse" />
+  <xsd:complexType name="GetUserListResponse">
+    <xsd:choice>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="USER" type="GIBUSER" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:element name="GetUserListBinaryRequest" type="GetUserListBinaryRequest" />
+  <xsd:complexType name="GetUserListBinaryRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" default="XML" name="TYPE">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:enumeration value="CSV" />
+                <xsd:enumeration value="XML" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="DOCUMENT_TYPE" type="xsd:normalizedString" />
+          <xsd:element minOccurs="0" name="REGISTER_TIME_START" type="xsd:dateTime" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GetUserListBinaryResponse" type="GetUserListBinaryResponse" />
+  <xsd:complexType name="GetUserListBinaryResponse">
+    <xsd:choice>
+      <xsd:element minOccurs="0" maxOccurs="1" name="CONTENT" type="xmime:base64Binary" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:element name="CheckUserRequest" type="CheckUserRequest" />
+  <xsd:complexType name="CheckUserRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" name="USER" type="GIBUSER" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CheckUserResponse" type="CheckUserResponse" />
+  <xsd:complexType name="CheckUserResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="USER" type="GIBUSER" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GIBUSER">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="IDENTIFIER" type="xsd:string" />
+      <xsd:element minOccurs="0" name="ALIAS" type="xsd:string" />
+      <xsd:element minOccurs="0" name="TITLE" type="xsd:string" />
+      <xsd:element minOccurs="0" name="TYPE" type="xsd:string" />
+      <xsd:element minOccurs="0" name="REGISTER_TIME" type="xsd:string" />
+      <xsd:element minOccurs="0" name="UNIT" type="xsd:token" />
+      <xsd:element minOccurs="0" name="ALIAS_CREATION_TIME" type="xsd:string" />
+      <xsd:element minOccurs="0" name="DOCUMENT_TYPE" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetInvoiceStatusRequest" type="GetInvoiceStatusRequest" />
+  <xsd:complexType name="GetInvoiceStatusRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" name="INVOICE" type="INVOICE" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GetInvoiceStatusResponse" type="GetInvoiceStatusResponse" />
+  <xsd:complexType name="GetInvoiceStatusResponse">
+    <xsd:sequence>
+      <xsd:element name="INVOICE_STATUS">
+        <xsd:complexType>
+          <xsd:complexContent mixed="false">
+            <xsd:extension base="INVOICE">
+              <xsd:sequence>
+                <xsd:element minOccurs="1" name="STATUS" type="xsd:string" />
+                <xsd:element minOccurs="1" name="STATUS_DESCRIPTION" type="xsd:string" />
+                <xsd:element minOccurs="0" name="GIB_STATUS_CODE" type="xsd:int" />
+                <xsd:element minOccurs="0" name="GIB_STATUS_DESCRIPTION" type="xsd:string" />
+                <xsd:element minOccurs="0" name="RESPONSE_CODE" type="xsd:string" />
+                <xsd:element minOccurs="0" name="RESPONSE_DESCRIPTION" type="xsd:string" />
+                <xsd:element minOccurs="0" name="CDATE" type="xsd:dateTime" />
+                <xsd:element minOccurs="0" name="ENVELOPE_IDENTIFIER" type="xsd:token" />
+                <xsd:element minOccurs="0" name="GTB_REFNO" type="xsd:string" />
+                <xsd:element minOccurs="0" name="GTB_GCB_TESCILNO" type="xsd:string" />
+                <xsd:element minOccurs="0" name="GTB_FIILI_IHRACAT_TARIHI" type="xsd:string" />
+                <xsd:element minOccurs="1" name="STATUS_CODE" type="xsd:string" />
+                <xsd:element minOccurs="0" name="DIRECTION" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetInvoiceStatusAllRequest" type="GetInvoiceStatusAllRequest" />
+  <xsd:complexType name="GetInvoiceStatusAllRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="UUID" type="xsd:token" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GetInvoiceStatusAllResponse" type="GetInvoiceStatusAllResponse" />
+  <xsd:complexType name="GetInvoiceStatusAllResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="INVOICE_STATUS">
+        <xsd:complexType>
+          <xsd:complexContent mixed="false">
+            <xsd:extension base="INVOICE">
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="STATUS" type="xsd:string" />
+                <xsd:element minOccurs="0" name="STATUS_DESCRIPTION" type="xsd:string" />
+                <xsd:element minOccurs="0" name="GIB_STATUS_CODE" type="xsd:int" />
+                <xsd:element minOccurs="0" name="GIB_STATUS_DESCRIPTION" type="xsd:string" />
+                <xsd:element minOccurs="0" name="RESPONSE_CODE" type="xsd:string" />
+                <xsd:element minOccurs="0" name="RESPONSE_DESCRIPTION" type="xsd:string" />
+                <xsd:element minOccurs="0" name="CDATE" type="xsd:dateTime" />
+                <xsd:element minOccurs="0" name="ENVELOPE_IDENTIFIER" type="xsd:token" />
+                <xsd:element minOccurs="0" name="GTB_REFNO" type="xsd:string" />
+                <xsd:element minOccurs="0" name="GTB_GCB_TESCILNO" type="xsd:string" />
+                <xsd:element minOccurs="0" name="GTB_FIILI_IHRACAT_TARIHI" type="xsd:string" />
+                <xsd:element minOccurs="0" name="STATUS_CODE" type="xsd:string" />
+                <xsd:element minOccurs="0" name="DIRECTION" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="CancelDraftInvoiceRequest" type="CancelDraftInvoiceRequest" />
+  <xsd:complexType name="CancelDraftInvoiceRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" name="UUID" type="xsd:token" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="CancelDraftInvoiceResponse" type="CancelDraftInvoiceResponse" />
+  <xsd:complexType name="CancelDraftInvoiceResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="LoadInvoiceRequest" type="LoadInvoiceRequest" />
+  <xsd:complexType name="LoadInvoiceRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="INVOICE" type="INVOICE" />
+          <xsd:element minOccurs="0" default="Y" name="VALIDATION_FLAG" type="c:FLAG_VALUE" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LoadInvoiceResponse" type="LoadInvoiceResponse" />
+  <xsd:complexType name="LoadInvoiceResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEnvelopeRequest" type="GetEnvelopeRequest" />
+  <xsd:complexType name="GetEnvelopeRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element name="ENVELOPE_SEARCH_KEY">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="LIMIT" type="xsd:int" />
+                <xsd:element minOccurs="0" name="IDENTIFIER" type="xsd:normalizedString" />
+                <xsd:element minOccurs="0" name="FROM" type="xsd:token" />
+                <xsd:element minOccurs="0" name="TO" type="xsd:token" />
+                <xsd:element minOccurs="0" name="START_DATE" type="xsd:date" />
+                <xsd:element minOccurs="0" name="END_DATE" type="xsd:date" />
+                <xsd:element minOccurs="0" name="READ_INCLUDED" type="xsd:boolean" />
+                <xsd:element minOccurs="0" name="DIRECTION" type="xsd:token" />
+                <xsd:element minOccurs="0" name="SENDER" type="xsd:token" />
+                <xsd:element minOccurs="0" name="RECEIVER" type="xsd:token" />
+                <xsd:element minOccurs="0" name="TYPE" type="xsd:token" />
+                <xsd:element minOccurs="0" name="ELEMENT">
+                  <xsd:complexType>
+                    <xsd:annotation>
+                      <xsd:documentation>Used to search for the envelopes having package content with the given type and uuid with
+												this element
+											</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:sequence>
+                      <xsd:element name="TYPE" type="xsd:token">
+                        <xsd:annotation>
+                          <xsd:documentation>One of the values of (INVOICE,APPLICATIONRESPONSE)</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="UUID" type="xsd:token">
+                        <xsd:annotation>
+                          <xsd:documentation>UUID of the target element</xsd:documentation>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" default="N" name="HEADER_ONLY" type="xsd:token" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GetEnvelopeResponse" type="GetEnvelopeResponse" />
+  <xsd:complexType name="GetEnvelopeResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="ENVELOPE" type="ENVELOPE" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="MarkEnvelopeRequest" type="MarkEnvelopeRequest" />
+  <xsd:complexType name="MarkEnvelopeRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" name="MARK">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="unbounded" name="ENVELOPE">
+                  <xsd:complexType>
+                    <xsd:attribute name="INSTANCEIDENTIFIER" type="xsd:token" />
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="value">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:token">
+                    <xsd:enumeration value="READ" />
+                    <xsd:enumeration value="UNREAD" />
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="MarkEnvelopeResponse" type="MarkEnvelopeResponse" />
+  <xsd:complexType name="MarkEnvelopeResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEnvelopeStatusRequest" type="GetEnvelopeStatusRequest" />
+  <xsd:complexType name="GetEnvelopeStatusRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="ENVELOPE">
+            <xsd:complexType>
+              <xsd:attribute name="INSTANCEIDENTIFIER" type="xsd:token" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GetEnvelopeStatusResponse" type="GetEnvelopeStatusResponse" />
+  <xsd:complexType name="GetEnvelopeStatusResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="ENVELOPE" type="ENVELOPE" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetInvoiceWithTypeRequest" type="GetInvoiceWithTypeRequest" />
+  <xsd:complexType name="GetInvoiceWithTypeRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element name="INVOICE_SEARCH_KEY">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="LIMIT" type="xsd:int" />
+                <xsd:element minOccurs="0" name="ID" type="xsd:normalizedString" />
+                <xsd:element minOccurs="0" name="UUID" type="xsd:normalizedString" />
+                <xsd:element minOccurs="0" name="EXTERNAL_ID" type="xsd:normalizedString" />
+                <xsd:element minOccurs="0" name="TYPE" type="xsd:normalizedString" />
+                <xsd:element minOccurs="0" name="FROM" type="xsd:token" />
+                <xsd:element minOccurs="0" name="TO" type="xsd:token" />
+                <xsd:element minOccurs="0" name="START_DATE" type="xsd:date" />
+                <xsd:element minOccurs="0" name="END_DATE" type="xsd:date" />
+                <xsd:element minOccurs="0" name="READ_INCLUDED" type="xsd:boolean" />
+                <xsd:element minOccurs="0" name="DIRECTION" type="xsd:token" />
+                <xsd:element minOccurs="0" name="SENDER" type="xsd:token" />
+                <xsd:element minOccurs="0" name="RECEIVER" type="xsd:token" />
+                <xsd:element minOccurs="0" name="PAYABLE_AMOUNT" type="c:AmountType" />
+                <xsd:element minOccurs="0" name="DRAFT_FLAG" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" default="N" name="HEADER_ONLY" type="xsd:token" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GetInvoiceWithTypeResponse" type="GetInvoiceWithTypeResponse" />
+  <xsd:complexType name="GetInvoiceWithTypeResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="INVOICE" type="INVOICE" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetInvoiceCountRequest" type="GetInvoiceCountRequest" />
+  <xsd:complexType name="GetInvoiceCountRequest">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ISSUE_DATE_START" type="xsd:date" />
+          <xsd:element minOccurs="0" name="ISSUE_DATE_END" type="xsd:date" />
+          <xsd:element minOccurs="0" name="CDATE_START" type="xsd:date" />
+          <xsd:element minOccurs="0" name="CDATE_END" type="xsd:date" />
+          <xsd:element minOccurs="0" name="DIRECTION" type="xsd:token" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GetInvoiceCountResponse" type="GetInvoiceCountResponse" />
+  <xsd:complexType name="GetInvoiceCountResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="PORTAL" type="xsd:int" />
+      <xsd:element minOccurs="0" name="WS" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

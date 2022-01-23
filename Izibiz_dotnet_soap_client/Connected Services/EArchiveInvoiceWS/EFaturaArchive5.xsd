@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:earsiv="http://earsiv.efatura.gov.tr" xmlns:hr="http://www.hr-xml.org/3" xmlns:c="http://schemas.i2i.com/ei/common" xmlns="http://schemas.i2i.com/ei/wsdl/archive" xmlns:e="http://schemas.i2i.com/ei/entity" xmlns:pck="http://www.efatura.gov.tr/package-namespace" targetNamespace="http://schemas.i2i.com/ei/wsdl/archive" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/EIArchiveWS/EFaturaArchive?xsd=6" namespace="http://schemas.i2i.com/ei/common" />
+  <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/EIArchiveWS/EFaturaArchive?xsd=7" namespace="http://schemas.i2i.com/ei/entity" />
+  <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/EIArchiveWS/EFaturaArchive?xsd=8" namespace="http://www.w3.org/2005/05/xmlmime" />
+  <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/EIArchiveWS/EFaturaArchive?xsd=4" namespace="http://earsiv.efatura.gov.tr" />
+  <xsd:complexType name="OIBOperation">
+    <xsd:sequence>
+      <xsd:element name="RequestFaultResponse" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="RequestFault" type="RequestFaultType" />
+  <xsd:complexType name="RequestFaultType">
+    <xsd:sequence>
+      <xsd:element name="RequestFaultResponse" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ArchiveInvoiceWriteRequest" type="ArchiveInvoiceWriteRequest" />
+  <xsd:complexType name="ArchiveInvoiceWriteRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element name="ArchiveInvoiceWriteContent" type="ArchiveInvoiceWriteContent" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArchiveInvoiceWriteContent">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="Elements">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ElementType" type="xsd:string" />
+            <xsd:element name="ElementCount" type="xsd:int" />
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="ElementList" type="xmime:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ArchiveInvoiceWriteResponse" type="ArchiveInvoiceWriteResponse" />
+  <xsd:complexType name="ArchiveInvoiceWriteResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ArchiveInvoiceReadRequest" type="ArchiveInvoiceReadRequest" />
+  <xsd:complexType name="ArchiveInvoiceReadRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="INVOICEID" type="xsd:string" />
+      <xsd:element minOccurs="0" name="PORTAL_DIRECTION" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="EXTERNAL_ID" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="PROFILE" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ArchiveInvoiceReadResponse" type="ArchiveInvoiceReadResponse" />
+  <xsd:complexType name="ArchiveInvoiceReadResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="INVOICE" type="xmime:base64Binary" />
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ArchiveInvoiceCopyRequest" type="ArchiveInvoiceCopyRequest" />
+  <xsd:complexType name="ArchiveInvoiceCopyRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="INVOICE_UUID" type="xsd:string" />
+      <xsd:element minOccurs="1" name="PORTAL_DIRECTION" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="EXTERNAL_ID" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="ARCHIVE_NOTE" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ArchiveInvoiceCopyResponse" type="ArchiveInvoiceCopyResponse" />
+  <xsd:complexType name="ArchiveInvoiceCopyResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ArchiveGetInvoiceInfoRequest" type="ArchiveGetInvoiceInfoRequest" />
+  <xsd:complexType name="ArchiveGetInvoiceInfoRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" name="PAGE_SIZE" type="xsd:int" />
+      <xsd:element minOccurs="1" name="PAGE_NUMBER" type="xsd:int" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ArchiveGetInvoiceInfoResponse" type="ArchiveGetInvoiceInfoResponse" />
+  <xsd:complexType name="ArchiveGetInvoiceInfoResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="PAGE_SIZE" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="PAGE_NUMBER" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="TOTAL_INVOICE_COUNT" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="INVOICE" type="INVOICE" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="INVOICE">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="HEADER">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="INVOICE_ID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="UUID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="PROFILE_ID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="STATUS" type="xsd:string" />
+            <xsd:element minOccurs="0" name="SUB_STATUS" type="xsd:string" />
+            <xsd:element minOccurs="0" name="ISSUE_DATE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="CDATE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="SENDER" type="xsd:string" />
+            <xsd:element minOccurs="0" name="RECEIVER" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEArchiveInvoiceStatusRequest" type="GetEArchiveInvoiceStatusRequest" />
+  <xsd:complexType name="GetEArchiveInvoiceStatusRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="500" name="UUID" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEArchiveInvoiceStatusResponse" type="GetEArchiveInvoiceStatusResponse" />
+  <xsd:complexType name="GetEArchiveInvoiceStatusResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="500" name="INVOICE" type="EARCHIVE_INVOICE" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EARCHIVE_INVOICE">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="HEADER">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="INVOICE_ID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="PROFILE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="UUID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="INVOICE_DATE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="STATUS" type="xsd:string" />
+            <xsd:element minOccurs="0" name="STATUS_DESC" type="xsd:string" />
+            <xsd:element minOccurs="0" name="EMAIL_STATUS" type="xsd:string" />
+            <xsd:element minOccurs="0" name="EMAIL_STATUS_DESC" type="xsd:string" />
+            <xsd:element minOccurs="0" name="REPORT_ID" type="xsd:int" />
+            <xsd:element minOccurs="0" name="WEB_KEY" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ArchiveInvoiceExtendedRequest" type="ArchiveInvoiceExtendedRequest" />
+  <xsd:complexType name="ArchiveInvoiceExtendedRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element name="ArchiveInvoiceExtendedContent" type="ArchiveInvoiceExtendedContent" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArchiveInvoiceExtendedContent">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="INVOICE_PROPERTIES">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" default="N" name="EARSIV_FLAG" type="FLAG_VALUE" />
+            <xsd:element name="EARSIV_PROPERTIES" type="EARSIV_PROPERTIES" />
+            <xsd:element minOccurs="0" name="PDF_PROPERTIES" type="PDF_PROPERTIES" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ARCHIVE_NOTE" type="xsd:string" />
+            <xsd:element name="INVOICE_CONTENT" type="xmime:base64Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EARSIV_PROPERTIES">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="EARSIV_TYPE" type="EARSIV_TYPE_VALUE" />
+      <xsd:element minOccurs="0" default="N" name="EARSIV_EMAIL_FLAG" type="FLAG_VALUE" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="EARSIV_EMAIL" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" default="NEW" name="SUB_STATUS" type="SUB_STATUS_VALUE" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="ARCH_INVOICE_ID" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="SERI" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="EARCHIVE_TEST_FLAG" type="FLAG_VALUE" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="EARSIV_SMS_FLAG" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="SMS_PHONE_NUMBER" type="xsd:string" />
+      <xsd:element minOccurs="0" name="VALIDATION_FLAG" type="FLAG_VALUE" />
+      <xsd:element minOccurs="0" name="XSLT_NAME" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PDF_PROPERTIES">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" default="N" name="EARSIV_PDF_FLAG" type="FLAG_VALUE" />
+      <xsd:element minOccurs="0" default="N" name="PDF_SIGNATURE_FLAG" type="FLAG_VALUE" />
+      <xsd:element minOccurs="0" name="PDF_NAME" type="xsd:string" />
+      <xsd:element minOccurs="0" name="EARCHIVE_PDF_XSLT_FILENAME" type="xsd:string" />
+      <xsd:element minOccurs="0" name="PDF_CONTENT" type="xmime:base64Binary" />
+      <xsd:element minOccurs="0" name="EARCHIVE_PDF_VISUALSIGN_FILE" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="EARSIV_TYPE_VALUE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="INTERNET" />
+      <xsd:enumeration value="NORMAL" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SUB_STATUS_VALUE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="NEW" />
+      <xsd:enumeration value="DRAFT" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="FLAG_VALUE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Y" />
+      <xsd:enumeration value="N" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ArchiveInvoiceExtendedResponse" type="ArchiveInvoiceExtendedResponse" />
+  <xsd:complexType name="ArchiveInvoiceExtendedResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+      <xsd:element minOccurs="0" name="INVOICE_ID" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ArchiveGenericDocumentRequest" type="ArchiveGenericDocumentRequest" />
+  <xsd:complexType name="ArchiveGenericDocumentRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="GENERIC_CONTENT" type="GENERIC_CONTENT" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GENERIC_CONTENT">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="FILE_NAME" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="PAR_INDEX1" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="PAR_INDEX2" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="PAR_INDEX3" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="PAR_INDEX4" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="PAR_INDEX5" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="PAR_INDEX6" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="FIX_PAR1" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="FIX_PAR2" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="FIX_PAR3" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="FIX_PAR4" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="FIX_PAR5" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="FIX_PAR6" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="DATE_INDEX1" type="xsd:date" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="DATE_INDEX2" type="xsd:date" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="DATE_INDEX3" type="xsd:date" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="ARCHIVE_TYPE" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" default="NORMAL" name="ARCHIVE_SUB_TYPE" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="FILE_TYPE" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="DIRECTION" type="xsd:string" />
+      <xsd:element name="PARSE_FLAG" type="xsd:string" />
+      <xsd:element name="OVERRIDE" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="CONTENT" type="xmime:base64Binary" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ArchiveGenericDocumentResponse" type="ArchiveGenericDocumentResponse" />
+  <xsd:complexType name="ArchiveGenericDocumentResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GenericReadRequest" type="GenericReadRequest" />
+  <xsd:complexType name="GenericReadRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="DOCUMENT">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="DONEM" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="DOC_NAME" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="DOC_TYPE" type="DOC_TYPE" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="SUBE_NO" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GenericReadResponse" type="GenericReadResponse" />
+  <xsd:complexType name="GenericReadResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="GEN_ARCHIVE_DOC" type="xmime:base64Binary" />
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="DOC_TYPE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="KEBIR DEFTERI" />
+      <xsd:enumeration value="YEVMIYE DEFTERI" />
+      <xsd:enumeration value="KEBIR BERATI" />
+      <xsd:enumeration value="YEVMIYE BERATI" />
+      <xsd:enumeration value="GIB KEBIR BERATI" />
+      <xsd:enumeration value="GIB YEVMIYE BERATI" />
+      <xsd:enumeration value="DEFTER RAPORU" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="ReadEArchiveReportRequest" type="ReadEArchiveReportRequest" />
+  <xsd:complexType name="ReadEArchiveReportRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" name="RAPOR_NO" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ReadEArchiveReportResponse" type="ReadEArchiveReportResponse" />
+  <xsd:complexType name="ReadEArchiveReportResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="EARCHIVEREPORT" type="xmime:base64Binary" />
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="CancelEArchiveInvoiceRequest" type="CancelEArchiveInvoiceRequest" />
+  <xsd:complexType name="CancelEArchiveInvoiceRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="CancelEArsivInvoiceContent">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="UPLOAD_FLAG" type="FLAG_VALUE" />
+            <xsd:element minOccurs="1" name="FATURA_UUID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="FATURA_ID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="EARSIV_CANCEL_EMAIL" type="xsd:string" />
+            <xsd:element minOccurs="0" name="DELETE_FLAG" type="xsd:string" />
+            <xsd:element minOccurs="0" name="IPTAL_TARIHI" type="xsd:date" />
+            <xsd:element minOccurs="0" name="TOPLAM_TUTAR" type="xsd:decimal" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="INVOICE_CONTENT" type="xmime:base64Binary" />
+            <xsd:element minOccurs="0" name="IPTAL_NOTU" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="CancelEArchiveInvoiceResponse" type="CancelEArchiveInvoiceResponse" />
+  <xsd:complexType name="CancelEArchiveInvoiceResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEArchiveReportRequest" type="GetEArchiveReportRequest" />
+  <xsd:complexType name="GetEArchiveReportRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="0" name="REPORT_PERIOD" type="xsd:string" />
+      <xsd:element minOccurs="0" maxOccurs="1" default="N" name="REPORT_STATUS_FLAG" type="xsd:string" />
+      <xsd:element minOccurs="0" name="START_DATE" type="xsd:date" />
+      <xsd:element minOccurs="0" name="END_DATE" type="xsd:date" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEArchiveReportResponse" type="GetEArchiveReportResponse" />
+  <xsd:complexType name="GetEArchiveReportResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="REPORT" type="REPORT" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="INVOICE" type="REPORT_INVOICE" />
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="REPORT_INVOICE">
+    <xsd:sequence>
+      <xsd:element name="INVOICE_ID" type="xsd:string" />
+      <xsd:element name="UUID" type="xsd:string" />
+      <xsd:element name="STATUS" type="xsd:string" />
+      <xsd:element name="STATUS_DESC" type="xsd:string" />
+      <xsd:element name="INVOICE_DATE" type="xsd:date" />
+      <xsd:element name="CDATE" type="xsd:dateTime" />
+      <xsd:element name="PAYABLE_AMOUNT" type="xsd:int" />
+      <xsd:element minOccurs="0" name="EMAIL_STATUS" type="xsd:string" />
+      <xsd:element minOccurs="0" name="EMAIL_STATUS_DESC" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="REPORT">
+    <xsd:sequence>
+      <xsd:element name="REPORT_NO" type="xsd:string" />
+      <xsd:element name="REPORT_PERIOD" type="xsd:string" />
+      <xsd:element name="REPORT_STATUS" type="xsd:string" />
+      <xsd:element name="REPORT_SUB_STATUS" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEArchiveInvoiceRequest" type="GetEArchiveInvoiceRequest" />
+  <xsd:complexType name="GetEArchiveInvoiceRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="WEB_VALIDATION_KEY" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEArchiveInvoiceResponse" type="GetEArchiveInvoiceResponse" />
+  <xsd:complexType name="GetEArchiveInvoiceResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="INVOICE" type="xmime:base64Binary" />
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="CancelEDefterRequest" type="CancelEDefterRequest" />
+  <xsd:complexType name="CancelEDefterRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="CancelEDefterContent">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" name="VKN" type="xsd:string" />
+            <xsd:element minOccurs="1" name="DONEM" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="CancelEDefterResponse" type="CancelEDefterResponse" />
+  <xsd:complexType name="CancelEDefterResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetGenericArchiveByPeriodRequest" type="GetGenericArchiveByPeriodRequest" />
+  <xsd:complexType name="GetGenericArchiveByPeriodRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="DONEM" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="VKN" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetGenericArchiveByPeriodResponse" type="GetGenericArchiveByPeriodResponse" />
+  <xsd:complexType name="GetGenericArchiveByPeriodResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="GEN_ARCHIVE_DOC" type="xmime:base64Binary" />
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetGenericArchiveStatusRequest" type="GetGenericArchiveStatusRequest" />
+  <xsd:complexType name="GetGenericArchiveStatusRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="DONEM" type="xsd:string" />
+      <xsd:element minOccurs="0" name="DONEM_PARCA_SAYISI" type="xsd:string" />
+      <xsd:element minOccurs="0" name="DONEM_PARCA_KODU" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetGenericArchiveStatusResponse" type="GetGenericArchiveStatusResponse" />
+  <xsd:complexType name="GetGenericArchiveStatusResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="GEN_ARCHIVE_DOC" type="xmime:base64Binary" />
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEmailEarchiveInvoiceRequest" type="GetEmailEarchiveInvoiceRequest" />
+  <xsd:complexType name="GetEmailEarchiveInvoiceRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="FATURA_UUID" type="xsd:string" />
+      <xsd:element minOccurs="0" name="FATURA_ID" type="xsd:string" />
+      <xsd:element minOccurs="0" name="EMAIL" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEmailEarchiveInvoiceResponse" type="GetEmailEarchiveInvoiceResponse" />
+  <xsd:complexType name="GetEmailEarchiveInvoiceResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="GEN_ARCHIVE_DOC" type="xmime:base64Binary" />
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="SendSmsEarchiveInvoiceRequest" type="SendSmsEarchiveInvoiceRequest" />
+  <xsd:complexType name="SendSmsEarchiveInvoiceRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="FATURA_UUID" type="xsd:string" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="TELEFON_NO" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="SendSmsEarchiveInvoiceResponse" type="SendSmsEarchiveInvoiceResponse" />
+  <xsd:complexType name="SendSmsEarchiveInvoiceResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="1" name="GEN_ARCHIVE_DOC" type="xmime:base64Binary" />
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEArchiveInvoiceListRequest" type="GetEArchiveInvoiceListRequest" />
+  <xsd:complexType name="GetEArchiveInvoiceListRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="0" name="LIMIT" type="xsd:int" />
+      <xsd:element minOccurs="0" name="ID" type="xsd:normalizedString" />
+      <xsd:element minOccurs="0" name="UUID" type="xsd:normalizedString" />
+      <xsd:element minOccurs="0" name="START_DATE" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" name="END_DATE" type="xsd:dateTime" />
+      <xsd:element minOccurs="0" name="PERIOD" type="xsd:string" />
+      <xsd:element minOccurs="0" name="PREFIX" type="xsd:string" />
+      <xsd:element minOccurs="0" name="REPORT_ID " type="xsd:int" />
+      <xsd:element minOccurs="0" name="REPORT_INCLUDED" type="xsd:boolean" />
+      <xsd:element minOccurs="0" name="REPORT_FLAG" type="xsd:string" />
+      <xsd:element minOccurs="0" default="N" name="HEADER_ONLY" type="xsd:token" />
+      <xsd:element minOccurs="0" default="XML" name="CONTENT_TYPE" type="xsd:string" />
+      <xsd:element minOccurs="0" name="READ_INCLUDED" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetEArchiveInvoiceListResponse" type="GetEArchiveInvoiceListResponse" />
+  <xsd:complexType name="GetEArchiveInvoiceListResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+      <xsd:element minOccurs="0" maxOccurs="10000" name="INVOICE" type="EARCHIVEINV" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EARCHIVEINV">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="HEADER">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="INVOICE_ID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="UUID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="SENDER_NAME" type="xsd:string" />
+            <xsd:element minOccurs="0" name="SENDER_IDENTIFIER" type="xsd:string" />
+            <xsd:element minOccurs="0" name="CUSTOMER_NAME" type="xsd:string" />
+            <xsd:element minOccurs="0" name="CUSTOMER_IDENTIFIER" type="xsd:string" />
+            <xsd:element minOccurs="0" name="PROFILE_ID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="INVOICE_TYPE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="EARCHIVE_TYPE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="SENDING_TYPE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="STATUS" type="xsd:string" />
+            <xsd:element minOccurs="0" name="STATUS_CODE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="ISSUE_DATE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="PAYABLE_AMOUNT" type="xsd:string" />
+            <xsd:element minOccurs="0" name="TAXABLE_AMOUNT" type="xsd:string" />
+            <xsd:element minOccurs="0" name="CURRENCY_CODE" type="xsd:string" />
+            <xsd:element minOccurs="0" name="REPORTED" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CONTENT" type="xmime:base64Binary" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="MarkEArchiveInvoiceRequest" type="MarkEArchiveInvoiceRequest" />
+  <xsd:complexType name="MarkEArchiveInvoiceRequest">
+    <xsd:sequence>
+      <xsd:sequence>
+        <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      </xsd:sequence>
+      <xsd:element minOccurs="1" name="MARK">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="EARCHIVE_INVOICE" type="EARCHIVEINV" />
+          </xsd:sequence>
+          <xsd:attribute name="value">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:enumeration value="READ" />
+                <xsd:enumeration value="UNREAD" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:attribute>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="MarkEArchiveInvoiceResponse" type="MarkEArchiveInvoiceResponse" />
+  <xsd:complexType name="MarkEArchiveInvoiceResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="EArchiveInvoiceCountRequest" type="EArchiveInvoiceCountRequest" />
+  <xsd:complexType name="EArchiveInvoiceCountRequest">
+    <xsd:sequence>
+      <xsd:sequence>
+        <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      </xsd:sequence>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" name="ISSUE_DATE_START" type="xsd:date" />
+        <xsd:element minOccurs="0" name="ISSUE_DATE_END" type="xsd:date" />
+        <xsd:element minOccurs="0" name="CDATE_START" type="xsd:date" />
+        <xsd:element minOccurs="0" name="CDATE_END" type="xsd:date" />
+      </xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="EArchiveInvoiceCountResponse" type="EArchiveInvoiceCountResponse" />
+  <xsd:complexType name="EArchiveInvoiceCountResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="PORTAL" type="xsd:int" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="WS" type="xsd:int" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetELedgerStatusRequest" type="GetELedgerStatusRequest" />
+  <xsd:complexType name="GetELedgerStatusRequest">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="e:REQUEST_HEADERType" />
+      <xsd:element minOccurs="1" maxOccurs="1" name="PERIOD" type="xsd:string" />
+      <xsd:element minOccurs="0" name="PART_NO" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="GetELedgerStatusResponse" type="GetELedgerStatusResponse" />
+  <xsd:complexType name="GetELedgerStatusResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="ELEDGER">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="PART_NO" type="xsd:string" />
+            <xsd:element minOccurs="0" name="IDENTIFIER" type="xsd:string" />
+            <xsd:element minOccurs="0" name="PERIOD" type="xsd:string" />
+            <xsd:element minOccurs="0" name="GIB_ARCHIVE_CONSENT" type="xsd:string" />
+            <xsd:element minOccurs="0" name="GIB_ARCHIVE_CONSENT_DATE" type="xsd:date" />
+            <xsd:element minOccurs="0" name="GIB_ARCHIVE_STATUS" type="xsd:int" />
+            <xsd:element minOccurs="0" name="GIB_ARCHIVE_STATUS_DESC" type="xsd:string" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="ELEDGER_DETAIL">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="1" name="UNIQUE_ID" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="TYPE" type="xsd:string" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="GIB_ARCHIVE_DATE" type="xsd:date" />
+                  <xsd:element minOccurs="0" maxOccurs="1" name="GIB_ARCHIVE_STATUS_DESC" type="xsd:string" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="e:REQUEST_RETURNType" />
+      <xsd:element minOccurs="0" name="ERROR_TYPE" type="e:REQUEST_ERRORType" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

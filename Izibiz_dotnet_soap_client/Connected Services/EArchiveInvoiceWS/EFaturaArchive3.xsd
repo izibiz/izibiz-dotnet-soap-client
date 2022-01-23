@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://schemas.i2i.com/ei/entity" xmlns:c="http://schemas.i2i.com/ei/common" targetNamespace="http://schemas.i2i.com/ei/entity" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/EIArchiveWS/EFaturaArchive?xsd=6" namespace="http://schemas.i2i.com/ei/common" />
+  <xsd:complexType name="REQUEST">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="REQUEST_HEADERType" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="REQUEST_HEADERType">
+    <xsd:annotation>
+      <xsd:documentation>Request related information context including data
+				such as SESSION_ID, INTL_TXN_ID etc.
+			</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="SESSION_ID" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Initiating domain Transaction ID of the action
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CLIENT_TXN_ID" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Initiating domain Transaction ID of the action
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="INTL_TXN_ID" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Internal Transaction ID
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="INTL_PARENT_TXN_ID" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Parent Transaction ID
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ACTION_DATE" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:documentation>Action Date provided by client system
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CHANGE_INFO" type="c:CHANGE_INFOType">
+        <xsd:annotation>
+          <xsd:documentation>See CHANGE_INFO type</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="REASON" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Reason of the Action</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="APPLICATION_NAME" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Application Name</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="HOSTNAME" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Initiating host name or IP address
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CHANNEL_NAME" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Initiating domain channel name of the action
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="SIMULATION_FLAG" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>A true or yes indicates that the request will be
+						executed but not committed
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="COMPRESSED" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Indicates parent message contains compressed
+						content
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="ATTRIBUTES" type="c:ATTRIBUTESTYPE">
+        <xsd:annotation>
+          <xsd:documentation>Attributes array that composed by name-value
+						pairs using for information manners.
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="API_KEY" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Request related information external customer key, it is not a SESSION_ID
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="REQUEST_RETURNType">
+    <xsd:annotation>
+      <xsd:documentation>Request response related context information
+				including data such as RETURN_CODE, DETAILED_RESULT
+				information etc.
+			</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="INTL_TXN_ID" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Internal TXN ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CLIENT_TXN_ID" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Initiating domain Transaction ID of the action
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RETURN_CODE" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Numeric return code of the action. 0: success,
+						negative: failure, positive: success with warning
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="WARNINGS" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="REQUEST_ERRORType">
+    <xsd:annotation>
+      <xsd:documentation>This will be fault type</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="INTL_TXN_ID" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Internal TXN ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CLIENT_TXN_ID" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Initiating domain Transaction ID of the action
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ERROR_CODE" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Error Code</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ERROR_SHORT_DES" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Error Short Description</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ERROR_LONG_DES" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Error Long Description</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="STACKTRACE" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>This is printStackTrace output...
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ERROR_ELEMENT_INDEX" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>In case of multiple requests this is the failing
+						element index
+					</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="REQUEST_INFOType">
+    <xsd:annotation>
+      <xsd:documentation>Detailed Information about the status of a request
+			</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="REQUEST_HEADERType">
+        <xsd:annotation>
+          <xsd:documentation>See REQUEST_HEADER type</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="REQUEST_RETURN" type="REQUEST_RETURNType">
+        <xsd:annotation>
+          <xsd:documentation>See REQUEST_RETURNType</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="REQUEST_ERROR" type="REQUEST_ERRORType">
+        <xsd:annotation>
+          <xsd:documentation>See REQUEST_ERRORType</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

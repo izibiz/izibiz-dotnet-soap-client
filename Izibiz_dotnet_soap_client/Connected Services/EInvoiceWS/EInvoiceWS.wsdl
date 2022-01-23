@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://schemas.i2i.com/ei/wsdl" xmlns:gib1="http://gib.gov.tr/vedop3/eFatura" name="EInvoiceWS" targetNamespace="http://schemas.i2i.com/ei/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/EInvoiceWS?xsd=4" namespace="http://schemas.i2i.com/ei/wsdl" />
+    </xsd:schema>
+    <xsd:schema xmlns:gib="http://gib.gov.tr/vedop3/eFatura" xmlns:ns1="http://www.w3.org/2005/05/xmlmime" targetNamespace="http://gib.gov.tr/vedop3/eFatura" version="1.0">
+      <xsd:element name="getAppRespRequest" type="gib:getAppRespRequestType" />
+      <xsd:element name="getAppRespResponse" type="gib:getAppRespResponseType" />
+      <xsd:complexType name="getAppRespRequestType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="instanceIdentifier" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getAppRespResponseType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="applicationResponse" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginRequestMessage">
+    <wsdl:part name="request" element="tns:LoginRequest" />
+  </wsdl:message>
+  <wsdl:message name="LoginResponseMessage">
+    <wsdl:part name="response" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutRequestMessage">
+    <wsdl:part name="request" element="tns:LogoutRequest" />
+  </wsdl:message>
+  <wsdl:message name="LogoutResponseMessage">
+    <wsdl:part name="response" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadInvoiceRequestMessage">
+    <wsdl:part name="request" element="tns:LoadInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="LoadInvoiceResponseMessage">
+    <wsdl:part name="response" element="tns:LoadInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendInvoiceRequestMessage">
+    <wsdl:part name="request" element="tns:SendInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="SendInvoiceResponseMessage">
+    <wsdl:part name="response" element="tns:SendInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceRequestMessage">
+    <wsdl:part name="request" element="tns:GetInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceResponseMessage">
+    <wsdl:part name="response" element="tns:GetInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="MarkInvoiceRequestMessage">
+    <wsdl:part name="request" element="tns:MarkInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="MarkInvoiceResponseMessage">
+    <wsdl:part name="response" element="tns:MarkInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListRequestMessage">
+    <wsdl:part name="request" element="tns:GetUserListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListResponseMessage">
+    <wsdl:part name="response" element="tns:GetUserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListBinaryRequestMessage">
+    <wsdl:part name="request" element="tns:GetUserListBinaryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListBinaryResponseMessage">
+    <wsdl:part name="response" element="tns:GetUserListBinaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserRequestMessage">
+    <wsdl:part name="request" element="tns:CheckUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="CheckUserResponseMessage">
+    <wsdl:part name="response" element="tns:CheckUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceStatusRequestMessage">
+    <wsdl:part name="request" element="tns:GetInvoiceStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceStatusResponseMessage">
+    <wsdl:part name="response" element="tns:GetInvoiceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceStatusAllRequestMessage">
+    <wsdl:part name="request" element="tns:GetInvoiceStatusAllRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceStatusAllResponseMessage">
+    <wsdl:part name="response" element="tns:GetInvoiceStatusAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrepareInvoiceResponseRequestMessage">
+    <wsdl:part name="request" element="tns:PrepareInvoiceResponseRequest" />
+  </wsdl:message>
+  <wsdl:message name="PrepareInvoiceResponseResponseMessage">
+    <wsdl:part name="response" element="tns:PrepareInvoiceResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendInvoiceResponseRequestMessage">
+    <wsdl:part name="request" element="tns:SendInvoiceResponseRequest" />
+  </wsdl:message>
+  <wsdl:message name="SendInvoiceResponseResponseMessage">
+    <wsdl:part name="response" element="tns:SendInvoiceResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendInvoiceResponseWithServerSignRequestMessage">
+    <wsdl:part name="request" element="tns:SendInvoiceResponseWithServerSignRequest" />
+  </wsdl:message>
+  <wsdl:message name="SendInvoiceResponseWithServerSignResponseMessage">
+    <wsdl:part name="response" element="tns:SendInvoiceResponseWithServerSignResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEnvelopeRequestMessage">
+    <wsdl:part name="request" element="tns:GetEnvelopeRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEnvelopeResponseMessage">
+    <wsdl:part name="response" element="tns:GetEnvelopeResponse" />
+  </wsdl:message>
+  <wsdl:message name="MarkEnvelopeRequestMessage">
+    <wsdl:part name="request" element="tns:MarkEnvelopeRequest" />
+  </wsdl:message>
+  <wsdl:message name="MarkEnvelopeResponseMessage">
+    <wsdl:part name="response" element="tns:MarkEnvelopeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEnvelopeStatusRequestMessage">
+    <wsdl:part name="request" element="tns:GetEnvelopeStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEnvelopeStatusResponseMessage">
+    <wsdl:part name="response" element="tns:GetEnvelopeStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationResponseMessage">
+    <wsdl:part name="request" element="gib1:getAppRespRequest" />
+  </wsdl:message>
+  <wsdl:message name="getApplicationResponseResponseMessage">
+    <wsdl:part name="response" element="gib1:getAppRespResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceWithTypeRequestMessage">
+    <wsdl:part name="request" element="tns:GetInvoiceWithTypeRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceWithTypeResponseMessage">
+    <wsdl:part name="response" element="tns:GetInvoiceWithTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceCountRequestMessage">
+    <wsdl:part name="request" element="tns:GetInvoiceCountRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceCountResponseMessage">
+    <wsdl:part name="response" element="tns:GetInvoiceCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelDraftInvoiceRequestMessage">
+    <wsdl:part name="request" element="tns:CancelDraftInvoiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelDraftInvoiceResponseMessage">
+    <wsdl:part name="response" element="tns:CancelDraftInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestFaultMessage">
+    <wsdl:part name="parameters" element="tns:RequestFault" />
+  </wsdl:message>
+  <wsdl:portType name="EInvoiceWSPort">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginRequestMessage" />
+      <wsdl:output message="tns:LoginResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input message="tns:LogoutRequestMessage" />
+      <wsdl:output message="tns:LogoutResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadInvoice">
+      <wsdl:input message="tns:LoadInvoiceRequestMessage" />
+      <wsdl:output message="tns:LoadInvoiceResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendInvoice">
+      <wsdl:input message="tns:SendInvoiceRequestMessage" />
+      <wsdl:output message="tns:SendInvoiceResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoice">
+      <wsdl:input message="tns:GetInvoiceRequestMessage" />
+      <wsdl:output message="tns:GetInvoiceResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkInvoice">
+      <wsdl:input message="tns:MarkInvoiceRequestMessage" />
+      <wsdl:output message="tns:MarkInvoiceResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserList">
+      <wsdl:input message="tns:GetUserListRequestMessage" />
+      <wsdl:output message="tns:GetUserListResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListBinary">
+      <wsdl:input message="tns:GetUserListBinaryRequestMessage" />
+      <wsdl:output message="tns:GetUserListBinaryResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <wsdl:input message="tns:CheckUserRequestMessage" />
+      <wsdl:output message="tns:CheckUserResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceStatus">
+      <wsdl:input message="tns:GetInvoiceStatusRequestMessage" />
+      <wsdl:output message="tns:GetInvoiceStatusResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceStatusAll">
+      <wsdl:input message="tns:GetInvoiceStatusAllRequestMessage" />
+      <wsdl:output message="tns:GetInvoiceStatusAllResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareInvoiceResponse">
+      <wsdl:input message="tns:PrepareInvoiceResponseRequestMessage" />
+      <wsdl:output message="tns:PrepareInvoiceResponseResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendInvoiceResponse">
+      <wsdl:input message="tns:SendInvoiceResponseRequestMessage" />
+      <wsdl:output message="tns:SendInvoiceResponseResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendInvoiceResponseWithServerSign">
+      <wsdl:input message="tns:SendInvoiceResponseWithServerSignRequestMessage" />
+      <wsdl:output message="tns:SendInvoiceResponseWithServerSignResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnvelope">
+      <wsdl:input message="tns:GetEnvelopeRequestMessage" />
+      <wsdl:output message="tns:GetEnvelopeResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkEnvelope">
+      <wsdl:input message="tns:MarkEnvelopeRequestMessage" />
+      <wsdl:output message="tns:MarkEnvelopeResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnvelopeStatus">
+      <wsdl:input message="tns:GetEnvelopeStatusRequestMessage" />
+      <wsdl:output message="tns:GetEnvelopeStatusResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationResponse">
+      <wsdl:input message="tns:getApplicationResponseMessage" />
+      <wsdl:output message="tns:getApplicationResponseResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceWithType">
+      <wsdl:input message="tns:GetInvoiceWithTypeRequestMessage" />
+      <wsdl:output message="tns:GetInvoiceWithTypeResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceCount">
+      <wsdl:input message="tns:GetInvoiceCountRequestMessage" />
+      <wsdl:output message="tns:GetInvoiceCountResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelDraftInvoice">
+      <wsdl:input message="tns:CancelDraftInvoiceRequestMessage" />
+      <wsdl:output message="tns:CancelDraftInvoiceResponseMessage" />
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EInvoiceWSPortBinding" type="tns:EInvoiceWSPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoadInvoice">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendInvoice">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoice">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MarkInvoice">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserList">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListBinary">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceStatus">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceStatusAll">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareInvoiceResponse">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendInvoiceResponse">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendInvoiceResponseWithServerSign">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnvelope">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MarkEnvelope">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnvelopeStatus">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getApplicationResponse">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceWithType">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceCount">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelDraftInvoice">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault use="literal" name="RequestFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EInvoiceWS">
+    <wsdl:port name="EInvoiceWSPort" binding="tns:EInvoiceWSPortBinding">
+      <soap:address location="https://efaturatest.izibiz.com.tr:443/EInvoiceWS" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
