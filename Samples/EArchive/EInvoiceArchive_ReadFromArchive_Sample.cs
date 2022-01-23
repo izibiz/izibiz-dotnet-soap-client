@@ -14,14 +14,14 @@ using NUnit.Framework;
 
 namespace Samples.EArchive
 {
-    // [Ignore("Waiting for Joe to fix his bugs", Until = "2022-07-31 12:00:00Z")]
+   
     class EInvoiceArchive_ReadFromArchive_Sample
     {
         private readonly IzibizClient _izibizClient = new IzibizClient();
 
         [Test]
         public void ReadFromArchive_PDF()
-        {//Compressed alanımız N de olsa Y de olsa pdf te 1 kere zipleme yapar
+        {
             var request = new ArchiveInvoiceReadRequest
             {
                 REQUEST_HEADER = BaseAdapter.EArchiveRequestHeaderType(),
@@ -44,7 +44,7 @@ namespace Samples.EArchive
 
           [Test]
         public void ReadFromArchive_XML()
-        {//XML DE COMPRESSED ALANI N VEYA Y OLSADA ZİPLİ GELMİYOR.
+        {
             var deger = BaseAdapter.EArchiveRequestHeaderType();
             deger.COMPRESSED = nameof(EI.YesNo.N);
             var request = new ArchiveInvoiceReadRequest
@@ -69,7 +69,7 @@ namespace Samples.EArchive
 
          [Test]
         public void ReadFromArchive_HTML()
-        {//Compressed alanımız Y İKEN 2 KERE ZİPLİ GELİYOR N İKEN RESPONSE.INVOİCE VERİMİZ ZİPSİZ HALDE GELİR.
+        {
             var deger = BaseAdapter.EArchiveRequestHeaderType();
             deger.COMPRESSED = nameof(EI.YesNo.Y);
             var request = new ArchiveInvoiceReadRequest
@@ -85,7 +85,7 @@ namespace Samples.EArchive
             Assert.IsTrue(response.INVOICE.Length > 0);
             string decodedString = Encoding.UTF8.GetString(response.INVOICE[0].Value);
 
-            string yeni = Convert.ToBase64String(response.INVOICE[0].Value);//Gelen byte değerini base64 string'e çeviriliyor.
+            string yeni = Convert.ToBase64String(response.INVOICE[0].Value);
 
             if (response.INVOICE[0].Value != null)
             {

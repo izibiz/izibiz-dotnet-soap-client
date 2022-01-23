@@ -13,7 +13,7 @@ using NUnit.Framework;
 
 namespace Samples.EInvoice
 {
-   // [Ignore("Waiting for Joe to fix his bugs", Until = "2024-07-31 12:00:00Z")]
+   
     class EInvoice_MarkInvoice_Sample
     {
         private readonly IzibizClient _izibizClient = new IzibizClient();
@@ -38,9 +38,8 @@ namespace Samples.EInvoice
             };
             MarkInvoiceResponse response = _izibizClient.EInvoice().markInvoice(request);
             Assert.AreEqual(response.REQUEST_RETURN.RETURN_CODE, 0);
-           // EInvoice_GetInvoice_Sample eInvoice_GetInvoice_Sample = new EInvoice_GetInvoice_Sample();
-            //eInvoice_GetInvoice_Sample.GetInvoice_BetweenDate();//Alındı olarak işaretlendi faturalar getinvoice tekrar istekte bulunursak farklı okunmamış faturaları getirir.
-        }
+
+       }
 
         [Test]
         public void MarkInvoice_UnRead()

@@ -53,5 +53,18 @@ namespace Izibiz_dotnet_soap_client.Operations
         }
 
 
+        public static string XmlSerializeReceipt(ReceiptAdviceType receiptType)
+        {
+            using (var stringwriter = new Utf8StringWriter())
+            {
+                var serializer = new XmlSerializer(receiptType.GetType());
+                serializer.Serialize(stringwriter, receiptType, ReceiptSerializer.GetXmlSerializerNamespace());
+                xmlString = stringwriter.ToString();
+            }
+
+            return xmlString;
+        }
+
+
     }
 }

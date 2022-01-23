@@ -21,13 +21,6 @@ namespace Izibiz_dotnet_soap_client
 
             foreach (XElement element in doc.Descendants())
             {
-                if(element.Name.LocalName.Equals("EmbeddedDocumentBinaryObject")) {
-
-                    Console.WriteLine("deneme");
-
-                }
-                //if (element.Name.LocalName.ToString().Equals("EmbeddedDocumentBinaryObject")
-                //       && element.Parent.Name.LocalName.ToString().Equals("Attachment"))
                     if (element.Name.LocalName.Equals("EmbeddedDocumentBinaryObject")
                         && element.Parent.Name.LocalName.Equals("Attachment")
                       && element.HasAttributes && element.Attribute("filename") != null
@@ -54,7 +47,7 @@ namespace Izibiz_dotnet_soap_client
            
             byte[] data = System.Convert.FromBase64String(xslEncoded);
             string decodedXslt = System.Text.UTF8Encoding.UTF8.GetString(data);
-            //  string decodedXslt = Encoding.UTF8.GetString(Convert.FromBase64String(xslEncoded));
+            
          
             using (StringReader srt = new StringReader(decodedXslt)) // xslInput is a string that contains xsl
             using (StringReader sri = new StringReader(inputXml)) // xmlInput is a string that contains xml

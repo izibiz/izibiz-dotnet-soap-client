@@ -120,7 +120,6 @@
     <Compile Include="Ubl\UblReceipt.cs" />
     <Compile Include="Ubl\UblInvoice.cs" />
     <Compile Include="Ubl\Xslt.cs" />
-    <Compile Include="UblEditor.cs" />
     <Compile Include="XmlProcess.cs" />
   </ItemGroup>
   <ItemGroup>

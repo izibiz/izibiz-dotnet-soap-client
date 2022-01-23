@@ -162,17 +162,6 @@ namespace Izibiz_dotnet_soap_client.Operations
         }
 
 
-        //public static byte[] InvoiceUnzip(byte[] xmlContent, string compressed)
-        //{
-        //    if (compressed.Equals(nameof(EI.YesNo.Y)) || compressed.Equals(nameof(EI.YesNo.NULL)))
-        //    {
-        //        return xmlContent = Compress.ZipFile(xmlContent);
-        //    }
-
-        //    return xmlContent;
-
-        //}
-
         public static byte[] DocumentUnzip(byte[] xmlContent, string compressed)
         {
             if (compressed.Equals(nameof(EI.YesNo.Y)))
@@ -195,23 +184,6 @@ namespace Izibiz_dotnet_soap_client.Operations
             return xmlContent;
         }
 
-        //public static byte[] CreditNoteUnzip(byte[] xmlContent, string compressed)
-        //{
-        //    if (compressed.Equals(nameof(EI.YesNo.Y)))
-        //    {
-        //        return xmlContent = Compress.ZipFile(xmlContent);
-        //    }
-        //    return xmlContent;
-        //}
-
-        //public static byte[] ReceiptUnzip(byte[] xmlContent, string compressed)
-        //{
-        //    if (compressed.Equals(nameof(EI.YesNo.Y)))
-        //    {
-        //        return xmlContent = Compress.ZipFile(xmlContent);
-        //    }
-        //    return xmlContent;
-        //}
 
     }
 }

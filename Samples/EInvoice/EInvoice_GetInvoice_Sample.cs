@@ -21,9 +21,9 @@ using System.Collections;
 
 namespace Samples.EInvoice
 {
- //[Ignore("Waiting for Joe to fix his bugs", Until = "2022-07-31 12:00:00Z")]
+ 
     class EInvoice_GetInvoice_Sample
-    {//HEADER_ONLY Y İken content alanı gelmez N iken foreach döngüsüne GİRER.
+    {
         private readonly IzibizClient _izibizClient = new IzibizClient();
 
 

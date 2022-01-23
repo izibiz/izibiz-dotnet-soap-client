@@ -1,1 +1,0 @@
-<Playlist Version="1.0"><Add Test="Samples.EInvoice.EInvoice_GetInvoiceStatus_Sample.GetInvoiceStatusAll" /><Add Test="Samples.EInvoice.EInvoiceSample.LoadInvoice" /></Playlist>

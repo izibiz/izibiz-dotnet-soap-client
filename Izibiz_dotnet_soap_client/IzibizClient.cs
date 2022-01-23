@@ -4,7 +4,6 @@ namespace Izibiz_dotnet_soap_client
 {
     public class IzibizClient
     {
-        private const string BaseUrl = "";    
         private readonly AuthAdapter _authAdapter;
         private readonly EInvoiceAdapter _eInvoiceAdapter;
         private readonly EArchiveInvoiceAdapter _eInvoiceArchiveAdapter;

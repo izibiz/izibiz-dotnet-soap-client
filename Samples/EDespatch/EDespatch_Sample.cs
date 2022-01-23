@@ -30,10 +30,6 @@ namespace Samples.DespatchS
         {
             despatchType = despatch.baseDespatchUBL;
 
-           // despatchType.ID.Value = "IRS2022000000013";
-            //despatchType.Signature[0].DigitalSignatureAttachment.ExternalReference.URI.Value = string.Format("{0}{1}", "#Signature_", despatchType.ID.Value);
-            //despatchType.AdditionalDocumentReference[0].Attachment.EmbeddedDocumentBinaryObject.filename = despatchType.ID.Value + ".xslt";
-
             String xmlString = null;
             
             xmlString = XmlSerializerr.XmlSerializeDespatch(despatchType);
@@ -84,10 +80,7 @@ namespace Samples.DespatchS
         {// birden fazla irsaliye yüklenecekse basebinary de dizi olarak tanımlanmalıdır.
            
             despatchType = despatch.baseDespatchUBL;
-           // despatchType.ID.Value = "IRS2022000000013";
-            //despatchType.Signature[0].DigitalSignatureAttachment.ExternalReference.URI.Value= string.Format("{0}{1}", "#Signature_", despatchType.ID.Value);
-            //despatchType.AdditionalDocumentReference[0].Attachment.EmbeddedDocumentBinaryObject.filename = despatchType.ID.Value + ".xslt";
-
+          
             String xmlString = null;
 
             xmlString = XmlSerializerr.XmlSerializeDespatch(despatchType);
@@ -133,7 +126,7 @@ namespace Samples.DespatchS
                 {
                     LIMIT = 10,
                     LIMITSpecified = true,
-                    READ_INCLUDED = false,
+                    READ_INCLUDED = true,
                     READ_INCLUDEDSpecified = true,
                     START_DATE = Convert.ToDateTime("2021-12-28"),
                     START_DATESpecified = true,
@@ -178,7 +171,6 @@ namespace Samples.DespatchS
                     UUID= "B537A0C8-9150-DE37-11AD-04D29850DA1B",
                     READ_INCLUDED = true,
                     READ_INCLUDEDSpecified = true,
-                    
                     DIRECTION = nameof(EI.Direction.IN)
                 },
                 HEADER_ONLY = nameof(EI.YesNo.N)
@@ -228,7 +220,7 @@ namespace Samples.DespatchS
             MarkDespatchAdviceResponse response = _izibizClient.EDespatch().MarkDespatchAdviceResponse(request);
             Assert.Null(response.ERROR_TYPE);
             Assert.AreEqual(response.REQUEST_RETURN.RETURN_CODE,0);
-            GetDespatch();
+            GetDespatch();//çekilen irsaliyeler listede bir daha gelmemesi için okundu  işaretlendi tekrar irsaliyeleri çekince farklı irsaliyeler gelir.
         }
 
     }

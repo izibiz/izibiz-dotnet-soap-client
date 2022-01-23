@@ -16,7 +16,7 @@ using UblInvoice;
 
 namespace Samples.EArchive
 {
-   // [Ignore("Waiting for Joe to fix his bugs", Until = "2022-07-31 12:00:00Z")]
+   
     class EInvoiceArchiveSample
     {
         private readonly IzibizClient _izibizClient = new IzibizClient();
@@ -142,7 +142,7 @@ namespace Samples.EArchive
             Assert.AreEqual(response.REQUEST_RETURN.RETURN_CODE, 0);
         }
 
-        [Test]//portaltest sorunu test edilemedi.
+        [Test]
         public void ReadEArchiveReport()
         {
             var request = new ReadEArchiveReportRequest

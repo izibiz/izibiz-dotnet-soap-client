@@ -18,7 +18,7 @@ using Izibiz_dotnet_soap_client.Operations;
 
 namespace Samples.EInvoice
 {
-   // [Ignore("Waiting for Joe to fix his bugs", Until = "2024-07-31 12:00:00Z")]
+  
     class A10EInvoiceSample
     {
         private readonly IzibizClient _izibizClient = new IzibizClient();
@@ -67,13 +67,10 @@ namespace Samples.EInvoice
            
             base64Binary[] base64binary = new base64Binary[1];
 
-            //xmldeki değişen alanlar
+       
             invoice = new InvoiceUBL();
             invoiceType = invoice.baseInvoiceUBL;
-               
-            //invoiceType.Signature[0].DigitalSignatureAttachment.ExternalReference.URI.Value =string.Format("{0}{1}", "#Signature_", invoiceType.ID.Value);
-            //invoiceType.AdditionalDocumentReference[0].Attachment.EmbeddedDocumentBinaryObject.filename = invoiceType.ID.Value + ".xslt";
-
+            
             string xmlString = XmlSerializerr.XmlSerializeInvoice(invoiceType);
 
             byte[] zipFile = Compress.compressFile(xmlString);
@@ -118,7 +115,7 @@ namespace Samples.EInvoice
             uuidList.Add(invoiceType.UUID.Value);
         }
 
-         //[Test]//ticari faturaya kabul veya red
+         [Test]//ticari faturaya kabul veya red
         public void SendInvoiceResponseWithServerSign()
         {// gelen ticari faturalara  uygulama yanıtı göndermeyi sağlayan servistir.(red veya kabul)
 

@@ -12,7 +12,7 @@ using NUnit.Framework;
 
 namespace Samples.EInvoice
 {
-  //  [Ignore("Waiting for Joe to fix his bugs", Until = "2024-07-31 12:00:00Z")]
+  
     class A11EInvoice_GetInvoiceStatus_Sample
     { 
         private readonly IzibizClient _izibizClient = new IzibizClient();

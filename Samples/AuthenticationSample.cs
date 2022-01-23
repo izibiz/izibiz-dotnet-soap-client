@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using Izibiz_dotnet_soap_client;
 using Izibiz_dotnet_soap_client.Adapter;
 using Izibiz_dotnet_soap_client.AuthenticationWS;
+using Izibiz_dotnet_soap_client.Operations;
 using NUnit.Framework;
 
 namespace Samples
 {
-  // [Ignore("Waiting for Joe to fix his bugs", Until = "2024-07-31 12:00:00Z")]
     class AuthenticationSample
     {
         private readonly IzibizClient _izibizClient = new IzibizClient();
@@ -105,7 +105,8 @@ namespace Samples
             Assert.NotNull(response.CONTENT);
             Assert.NotNull(response.CONTENT.Value);
             Assert.IsTrue(response.CONTENT.Value.Length > 0);
-            File.WriteAllBytes(@"C:\Users\meryem.aksu\Desktop\yeni.zip", response.CONTENT.Value);
+            byte[] gibUserList= Compress.ZipFile(response.CONTENT.Value);           
+            File.WriteAllBytes(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+@"\GibUserList.xml", gibUserList);
         }
 
     //    [Test,Order(5)]

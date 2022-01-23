@@ -27,30 +27,25 @@ namespace Samples.Receipt
         ReceiptUBL receipt = new ReceiptUBL();
         ReceiptAdviceType receiptType;
 
-         [Test,Order(2)]
+        [Test, Order(2)]
         public void SendReceipt()
-      {// 1 irsaliye 1 kez yanıt gönderilir. yanıt gönderilebilmesi için irsaliyenin ıd ve uuisi xmlde ilgili alana yazılır.
+        {// 1 irsaliye 1 kez yanıt gönderilir. yanıt gönderilebilmesi için irsaliyenin ıd ve uuisi xmlde ilgili alana yazılır.
             receiptType = receipt.baseReceiptUBL;
 
             String xmlString = null;
 
-            using (var stringwriter = new Utf8StringWriter())
-            {
-                var serializer = new XmlSerializer(receiptType.GetType());
-                serializer.Serialize(stringwriter, receiptType, ReceiptSerializer.GetXmlSerializerNamespace());
-                xmlString = stringwriter.ToString();
-            }
+            xmlString = XmlSerializerr.XmlSerializeReceipt(receiptType);
 
             base64Binary base64binary = new base64Binary();
             base64binary.contentType = nameof(EI.DocumentType.XML);
 
-            byte[] zipFile =  Compress.compressFile(xmlString);
+            byte[] zipFile = Compress.compressFile(xmlString);
             base64binary.Value = zipFile;
 
             var request = new SendReceiptAdviceRequest
             {
                 REQUEST_HEADER = BaseAdapter.EDespatchWSRequestHeaderType(),
-                RECEIPTADVICE=new RECEIPTADVICE[]
+                RECEIPTADVICE = new RECEIPTADVICE[]
                 {
                     new RECEIPTADVICE
                     {
@@ -64,25 +59,20 @@ namespace Samples.Receipt
             if (response.REQUEST_RETURN.RETURN_CODE == 0)
             {
                 // FolderPath.FileYesNo(nameof(EI.FileName.RECEIPTSEND), receiptType.ID.Value, receiptType.UUID.Value, zipFile);
-                FolderPath.SendAndLoadSaveToDisk(nameof(EI.FileName.RECEIPTSEND), receiptType.ID.Value, receiptType.UUID.Value, zipFile,nameof(EI.Type.RECEIPT));
+                FolderPath.SendAndLoadSaveToDisk(nameof(EI.FileName.RECEIPTSEND), receiptType.ID.Value, receiptType.UUID.Value, zipFile, nameof(EI.Type.RECEIPT));
                 uuidList.Add(receiptType.UUID.Value);
             }
         }
 
-        [Test,Order(1)]
+        [Test, Order(1)]
         public void LoadReceipt()
-        {//gelen irsaliyenin bilgileri BaseReceiptUBL.cs de doldurulur.
-            receipt = new ReceiptUBL();
+        {
+
             receiptType = receipt.baseReceiptUBL;
 
             String xmlString = null;
 
-            using (var stringwriter = new Utf8StringWriter())
-            {
-                var serializer = new XmlSerializer(receiptType.GetType());
-                serializer.Serialize(stringwriter, receiptType, ReceiptSerializer.GetXmlSerializerNamespace());
-                xmlString = stringwriter.ToString();
-            }
+            xmlString = XmlSerializerr.XmlSerializeReceipt(receiptType);
 
             byte[] zipFile = Compress.compressFile(xmlString);
 
@@ -99,17 +89,14 @@ namespace Samples.Receipt
                     CONTENT =base64binary,
                    }
                 },
-                
             };
-
-
             LoadReceiptAdviceResponse response = _izibizClient.EDespatch().LoadReceiptAdviceResponse(request);
             Assert.Null(response.ERROR_TYPE);
             Assert.AreEqual(response.REQUEST_RETURN.RETURN_CODE, 0);
 
             if (response.REQUEST_RETURN.RETURN_CODE == 0)
             {
-                FolderPath.SendAndLoadSaveToDisk(nameof(EI.FileName.RECEIPTLOAD), receiptType.ID.Value, receiptType.UUID.Value, zipFile,nameof(EI.Type.RECEIPT));
+                FolderPath.SendAndLoadSaveToDisk(nameof(EI.FileName.RECEIPTLOAD), receiptType.ID.Value, receiptType.UUID.Value, zipFile, nameof(EI.Type.RECEIPT));
                 uuidList.Add(receiptType.UUID.Value);
             }
 
@@ -132,7 +119,7 @@ namespace Samples.Receipt
         }
 
 
-        [Test,Order(5)]
+        [Test, Order(5)]
         public void MarkReceiptAdvice_Read()
         {
             var request = new MarkReceiptAdviceRequest
@@ -151,7 +138,7 @@ namespace Samples.Receipt
         }
 
 
-       [Test, Order(6)]
+        [Test, Order(6)]
         public void MarkReceiptAdvice_Unread()
         {
             var request = new MarkReceiptAdviceRequest
@@ -202,7 +189,7 @@ namespace Samples.Receipt
                 }
             }
             receiptToMarkRange = new RECEIPTADVICEINFO[response.RECEIPTADVICE.Length];
-            receiptToMarkRange = response.RECEIPTADVICE.Select(a => new RECEIPTADVICE() {UUID = a.UUID }).ToList().ToArray();
+            receiptToMarkRange = response.RECEIPTADVICE.Select(a => new RECEIPTADVICE() { UUID = a.UUID }).ToList().ToArray();
         }
 
     }

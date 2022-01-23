@@ -16,8 +16,7 @@ using NUnit.Framework;
 
 namespace Samples.EInvoice
 {
-   // [Ignore("Waiting for Joe to fix his bugs", Until = "2024-07-31 12:00:00Z")]
-    //bu class tek başına çalışmaktadır.
+   
     class EInvoice_GetInvoiceWithType_Sample
     {
         private readonly IzibizClient _izibizClient = new IzibizClient();

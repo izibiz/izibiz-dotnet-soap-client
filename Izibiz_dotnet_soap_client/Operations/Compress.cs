@@ -33,7 +33,7 @@ namespace Izibiz_dotnet_soap_client.Operations
 
         public static byte[] compressFile(string xmlContent)
         {
-            BaseInvoiceUBL invoiceUbl = new BaseInvoiceUBL();
+            
             byte[] xml = Encoding.UTF8.GetBytes(xmlContent);
             string value=null;
             XDocument doc = XDocument.Parse(xmlContent);
