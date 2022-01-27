@@ -10,9 +10,9 @@ using Izibiz_dotnet_soap_client.AuthenticationWS;
 using Izibiz_dotnet_soap_client.Operations;
 using NUnit.Framework;
 
-namespace Samples
+namespace Samples.Authentication
 {
-    [Ignore("Waiting for Joe to fix his bugs", Until = "2022-07-31 12:00:00Z")]
+    
     class AuthenticationSample
     {
         private readonly IzibizClient _izibizClient = new IzibizClient();
