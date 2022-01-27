@@ -56,7 +56,7 @@ namespace Izibiz_dotnet_soap_client.UblCreate
         {
 
             var arcRef = new DocumentReferenceType();
-            arcRef.ID = new IDType { Value = Guid.NewGuid().ToString() };
+            arcRef.ID = new IDType { Value = "1"};
             arcRef.IssueDate = baseInvoiceUBL.IssueDate;
             arcRef.DocumentType = new DocumentTypeType { Value = "KAGIT" };
             arcRef.DocumentTypeCode = new DocumentTypeCodeType { Value = "SendingType" };
@@ -64,6 +64,7 @@ namespace Izibiz_dotnet_soap_client.UblCreate
 
             baseInvoiceUBL.AdditionalDocumentReference = docRefList.ToArray();
         }
+
         public static PartyType createParty(string partyName, string cityName, string telephone, string mail, string VKN)
         {
             PartyType party = new PartyType();

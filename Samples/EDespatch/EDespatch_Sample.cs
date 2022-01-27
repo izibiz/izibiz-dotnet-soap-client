@@ -16,7 +16,7 @@ using Izibiz_dotnet_soap_client.Operations;
 
 namespace Samples.DespatchS
 {
-  // [Ignore("Waiting for Joe to fix his bugs", Until = "2022-07-31 12:00:00Z")]
+  
     class EDespatch_Sample
     {
         private readonly IzibizClient _izibizClient = new IzibizClient();
@@ -67,7 +67,7 @@ namespace Samples.DespatchS
             Assert.Null(response.ERROR_TYPE);
             if (response.REQUEST_RETURN.RETURN_CODE == 0)
             {
-                FolderPath.SendAndLoadSaveToDisk(nameof(EI.FileName.SENDDESPATCH), despatchType.ID.Value, despatchType.UUID.Value, zipFile,nameof(EI.Type.DESPATCH));
+                FileOperations.SendAndLoadSaveToDisk(nameof(EI.FileName.SENDDESPATCH), despatchType.ID.Value, despatchType.UUID.Value, zipFile,nameof(EI.Type.DESPATCH));
             }
             uuidList.Add(despatchType.UUID.Value);
 
@@ -110,7 +110,7 @@ namespace Samples.DespatchS
             Assert.AreEqual(response.REQUEST_RETURN.RETURN_CODE, 0);
             if (response.REQUEST_RETURN.RETURN_CODE == 0)
             {
-                FolderPath.SendAndLoadSaveToDisk(nameof(EI.FileName.LOADDESPATCH), despatchType.ID.Value, despatchType.UUID.Value, zipFile,nameof(EI.Type.DESPATCH));
+                FileOperations.SendAndLoadSaveToDisk(nameof(EI.FileName.LOADDESPATCH), despatchType.ID.Value, despatchType.UUID.Value, zipFile,nameof(EI.Type.DESPATCH));
             }
            uuidList.Add(despatchType.UUID.Value);
         }
@@ -143,7 +143,7 @@ namespace Samples.DespatchS
             {
                 foreach (DESPATCHADVICE inv in response.DESPATCHADVICE)
                 {
-                    FolderPath.SaveToDisk(inv.CONTENT.Value, inv.UUID, request.SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.DESPATCH), nameof(EI.DocumentType.NULL), inv.ID);
+                    FileOperations.SaveToDisk(inv.CONTENT.Value, inv.UUID, request.SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.DESPATCH), nameof(EI.DocumentType.NULL), inv.ID);
                 }
             }
             despatchAdviceInfo = new DESPATCHADVICEINFO[response.DESPATCHADVICE.Length];
@@ -183,7 +183,7 @@ namespace Samples.DespatchS
             {
                 foreach (DESPATCHADVICE inv in response.DESPATCHADVICE)
                 {
-                    FolderPath.SaveToDisk(inv.CONTENT.Value, inv.UUID, request.SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.DESPATCH), nameof(EI.DocumentType.NULL), inv.ID);
+                    FileOperations.SaveToDisk(inv.CONTENT.Value, inv.UUID, request.SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.DESPATCH), nameof(EI.DocumentType.NULL), inv.ID);
                 }
             }
             uuidList.Add(request.SEARCH_KEY.UUID);
@@ -220,7 +220,7 @@ namespace Samples.DespatchS
             MarkDespatchAdviceResponse response = _izibizClient.EDespatch().MarkDespatchAdviceResponse(request);
             Assert.Null(response.ERROR_TYPE);
             Assert.AreEqual(response.REQUEST_RETURN.RETURN_CODE,0);
-            GetDespatch();//çekilen irsaliyeler listede bir daha gelmemesi için okundu  işaretlendi tekrar irsaliyeleri çekince farklı irsaliyeler gelir.
+          //  GetDespatch();   //çekilen irsaliyeler listede bir daha gelmemesi için okundu  işaretlendi tekrar irsaliyeleri çekince farklı irsaliyeler gelir. Çalışabilmesi için getdespatchteki read included false olmalı
         }
 
     }

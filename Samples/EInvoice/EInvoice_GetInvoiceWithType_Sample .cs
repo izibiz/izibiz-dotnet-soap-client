@@ -54,7 +54,6 @@ namespace Samples.EInvoice
                 REQUEST_HEADER = BaseAdapter.EInvoiceWSRequestHeaderType(),
                 INVOICE_SEARCH_KEY = new GetInvoiceWithTypeRequestINVOICE_SEARCH_KEY
                 {
-                  //  UUID = "41001dd0-1a2c-48db-88a0-875f0f542fa5",
                     UUID=SingleUUID,
                     TYPE = nameof(EI.DocumentType.XML),
                     DIRECTION = nameof(EI.Direction.IN),
@@ -66,7 +65,8 @@ namespace Samples.EInvoice
             GetInvoiceWithTypeResponse response = _izibizClient.EInvoice().getInvoiceWThtml(request);
             Assert.NotNull(response.INVOICE);
             Assert.IsTrue(response.INVOICE.Length > 0);
-            FolderPath.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), request.INVOICE_SEARCH_KEY.TYPE, response.INVOICE[0].ID);
+            if (request.HEADER_ONLY == nameof(EI.YesNo.N))
+            { FileOperations.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), request.INVOICE_SEARCH_KEY.TYPE, response.INVOICE[0].ID); }
 
         }
 
@@ -90,7 +90,8 @@ namespace Samples.EInvoice
             GetInvoiceWithTypeResponse response = _izibizClient.EInvoice().getInvoiceWThtml(request);
             Assert.NotNull(response.INVOICE);
             Assert.IsTrue(response.INVOICE.Length > 0);
-            FolderPath.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), request.INVOICE_SEARCH_KEY.TYPE, response.INVOICE[0].ID);
+            if (request.HEADER_ONLY == nameof(EI.YesNo.N))
+            { FileOperations.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), request.INVOICE_SEARCH_KEY.TYPE, response.INVOICE[0].ID); }
         }
 
        [Test,Order(2)]
@@ -114,7 +115,8 @@ namespace Samples.EInvoice
             GetInvoiceWithTypeResponse response = _izibizClient.EInvoice().getInvoiceWTpDF(request);
             Assert.NotNull(response.INVOICE);
             Assert.IsTrue(response.INVOICE.Length > 0);
-            FolderPath.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), request.INVOICE_SEARCH_KEY.TYPE, response.INVOICE[0].ID);
+            if (request.HEADER_ONLY == nameof(EI.YesNo.N))
+            { FileOperations.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), request.INVOICE_SEARCH_KEY.TYPE, response.INVOICE[0].ID); }
         }
 
 
@@ -159,7 +161,8 @@ namespace Samples.EInvoice
             GetInvoiceWithTypeResponse response = _izibizClient.EInvoice().getInvoiceWThtmlOut(request);
             Assert.NotNull(response.INVOICE);
             Assert.IsTrue(response.INVOICE.Length > 0);
-            FolderPath.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), request.INVOICE_SEARCH_KEY.TYPE, response.INVOICE[0].ID);
+            if (request.HEADER_ONLY == nameof(EI.YesNo.N))
+            { FileOperations.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), request.INVOICE_SEARCH_KEY.TYPE, response.INVOICE[0].ID); }
         }
 
         [Test, Order(4)]
@@ -181,8 +184,9 @@ namespace Samples.EInvoice
             };
             GetInvoiceWithTypeResponse response = _izibizClient.EInvoice().getInvoiceWTpdfOut(request);
             Assert.NotNull(response.INVOICE);
-            Assert.IsTrue(response.INVOICE.Length > 0);           
-            FolderPath.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), request.INVOICE_SEARCH_KEY.TYPE, response.INVOICE[0].ID);
+            Assert.IsTrue(response.INVOICE.Length > 0);
+            if (request.HEADER_ONLY == nameof(EI.YesNo.N))
+            { FileOperations.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), request.INVOICE_SEARCH_KEY.TYPE, response.INVOICE[0].ID); }
         }
     }
 }

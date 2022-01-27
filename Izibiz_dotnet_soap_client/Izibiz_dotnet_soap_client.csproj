@@ -61,6 +61,7 @@
     <Compile Include="Adapter\CreditNoteAdapter.cs" />
     <Compile Include="Adapter\EDespatchAdapter.cs" />
     <Compile Include="Adapter\EArchiveInvoiceAdapter.cs" />
+    <Compile Include="Adapter\SmmAdapter.cs" />
     <Compile Include="Adapter\EInvoiceAdapter.cs" />
     <Compile Include="Adapter\AuthAdapter.cs" />
     <Compile Include="Adapter\BaseAdapter.cs" />
@@ -89,11 +90,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="EI.cs" />
+    <Compile Include="Connected Services\SmmWs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\EI.cs" />
     <Compile Include="IzibizClient.cs" />
     <Compile Include="Operations\FilePaths.cs" />
     <Compile Include="Operations\Compress.cs" />
     <Compile Include="Operations\FolderPath.cs" />
+    <Compile Include="Operations\XmlProcess.cs" />
     <Compile Include="Operations\XmlSerializerr.cs" />
     <Compile Include="Operations\Utf8StringWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,6 +109,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UblCreate\BaseESmmUBL.cs" />
+    <Compile Include="UblCreate\SmmUBL.cs" />
     <Compile Include="UblCreate\BaseReceiptUBL .cs" />
     <Compile Include="UblCreate\CreditNoteUBL .cs" />
     <Compile Include="UblCreate\ArchiveUBL.cs" />
@@ -120,7 +129,6 @@
     <Compile Include="Ubl\UblReceipt.cs" />
     <Compile Include="Ubl\UblInvoice.cs" />
     <Compile Include="Ubl\Xslt.cs" />
-    <Compile Include="XmlProcess.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -603,6 +611,55 @@
     <None Include="Connected Services\EIrsaliyeWS\Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.GetSmmReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.GetSmmReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.GetSmmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.GetSmmResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\SmmWS.wsdl" />
+    <None Include="Connected Services\SmmWs\SmmWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmmWs\SmmWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmmWs\SmmWS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmmWs\SmmWS3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -618,6 +675,7 @@
     <WCFMetadataStorage Include="Connected Services\EArchiveInvoiceWS\" />
     <WCFMetadataStorage Include="Connected Services\EInvoiceWS\" />
     <WCFMetadataStorage Include="Connected Services\EIrsaliyeWS\" />
+    <WCFMetadataStorage Include="Connected Services\SmmWs\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\AuthenticationWS\configuration91.svcinfo" />
@@ -675,6 +733,12 @@
     <None Include="Connected Services\CreditNoteWS\configuration91.svcinfo" />
     <None Include="Connected Services\CreditNoteWS\configuration.svcinfo" />
     <None Include="Connected Services\CreditNoteWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\SmmWs\configuration91.svcinfo" />
+    <None Include="Connected Services\SmmWs\configuration.svcinfo" />
+    <None Include="Connected Services\SmmWs\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

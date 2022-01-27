@@ -51,7 +51,7 @@ namespace Samples.EInvoice
             {
                 foreach (INVOICE inv in response.INVOICE)
                 {
-                    FolderPath.SaveToDisk(inv.CONTENT.Value, inv.UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), nameof(EI.DocumentType.NULL), inv.ID);
+                    FileOperations.SaveToDisk(inv.CONTENT.Value, inv.UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), nameof(EI.DocumentType.NULL), inv.ID);
 
                 }
             }
@@ -79,7 +79,7 @@ namespace Samples.EInvoice
             Assert.AreEqual(request.INVOICE_SEARCH_KEY.UUID, response.INVOICE[0].UUID);
             if (request.HEADER_ONLY == nameof(EI.YesNo.N))
             {
-                FolderPath.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), nameof(EI.DocumentType.NULL), response.INVOICE[0].ID);
+                FileOperations.SaveToDisk(response.INVOICE[0].CONTENT.Value, response.INVOICE[0].UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), nameof(EI.DocumentType.NULL), response.INVOICE[0].ID);
             }
         }
 
@@ -109,31 +109,12 @@ namespace Samples.EInvoice
             {
                 foreach (INVOICE inv in response.INVOICE)
                 {
-                    FolderPath.SaveToDisk(inv.CONTENT.Value, inv.UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), nameof(EI.DocumentType.NULL), inv.ID);
+                    FileOperations.SaveToDisk(inv.CONTENT.Value, inv.UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), nameof(EI.DocumentType.NULL), inv.ID);
                 }
             }
             BaseAdapter.invoiceToMarkInvoice = new INVOICE[response.INVOICE.Length];
-            //BaseAdapter.invoiceToMarkInvoice = response.INVOICE.ToList().Select(x => new INVOICE()
-            //{
-            //    ID = x.ID,
-            //    UUID = x.UUID
-            //}).ToArray();
-             BaseAdapter.invoiceToMarkInvoice = response.INVOICE.Select(a => new INVOICE() { ID = a.ID, UUID = a.UUID }).ToList().ToArray();
-          
-            //InvoiceMap clasında ıd ve uuid propertyleri mevcut
-            //BaseAdapter.inv = response.INVOICE.ToList().Select(x => new InvoiceMap()
-            //{
-            //    ID = x.ID,
-            //    UUID = x.UUID
-            //}).ToArray();
-
-            //BaseAdapter.invoiceToMarkInvoice = BaseAdapter.inv.ToList().Select(o =>
-            //      new INVOICE
-            //       {
-            //          ID = o.ID,
-            //          UUID = o.UUID
-            //        }).ToArray();
-        }
+            BaseAdapter.invoiceToMarkInvoice = response.INVOICE.Select(a => new INVOICE() { ID = a.ID, UUID = a.UUID }).ToList().ToArray();
+           }
 
           [Test]
         public void GetInvoice_Outgoing()
@@ -159,7 +140,7 @@ namespace Samples.EInvoice
             {
                 foreach (INVOICE inv in response.INVOICE)
                 {
-                    FolderPath.SaveToDisk(inv.CONTENT.Value, inv.UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), nameof(EI.DocumentType.NULL), inv.ID);
+                    FileOperations.SaveToDisk(inv.CONTENT.Value, inv.UUID, request.INVOICE_SEARCH_KEY.DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.INVOICE), nameof(EI.DocumentType.NULL), inv.ID);
                 }
             }
         }

@@ -37,7 +37,7 @@ namespace Izibiz_dotnet_soap_client.UblCreate
             idRef.Attachment.EmbeddedDocumentBinaryObject.encodingCode = "Base64";
             idRef.Attachment.EmbeddedDocumentBinaryObject.filename = baseDespatchUBL.ID.Value.ToString() + ".xslt";
             idRef.Attachment.EmbeddedDocumentBinaryObject.mimeCode = "application/xml";
-            //invoice olusturuldugunda xslt invoice olarak verılecegı ıcın
+          
             idRef.Attachment.EmbeddedDocumentBinaryObject.Value = Convert.FromBase64String(Xslt.xsltGibDespatch);
 
             docRefList.Add(idRef);

@@ -9,6 +9,7 @@ namespace Izibiz_dotnet_soap_client
         private readonly EArchiveInvoiceAdapter _eInvoiceArchiveAdapter;
         private readonly EDespatchAdapter _eDespatchAdapter;
         private readonly CreditNoteAdapter _creditNoteAdapter;
+        private readonly SmmAdapter _smmAdapter;
 
         public IzibizClient() {
             _authAdapter = new AuthAdapter();
@@ -16,6 +17,7 @@ namespace Izibiz_dotnet_soap_client
             _eInvoiceArchiveAdapter = new EArchiveInvoiceAdapter();
             _eDespatchAdapter = new EDespatchAdapter();
             _creditNoteAdapter = new CreditNoteAdapter();
+            _smmAdapter = new SmmAdapter();
 
         }
 
@@ -41,6 +43,11 @@ namespace Izibiz_dotnet_soap_client
         public CreditNoteAdapter CreditNote()
         {
             return _creditNoteAdapter;
+        }
+
+        public SmmAdapter Smm()
+        {
+            return _smmAdapter;
         }
 
 

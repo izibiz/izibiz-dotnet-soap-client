@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Izibiz_dotnet_soap_client.Operations
 {
-    public class FolderPath
+    public class FileOperations
     {
         public static string FilePath(string type, string Direction)
         {
@@ -63,6 +63,11 @@ namespace Izibiz_dotnet_soap_client.Operations
             {
                 FileYesNo(FilePaths.InvoicePath);
                 return string.Format("{0}{1}", FilePaths.ReceiptDespatchPath, proces.Equals(nameof(EI.FileName.RECEIPTLOAD)) ? @"\LoadReceipt\" : @"\SendReceipt\");
+            }
+            else if (type == nameof(EI.Type.SMM))
+            {
+                FileYesNo(FilePaths.InvoicePath);
+                return string.Format("{0}{1}", FilePaths.SmmPath, proces.Equals(nameof(EI.FileName.SMMSEND)) ? @"\SmmSend\" : @"\SmmLoad\");
             }
 
             return null;

@@ -12,6 +12,7 @@ using NUnit.Framework;
 
 namespace Samples
 {
+    [Ignore("Waiting for Joe to fix his bugs", Until = "2022-07-31 12:00:00Z")]
     class AuthenticationSample
     {
         private readonly IzibizClient _izibizClient = new IzibizClient();
@@ -25,10 +26,10 @@ namespace Samples
                 REQUEST_HEADER = new REQUEST_HEADERType
                 {
                    SESSION_ID = "-1",
-                    APPLICATION_NAME = "izibiz.Application"              
+                    APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"              
                 },
-                USER_NAME = "izibiz-test2",
-                PASSWORD = "izi321"
+                USER_NAME = "KULLANICI ADINI GIRINIZ...",
+                PASSWORD = "SIFRE GIRINIZ..."
                 
             };
 
@@ -47,7 +48,7 @@ namespace Samples
                 REQUEST_HEADER = new REQUEST_HEADERType
                 {
                     SESSION_ID = BaseAdapter.SessionId,
-                    APPLICATION_NAME = "izibiz.Application"
+                    APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"
                 },
                 USER = new GIBUSER
                 {
@@ -69,7 +70,7 @@ namespace Samples
                   REQUEST_HEADER = new REQUEST_HEADERType
                   {
                       SESSION_ID = BaseAdapter.SessionId,
-                      APPLICATION_NAME = "izibiz.Application"
+                      APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"
                   },
                   USER = new GIBUSER
                   {
@@ -91,7 +92,7 @@ namespace Samples
                 REQUEST_HEADER = new REQUEST_HEADERType
                 {
                     SESSION_ID = BaseAdapter.SessionId,
-                    APPLICATION_NAME = "izibiz.Application"
+                    APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"
                 },
                 TYPE = "XML",
                 DOCUMENT_TYPE = "DESPATCHADVICE",
@@ -118,7 +119,7 @@ namespace Samples
                 REQUEST_HEADER = new REQUEST_HEADERType
                 {
                     SESSION_ID = BaseAdapter.SessionId,
-                    APPLICATION_NAME = "izibiz.Application"
+                    APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"
                 }
                 
             };

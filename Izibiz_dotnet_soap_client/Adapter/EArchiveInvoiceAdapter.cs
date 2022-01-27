@@ -25,6 +25,12 @@ namespace Izibiz_dotnet_soap_client.Adapter
             return eFaturaArchivePortClient.GetEArchiveInvoiceStatus(getEArchiveInvoiceStatusRequest);
         }
 
+        public GetEArchiveInvoiceListResponse GetEArchiveInvoiceList(GetEArchiveInvoiceListRequest getEArchiveInvoiceListRequest)
+        {
+            EFaturaArchivePortClient eFaturaArchivePortClient = new EFaturaArchivePortClient();
+            return eFaturaArchivePortClient.GetEArchiveInvoiceList(getEArchiveInvoiceListRequest);
+        }
+
         public CancelEArchiveInvoiceResponse CancelEArchiveInvoiceResponse(CancelEArchiveInvoiceRequest cancelEArchiveInvoiceRequest)
         {
             EFaturaArchivePortClient eFaturaArchivePortClient = new EFaturaArchivePortClient();

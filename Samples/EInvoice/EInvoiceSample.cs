@@ -54,9 +54,9 @@ namespace Samples.EInvoice
             };
             LoadInvoiceResponse response = _izibizClient.EInvoice().loadInvoice(request);
             Assert.Null(response.ERROR_TYPE);
-            if (response.REQUEST_RETURN.RETURN_CODE == 0)//Taslak fatura yükleme başarılı ise dosyaya yazar.
+            if (response.REQUEST_RETURN.RETURN_CODE == 0)
             {
-                FolderPath.SendAndLoadSaveToDisk(nameof(EI.FileName.LOADINVOICE), invoiceType.UUID.Value, invoiceType.ID.Value,zipFile,nameof(EI.Type.INVOICE));
+                FileOperations.SendAndLoadSaveToDisk(nameof(EI.FileName.LOADINVOICE), invoiceType.UUID.Value, invoiceType.ID.Value,zipFile,nameof(EI.Type.INVOICE));
             }
             uuidList.Add(invoiceType.UUID.Value);//Gönderim başarılı ise statusunu sorgulamak için yüklenilen belgelen uuidsi diziye atanır.
         }
@@ -110,7 +110,7 @@ namespace Samples.EInvoice
 
             if (response.REQUEST_RETURN.RETURN_CODE == 0)
             {
-                FolderPath.SendAndLoadSaveToDisk(nameof(EI.FileName.SENDINVOICE), invoiceType.UUID.Value, invoiceType.ID.Value, zipFile,nameof(EI.Type.INVOICE));           
+                FileOperations.SendAndLoadSaveToDisk(nameof(EI.FileName.SENDINVOICE), invoiceType.UUID.Value, invoiceType.ID.Value, zipFile,nameof(EI.Type.INVOICE));           
             }
             uuidList.Add(invoiceType.UUID.Value);
         }
@@ -123,17 +123,14 @@ namespace Samples.EInvoice
             {
 
                 REQUEST_HEADER = BaseAdapter.EInvoiceWSRequestHeaderType(),
-                STATUS = nameof(EI.Status.KABUL),
+                STATUS = nameof(EI.Status.KABUL),//kabul veya red seçimi yapılır.
                 INVOICE = new INVOICE[]
                 {
                      new INVOICE
                      {
-                             ID="TEE2022000000015"
+                             ID="TEE2022000000015"//ticari faturanın fatura ıd'si yazılır.
                      },
-                     //new INVOICE
-                     //{
-                     //        ID="DMK2022104171808"
-                     //}
+                    
                 },
                 DESCRIPTION = new String[] { "Onaylandı. Denemedir" },
 

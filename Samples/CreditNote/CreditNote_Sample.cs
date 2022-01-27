@@ -65,7 +65,7 @@ namespace Samples.CreditNote
             Assert.Null(response.ERROR_TYPE);
             if (response.REQUEST_RETURN.RETURN_CODE == 0)
             {
-                FolderPath.SendAndLoadSaveToDisk(nameof(EI.FileName.CREDITNOTESEND), creditNoteType.ID.Value, creditNoteType.UUID.Value, zipFile, nameof(EI.Type.CREDITNOTE));
+                FileOperations.SendAndLoadSaveToDisk(nameof(EI.FileName.CREDITNOTESEND), creditNoteType.ID.Value, creditNoteType.UUID.Value, zipFile, nameof(EI.Type.CREDITNOTE));
                 uuidList.Add(creditNoteType.UUID.Value);
             }
           
@@ -86,7 +86,7 @@ namespace Samples.CreditNote
                     START_DATESpecified = true,
                     END_DATE = Convert.ToDateTime("2022-01-17"),
                     END_DATESpecified = true,
-                    READ_INCLUDED = FLAG_VALUE.N,//Daha önce okunmamış olan belgeleri getirmesi için N verildi. Eğer okunmuş belgelerinde dahil edilmesi isteniyorsa Y gönderilmeli.
+                    READ_INCLUDED = FLAG_VALUE.Y,//Daha önce okunmamış olan belgeleri getirmesi için N verilmeli Eğer okunmuş belgelerin dahil edilmesi isteniyorsa Y gönderilmeli.
                     READ_INCLUDEDSpecified = true,
 
                 },
@@ -101,7 +101,7 @@ namespace Samples.CreditNote
             {
                 foreach (CREDITNOTE cnote in response.CREDITNOTE)
                 {
-                    FolderPath.SaveToDisk(cnote.CONTENT.Value, cnote.UUID, "", request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.CREDITNOTE), request.CONTENT_TYPE.ToString(), cnote.ID);
+                    FileOperations.SaveToDisk(cnote.CONTENT.Value, cnote.UUID, "", request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.CREDITNOTE), request.CONTENT_TYPE.ToString(), cnote.ID);
                     uuidListMarkToGet.Add(cnote.UUID);
                 }
             }
@@ -166,7 +166,7 @@ namespace Samples.CreditNote
 
             if (response.REQUEST_RETURN.RETURN_CODE == 0)
             {
-                FolderPath.SendAndLoadSaveToDisk(nameof(EI.FileName.CREDITNOTELOAD), creditNoteType.ID.Value, creditNoteType.UUID.Value, zipFile,nameof(EI.Type.CREDITNOTE));
+                FileOperations.SendAndLoadSaveToDisk(nameof(EI.FileName.CREDITNOTELOAD), creditNoteType.ID.Value, creditNoteType.UUID.Value, zipFile,nameof(EI.Type.CREDITNOTE));
             }
             
         }

@@ -25,7 +25,7 @@ namespace Samples.EArchive
             var request = new ArchiveInvoiceReadRequest
             {
                 REQUEST_HEADER = BaseAdapter.EArchiveRequestHeaderType(),
-                INVOICEID = "0055215d-f3c1-46b1-bc91-dbbb58e495ea",//E ARŞİV faturalarda hangi faturanın okunmasını isteniyorsa
+                INVOICEID = "0055215d-f3c1-46b1-bc91-dbbb58e495ea",//E ARŞİV faturalarda hangi faturanın okunmasını isteniyorsa onun uuıd'si yazılmalı
                 PORTAL_DIRECTION = nameof(EI.Direction.OUT),
                 PROFILE = nameof(EI.DocumentType.PDF)
             };
@@ -36,7 +36,7 @@ namespace Samples.EArchive
 
             if (response.INVOICE[0].Value != null)
             {
-                FolderPath.SaveToDisk(response.INVOICE[0].Value, request.INVOICEID, request.PORTAL_DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.EARCHIVEINVOICE), request.PROFILE);
+                FileOperations.SaveToDisk(response.INVOICE[0].Value, request.INVOICEID, request.PORTAL_DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.EARCHIVEINVOICE), request.PROFILE);
 
             }
         }
@@ -50,7 +50,7 @@ namespace Samples.EArchive
             var request = new ArchiveInvoiceReadRequest
             {
                 REQUEST_HEADER = deger,
-                INVOICEID = "0055215d-f3c1-46b1-bc91-dbbb58e495ea",//E ARŞİV faturalarda hangi faturanın okunmasını isteniyorsa
+                INVOICEID = "0055215d-f3c1-46b1-bc91-dbbb58e495ea",//E ARŞİV faturalarda hangi faturanın okunmasını isteniyorsa onun uuıd'si yazılmalı
                 PORTAL_DIRECTION = nameof(EI.Direction.OUT),
                 PROFILE = nameof(EI.DocumentType.XML)
             };
@@ -63,7 +63,7 @@ namespace Samples.EArchive
 
             if (response.INVOICE[0].Value != null)
             {
-                FolderPath.SaveToDisk(response.INVOICE[0].Value, request.INVOICEID, request.PORTAL_DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.EARCHIVEINVOICE), request.PROFILE);
+                FileOperations.SaveToDisk(response.INVOICE[0].Value, request.INVOICEID, request.PORTAL_DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.EARCHIVEINVOICE), request.PROFILE);
             }
         }
 
@@ -75,7 +75,7 @@ namespace Samples.EArchive
             var request = new ArchiveInvoiceReadRequest
             {
                 REQUEST_HEADER = deger,
-                INVOICEID = "0055215d-f3c1-46b1-bc91-dbbb58e495ea",//E ARŞİV faturalarda hangi faturanın okunmasını isteniyorsa
+                INVOICEID = "0055215d-f3c1-46b1-bc91-dbbb58e495ea",//E ARŞİV faturalarda hangi faturanın okunmasını isteniyorsa onun uuıd'si yazılmalı
                 PORTAL_DIRECTION = nameof(EI.Direction.OUT),
                 PROFILE = nameof(EI.DocumentType.HTML)
             };
@@ -89,7 +89,7 @@ namespace Samples.EArchive
 
             if (response.INVOICE[0].Value != null)
             {
-                FolderPath.SaveToDisk(response.INVOICE[0].Value, request.INVOICEID, request.PORTAL_DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.EARCHIVEINVOICE), request.PROFILE);
+                FileOperations.SaveToDisk(response.INVOICE[0].Value, request.INVOICEID, request.PORTAL_DIRECTION, request.REQUEST_HEADER.COMPRESSED, nameof(EI.Type.EARCHIVEINVOICE), request.PROFILE);
             }
 
         }

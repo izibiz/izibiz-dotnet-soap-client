@@ -3,12 +3,13 @@ using System;
 using System.Collections.Generic;
 using Izibiz_dotnet_soap_client.EArchiveInvoiceWS;
 using Izibiz_dotnet_soap_client.EIrsaliyeWS;
+using Izibiz_dotnet_soap_client.SmmWs;
+using Izibiz_dotnet_soap_client.Operations;
 
 namespace Izibiz_dotnet_soap_client.Adapter
 {
     public static class BaseAdapter
     {
-        public const string UUIDArchive = "0055215d-f3c1-46b1-bc91-dbbb58e495ea";
         private static String _sessionId;
         public static EInvoiceWS.INVOICE[] invoiceToMarkInvoice;//GetInvoice ile çekilen faturalarý markinvoice ile alýndý alýnmadý olarak iþaretlemek için
 
@@ -20,8 +21,8 @@ namespace Izibiz_dotnet_soap_client.Adapter
                 {
                     AuthenticationServicePortClient authenticationPortClient = new AuthenticationServicePortClient();
                     LoginRequest loginRequest = new LoginRequest();
-                    loginRequest.USER_NAME = "izibiz-test2";
-                    loginRequest.PASSWORD = "izi321";
+                    loginRequest.USER_NAME = "KULLANICI ADINI GIRINIZ...";
+                    loginRequest.PASSWORD = "SIFRE GIRINIZ...";
                     LoginResponse loginResponse = authenticationPortClient.Login(loginRequest);
                     _sessionId = loginResponse.SESSION_ID;
                 }
@@ -35,7 +36,7 @@ namespace Izibiz_dotnet_soap_client.Adapter
             {
                 SESSION_ID = BaseAdapter.SessionId,
                 COMPRESSED = nameof(EI.YesNo.Y),
-                APPLICATION_NAME = "izibiz.Application"
+                APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"
             };
         }
 
@@ -45,7 +46,7 @@ namespace Izibiz_dotnet_soap_client.Adapter
             {
                 SESSION_ID = BaseAdapter.SessionId,
                 COMPRESSED = nameof(EI.YesNo.Y),
-                APPLICATION_NAME = "izibiz.Application"
+                APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"
             };
         }
 
@@ -55,7 +56,7 @@ namespace Izibiz_dotnet_soap_client.Adapter
             {
                 SESSION_ID = BaseAdapter.SessionId,
                 COMPRESSED = nameof(EI.YesNo.Y),
-                APPLICATION_NAME = "izibiz.Application"
+                APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"
 
             };
         }
@@ -66,7 +67,7 @@ namespace Izibiz_dotnet_soap_client.Adapter
             {
                 SESSION_ID = BaseAdapter.SessionId,
                 COMPRESSED = nameof(EI.YesNo.Y),
-                APPLICATION_NAME = "izibiz.Application"
+                APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"
             };
         }
 
@@ -76,7 +77,17 @@ namespace Izibiz_dotnet_soap_client.Adapter
             {
                 SESSION_ID = BaseAdapter.SessionId,
                 COMPRESSED = nameof(EI.YesNo.Y),
-                APPLICATION_NAME = "izibiz.Application"
+                APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"
+            };
+        }
+
+        public static SmmWs.REQUEST_HEADERType SmmWSRequestHeaderType()
+        {
+            return new SmmWs.REQUEST_HEADERType
+            {
+                SESSION_ID = BaseAdapter.SessionId,
+                COMPRESSED = nameof(EI.YesNo.Y),
+                APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"
             };
         }
     }

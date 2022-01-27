@@ -16,8 +16,7 @@ namespace Samples.EInvoice
     class A11EInvoice_GetInvoiceStatus_Sample
     { 
         private readonly IzibizClient _izibizClient = new IzibizClient();
-
-
+        
         [Test]
         public void GetInvoiceStatusAll()
         {//Durumunu sorgulamak istediğimiz faturaların(gelen , giden veya taslak) uuid sini UUID alanına yazarak sorgulama yapılır.

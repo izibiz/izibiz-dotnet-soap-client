@@ -1,4 +1,5 @@
 ﻿using Izibiz_dotnet_soap_client;
+using Izibiz_dotnet_soap_client.Operations;
 using Izibiz_dotnet_soap_client.Ubl;
 using Izibiz_dotnet_soap_client.UblCreate;
 using System;
