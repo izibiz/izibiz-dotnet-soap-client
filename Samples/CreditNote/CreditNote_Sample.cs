@@ -56,7 +56,7 @@ namespace Samples.CreditNote
                 CREDITNOTE_PROPERTIES = new CREDITNOTE_PROPERTIES
                 {
                     EMAIL_FLAG = FLAG_VALUE.Y,
-                    EMAIL = new string[] { "meryem.aksu@izibiz.com.tr" },
+                    EMAIL = new string[] { "b@gmail.com" },
                     SENDING_TYPE = SENDING_TYPE.ELEKTRONIK,
                 }
             };

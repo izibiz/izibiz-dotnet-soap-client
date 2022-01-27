@@ -167,7 +167,7 @@ namespace Samples.DespatchS
                 REQUEST_HEADER = BaseAdapter.EDespatchWSRequestHeaderType(),
                 SEARCH_KEY = new GetDespatchAdviceRequestSEARCH_KEY
                 {
-                    ID= "XZE2021000000096",
+                    ID= "XZE2021000000096",//çekmek istenilen faturanın ıdsi ve uuid'si yazılır.
                     UUID= "B537A0C8-9150-DE37-11AD-04D29850DA1B",
                     READ_INCLUDED = true,
                     READ_INCLUDEDSpecified = true,

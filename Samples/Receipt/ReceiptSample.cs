@@ -28,7 +28,7 @@ namespace Samples.Receipt
 
         [Test, Order(2)]
         public void SendReceipt()
-        {// 1 irsaliye 1 kez yanıt gönderilir. yanıt gönderilebilmesi için irsaliyenin ıd ve uuisi xmlde ilgili alana yazılır.
+        {// 1 irsaliye 1 kez yanıt gönderilir. yanıt gönderilebilmesi için cevap verilecek irsaliyenin ıd ve uuisi xmlde(BaseReceiptUBL.cs) ilgili alana yazılır.
             receiptType = receipt.baseReceiptUBL;
 
             String xmlString = null;

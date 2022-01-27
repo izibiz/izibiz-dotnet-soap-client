@@ -115,7 +115,7 @@ namespace Samples.EInvoice
             uuidList.Add(invoiceType.UUID.Value);
         }
 
-         [Test]//ticari faturaya kabul veya red
+         [Test]
         public void SendInvoiceResponseWithServerSign()
         {// gelen ticari faturalara  uygulama yanıtı göndermeyi sağlayan servistir.(red veya kabul)
 

@@ -120,7 +120,7 @@ namespace Samples.EArchive
         {
             CancelEArchiveInvoiceRequestCancelEArsivInvoiceContent EArchiveContent = new CancelEArchiveInvoiceRequestCancelEArsivInvoiceContent
             {
-                FATURA_ID= "NEA2021002000013",
+                FATURA_ID= "NEA2021002000013",//iptal edilecek faturanın ıd'si ve uuid'si yazılmalıdır.
                 FATURA_UUID= "1fa2c9d5-e60c-489d-ae48-f628eddc8411",
                 IPTAL_NOTU="Deneme yapma"
             };
@@ -145,7 +145,7 @@ namespace Samples.EArchive
             {
                 REQUEST_HEADER = BaseAdapter.EArchiveRequestHeaderType(),
                 FATURA_UUID= "3677E830-2638-4B21-B6EE-D1762CFF25BC",//Mail olarak gönderilmesi istenilen earsiv faturanın uuidsi yazılır.
-                EMAIL= "meryem.aksu@izibiz.com.tr,meryemaksu.5869@gmail.com"
+                EMAIL= "c@gmail.com,b@gmail.com"
               };
             GetEmailEarchiveInvoiceResponse response = _izibizClient.EInvoiceArchive().GetEmailEarchiveInvoiceResponse(request);
             Assert.Null(response.ERROR_TYPE);
@@ -172,7 +172,7 @@ namespace Samples.EArchive
             var request = new ReadEArchiveReportRequest
             {
                 REQUEST_HEADER = BaseAdapter.EArchiveRequestHeaderType(),
-                RAPOR_NO = "da49535a-0265-41e4-ae7c-14f539a08843",
+                RAPOR_NO = "866343d7-84b7-4610-82f0-1ce51d69cb1b",
             };
             ReadEArchiveReportResponse response = _izibizClient.EInvoiceArchive().ReadEArchiveReportResponse(request);
             Assert.Null(response.ERROR_TYPE);
