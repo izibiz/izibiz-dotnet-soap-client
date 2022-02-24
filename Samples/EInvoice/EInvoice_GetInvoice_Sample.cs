@@ -21,7 +21,7 @@ using System.Collections;
 
 namespace Samples.EInvoice
 {
- 
+
     class EInvoice_GetInvoice_Sample
     {
         private readonly IzibizClient _izibizClient = new IzibizClient();
@@ -36,8 +36,8 @@ namespace Samples.EInvoice
                 REQUEST_HEADER = BaseAdapter.EInvoiceWSRequestHeaderType(),
                 INVOICE_SEARCH_KEY = new GetInvoiceRequestINVOICE_SEARCH_KEY
                 {
-                    LIMIT = 10,
-                    LIMITSpecified=true,
+                    LIMIT = 100,
+                    LIMITSpecified = true,
                     READ_INCLUDED = false,
                     READ_INCLUDEDSpecified = true,
                     DIRECTION = nameof(EI.Direction.IN)
@@ -55,7 +55,7 @@ namespace Samples.EInvoice
 
                 }
             }
-           
+
         }
 
         [Test]
@@ -86,16 +86,26 @@ namespace Samples.EInvoice
         [Test]
         public void GetInvoice_BetweenDate()
         {
-              var request = new GetInvoiceRequest
+            // Lütfen buradaki yapıya göre tasarım yapınız https://dev.izibiz.com.tr/#dikkat-edilecek-hususlar
+            // GetInvoice metodu ile firmaya gelen faturalar müşteri bilgisayarına aktarılır.
+            //İzibiz sistemlerine gelen yeni faturaları almanız gerekmektedir.
+            //Servis ile yeni gelen en fazla 100 adet faturayı çekebilirsiniz.
+            //Eğer dönen listede 100 adet fatura varsa yeniden getinvoice servisi çağırılarak başka fatura olup olmadığı kontrol edilmelidir.
+            //Dönen listede 100den az fatura varsa tekrar sorgulama yapmaya gerek yoktur.
+            //Fatura çekme zamanlayıcı ile yapılıyorsa en az 15 dk bir servis çağırılmalıdır.
+
+            var request = new GetInvoiceRequest
             {
 
                 REQUEST_HEADER = BaseAdapter.EInvoiceWSRequestHeaderType(),
                 INVOICE_SEARCH_KEY = new GetInvoiceRequestINVOICE_SEARCH_KEY
                 {
-                    LIMIT = 10,
+                    LIMIT = 100,
                     LIMITSpecified = true,
-                    START_DATE = Convert.ToDateTime("2018-12-01"),
-                    END_DATE = Convert.ToDateTime("2022-01-06"),
+                    START_DATE = Convert.ToDateTime("2021-11-01"),
+                    START_DATESpecified = true,
+                    END_DATE = Convert.ToDateTime("2022-02-20"),
+                    END_DATESpecified = true,
                     READ_INCLUDED = true,
                     READ_INCLUDEDSpecified = true,
                     DIRECTION = nameof(EI.Direction.IN)
@@ -114,9 +124,9 @@ namespace Samples.EInvoice
             }
             BaseAdapter.invoiceToMarkInvoice = new INVOICE[response.INVOICE.Length];
             BaseAdapter.invoiceToMarkInvoice = response.INVOICE.Select(a => new INVOICE() { ID = a.ID, UUID = a.UUID }).ToList().ToArray();
-           }
+        }
 
-          [Test]
+        [Test]
         public void GetInvoice_Outgoing()
         {
             var request = new GetInvoiceRequest
@@ -125,7 +135,7 @@ namespace Samples.EInvoice
                 REQUEST_HEADER = BaseAdapter.EInvoiceWSRequestHeaderType(),
                 INVOICE_SEARCH_KEY = new GetInvoiceRequestINVOICE_SEARCH_KEY
                 {
-                    LIMIT = 10,
+                    LIMIT = 100,
                     LIMITSpecified = true,
                     READ_INCLUDED = false,
                     READ_INCLUDEDSpecified = true,

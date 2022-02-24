@@ -33,6 +33,8 @@ namespace Samples.EInvoice
                 {
                     LIMIT=1,
                     LIMITSpecified=true,
+                    START_DATE = Convert.ToDateTime("2022-02-20"),
+                    START_DATESpecified = true,
                     READ_INCLUDED = true,
                     READ_INCLUDEDSpecified = true,
                     DIRECTION = nameof(EI.Direction.IN)
@@ -131,6 +133,8 @@ namespace Samples.EInvoice
                 {
                     LIMIT = 1,
                     LIMITSpecified = true,
+                    START_DATE = Convert.ToDateTime("2022-02-20"),
+                    START_DATESpecified=true,
                     READ_INCLUDED = true,
                     READ_INCLUDEDSpecified = true,
                     DIRECTION = nameof(EI.Direction.OUT)

@@ -30,7 +30,7 @@ namespace Samples.Authentication
                 },
                 USER_NAME = "KULLANICI ADINI GIRINIZ...",
                 PASSWORD = "SIFRE GIRINIZ..."
-                
+
             };
 
             LoginResponse response = _izibizClient.Auth().Login(request);
@@ -58,7 +58,7 @@ namespace Samples.Authentication
                  };
 
             CheckUserResponse response = _izibizClient.Auth().CheckUserInvoice(request);
-            Assert.AreEqual(response.USER.Length, 2);
+            Assert.AreEqual(response.USER.Length, 7);
         }
 
        [Test, Order(3)]
@@ -80,7 +80,7 @@ namespace Samples.Authentication
               };
 
               CheckUserResponse response = _izibizClient.Auth().CheckUserDespatchadvice(request);
-              Assert.AreEqual(response.USER.Length, 2);
+              Assert.AreEqual(response.USER.Length, 6);
           }
 
         [Test, Order(4)]
