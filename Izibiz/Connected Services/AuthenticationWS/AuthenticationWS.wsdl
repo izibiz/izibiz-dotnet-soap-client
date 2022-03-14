@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://schemas.i2i.com/ei/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="AuthenticationWS" targetNamespace="http://schemas.i2i.com/ei/wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="AuthenticationPortBinding_MTOM_Policy-AuthenticationPortBinding_MTOM_Policy">
+    <ns1:OptimizedMimeSerialization xmlns:ns1="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+  </wsp:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/AuthenticationWS?xsd=1" namespace="http://www.w3.org/2005/05/xmlmime" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/AuthenticationWS?xsd=2" namespace="http://schemas.i2i.com/ei/wsdl" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/AuthenticationWS?xsd=3" namespace="http://schemas.i2i.com/ei/entity" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/AuthenticationWS?xsd=4" namespace="http://schemas.i2i.com/ei/common" />
+    </xsd:schema>
+  </types>
+  <message name="Login">
+    <part name="request" element="tns:LoginRequest" />
+  </message>
+  <message name="LoginResponse">
+    <part name="response" element="tns:LoginResponse" />
+  </message>
+  <message name="RequestFaultMessage">
+    <part name="fault" element="tns:RequestFault" />
+  </message>
+  <message name="CheckUser">
+    <part name="request" element="tns:CheckUserRequest" />
+  </message>
+  <message name="CheckUserResponse">
+    <part name="response" element="tns:CheckUserResponse" />
+  </message>
+  <message name="GetUserAuthorization">
+    <part name="request" element="tns:GetUserAuthorizationRequest" />
+  </message>
+  <message name="GetUserAuthorizationResponse">
+    <part name="response" element="tns:GetUserAuthorizationResponse" />
+  </message>
+  <message name="GetGibUserList">
+    <part name="request" element="tns:GetGibUserListRequest" />
+  </message>
+  <message name="GetGibUserListResponse">
+    <part name="response" element="tns:GetGibUserListResponse" />
+  </message>
+  <message name="GetAccount">
+    <part name="request" element="tns:GetAccountRequest" />
+  </message>
+  <message name="GetAccountResponse">
+    <part name="response" element="tns:GetAccountResponse" />
+  </message>
+  <message name="Logout">
+    <part name="request" element="tns:LogoutRequest" />
+  </message>
+  <message name="LogoutResponse">
+    <part name="response" element="tns:LogoutResponse" />
+  </message>
+  <portType name="AuthenticationServicePort">
+    <operation name="Login">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LoginResponse" message="tns:LoginResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/Login/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="CheckUser">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/CheckUserRequest" message="tns:CheckUser" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/CheckUserResponse" message="tns:CheckUserResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/CheckUser/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="GetUserAuthorization">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetUserAuthorizationRequest" message="tns:GetUserAuthorization" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetUserAuthorizationResponse" message="tns:GetUserAuthorizationResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetUserAuthorization/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="GetGibUserList">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetGibUserListRequest" message="tns:GetGibUserList" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetGibUserListResponse" message="tns:GetGibUserListResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetGibUserList/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="GetAccount">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetAccountRequest" message="tns:GetAccount" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetAccountResponse" message="tns:GetAccountResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetAccount/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="Logout">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LogoutRequest" message="tns:Logout" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LogoutResponse" message="tns:LogoutResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/Logout/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+  </portType>
+  <binding name="AuthenticationPortBinding" type="tns:AuthenticationServicePort">
+    <wsp:PolicyReference URI="#AuthenticationPortBinding_MTOM_Policy-AuthenticationPortBinding_MTOM_Policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="CheckUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GetUserAuthorization">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GetGibUserList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GetAccount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="Logout">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="AuthenticationWS">
+    <port name="AuthenticationPort" binding="tns:AuthenticationPortBinding">
+      <soap:address location="https://efaturatest.izibiz.com.tr:443/AuthenticationWS" />
+    </port>
+  </service>
+</definitions>

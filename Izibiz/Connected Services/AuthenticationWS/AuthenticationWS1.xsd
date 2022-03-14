@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.i2i.com/ei/entity" xmlns:ns1="http://schemas.i2i.com/ei/common" targetNamespace="http://schemas.i2i.com/ei/entity" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://efaturatest.izibiz.com.tr:443/AuthenticationWS?xsd=4" namespace="http://schemas.i2i.com/ei/common" />
+  <xs:complexType name="REQUEST_HEADERType">
+    <xs:sequence>
+      <xs:element name="SESSION_ID" type="xs:token" />
+      <xs:element minOccurs="0" name="CLIENT_TXN_ID" type="xs:token" />
+      <xs:element minOccurs="0" name="INTL_TXN_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="INTL_PARENT_TXN_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="ACTION_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CHANGE_INFO" type="ns1:CHANGE_INFOType" />
+      <xs:element minOccurs="0" name="REASON" type="xs:token" />
+      <xs:element minOccurs="0" name="APPLICATION_NAME" type="xs:token" />
+      <xs:element minOccurs="0" name="HOSTNAME" type="xs:token" />
+      <xs:element minOccurs="0" name="CHANNEL_NAME" type="xs:token" />
+      <xs:element minOccurs="0" name="SIMULATION_FLAG" type="xs:token" />
+      <xs:element minOccurs="0" name="COMPRESSED" type="xs:token" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ATTRIBUTES" type="ns1:ATTRIBUTESTYPE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="REQUEST_RETURNType">
+    <xs:sequence>
+      <xs:element name="INTL_TXN_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="CLIENT_TXN_ID" type="xs:token" />
+      <xs:element name="RETURN_CODE" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WARNINGS" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="REQUEST_INFOType">
+    <xs:sequence>
+      <xs:element name="REQUEST_HEADER" type="tns:REQUEST_HEADERType" />
+      <xs:element minOccurs="0" name="REQUEST_RETURN" type="tns:REQUEST_RETURNType" />
+      <xs:element minOccurs="0" name="REQUEST_ERROR" type="tns:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="REQUEST_ERRORType">
+    <xs:sequence>
+      <xs:element name="INTL_TXN_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="CLIENT_TXN_ID" type="xs:token" />
+      <xs:element name="ERROR_CODE" type="xs:int" />
+      <xs:element name="ERROR_SHORT_DES" type="xs:string" />
+      <xs:element minOccurs="0" name="ERROR_LONG_DES" type="xs:string" />
+      <xs:element minOccurs="0" name="STACKTRACE" type="xs:string" />
+      <xs:element minOccurs="0" name="ERROR_ELEMENT_INDEX" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="REQUEST">
+    <xs:sequence>
+      <xs:element name="REQUEST_HEADER" type="tns:REQUEST_HEADERType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

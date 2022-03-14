@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://schemas.i2i.com/ei/common" xmlns:tns="http://schemas.i2i.com/ei/wsdl" xmlns:ns2="http://www.w3.org/2005/05/xmlmime" xmlns:ns3="http://schemas.i2i.com/ei/entity" targetNamespace="http://schemas.i2i.com/ei/wsdl" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://efaturatest.izibiz.com.tr:443/SmmWS?xsd=4" namespace="http://schemas.i2i.com/ei/common" />
+  <xs:import schemaLocation="https://efaturatest.izibiz.com.tr:443/SmmWS?xsd=1" namespace="http://www.w3.org/2005/05/xmlmime" />
+  <xs:import schemaLocation="https://efaturatest.izibiz.com.tr:443/SmmWS?xsd=3" namespace="http://schemas.i2i.com/ei/entity" />
+  <xs:element name="CancelSmmRequest" type="tns:CancelSmmRequest" />
+  <xs:element name="CancelSmmResponse" type="tns:CancelSmmResponse" />
+  <xs:element name="GetSmmReportRequest" type="tns:GetSmmReportRequest" />
+  <xs:element name="GetSmmReportResponse" type="tns:GetSmmReportResponse" />
+  <xs:element name="GetSmmRequest" type="tns:GetSmmRequest" />
+  <xs:element name="GetSmmResponse" type="tns:GetSmmResponse" />
+  <xs:element name="GetSmmStatusRequest" type="tns:GetSmmStatusRequest" />
+  <xs:element name="GetSmmStatusResponse" type="tns:GetSmmStatusResponse" />
+  <xs:element name="LoadSmmRequest" type="tns:LoadSmmRequest" />
+  <xs:element name="LoadSmmResponse" type="tns:LoadSmmResponse" />
+  <xs:element name="RequestFault" type="ns3:REQUEST_ERRORType" />
+  <xs:element name="SendSmmRequest" type="tns:SendSmmRequest" />
+  <xs:element name="SendSmmResponse" type="tns:SendSmmResponse" />
+  <xs:complexType name="SMM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HEADER">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CUSTOMER" type="ns1:CUSTOMER" />
+            <xs:element minOccurs="0" name="ISSUE_DATE" type="xs:date" />
+            <xs:element minOccurs="0" name="PAYABLE_AMOUNT" type="ns1:AmountType" />
+            <xs:element minOccurs="0" name="PROFILE_ID" type="tns:PROFILE_ID" />
+            <xs:element minOccurs="0" name="STATUS" type="xs:string" />
+            <xs:element minOccurs="0" name="STATUS_CODE" type="xs:int" />
+            <xs:element minOccurs="0" name="STATUS_DESCRIPTION" type="xs:string" />
+            <xs:element minOccurs="0" name="SMS_STATUS_CODE" type="xs:int" />
+            <xs:element minOccurs="0" name="SMS_STATUS_DESCRIPTION" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="EMAIL" type="xs:string" />
+            <xs:element minOccurs="0" name="EMAIL_STATUS_CODE" type="xs:int" />
+            <xs:element minOccurs="0" name="EMAIL_STATUS_DESCRIPTION" type="xs:string" />
+            <xs:element minOccurs="0" name="FILENAME" type="xs:string" />
+            <xs:element minOccurs="0" name="HASH" type="xs:string" />
+            <xs:element minOccurs="0" name="CDATE" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="REPORT_STATUS_CODE" type="xs:int" />
+            <xs:element minOccurs="0" name="REPORT_STATUS_DESCRIPTION" type="xs:string" />
+            <xs:element minOccurs="0" name="CANCEL_REPORT_DATE" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="NO_REPORT_DATE" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CONTENT" type="ns2:base64Binary" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:token" />
+    <xs:attribute name="UUID" type="xs:token" />
+  </xs:complexType>
+  <xs:complexType name="REPORT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HEADER">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UUID" type="xs:string" />
+            <xs:element minOccurs="0" name="PERIOD_SDATE" type="xs:date" />
+            <xs:element minOccurs="0" name="PERIOD_EDATE" type="xs:date" />
+            <xs:element minOccurs="0" name="SEGMENT_SDATE" type="xs:date" />
+            <xs:element minOccurs="0" name="SEGMENT_EDATE" type="xs:date" />
+            <xs:element minOccurs="0" name="SEGMENT_NO" type="xs:int" />
+            <xs:element minOccurs="0" name="DOCUMENT_COUNT" type="xs:int" />
+            <xs:element minOccurs="0" name="STATUS" type="xs:string" />
+            <xs:element minOccurs="0" name="STATUS_CODE" type="xs:string" />
+            <xs:element minOccurs="0" name="STATUS_DESC" type="xs:string" />
+            <xs:element minOccurs="0" name="GIB_STATUS_CODE" type="xs:int" />
+            <xs:element minOccurs="0" name="GIB_STATUS_DESCRIPTION" type="xs:string" />
+            <xs:element minOccurs="0" name="GIB_STATUS_DATE" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="CREATE_DATE" type="xs:date" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CONTENT" type="ns2:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetSmmRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns3:REQUEST">
+        <xs:sequence>
+          <xs:element name="SMM_SEARCH_KEY">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="LIMIT" type="xs:int" />
+                <xs:element minOccurs="0" name="ID" type="xs:normalizedString" />
+                <xs:element minOccurs="0" name="UUID" type="xs:normalizedString" />
+                <xs:element minOccurs="0" name="FROM" type="xs:token" />
+                <xs:element minOccurs="0" name="TO" type="xs:token" />
+                <xs:element minOccurs="0" name="START_DATE" type="xs:date" />
+                <xs:element minOccurs="0" name="END_DATE" type="xs:date" />
+                <xs:element minOccurs="0" name="READ_INCLUDED" type="ns1:FLAG_VALUE" />
+                <xs:element minOccurs="0" name="CUSTOMER" type="ns1:CUSTOMER" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" default="N" name="HEADER_ONLY" type="ns1:FLAG_VALUE" />
+          <xs:element minOccurs="0" default="XML" name="CONTENT_TYPE" type="ns1:CONTENT_TYPE" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CancelSmmRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns3:REQUEST">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="UUID" type="xs:token" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LoadSmmRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns3:REQUEST">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="SMM" type="tns:SMM" />
+          <xs:element minOccurs="0" name="SMM_PROPERTIES" type="tns:SMM_PROPERTIES" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SMM_PROPERTIES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SMS_FLAG" type="ns1:FLAG_VALUE" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SMS_NUMBER" type="xs:string" />
+      <xs:element minOccurs="0" name="EMAIL_FLAG" type="ns1:FLAG_VALUE" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EMAIL" type="xs:string" />
+      <xs:element minOccurs="0" name="SENDING_TYPE" type="tns:SENDING_TYPE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetSmmStatusRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns3:REQUEST">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="UUID" type="xs:token" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetSmmReportRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns3:REQUEST">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="START_DATE" type="xs:date" />
+          <xs:element minOccurs="0" name="END_DATE" type="xs:date" />
+          <xs:element minOccurs="0" name="HEADER_ONLY" type="ns1:FLAG_VALUE" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SendSmmRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns3:REQUEST">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="SMM" type="tns:SMM" />
+          <xs:element minOccurs="0" name="SMM_PROPERTIES" type="tns:SMM_PROPERTIES" />
+          <xs:element minOccurs="0" name="SERIES_PROPERTIES" type="tns:SERIES_PROPERTIES" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SERIES_PROPERTIES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SERIES_FLAG" type="ns1:FLAG_VALUE" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SERIES_PREFIX" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetSmmReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SMM_REPORT" type="tns:REPORT" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns3:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetSmmResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns3:REQUEST_ERRORType" />
+      <xs:element maxOccurs="unbounded" name="SMM" type="tns:SMM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CancelSmmResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="REQUEST_RETURN" type="ns3:REQUEST_RETURNType" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns3:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetSmmStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SMM_STATUS" type="tns:SMM" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns3:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoadSmmResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="REQUEST_RETURN" type="ns3:REQUEST_RETURNType" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns3:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SendSmmResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="REQUEST_RETURN" type="ns3:REQUEST_RETURNType" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns3:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PROFILE_ID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EARSIVBELGE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SENDING_TYPE">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ELEKTRONIK" />
+      <xs:enumeration value="KAGIT" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

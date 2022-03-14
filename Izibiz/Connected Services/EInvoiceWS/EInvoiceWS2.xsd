@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://schemas.i2i.com/ei/common" targetNamespace="http://schemas.i2i.com/ei/common" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="CHANGE_INFOType">
+    <xsd:annotation>
+      <xsd:documentation>Helper Entity; Contains information related to
+				either Creation or Modification
+			</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="CDATE" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>Create Date</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CPOSITION_ID" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Create Position ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CUSER_ID" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Create User ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="UDATE" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>Update Date</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="UPOSITION_ID" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Update Position ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="UUSER_ID" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Update User ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LOV_VALUEType">
+    <xsd:annotation>
+      <xsd:documentation>Helper Entity; Holds LOV Value Type
+			</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="LOV_ID" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Indicates list of value ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" default="'N'" name="LOV_CODE">
+        <xsd:annotation>
+          <xsd:documentation>LOV Internal CODE</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:token">
+            <xsd:maxLength value="64" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ATTRIBUTESTYPE">
+    <xsd:annotation>
+      <xsd:documentation>A generic name/value Attributes type
+			</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="xsd:anyType">
+        <xsd:attribute name="NAME" use="required">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:token">
+              <xsd:minLength value="1" />
+              <xsd:maxLength value="64" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="AmountType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:decimal">
+        <xsd:attribute name="currencyID" type="xsd:normalizedString" use="optional" />
+        <xsd:attribute name="currencyCodeListVersionID" type="xsd:normalizedString" use="optional" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="PARTINFO">
+    <xsd:attribute name="VKN" type="xsd:normalizedString" />
+    <xsd:attribute name="IDENTIFIER" type="xsd:normalizedString" />
+  </xsd:complexType>
+  <xsd:simpleType name="FLAG_VALUE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Y" />
+      <xsd:enumeration value="N" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CONTENT_TYPE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="XML" />
+      <xsd:enumeration value="PDF" />
+      <xsd:enumeration value="HTML" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CUSTOMER">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="IDENTIFIER" type="xsd:string" />
+      <xsd:element minOccurs="0" name="NAME" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="SERI_PREFIX">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[A-Z0-9]+" />
+      <xsd:minLength value="3" />
+      <xsd:maxLength value="3" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

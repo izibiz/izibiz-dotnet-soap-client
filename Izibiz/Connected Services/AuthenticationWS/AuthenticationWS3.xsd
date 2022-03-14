@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://schemas.i2i.com/ei/entity" xmlns:tns="http://schemas.i2i.com/ei/wsdl" xmlns:ns2="http://www.w3.org/2005/05/xmlmime" targetNamespace="http://schemas.i2i.com/ei/wsdl" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://efaturatest.izibiz.com.tr:443/AuthenticationWS?xsd=3" namespace="http://schemas.i2i.com/ei/entity" />
+  <xs:import schemaLocation="https://efaturatest.izibiz.com.tr:443/AuthenticationWS?xsd=1" namespace="http://www.w3.org/2005/05/xmlmime" />
+  <xs:element name="CheckUserRequest" type="tns:CheckUserRequest" />
+  <xs:element name="CheckUserResponse" type="tns:CheckUserResponse" />
+  <xs:element name="GetAccountRequest" type="tns:GetAccountRequest" />
+  <xs:element name="GetAccountResponse" type="tns:GetAccountResponse" />
+  <xs:element name="GetGibUserListRequest" type="tns:GetGibUserListRequest" />
+  <xs:element name="GetGibUserListResponse" type="tns:GetGibUserListResponse" />
+  <xs:element name="GetUserAuthorizationRequest" type="tns:GetUserAuthorizationRequest" />
+  <xs:element name="GetUserAuthorizationResponse" type="tns:GetUserAuthorizationResponse" />
+  <xs:element name="LoginRequest" type="tns:LoginRequest" />
+  <xs:element name="LoginResponse" type="tns:LoginResponse" />
+  <xs:element name="LogoutRequest" type="tns:LogoutRequest" />
+  <xs:element name="LogoutResponse" type="tns:LogoutResponse" />
+  <xs:element name="RequestFault" type="ns1:REQUEST_ERRORType" />
+  <xs:complexType name="GIBUSER">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDENTIFIER" type="xs:string" />
+      <xs:element minOccurs="0" name="ALIAS" type="xs:string" />
+      <xs:element minOccurs="0" name="TITLE" type="xs:string" />
+      <xs:element minOccurs="0" name="TYPE" type="xs:string" />
+      <xs:element minOccurs="0" name="REGISTER_TIME" type="xs:string" />
+      <xs:element minOccurs="0" name="UNIT" type="xs:token" />
+      <xs:element minOccurs="0" name="ALIAS_CREATION_TIME" type="xs:string" />
+      <xs:element minOccurs="0" name="ACCOUNT_TYPE" type="xs:string" />
+      <xs:element minOccurs="0" name="DELETED" type="xs:string" />
+      <xs:element minOccurs="0" name="ALIAS_DELETION_TIME" type="xs:string" />
+      <xs:element minOccurs="0" name="DOCUMENT_TYPE" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetUserAuthorizationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence>
+          <xs:element name="PRODUCT" type="tns:PRODUCT" />
+          <xs:element name="PRODUCT_DETAIL_FLAG" type="tns:PRODUCT_DETAIL_FLAG" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CheckUserRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence>
+          <xs:element name="USER" type="tns:GIBUSER" />
+          <xs:element minOccurs="0" name="DOCUMENT_TYPE" type="xs:normalizedString" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LoginRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence>
+          <xs:element name="USER_NAME" type="xs:string" />
+          <xs:element name="PASSWORD" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetAccountRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetGibUserListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence>
+          <xs:element minOccurs="0" default="XML" name="TYPE" type="xs:string" />
+          <xs:element minOccurs="0" name="DOCUMENT_TYPE" type="xs:normalizedString" />
+          <xs:element minOccurs="0" name="REGISTER_TIME_START" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ALIAS_TYPE" type="tns:ALIAS_TYPE" />
+          <xs:element minOccurs="0" name="ALIAS_MODIFY_DATE" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LogoutRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CheckUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USER" type="tns:GIBUSER" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetUserAuthorizationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AUTHORIZED" type="tns:AUTHORIZED" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+      <xs:element minOccurs="0" name="PRODUCT_LIST" type="tns:PRODUCT_LIST" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PRODUCT_LIST">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PRODUCT" type="tns:PRODUCT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetGibUserListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CONTENT" type="ns2:base64Binary" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogoutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="REQUEST_RETURN" type="ns1:REQUEST_RETURNType" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoginResponse">
+    <xs:sequence>
+      <xs:element name="SESSION_ID" type="xs:token" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+      <xs:element minOccurs="0" name="ACCOUNT_ADDRESS" type="tns:ACCOUNT_ADDRESS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ACCOUNT_ADDRESS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="COMMERCIAL_NAME" type="xs:string" />
+      <xs:element minOccurs="0" name="FIRST_NAME" type="xs:string" />
+      <xs:element minOccurs="0" name="LAST_NAME" type="xs:string" />
+      <xs:element minOccurs="0" name="VKN_TCKNO" type="xs:string" />
+      <xs:element minOccurs="0" name="EMAIL" type="xs:string" />
+      <xs:element minOccurs="0" name="WEBSITE" type="xs:token" />
+      <xs:element minOccurs="0" name="TAX_OFFICE" type="xs:string" />
+      <xs:element minOccurs="0" name="SICIL_NO" type="xs:string" />
+      <xs:element minOccurs="0" name="MERSIS_NO" type="xs:string" />
+      <xs:element minOccurs="0" name="ISLETME_MERKEZI" type="xs:string" />
+      <xs:element minOccurs="0" name="STREET" type="xs:string" />
+      <xs:element minOccurs="0" name="BUILDING_NAME" type="xs:string" />
+      <xs:element minOccurs="0" name="BUILDING_NO" type="xs:string" />
+      <xs:element minOccurs="0" name="HOUSE_NO" type="xs:string" />
+      <xs:element minOccurs="0" name="SUB_CITY" type="xs:string" />
+      <xs:element minOccurs="0" name="DISTRICT" type="xs:string" />
+      <xs:element minOccurs="0" name="CITY" type="xs:token" />
+      <xs:element minOccurs="0" name="REGION" type="xs:string" />
+      <xs:element minOccurs="0" name="COUNTRY" type="xs:string" />
+      <xs:element minOccurs="0" name="POSTAL_CODE" type="xs:string" />
+      <xs:element minOccurs="0" name="TELNO" type="xs:string" />
+      <xs:element minOccurs="0" name="FAXNO" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PRODUCT">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EINVOICE" />
+      <xs:enumeration value="EARCHIVE" />
+      <xs:enumeration value="EDESPATCH" />
+      <xs:enumeration value="CREDITNOTE" />
+      <xs:enumeration value="RECONCILIATION" />
+      <xs:enumeration value="CONNECTOR" />
+      <xs:enumeration value="ELEDGER" />
+      <xs:enumeration value="ELEDGERARCHIVE" />
+      <xs:enumeration value="EINVOICEARCHIVE" />
+      <xs:enumeration value="ESMM" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PRODUCT_DETAIL_FLAG">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Y" />
+      <xs:enumeration value="N" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ALIAS_TYPE">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ALL" />
+      <xs:enumeration value="PK" />
+      <xs:enumeration value="GB" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AUTHORIZED">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Y" />
+      <xs:enumeration value="N" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

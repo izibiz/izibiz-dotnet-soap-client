@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://schemas.i2i.com/ei/entity" xmlns:tns="http://schemas.i2i.com/ei/wsdl" xmlns:ns2="http://schemas.i2i.com/ei/common" xmlns:ns3="http://www.w3.org/2005/05/xmlmime" targetNamespace="http://schemas.i2i.com/ei/wsdl" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://efaturatest.izibiz.com.tr:443/CreditNoteWS/CreditNote?xsd=3" namespace="http://schemas.i2i.com/ei/entity" />
+  <xs:import schemaLocation="https://efaturatest.izibiz.com.tr:443/CreditNoteWS/CreditNote?xsd=4" namespace="http://schemas.i2i.com/ei/common" />
+  <xs:import schemaLocation="https://efaturatest.izibiz.com.tr:443/CreditNoteWS/CreditNote?xsd=1" namespace="http://www.w3.org/2005/05/xmlmime" />
+  <xs:element name="CancelCreditNoteRequest" type="tns:CancelCreditNoteRequest" />
+  <xs:element name="CancelCreditNoteResponse" type="tns:CancelCreditNoteResponse" />
+  <xs:element name="GetCreditNoteReportRequest" type="tns:GetCreditNoteReportRequest" />
+  <xs:element name="GetCreditNoteReportResponse" type="tns:GetCreditNoteReportResponse" />
+  <xs:element name="GetCreditNoteRequest" type="tns:GetCreditNoteRequest" />
+  <xs:element name="GetCreditNoteResponse" type="tns:GetCreditNoteResponse" />
+  <xs:element name="GetCreditNoteStatusRequest" type="tns:GetCreditNoteStatusRequest" />
+  <xs:element name="GetCreditNoteStatusResponse" type="tns:GetCreditNoteStatusResponse" />
+  <xs:element name="LoadCreditNoteRequest" type="tns:LoadCreditNoteRequest" />
+  <xs:element name="LoadCreditNoteResponse" type="tns:LoadCreditNoteResponse" />
+  <xs:element name="MarkCreditNoteRequest" type="tns:MarkCreditNoteRequest" />
+  <xs:element name="MarkCreditNoteResponse" type="tns:MarkCreditNoteResponse" />
+  <xs:element name="RequestFault" type="ns1:REQUEST_ERRORType" />
+  <xs:element name="SendCreditNoteRequest" type="tns:SendCreditNoteRequest" />
+  <xs:element name="SendCreditNoteResponse" type="tns:SendCreditNoteResponse" />
+  <xs:complexType name="CancelCreditNoteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="REQUEST_RETURN" type="ns1:REQUEST_RETURNType" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CREDIT_SEARCH_KEY">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LIMIT" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:normalizedString" />
+      <xs:element minOccurs="0" name="UUID" type="xs:normalizedString" />
+      <xs:element minOccurs="0" name="FROM" type="xs:token" />
+      <xs:element minOccurs="0" name="TO" type="xs:token" />
+      <xs:element minOccurs="0" name="START_DATE" type="xs:date" />
+      <xs:element minOccurs="0" name="END_DATE" type="xs:date" />
+      <xs:element minOccurs="0" name="READ_INCLUDED" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DIRECTION" type="xs:token" />
+      <xs:element minOccurs="0" name="SENDER" type="xs:token" />
+      <xs:element minOccurs="0" name="RECEIVER" type="xs:token" />
+      <xs:element minOccurs="0" name="TYPE" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SERIES_PROPERTIES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SERIES_FLAG" type="ns2:FLAG_VALUE" />
+      <xs:element minOccurs="0" name="SERIES_PREFIX" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CREDITNOTE_PROPERTIES">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SMS_FLAG" type="ns2:FLAG_VALUE" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SMS_NUMBER" type="xs:string" />
+      <xs:element minOccurs="0" name="EMAIL_FLAG" type="ns2:FLAG_VALUE" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EMAIL" type="xs:string" />
+      <xs:element minOccurs="0" name="SENDING_TYPE" type="tns:SENDING_TYPE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetCreditNoteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence>
+          <xs:element name="CREDITNOTE_SEARCH_KEY">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" name="LIMIT" type="xs:int" />
+                <xs:element minOccurs="0" name="ID" type="xs:normalizedString" />
+                <xs:element minOccurs="0" name="UUID" type="xs:normalizedString" />
+                <xs:element minOccurs="0" name="FROM" type="xs:token" />
+                <xs:element minOccurs="0" name="TO" type="xs:token" />
+                <xs:element minOccurs="0" name="START_DATE" type="xs:date" />
+                <xs:element minOccurs="0" name="END_DATE" type="xs:date" />
+                <xs:element minOccurs="0" name="READ_INCLUDED" type="ns2:FLAG_VALUE" />
+                <xs:element minOccurs="0" name="CUSTOMER" type="ns2:CUSTOMER" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" default="N" name="HEADER_ONLY" type="ns2:FLAG_VALUE" />
+          <xs:element minOccurs="0" default="XML" name="CONTENT_TYPE" type="ns2:CONTENT_TYPE" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CancelCreditNoteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="UUID" type="xs:token" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetCreditNoteReportRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="START_DATE" type="xs:date" />
+          <xs:element minOccurs="0" name="END_DATE" type="xs:date" />
+          <xs:element minOccurs="0" default="N" name="HEADER_ONLY" type="ns2:FLAG_VALUE" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetCreditNoteStatusRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="UUID" type="xs:token" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SendCreditNoteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="CREDITNOTE" type="tns:CREDITNOTE" />
+          <xs:element minOccurs="0" name="CREDITNOTE_PROPERTIES" type="tns:CREDITNOTE_PROPERTIES" />
+          <xs:element minOccurs="0" name="SERIES_PROPERTIES" type="tns:SERIES_PROPERTIES" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CREDITNOTE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HEADER">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CUSTOMER" type="ns2:CUSTOMER" />
+            <xs:element minOccurs="0" name="ISSUE_DATE" type="xs:date" />
+            <xs:element minOccurs="0" name="PAYABLE_AMOUNT" type="ns2:AmountType" />
+            <xs:element minOccurs="0" name="PROFILE_ID" type="tns:PROFILE_ID" />
+            <xs:element minOccurs="0" name="STATUS" type="xs:string" />
+            <xs:element minOccurs="0" name="STATUS_CODE" type="xs:int" />
+            <xs:element minOccurs="0" name="STATUS_DESCRIPTION" type="xs:string" />
+            <xs:element minOccurs="0" name="SMS_STATUS_CODE" type="xs:int" />
+            <xs:element minOccurs="0" name="SMS_STATUS_DESCRIPTION" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="EMAIL" type="xs:string" />
+            <xs:element minOccurs="0" name="EMAIL_STATUS_CODE" type="xs:int" />
+            <xs:element minOccurs="0" name="EMAIL_STATUS_DESCRIPTION" type="xs:string" />
+            <xs:element minOccurs="0" name="FILENAME" type="xs:string" />
+            <xs:element minOccurs="0" name="HASH" type="xs:string" />
+            <xs:element minOccurs="0" name="CDATE" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="REPORT_STATUS_CODE" type="xs:int" />
+            <xs:element minOccurs="0" name="REPORT_STATUS_DESCRIPTION" type="xs:string" />
+            <xs:element minOccurs="0" name="CANCEL_REPORT_DATE" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="NO_REPORT_DATE" type="xs:dateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CONTENT" type="ns3:base64Binary" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:token" />
+    <xs:attribute name="UUID" type="xs:token" />
+  </xs:complexType>
+  <xs:complexType name="MarkCreditNoteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence>
+          <xs:element name="MARK">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="UUID" type="xs:string" />
+              </xs:sequence>
+              <xs:attribute name="value" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="LoadCreditNoteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ns1:REQUEST">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="CREDITNOTE" type="tns:CREDITNOTE" />
+          <xs:element minOccurs="0" name="CREDITNOTE_PROPERTIES" type="tns:CREDITNOTE_PROPERTIES" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetCreditNoteReportResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="CREDITNOTE_REPORT" type="tns:REPORT" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="REPORT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HEADER">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UUID" type="xs:string" />
+            <xs:element minOccurs="0" name="PERIOD_SDATE" type="xs:date" />
+            <xs:element minOccurs="0" name="PERIOD_EDATE" type="xs:date" />
+            <xs:element minOccurs="0" name="SEGMENT_SDATE" type="xs:date" />
+            <xs:element minOccurs="0" name="SEGMENT_EDATE" type="xs:date" />
+            <xs:element minOccurs="0" name="SEGMENT_NO" type="xs:int" />
+            <xs:element minOccurs="0" name="DOCUMENT_COUNT" type="xs:int" />
+            <xs:element minOccurs="0" name="STATUS" type="xs:string" />
+            <xs:element minOccurs="0" name="STATUS_CODE" type="xs:string" />
+            <xs:element minOccurs="0" name="STATUS_DESC" type="xs:string" />
+            <xs:element minOccurs="0" name="GIB_STATUS_CODE" type="xs:int" />
+            <xs:element minOccurs="0" name="GIB_STATUS_DESCRIPTION" type="xs:string" />
+            <xs:element minOccurs="0" name="GIB_STATUS_DATE" type="xs:dateTime" />
+            <xs:element minOccurs="0" name="CREATE_DATE" type="xs:date" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CONTENT" type="ns3:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoadCreditNoteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="REQUEST_RETURN" type="ns1:REQUEST_RETURNType" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetCreditNoteStatusResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="CREDITNOTE_STATUS" type="tns:CREDITNOTE" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SendCreditNoteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="REQUEST_RETURN" type="ns1:REQUEST_RETURNType" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MarkCreditNoteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="REQUEST_RETURN" type="ns1:REQUEST_RETURNType" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetCreditNoteResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="CREDITNOTE" type="tns:CREDITNOTE" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="SENDING_TYPE">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ELEKTRONIK" />
+      <xs:enumeration value="KAGIT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PROFILE_ID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EARSIVBELGE" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

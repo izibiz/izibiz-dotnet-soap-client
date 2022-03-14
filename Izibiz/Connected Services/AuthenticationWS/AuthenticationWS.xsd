@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://schemas.i2i.com/ei/common" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="PARTINFO">
+    <xs:sequence />
+    <xs:attribute name="VKN" type="xs:normalizedString" />
+    <xs:attribute name="IDENTIFIER" type="xs:normalizedString" />
+    <xs:attribute name="ALIAS" type="xs:normalizedString" />
+  </xs:complexType>
+  <xs:complexType name="CHANGE_INFOType">
+    <xs:sequence>
+      <xs:element name="CDATE" type="xs:date" />
+      <xs:element name="CPOSITION_ID" type="xs:long" />
+      <xs:element name="CUSER_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="UDATE" type="xs:date" />
+      <xs:element minOccurs="0" name="UPOSITION_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="UUSER_ID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ATTRIBUTESTYPE">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="skip" />
+    </xs:sequence>
+    <xs:attribute name="NAME" type="xs:string" use="required" />
+    <xs:anyAttribute namespace="##other" processContents="skip" />
+  </xs:complexType>
+  <xs:complexType name="CUSTOMER">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDENTIFIER" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AmountType">
+    <xs:simpleContent>
+      <xs:extension base="xs:decimal">
+        <xs:attribute name="currencyID" type="xs:normalizedString" />
+        <xs:attribute name="currencyCodeListVersionID" type="xs:normalizedString" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="LOV_VALUEType">
+    <xs:sequence>
+      <xs:element name="LOV_ID" type="xs:long" />
+      <xs:element minOccurs="0" default="'N'" name="LOV_CODE" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

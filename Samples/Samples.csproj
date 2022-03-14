@@ -74,7 +74,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Izibiz_dotnet_soap_client\Izibiz.csproj">
+    <ProjectReference Include="..\Izibiz\Izibiz.csproj">
       <Project>{6edce3ee-0dd4-48ca-9278-57711dec0d67}</Project>
       <Name>Izibiz</Name>
     </ProjectReference>

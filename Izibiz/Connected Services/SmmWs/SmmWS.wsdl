@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://schemas.i2i.com/ei/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="SmmWS" targetNamespace="http://schemas.i2i.com/ei/wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="SmmPortBinding_MTOM_Policy-SmmPortBinding_MTOM_Policy">
+    <ns1:OptimizedMimeSerialization xmlns:ns1="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+  </wsp:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/SmmWS?xsd=1" namespace="http://www.w3.org/2005/05/xmlmime" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/SmmWS?xsd=2" namespace="http://schemas.i2i.com/ei/wsdl" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/SmmWS?xsd=3" namespace="http://schemas.i2i.com/ei/entity" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://efaturatest.izibiz.com.tr:443/SmmWS?xsd=4" namespace="http://schemas.i2i.com/ei/common" />
+    </xsd:schema>
+  </types>
+  <message name="GetSmm">
+    <part name="request" element="tns:GetSmmRequest" />
+  </message>
+  <message name="GetSmmResponse">
+    <part name="response" element="tns:GetSmmResponse" />
+  </message>
+  <message name="RequestFaultMessage">
+    <part name="fault" element="tns:RequestFault" />
+  </message>
+  <message name="GetSmmStatus">
+    <part name="request" element="tns:GetSmmStatusRequest" />
+  </message>
+  <message name="GetSmmStatusResponse">
+    <part name="response" element="tns:GetSmmStatusResponse" />
+  </message>
+  <message name="CancelSmm">
+    <part name="request" element="tns:CancelSmmRequest" />
+  </message>
+  <message name="CancelSmmResponse">
+    <part name="response" element="tns:CancelSmmResponse" />
+  </message>
+  <message name="GetSmmReport">
+    <part name="request" element="tns:GetSmmReportRequest" />
+  </message>
+  <message name="GetSmmReportResponse">
+    <part name="response" element="tns:GetSmmReportResponse" />
+  </message>
+  <message name="LoadSmm">
+    <part name="request" element="tns:LoadSmmRequest" />
+  </message>
+  <message name="LoadSmmResponse">
+    <part name="response" element="tns:LoadSmmResponse" />
+  </message>
+  <message name="SendSmm">
+    <part name="request" element="tns:SendSmmRequest" />
+  </message>
+  <message name="SendSmmResponse">
+    <part name="response" element="tns:SendSmmResponse" />
+  </message>
+  <portType name="SmmServicePort">
+    <operation name="GetSmm">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmRequest" message="tns:GetSmm" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmResponse" message="tns:GetSmmResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmm/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="GetSmmStatus">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmStatusRequest" message="tns:GetSmmStatus" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmStatusResponse" message="tns:GetSmmStatusResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmStatus/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="CancelSmm">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/CancelSmmRequest" message="tns:CancelSmm" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/CancelSmmResponse" message="tns:CancelSmmResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/CancelSmm/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="GetSmmReport">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmReportRequest" message="tns:GetSmmReport" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmReportResponse" message="tns:GetSmmReportResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmReport/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="LoadSmm">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/LoadSmmRequest" message="tns:LoadSmm" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/LoadSmmResponse" message="tns:LoadSmmResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/LoadSmm/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+    <operation name="SendSmm">
+      <input wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/SendSmmRequest" message="tns:SendSmm" />
+      <output wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/SendSmmResponse" message="tns:SendSmmResponse" />
+      <fault wsam:Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/SendSmm/Fault/RequestFaultMessage" name="RequestFaultMessage" message="tns:RequestFaultMessage" />
+    </operation>
+  </portType>
+  <binding name="SmmPortBinding" type="tns:SmmServicePort">
+    <wsp:PolicyReference URI="#SmmPortBinding_MTOM_Policy-SmmPortBinding_MTOM_Policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetSmm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GetSmmStatus">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="CancelSmm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="GetSmmReport">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="LoadSmm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+    <operation name="SendSmm">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="RequestFaultMessage">
+        <soap:fault use="literal" name="RequestFaultMessage" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="SmmWS">
+    <port name="SmmPort" binding="tns:SmmPortBinding">
+      <soap:address location="https://efaturatest.izibiz.com.tr:443/SmmWS" />
+    </port>
+  </service>
+</definitions>

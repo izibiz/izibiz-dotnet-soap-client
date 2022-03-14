@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://schemas.i2i.com/ei/common" targetNamespace="http://schemas.i2i.com/ei/common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CHANGE_INFOType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Contains information related to
+				either Creation or Modification
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CDATE" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Create Date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CPOSITION_ID" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>Create Position ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CUSER_ID" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>Create User ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UDATE" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Update Date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UPOSITION_ID" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>Update Position ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UUSER_ID" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>Update User ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AMOUNTType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Contains price type
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AMOUNT" type="xs:double">
+        <xs:annotation>
+          <xs:documentation>Charge amount.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CURRENCY_CODE" type="ISO_CURRENCY_CODEType">
+        <xs:annotation>
+          <xs:documentation>See ISO_CURRENCY_CODE Type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VALIDITY_PERIODType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Contains validity period info for
+				related entity
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SDATE" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Validity start date of the entity
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EDATE" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Validity end date of the entity
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ENTITYType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; defines basic properties for a
+				business entity
+			</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ENTITYBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FILESET" type="FILESETType">
+            <xs:annotation>
+              <xs:documentation>See FILESET type</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="COMMENTSET" type="COMMENTSETType">
+            <xs:annotation>
+              <xs:documentation>See COMMENTSET type</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FILEType">
+    <xs:annotation>
+      <xs:documentation>Holds File Info</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ENTITYBaseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CREATE_USER_INFO">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FIRST_NAME">
+                  <xs:annotation>
+                    <xs:documentation>First name</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:maxLength value="256" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="LAST_NAME">
+                  <xs:annotation>
+                    <xs:documentation>Last name</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:maxLength value="64" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="FILENAME">
+            <xs:annotation>
+              <xs:documentation>Filename</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:maxLength value="256" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="FILETYPE">
+            <xs:annotation>
+              <xs:documentation>Defines filetype such as PDF, XSL etc.
+							</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:maxLength value="10" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="OPERATION_CODE">
+            <xs:annotation>
+              <xs:documentation>Operation Code</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:maxLength value="32" />
+                <xs:minLength value="1" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="CONTENT" type="xs:anyType">
+            <xs:annotation>
+              <xs:documentation>This is the content of the file
+							</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="INTL_TXN_ID" type="xs:long">
+            <xs:annotation>
+              <xs:documentation>INTL TXN ID if related to a Workflow
+							</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FILESETType">
+    <xs:annotation>
+      <xs:documentation>Holds File Set Info</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ENTITYBaseType">
+        <xs:sequence>
+          <xs:element name="FILE_SET_ID" type="xs:long">
+            <xs:annotation>
+              <xs:documentation>Unique ID indicating a set of files. If NOT
+								defined may be set to -1
+							</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="FILE" type="FILEType">
+            <xs:annotation>
+              <xs:documentation>Files</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="COMMENTType">
+    <xs:annotation>
+      <xs:documentation>Holds Comment Info</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ENTITYBaseType">
+        <xs:sequence>
+          <xs:element name="COMMENT_ID" type="xs:long">
+            <xs:annotation>
+              <xs:documentation>Comment Internal ID. -1 if NOT defined
+							</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="COMMENT">
+            <xs:annotation>
+              <xs:documentation>Comment</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="1024" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element minOccurs="0" name="INTL_TXN_ID" type="xs:long">
+            <xs:annotation>
+              <xs:documentation>INTL TXN ID if related to a Workflow
+							</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="COMMENTSETType">
+    <xs:annotation>
+      <xs:documentation>Holds Comment Set Info</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ENTITYBaseType">
+        <xs:sequence>
+          <xs:element name="COMMENT_SET_ID" type="xs:long">
+            <xs:annotation>
+              <xs:documentation>Unique ID indicating a set of comments. If not
+								defined may be set to -1
+							</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="COMMENT" type="COMMENTType">
+            <xs:annotation>
+              <xs:documentation>Comments</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SEARCH_KEYType">
+    <xs:annotation>
+      <xs:documentation>Base type used for search keys</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VALID_FROM" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Valid From</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="VALID_TO" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Valid To</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ROWNUM_OFFSET" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>For searches that may return many rows, this
+						parameters specifies the starting rownum of query to be returned
+						by BACKEND system
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ROWNUM_LIMIT" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>For searches that may return many rows, this
+						parameters specifies the maximum rownums to be returned starting
+						with ROWNUM_OFFSET
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SEARCH_RESULTType">
+    <xs:annotation>
+      <xs:documentation>Base type used for all search results
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ROWNUM_TOTAL" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>Specifies the total number of rows returned
+					</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FIND_KEYType">
+    <xs:annotation>
+      <xs:documentation>Base type used for search keys</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DATETIME" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>DateTime of Inquire.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="VISIBILITY_TYPE">
+        <xs:annotation>
+          <xs:documentation>Visibility Type</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="PERSON" />
+            <xs:enumeration value="POSITION" />
+            <xs:enumeration value="POSITION_TYPE" />
+            <xs:enumeration value="PEER" />
+            <xs:enumeration value="TEAM" />
+            <xs:enumeration value="ORGANIZATION" />
+            <xs:enumeration value="ADMIN" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LOV_VALUEType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Holds LOV Value Type
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="LOV_ID" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>Indicates list of value ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" default="'N'" name="LOV_CODE">
+        <xs:annotation>
+          <xs:documentation>LOV Internal CODE</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:maxLength value="64" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ISO_CURRENCY_CODEType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Holds LOV Value Type
+			</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="LOV_VALUEType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ATTRIBUTESTYPE">
+    <xs:annotation>
+      <xs:documentation>A generic name/value Attributes type
+			</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="xs:anyType">
+        <xs:attribute name="NAME" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:minLength value="1" />
+              <xs:maxLength value="64" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="STRINGType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; The set of strings that do not
+				contain the carriage return, line feed nor tab characters, that have
+				no leading or trailing spaces and that have no internal sequences of
+				two or more spaces.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token" />
+  </xs:simpleType>
+  <xs:simpleType name="MSISDNType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Telephone Number of mobile phone;
+				acronym for Mobile Station Integrated Services Digital Network
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="5[0-9]{9}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TELNOType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Telephone Number</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[1-9][0-9]{9}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GLOBALTELNOType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Telephone Number of mobile phone in
+				long format
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-9]{10,15}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IPV4Type">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; IP Address type in V4 format
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-2]?[0-9]?[0-9]\.[0-2]?[0-9]?[0-9]\.[0-2]?[0-9]?[0-9]\.[0-2]?[0-9]?[0-9]" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IPV6Type">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; IP Address type in V6 format
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-9A-F]{1,4}:[0-9A-F]{1,4}:[0-9A-F]{1,4}:[0-9A-F]{1,4}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BOOLEANType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Boolean type one of case insensitive
+				"Y","N","1","0","true","false" indication true, false respectively
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="([YyNn01Xx_]|true|false){1}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CURRENCYType">
+    <xs:annotation>
+      <xs:documentation>Helper entity; type for currency; typically float
+				or double
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double" />
+  </xs:simpleType>
+  <xs:simpleType name="URLType">
+    <xs:annotation>
+      <xs:documentation>Helper entity; Simple type for URL validity check
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="(https?|ftp|file).*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TAXNOType">
+    <xs:annotation>
+      <xs:documentation>Helper entity; TAX No</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-9]{10,11}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IBANType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; IBAN</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[A-Z]{2}[0-9]{2}[A-Z0-9]{5}[A-Z0-9]{1}[A-Z0-9]{16}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="POSTCODEType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; EMAIL address</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-9]{5}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EMAILType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; EMAIL address</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*@[-a-zA-Z0-9]+(\.[-a-zA-Z0-9]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,10}))" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ENTITYBaseType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EL_ACTION">
+        <xs:annotation>
+          <xs:documentation>Requested Elementary Action:C, R, U or D
+					</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:maxLength value="1" />
+            <xs:pattern value="[CRUDScruds]" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="VALIDITY_PERIOD" type="VALIDITY_PERIODType">
+        <xs:annotation>
+          <xs:documentation>See VALIDITY_PERIOD type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CHANGE_INFO" type="CHANGE_INFOType">
+        <xs:annotation>
+          <xs:documentation>See CHANGE_INFO type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ACCESS_CONTROL_INFO" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>See ACCESS_CONTROL_INFO type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
