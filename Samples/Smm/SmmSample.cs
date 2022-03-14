@@ -7,13 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
-using Izibiz_dotnet_soap_client;
-using Izibiz_dotnet_soap_client.UblCreate;
-using Izibiz_dotnet_soap_client.Adapter;
+using Izibiz;
+using Izibiz.UblCreate;
+using Izibiz.Adapter;
 using NUnit.Framework;
-using Izibiz_dotnet_soap_client.SmmWs;
-using Izibiz_dotnet_soap_client.UblSerializer;
-using Izibiz_dotnet_soap_client.Operations;
+using Izibiz.SmmWs;
+using Izibiz.UblSerializer;
+using Izibiz.Operations;
 using UblInvoice;
 
 namespace Samples.Smm

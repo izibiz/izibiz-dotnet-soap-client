@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Izibiz_dotnet_soap_client.CreditNoteWS {
+namespace Izibiz.CreditNoteWS {
     
     
     /// <remarks/>
@@ -2487,80 +2487,80 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
         
         // CODEGEN: Generating message contract since the operation GetCreditNoteReport is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteReportRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteReportResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteReport/Fault/Re" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteReport/Fault/Re" +
             "questFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportResponse1 GetCreditNoteReport(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest1 request);
+        Izibiz.CreditNoteWS.GetCreditNoteReportResponse1 GetCreditNoteReport(Izibiz.CreditNoteWS.GetCreditNoteReportRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteReportRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteReportResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportResponse1> GetCreditNoteReportAsync(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.GetCreditNoteReportResponse1> GetCreditNoteReportAsync(Izibiz.CreditNoteWS.GetCreditNoteReportRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetCreditNote is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNote/Fault/RequestF" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNote/Fault/RequestF" +
             "aultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteResponse1 GetCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest1 request);
+        Izibiz.CreditNoteWS.GetCreditNoteResponse1 GetCreditNote(Izibiz.CreditNoteWS.GetCreditNoteRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteResponse1> GetCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.GetCreditNoteResponse1> GetCreditNoteAsync(Izibiz.CreditNoteWS.GetCreditNoteRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CancelCreditNote is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/CancelCreditNoteRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/CancelCreditNoteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/CancelCreditNote/Fault/Reque" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/CancelCreditNote/Fault/Reque" +
             "stFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteResponse1 CancelCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest1 request);
+        Izibiz.CreditNoteWS.CancelCreditNoteResponse1 CancelCreditNote(Izibiz.CreditNoteWS.CancelCreditNoteRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/CancelCreditNoteRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/CancelCreditNoteResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteResponse1> CancelCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.CancelCreditNoteResponse1> CancelCreditNoteAsync(Izibiz.CreditNoteWS.CancelCreditNoteRequest1 request);
         
         // CODEGEN: Generating message contract since the operation LoadCreditNote is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/LoadCreditNoteRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/LoadCreditNoteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/LoadCreditNote/Fault/Request" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/LoadCreditNote/Fault/Request" +
             "FaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteResponse1 LoadCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest1 request);
+        Izibiz.CreditNoteWS.LoadCreditNoteResponse1 LoadCreditNote(Izibiz.CreditNoteWS.LoadCreditNoteRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/LoadCreditNoteRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/LoadCreditNoteResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteResponse1> LoadCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.LoadCreditNoteResponse1> LoadCreditNoteAsync(Izibiz.CreditNoteWS.LoadCreditNoteRequest1 request);
         
         // CODEGEN: Generating message contract since the operation MarkCreditNote is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/MarkCreditNoteRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/MarkCreditNoteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/MarkCreditNote/Fault/Request" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/MarkCreditNote/Fault/Request" +
             "FaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteResponse1 MarkCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest1 request);
+        Izibiz.CreditNoteWS.MarkCreditNoteResponse1 MarkCreditNote(Izibiz.CreditNoteWS.MarkCreditNoteRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/MarkCreditNoteRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/MarkCreditNoteResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteResponse1> MarkCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.MarkCreditNoteResponse1> MarkCreditNoteAsync(Izibiz.CreditNoteWS.MarkCreditNoteRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetCreditNoteStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteStatusRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteStatusResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteStatus/Fault/Re" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteStatus/Fault/Re" +
             "questFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusResponse1 GetCreditNoteStatus(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest1 request);
+        Izibiz.CreditNoteWS.GetCreditNoteStatusResponse1 GetCreditNoteStatus(Izibiz.CreditNoteWS.GetCreditNoteStatusRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteStatusRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/GetCreditNoteStatusResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusResponse1> GetCreditNoteStatusAsync(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.GetCreditNoteStatusResponse1> GetCreditNoteStatusAsync(Izibiz.CreditNoteWS.GetCreditNoteStatusRequest1 request);
         
         // CODEGEN: Generating message contract since the operation SendCreditNote is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/SendCreditNoteRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/SendCreditNoteResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/SendCreditNote/Fault/Request" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.CreditNoteWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/SendCreditNote/Fault/Request" +
             "FaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteResponse1 SendCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest1 request);
+        Izibiz.CreditNoteWS.SendCreditNoteResponse1 SendCreditNote(Izibiz.CreditNoteWS.SendCreditNoteRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/SendCreditNoteRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/CreditNoteServicePort/SendCreditNoteResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteResponse1> SendCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.SendCreditNoteResponse1> SendCreditNoteAsync(Izibiz.CreditNoteWS.SendCreditNoteRequest1 request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2570,12 +2570,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class GetCreditNoteReportRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest GetCreditNoteReportRequest;
+        public Izibiz.CreditNoteWS.GetCreditNoteReportRequest GetCreditNoteReportRequest;
         
         public GetCreditNoteReportRequest1() {
         }
         
-        public GetCreditNoteReportRequest1(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest GetCreditNoteReportRequest) {
+        public GetCreditNoteReportRequest1(Izibiz.CreditNoteWS.GetCreditNoteReportRequest GetCreditNoteReportRequest) {
             this.GetCreditNoteReportRequest = GetCreditNoteReportRequest;
         }
     }
@@ -2587,12 +2587,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class GetCreditNoteReportResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportResponse GetCreditNoteReportResponse;
+        public Izibiz.CreditNoteWS.GetCreditNoteReportResponse GetCreditNoteReportResponse;
         
         public GetCreditNoteReportResponse1() {
         }
         
-        public GetCreditNoteReportResponse1(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportResponse GetCreditNoteReportResponse) {
+        public GetCreditNoteReportResponse1(Izibiz.CreditNoteWS.GetCreditNoteReportResponse GetCreditNoteReportResponse) {
             this.GetCreditNoteReportResponse = GetCreditNoteReportResponse;
         }
     }
@@ -2650,12 +2650,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class GetCreditNoteRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest GetCreditNoteRequest;
+        public Izibiz.CreditNoteWS.GetCreditNoteRequest GetCreditNoteRequest;
         
         public GetCreditNoteRequest1() {
         }
         
-        public GetCreditNoteRequest1(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest GetCreditNoteRequest) {
+        public GetCreditNoteRequest1(Izibiz.CreditNoteWS.GetCreditNoteRequest GetCreditNoteRequest) {
             this.GetCreditNoteRequest = GetCreditNoteRequest;
         }
     }
@@ -2667,12 +2667,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class GetCreditNoteResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteResponse GetCreditNoteResponse;
+        public Izibiz.CreditNoteWS.GetCreditNoteResponse GetCreditNoteResponse;
         
         public GetCreditNoteResponse1() {
         }
         
-        public GetCreditNoteResponse1(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteResponse GetCreditNoteResponse) {
+        public GetCreditNoteResponse1(Izibiz.CreditNoteWS.GetCreditNoteResponse GetCreditNoteResponse) {
             this.GetCreditNoteResponse = GetCreditNoteResponse;
         }
     }
@@ -2804,12 +2804,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class CancelCreditNoteRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest CancelCreditNoteRequest;
+        public Izibiz.CreditNoteWS.CancelCreditNoteRequest CancelCreditNoteRequest;
         
         public CancelCreditNoteRequest1() {
         }
         
-        public CancelCreditNoteRequest1(Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest CancelCreditNoteRequest) {
+        public CancelCreditNoteRequest1(Izibiz.CreditNoteWS.CancelCreditNoteRequest CancelCreditNoteRequest) {
             this.CancelCreditNoteRequest = CancelCreditNoteRequest;
         }
     }
@@ -2821,12 +2821,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class CancelCreditNoteResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteResponse CancelCreditNoteResponse;
+        public Izibiz.CreditNoteWS.CancelCreditNoteResponse CancelCreditNoteResponse;
         
         public CancelCreditNoteResponse1() {
         }
         
-        public CancelCreditNoteResponse1(Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteResponse CancelCreditNoteResponse) {
+        public CancelCreditNoteResponse1(Izibiz.CreditNoteWS.CancelCreditNoteResponse CancelCreditNoteResponse) {
             this.CancelCreditNoteResponse = CancelCreditNoteResponse;
         }
     }
@@ -2884,12 +2884,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class LoadCreditNoteRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest LoadCreditNoteRequest;
+        public Izibiz.CreditNoteWS.LoadCreditNoteRequest LoadCreditNoteRequest;
         
         public LoadCreditNoteRequest1() {
         }
         
-        public LoadCreditNoteRequest1(Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest LoadCreditNoteRequest) {
+        public LoadCreditNoteRequest1(Izibiz.CreditNoteWS.LoadCreditNoteRequest LoadCreditNoteRequest) {
             this.LoadCreditNoteRequest = LoadCreditNoteRequest;
         }
     }
@@ -2901,12 +2901,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class LoadCreditNoteResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteResponse LoadCreditNoteResponse;
+        public Izibiz.CreditNoteWS.LoadCreditNoteResponse LoadCreditNoteResponse;
         
         public LoadCreditNoteResponse1() {
         }
         
-        public LoadCreditNoteResponse1(Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteResponse LoadCreditNoteResponse) {
+        public LoadCreditNoteResponse1(Izibiz.CreditNoteWS.LoadCreditNoteResponse LoadCreditNoteResponse) {
             this.LoadCreditNoteResponse = LoadCreditNoteResponse;
         }
     }
@@ -2964,12 +2964,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class MarkCreditNoteRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest MarkCreditNoteRequest;
+        public Izibiz.CreditNoteWS.MarkCreditNoteRequest MarkCreditNoteRequest;
         
         public MarkCreditNoteRequest1() {
         }
         
-        public MarkCreditNoteRequest1(Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest MarkCreditNoteRequest) {
+        public MarkCreditNoteRequest1(Izibiz.CreditNoteWS.MarkCreditNoteRequest MarkCreditNoteRequest) {
             this.MarkCreditNoteRequest = MarkCreditNoteRequest;
         }
     }
@@ -2981,12 +2981,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class MarkCreditNoteResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteResponse MarkCreditNoteResponse;
+        public Izibiz.CreditNoteWS.MarkCreditNoteResponse MarkCreditNoteResponse;
         
         public MarkCreditNoteResponse1() {
         }
         
-        public MarkCreditNoteResponse1(Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteResponse MarkCreditNoteResponse) {
+        public MarkCreditNoteResponse1(Izibiz.CreditNoteWS.MarkCreditNoteResponse MarkCreditNoteResponse) {
             this.MarkCreditNoteResponse = MarkCreditNoteResponse;
         }
     }
@@ -3044,12 +3044,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class GetCreditNoteStatusRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest GetCreditNoteStatusRequest;
+        public Izibiz.CreditNoteWS.GetCreditNoteStatusRequest GetCreditNoteStatusRequest;
         
         public GetCreditNoteStatusRequest1() {
         }
         
-        public GetCreditNoteStatusRequest1(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest GetCreditNoteStatusRequest) {
+        public GetCreditNoteStatusRequest1(Izibiz.CreditNoteWS.GetCreditNoteStatusRequest GetCreditNoteStatusRequest) {
             this.GetCreditNoteStatusRequest = GetCreditNoteStatusRequest;
         }
     }
@@ -3061,12 +3061,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class GetCreditNoteStatusResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusResponse GetCreditNoteStatusResponse;
+        public Izibiz.CreditNoteWS.GetCreditNoteStatusResponse GetCreditNoteStatusResponse;
         
         public GetCreditNoteStatusResponse1() {
         }
         
-        public GetCreditNoteStatusResponse1(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusResponse GetCreditNoteStatusResponse) {
+        public GetCreditNoteStatusResponse1(Izibiz.CreditNoteWS.GetCreditNoteStatusResponse GetCreditNoteStatusResponse) {
             this.GetCreditNoteStatusResponse = GetCreditNoteStatusResponse;
         }
     }
@@ -3124,12 +3124,12 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class SendCreditNoteRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest SendCreditNoteRequest;
+        public Izibiz.CreditNoteWS.SendCreditNoteRequest SendCreditNoteRequest;
         
         public SendCreditNoteRequest1() {
         }
         
-        public SendCreditNoteRequest1(Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest SendCreditNoteRequest) {
+        public SendCreditNoteRequest1(Izibiz.CreditNoteWS.SendCreditNoteRequest SendCreditNoteRequest) {
             this.SendCreditNoteRequest = SendCreditNoteRequest;
         }
     }
@@ -3141,23 +3141,23 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
     public partial class SendCreditNoteResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteResponse SendCreditNoteResponse;
+        public Izibiz.CreditNoteWS.SendCreditNoteResponse SendCreditNoteResponse;
         
         public SendCreditNoteResponse1() {
         }
         
-        public SendCreditNoteResponse1(Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteResponse SendCreditNoteResponse) {
+        public SendCreditNoteResponse1(Izibiz.CreditNoteWS.SendCreditNoteResponse SendCreditNoteResponse) {
             this.SendCreditNoteResponse = SendCreditNoteResponse;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface CreditNoteServicePortChannel : Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort, System.ServiceModel.IClientChannel {
+    public interface CreditNoteServicePortChannel : Izibiz.CreditNoteWS.CreditNoteServicePort, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CreditNoteServicePortClient : System.ServiceModel.ClientBase<Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort>, Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort {
+    public partial class CreditNoteServicePortClient : System.ServiceModel.ClientBase<Izibiz.CreditNoteWS.CreditNoteServicePort>, Izibiz.CreditNoteWS.CreditNoteServicePort {
         
         public CreditNoteServicePortClient() {
         }
@@ -3179,164 +3179,164 @@ namespace Izibiz_dotnet_soap_client.CreditNoteWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportResponse1 Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.GetCreditNoteReport(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest1 request) {
+        Izibiz.CreditNoteWS.GetCreditNoteReportResponse1 Izibiz.CreditNoteWS.CreditNoteServicePort.GetCreditNoteReport(Izibiz.CreditNoteWS.GetCreditNoteReportRequest1 request) {
             return base.Channel.GetCreditNoteReport(request);
         }
         
-        public Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportResponse GetCreditNoteReport(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest GetCreditNoteReportRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest1();
+        public Izibiz.CreditNoteWS.GetCreditNoteReportResponse GetCreditNoteReport(Izibiz.CreditNoteWS.GetCreditNoteReportRequest GetCreditNoteReportRequest) {
+            Izibiz.CreditNoteWS.GetCreditNoteReportRequest1 inValue = new Izibiz.CreditNoteWS.GetCreditNoteReportRequest1();
             inValue.GetCreditNoteReportRequest = GetCreditNoteReportRequest;
-            Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportResponse1 retVal = ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNoteReport(inValue);
+            Izibiz.CreditNoteWS.GetCreditNoteReportResponse1 retVal = ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNoteReport(inValue);
             return retVal.GetCreditNoteReportResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportResponse1> Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.GetCreditNoteReportAsync(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.GetCreditNoteReportResponse1> Izibiz.CreditNoteWS.CreditNoteServicePort.GetCreditNoteReportAsync(Izibiz.CreditNoteWS.GetCreditNoteReportRequest1 request) {
             return base.Channel.GetCreditNoteReportAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportResponse1> GetCreditNoteReportAsync(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest GetCreditNoteReportRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteReportRequest1();
+        public System.Threading.Tasks.Task<Izibiz.CreditNoteWS.GetCreditNoteReportResponse1> GetCreditNoteReportAsync(Izibiz.CreditNoteWS.GetCreditNoteReportRequest GetCreditNoteReportRequest) {
+            Izibiz.CreditNoteWS.GetCreditNoteReportRequest1 inValue = new Izibiz.CreditNoteWS.GetCreditNoteReportRequest1();
             inValue.GetCreditNoteReportRequest = GetCreditNoteReportRequest;
-            return ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNoteReportAsync(inValue);
+            return ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNoteReportAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteResponse1 Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.GetCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest1 request) {
+        Izibiz.CreditNoteWS.GetCreditNoteResponse1 Izibiz.CreditNoteWS.CreditNoteServicePort.GetCreditNote(Izibiz.CreditNoteWS.GetCreditNoteRequest1 request) {
             return base.Channel.GetCreditNote(request);
         }
         
-        public Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteResponse GetCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest GetCreditNoteRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest1();
+        public Izibiz.CreditNoteWS.GetCreditNoteResponse GetCreditNote(Izibiz.CreditNoteWS.GetCreditNoteRequest GetCreditNoteRequest) {
+            Izibiz.CreditNoteWS.GetCreditNoteRequest1 inValue = new Izibiz.CreditNoteWS.GetCreditNoteRequest1();
             inValue.GetCreditNoteRequest = GetCreditNoteRequest;
-            Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteResponse1 retVal = ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNote(inValue);
+            Izibiz.CreditNoteWS.GetCreditNoteResponse1 retVal = ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNote(inValue);
             return retVal.GetCreditNoteResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteResponse1> Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.GetCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.GetCreditNoteResponse1> Izibiz.CreditNoteWS.CreditNoteServicePort.GetCreditNoteAsync(Izibiz.CreditNoteWS.GetCreditNoteRequest1 request) {
             return base.Channel.GetCreditNoteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteResponse1> GetCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest GetCreditNoteRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteRequest1();
+        public System.Threading.Tasks.Task<Izibiz.CreditNoteWS.GetCreditNoteResponse1> GetCreditNoteAsync(Izibiz.CreditNoteWS.GetCreditNoteRequest GetCreditNoteRequest) {
+            Izibiz.CreditNoteWS.GetCreditNoteRequest1 inValue = new Izibiz.CreditNoteWS.GetCreditNoteRequest1();
             inValue.GetCreditNoteRequest = GetCreditNoteRequest;
-            return ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNoteAsync(inValue);
+            return ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNoteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteResponse1 Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.CancelCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest1 request) {
+        Izibiz.CreditNoteWS.CancelCreditNoteResponse1 Izibiz.CreditNoteWS.CreditNoteServicePort.CancelCreditNote(Izibiz.CreditNoteWS.CancelCreditNoteRequest1 request) {
             return base.Channel.CancelCreditNote(request);
         }
         
-        public Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteResponse CancelCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest CancelCreditNoteRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest1();
+        public Izibiz.CreditNoteWS.CancelCreditNoteResponse CancelCreditNote(Izibiz.CreditNoteWS.CancelCreditNoteRequest CancelCreditNoteRequest) {
+            Izibiz.CreditNoteWS.CancelCreditNoteRequest1 inValue = new Izibiz.CreditNoteWS.CancelCreditNoteRequest1();
             inValue.CancelCreditNoteRequest = CancelCreditNoteRequest;
-            Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteResponse1 retVal = ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).CancelCreditNote(inValue);
+            Izibiz.CreditNoteWS.CancelCreditNoteResponse1 retVal = ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).CancelCreditNote(inValue);
             return retVal.CancelCreditNoteResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteResponse1> Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.CancelCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.CancelCreditNoteResponse1> Izibiz.CreditNoteWS.CreditNoteServicePort.CancelCreditNoteAsync(Izibiz.CreditNoteWS.CancelCreditNoteRequest1 request) {
             return base.Channel.CancelCreditNoteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteResponse1> CancelCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest CancelCreditNoteRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.CancelCreditNoteRequest1();
+        public System.Threading.Tasks.Task<Izibiz.CreditNoteWS.CancelCreditNoteResponse1> CancelCreditNoteAsync(Izibiz.CreditNoteWS.CancelCreditNoteRequest CancelCreditNoteRequest) {
+            Izibiz.CreditNoteWS.CancelCreditNoteRequest1 inValue = new Izibiz.CreditNoteWS.CancelCreditNoteRequest1();
             inValue.CancelCreditNoteRequest = CancelCreditNoteRequest;
-            return ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).CancelCreditNoteAsync(inValue);
+            return ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).CancelCreditNoteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteResponse1 Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.LoadCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest1 request) {
+        Izibiz.CreditNoteWS.LoadCreditNoteResponse1 Izibiz.CreditNoteWS.CreditNoteServicePort.LoadCreditNote(Izibiz.CreditNoteWS.LoadCreditNoteRequest1 request) {
             return base.Channel.LoadCreditNote(request);
         }
         
-        public Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteResponse LoadCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest LoadCreditNoteRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest1();
+        public Izibiz.CreditNoteWS.LoadCreditNoteResponse LoadCreditNote(Izibiz.CreditNoteWS.LoadCreditNoteRequest LoadCreditNoteRequest) {
+            Izibiz.CreditNoteWS.LoadCreditNoteRequest1 inValue = new Izibiz.CreditNoteWS.LoadCreditNoteRequest1();
             inValue.LoadCreditNoteRequest = LoadCreditNoteRequest;
-            Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteResponse1 retVal = ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).LoadCreditNote(inValue);
+            Izibiz.CreditNoteWS.LoadCreditNoteResponse1 retVal = ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).LoadCreditNote(inValue);
             return retVal.LoadCreditNoteResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteResponse1> Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.LoadCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.LoadCreditNoteResponse1> Izibiz.CreditNoteWS.CreditNoteServicePort.LoadCreditNoteAsync(Izibiz.CreditNoteWS.LoadCreditNoteRequest1 request) {
             return base.Channel.LoadCreditNoteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteResponse1> LoadCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest LoadCreditNoteRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.LoadCreditNoteRequest1();
+        public System.Threading.Tasks.Task<Izibiz.CreditNoteWS.LoadCreditNoteResponse1> LoadCreditNoteAsync(Izibiz.CreditNoteWS.LoadCreditNoteRequest LoadCreditNoteRequest) {
+            Izibiz.CreditNoteWS.LoadCreditNoteRequest1 inValue = new Izibiz.CreditNoteWS.LoadCreditNoteRequest1();
             inValue.LoadCreditNoteRequest = LoadCreditNoteRequest;
-            return ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).LoadCreditNoteAsync(inValue);
+            return ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).LoadCreditNoteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteResponse1 Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.MarkCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest1 request) {
+        Izibiz.CreditNoteWS.MarkCreditNoteResponse1 Izibiz.CreditNoteWS.CreditNoteServicePort.MarkCreditNote(Izibiz.CreditNoteWS.MarkCreditNoteRequest1 request) {
             return base.Channel.MarkCreditNote(request);
         }
         
-        public Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteResponse MarkCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest MarkCreditNoteRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest1();
+        public Izibiz.CreditNoteWS.MarkCreditNoteResponse MarkCreditNote(Izibiz.CreditNoteWS.MarkCreditNoteRequest MarkCreditNoteRequest) {
+            Izibiz.CreditNoteWS.MarkCreditNoteRequest1 inValue = new Izibiz.CreditNoteWS.MarkCreditNoteRequest1();
             inValue.MarkCreditNoteRequest = MarkCreditNoteRequest;
-            Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteResponse1 retVal = ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).MarkCreditNote(inValue);
+            Izibiz.CreditNoteWS.MarkCreditNoteResponse1 retVal = ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).MarkCreditNote(inValue);
             return retVal.MarkCreditNoteResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteResponse1> Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.MarkCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.MarkCreditNoteResponse1> Izibiz.CreditNoteWS.CreditNoteServicePort.MarkCreditNoteAsync(Izibiz.CreditNoteWS.MarkCreditNoteRequest1 request) {
             return base.Channel.MarkCreditNoteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteResponse1> MarkCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest MarkCreditNoteRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.MarkCreditNoteRequest1();
+        public System.Threading.Tasks.Task<Izibiz.CreditNoteWS.MarkCreditNoteResponse1> MarkCreditNoteAsync(Izibiz.CreditNoteWS.MarkCreditNoteRequest MarkCreditNoteRequest) {
+            Izibiz.CreditNoteWS.MarkCreditNoteRequest1 inValue = new Izibiz.CreditNoteWS.MarkCreditNoteRequest1();
             inValue.MarkCreditNoteRequest = MarkCreditNoteRequest;
-            return ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).MarkCreditNoteAsync(inValue);
+            return ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).MarkCreditNoteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusResponse1 Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.GetCreditNoteStatus(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest1 request) {
+        Izibiz.CreditNoteWS.GetCreditNoteStatusResponse1 Izibiz.CreditNoteWS.CreditNoteServicePort.GetCreditNoteStatus(Izibiz.CreditNoteWS.GetCreditNoteStatusRequest1 request) {
             return base.Channel.GetCreditNoteStatus(request);
         }
         
-        public Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusResponse GetCreditNoteStatus(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest GetCreditNoteStatusRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest1();
+        public Izibiz.CreditNoteWS.GetCreditNoteStatusResponse GetCreditNoteStatus(Izibiz.CreditNoteWS.GetCreditNoteStatusRequest GetCreditNoteStatusRequest) {
+            Izibiz.CreditNoteWS.GetCreditNoteStatusRequest1 inValue = new Izibiz.CreditNoteWS.GetCreditNoteStatusRequest1();
             inValue.GetCreditNoteStatusRequest = GetCreditNoteStatusRequest;
-            Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusResponse1 retVal = ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNoteStatus(inValue);
+            Izibiz.CreditNoteWS.GetCreditNoteStatusResponse1 retVal = ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNoteStatus(inValue);
             return retVal.GetCreditNoteStatusResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusResponse1> Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.GetCreditNoteStatusAsync(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.GetCreditNoteStatusResponse1> Izibiz.CreditNoteWS.CreditNoteServicePort.GetCreditNoteStatusAsync(Izibiz.CreditNoteWS.GetCreditNoteStatusRequest1 request) {
             return base.Channel.GetCreditNoteStatusAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusResponse1> GetCreditNoteStatusAsync(Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest GetCreditNoteStatusRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.GetCreditNoteStatusRequest1();
+        public System.Threading.Tasks.Task<Izibiz.CreditNoteWS.GetCreditNoteStatusResponse1> GetCreditNoteStatusAsync(Izibiz.CreditNoteWS.GetCreditNoteStatusRequest GetCreditNoteStatusRequest) {
+            Izibiz.CreditNoteWS.GetCreditNoteStatusRequest1 inValue = new Izibiz.CreditNoteWS.GetCreditNoteStatusRequest1();
             inValue.GetCreditNoteStatusRequest = GetCreditNoteStatusRequest;
-            return ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNoteStatusAsync(inValue);
+            return ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).GetCreditNoteStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteResponse1 Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.SendCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest1 request) {
+        Izibiz.CreditNoteWS.SendCreditNoteResponse1 Izibiz.CreditNoteWS.CreditNoteServicePort.SendCreditNote(Izibiz.CreditNoteWS.SendCreditNoteRequest1 request) {
             return base.Channel.SendCreditNote(request);
         }
         
-        public Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteResponse SendCreditNote(Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest SendCreditNoteRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest1();
+        public Izibiz.CreditNoteWS.SendCreditNoteResponse SendCreditNote(Izibiz.CreditNoteWS.SendCreditNoteRequest SendCreditNoteRequest) {
+            Izibiz.CreditNoteWS.SendCreditNoteRequest1 inValue = new Izibiz.CreditNoteWS.SendCreditNoteRequest1();
             inValue.SendCreditNoteRequest = SendCreditNoteRequest;
-            Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteResponse1 retVal = ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).SendCreditNote(inValue);
+            Izibiz.CreditNoteWS.SendCreditNoteResponse1 retVal = ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).SendCreditNote(inValue);
             return retVal.SendCreditNoteResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteResponse1> Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort.SendCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.CreditNoteWS.SendCreditNoteResponse1> Izibiz.CreditNoteWS.CreditNoteServicePort.SendCreditNoteAsync(Izibiz.CreditNoteWS.SendCreditNoteRequest1 request) {
             return base.Channel.SendCreditNoteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteResponse1> SendCreditNoteAsync(Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest SendCreditNoteRequest) {
-            Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest1 inValue = new Izibiz_dotnet_soap_client.CreditNoteWS.SendCreditNoteRequest1();
+        public System.Threading.Tasks.Task<Izibiz.CreditNoteWS.SendCreditNoteResponse1> SendCreditNoteAsync(Izibiz.CreditNoteWS.SendCreditNoteRequest SendCreditNoteRequest) {
+            Izibiz.CreditNoteWS.SendCreditNoteRequest1 inValue = new Izibiz.CreditNoteWS.SendCreditNoteRequest1();
             inValue.SendCreditNoteRequest = SendCreditNoteRequest;
-            return ((Izibiz_dotnet_soap_client.CreditNoteWS.CreditNoteServicePort)(this)).SendCreditNoteAsync(inValue);
+            return ((Izibiz.CreditNoteWS.CreditNoteServicePort)(this)).SendCreditNoteAsync(inValue);
         }
     }
 }

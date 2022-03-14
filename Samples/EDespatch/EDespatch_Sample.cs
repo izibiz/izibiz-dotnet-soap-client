@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using Izibiz_dotnet_soap_client;
-using Izibiz_dotnet_soap_client.Adapter;
-using Izibiz_dotnet_soap_client.EIrsaliyeWS;
+using Izibiz;
+using Izibiz.Adapter;
+using Izibiz.EIrsaliyeWS;
 using NUnit.Framework;
 using UblDespatch;
-using Izibiz_dotnet_soap_client.UblSerializer;
-using Izibiz_dotnet_soap_client.UblCreate;
-using Izibiz_dotnet_soap_client.Operations;
+using Izibiz.UblSerializer;
+using Izibiz.UblCreate;
+using Izibiz.Operations;
 
 namespace Samples.DespatchS
 {

@@ -1,7 +1,7 @@
-﻿using Izibiz_dotnet_soap_client;
-using Izibiz_dotnet_soap_client.Operations;
-using Izibiz_dotnet_soap_client.Ubl;
-using Izibiz_dotnet_soap_client.UblCreate;
+﻿using Izibiz;
+using Izibiz.Operations;
+using Izibiz.Ubl;
+using Izibiz.UblCreate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Xml.Xsl;
 using UblInvoice;
 
-namespace  Izibiz_dotnet_soap_client.UblCreate
+namespace  Izibiz.UblCreate
 {
     public class SmmUBL : BaseESmmUBL
     {

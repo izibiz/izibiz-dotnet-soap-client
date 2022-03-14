@@ -70,14 +70,14 @@ C:\izibiz-dotnet-soap-client\Samples\bin\Debug\testcentric.engine.metadata.dll
 C:\izibiz-dotnet-soap-client\Samples\bin\Debug\Samples.dll.config
 C:\izibiz-dotnet-soap-client\Samples\bin\Debug\Samples.dll
 C:\izibiz-dotnet-soap-client\Samples\bin\Debug\Samples.pdb
-C:\izibiz-dotnet-soap-client\Samples\bin\Debug\Izibiz_dotnet_soap_client.dll
 C:\izibiz-dotnet-soap-client\Samples\bin\Debug\nunit.framework.dll
 C:\izibiz-dotnet-soap-client\Samples\bin\Debug\System.IO.Compression.dll
-C:\izibiz-dotnet-soap-client\Samples\bin\Debug\Izibiz_dotnet_soap_client.pdb
-C:\izibiz-dotnet-soap-client\Samples\bin\Debug\Izibiz_dotnet_soap_client.dll.config
 C:\izibiz-dotnet-soap-client\Samples\bin\Debug\nunit.framework.xml
 C:\izibiz-dotnet-soap-client\Samples\obj\Debug\Samples.csprojAssemblyReference.cache
 C:\izibiz-dotnet-soap-client\Samples\obj\Debug\Samples.csproj.CoreCompileInputs.cache
 C:\izibiz-dotnet-soap-client\Samples\obj\Debug\Samples.csproj.CopyComplete
 C:\izibiz-dotnet-soap-client\Samples\obj\Debug\Samples.dll
 C:\izibiz-dotnet-soap-client\Samples\obj\Debug\Samples.pdb
+C:\izibiz-dotnet-soap-client\Samples\bin\Debug\Izibiz.dll
+C:\izibiz-dotnet-soap-client\Samples\bin\Debug\Izibiz.pdb
+C:\izibiz-dotnet-soap-client\Samples\bin\Debug\Izibiz.dll.config

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using Izibiz_dotnet_soap_client;
-using Izibiz_dotnet_soap_client.Adapter;
-using Izibiz_dotnet_soap_client.EArchiveInvoiceWS;
-using Izibiz_dotnet_soap_client.Operations;
+using Izibiz;
+using Izibiz.Adapter;
+using Izibiz.EArchiveInvoiceWS;
+using Izibiz.Operations;
 using NUnit.Framework;
 
 namespace Samples.EArchive

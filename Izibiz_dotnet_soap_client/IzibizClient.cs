@@ -1,6 +1,6 @@
-﻿using Izibiz_dotnet_soap_client.Adapter;
+﻿using Izibiz.Adapter;
 
-namespace Izibiz_dotnet_soap_client
+namespace Izibiz
 {
     public class IzibizClient
     {

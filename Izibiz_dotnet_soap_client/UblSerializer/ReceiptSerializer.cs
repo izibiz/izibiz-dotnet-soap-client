@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Izibiz_dotnet_soap_client.UblSerializer
+namespace Izibiz.UblSerializer
 {
    public abstract class ReceiptSerializer
     {

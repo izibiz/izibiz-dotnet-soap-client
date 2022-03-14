@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using Izibiz_dotnet_soap_client.Operations;
-using Izibiz_dotnet_soap_client.UblCreate;
-using Izibiz_dotnet_soap_client.UblSerializer;
+using Izibiz.Operations;
+using Izibiz.UblCreate;
+using Izibiz.UblSerializer;
 using UblInvoice;
 using UblDespatch;
 using UblCreditNote;
 using UblReceipt;
 
-namespace Izibiz_dotnet_soap_client.Operations
+namespace Izibiz.Operations
 {
    public class XmlSerializerr
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Izibiz_dotnet_soap_client.Ubl
+namespace Izibiz.Ubl
 {
     public class Xslt
     {

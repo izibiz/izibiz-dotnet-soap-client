@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Izibiz_dotnet_soap_client.UblCreate;
+using Izibiz.UblCreate;
 
-namespace Izibiz_dotnet_soap_client.Operations
+namespace Izibiz.Operations
 {
     public static class Compress
     {

@@ -15,34 +15,19 @@
   <xs:element name="LogoutRequest" type="tns:LogoutRequest" />
   <xs:element name="LogoutResponse" type="tns:LogoutResponse" />
   <xs:element name="RequestFault" type="ns1:REQUEST_ERRORType" />
-  <xs:complexType name="LoginResponse">
+  <xs:complexType name="GIBUSER">
     <xs:sequence>
-      <xs:element name="SESSION_ID" type="xs:token" />
-      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetGibUserListResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CONTENT" type="ns2:base64Binary" />
-      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="LogoutResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="REQUEST_RETURN" type="ns1:REQUEST_RETURNType" />
-      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetUserAuthorizationResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AUTHORIZED" type="tns:AUTHORIZED" />
-      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
-      <xs:element minOccurs="0" name="PRODUCT_LIST" type="tns:PRODUCT_LIST" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="PRODUCT_LIST">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="PRODUCT" type="tns:PRODUCT" />
+      <xs:element minOccurs="0" name="IDENTIFIER" type="xs:string" />
+      <xs:element minOccurs="0" name="ALIAS" type="xs:string" />
+      <xs:element minOccurs="0" name="TITLE" type="xs:string" />
+      <xs:element minOccurs="0" name="TYPE" type="xs:string" />
+      <xs:element minOccurs="0" name="REGISTER_TIME" type="xs:string" />
+      <xs:element minOccurs="0" name="UNIT" type="xs:token" />
+      <xs:element minOccurs="0" name="ALIAS_CREATION_TIME" type="xs:string" />
+      <xs:element minOccurs="0" name="ACCOUNT_TYPE" type="xs:string" />
+      <xs:element minOccurs="0" name="DELETED" type="xs:string" />
+      <xs:element minOccurs="0" name="ALIAS_DELETION_TIME" type="xs:string" />
+      <xs:element minOccurs="0" name="DOCUMENT_TYPE" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="GetUserAuthorizationRequest">
@@ -64,21 +49,6 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="GIBUSER">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="IDENTIFIER" type="xs:string" />
-      <xs:element minOccurs="0" name="ALIAS" type="xs:string" />
-      <xs:element minOccurs="0" name="TITLE" type="xs:string" />
-      <xs:element minOccurs="0" name="TYPE" type="xs:string" />
-      <xs:element minOccurs="0" name="REGISTER_TIME" type="xs:string" />
-      <xs:element minOccurs="0" name="UNIT" type="xs:token" />
-      <xs:element minOccurs="0" name="ALIAS_CREATION_TIME" type="xs:string" />
-      <xs:element minOccurs="0" name="ACCOUNT_TYPE" type="xs:string" />
-      <xs:element minOccurs="0" name="DELETED" type="xs:string" />
-      <xs:element minOccurs="0" name="ALIAS_DELETION_TIME" type="xs:string" />
-      <xs:element minOccurs="0" name="DOCUMENT_TYPE" type="xs:string" />
-    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="LoginRequest">
     <xs:complexContent mixed="false">
@@ -117,6 +87,42 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="CheckUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USER" type="tns:GIBUSER" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetUserAuthorizationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AUTHORIZED" type="tns:AUTHORIZED" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+      <xs:element minOccurs="0" name="PRODUCT_LIST" type="tns:PRODUCT_LIST" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PRODUCT_LIST">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PRODUCT" type="tns:PRODUCT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetGibUserListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CONTENT" type="ns2:base64Binary" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogoutResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="REQUEST_RETURN" type="ns1:REQUEST_RETURNType" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoginResponse">
+    <xs:sequence>
+      <xs:element name="SESSION_ID" type="xs:token" />
+      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="GetAccountResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
@@ -149,18 +155,6 @@
       <xs:element minOccurs="0" name="FAXNO" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="CheckUserResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ERROR_TYPE" type="ns1:REQUEST_ERRORType" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="USER" type="tns:GIBUSER" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:simpleType name="AUTHORIZED">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Y" />
-      <xs:enumeration value="N" />
-    </xs:restriction>
-  </xs:simpleType>
   <xs:simpleType name="PRODUCT">
     <xs:restriction base="xs:string">
       <xs:enumeration value="EINVOICE" />
@@ -186,6 +180,12 @@
       <xs:enumeration value="ALL" />
       <xs:enumeration value="PK" />
       <xs:enumeration value="GB" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AUTHORIZED">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Y" />
+      <xs:enumeration value="N" />
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

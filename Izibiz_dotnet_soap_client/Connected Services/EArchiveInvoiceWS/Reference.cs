@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
+namespace Izibiz.EArchiveInvoiceWS {
     
     
     /// <remarks/>
@@ -192,6 +192,1308 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
             set {
                 this.nAMEField = value;
                 this.RaisePropertyChanged("NAME");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://uri.etsi.org/01903/v1.4.1#")]
+    public partial class ValidationDataType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private CertificateValuesType certificateValuesField;
+        
+        private RevocationValuesType revocationValuesField;
+        
+        private string idField;
+        
+        private string urField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#", Order=0)]
+        public CertificateValuesType CertificateValues {
+            get {
+                return this.certificateValuesField;
+            }
+            set {
+                this.certificateValuesField = value;
+                this.RaisePropertyChanged("CertificateValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#", Order=1)]
+        public RevocationValuesType RevocationValues {
+            get {
+                return this.revocationValuesField;
+            }
+            set {
+                this.revocationValuesField = value;
+                this.RaisePropertyChanged("RevocationValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        public string UR {
+            get {
+                return this.urField;
+            }
+            set {
+                this.urField = value;
+                this.RaisePropertyChanged("UR");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    public partial class CertificateValuesType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private object[] itemsField;
+        
+        private string idField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("EncapsulatedX509Certificate", typeof(EncapsulatedPKIDataType), Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("OtherCertificate", typeof(AnyType), Order=0)]
+        public object[] Items {
+            get {
+                return this.itemsField;
+            }
+            set {
+                this.itemsField = value;
+                this.RaisePropertyChanged("Items");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    public partial class EncapsulatedPKIDataType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string encodingField;
+        
+        private byte[] valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        public string Encoding {
+            get {
+                return this.encodingField;
+            }
+            set {
+                this.encodingField = value;
+                this.RaisePropertyChanged("Encoding");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute(DataType="base64Binary")]
+        public byte[] Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("Value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    public partial class AnyType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.Xml.XmlNode[] anyField;
+        
+        private System.Xml.XmlAttribute[] anyAttrField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        [System.Xml.Serialization.XmlAnyElementAttribute(Order=0)]
+        public System.Xml.XmlNode[] Any {
+            get {
+                return this.anyField;
+            }
+            set {
+                this.anyField = value;
+                this.RaisePropertyChanged("Any");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAnyAttributeAttribute()]
+        public System.Xml.XmlAttribute[] AnyAttr {
+            get {
+                return this.anyAttrField;
+            }
+            set {
+                this.anyAttrField = value;
+                this.RaisePropertyChanged("AnyAttr");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#")]
+    public partial class RevocationValuesType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private EncapsulatedPKIDataType[] cRLValuesField;
+        
+        private EncapsulatedPKIDataType[] oCSPValuesField;
+        
+        private AnyType[] otherValuesField;
+        
+        private string idField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("EncapsulatedCRLValue", IsNullable=false)]
+        public EncapsulatedPKIDataType[] CRLValues {
+            get {
+                return this.cRLValuesField;
+            }
+            set {
+                this.cRLValuesField = value;
+                this.RaisePropertyChanged("CRLValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("EncapsulatedOCSPValue", IsNullable=false)]
+        public EncapsulatedPKIDataType[] OCSPValues {
+            get {
+                return this.oCSPValuesField;
+            }
+            set {
+                this.oCSPValuesField = value;
+                this.RaisePropertyChanged("OCSPValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("OtherValue", IsNullable=false)]
+        public AnyType[] OtherValues {
+            get {
+                return this.otherValuesField;
+            }
+            set {
+                this.otherValuesField = value;
+                this.RaisePropertyChanged("OtherValues");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+        public string Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("Id");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(COMMENTType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(COMMENTSETType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FILEType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FILESETType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ENTITYType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class ENTITYBaseType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string eL_ACTIONField;
+        
+        private VALIDITY_PERIODType vALIDITY_PERIODField;
+        
+        private CHANGE_INFOType cHANGE_INFOField;
+        
+        private string aCCESS_CONTROL_INFOField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=0)]
+        public string EL_ACTION {
+            get {
+                return this.eL_ACTIONField;
+            }
+            set {
+                this.eL_ACTIONField = value;
+                this.RaisePropertyChanged("EL_ACTION");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public VALIDITY_PERIODType VALIDITY_PERIOD {
+            get {
+                return this.vALIDITY_PERIODField;
+            }
+            set {
+                this.vALIDITY_PERIODField = value;
+                this.RaisePropertyChanged("VALIDITY_PERIOD");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public CHANGE_INFOType CHANGE_INFO {
+            get {
+                return this.cHANGE_INFOField;
+            }
+            set {
+                this.cHANGE_INFOField = value;
+                this.RaisePropertyChanged("CHANGE_INFO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string ACCESS_CONTROL_INFO {
+            get {
+                return this.aCCESS_CONTROL_INFOField;
+            }
+            set {
+                this.aCCESS_CONTROL_INFOField = value;
+                this.RaisePropertyChanged("ACCESS_CONTROL_INFO");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class VALIDITY_PERIODType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime sDATEField;
+        
+        private System.DateTime eDATEField;
+        
+        private bool eDATEFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
+        public System.DateTime SDATE {
+            get {
+                return this.sDATEField;
+            }
+            set {
+                this.sDATEField = value;
+                this.RaisePropertyChanged("SDATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=1)]
+        public System.DateTime EDATE {
+            get {
+                return this.eDATEField;
+            }
+            set {
+                this.eDATEField = value;
+                this.RaisePropertyChanged("EDATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool EDATESpecified {
+            get {
+                return this.eDATEFieldSpecified;
+            }
+            set {
+                this.eDATEFieldSpecified = value;
+                this.RaisePropertyChanged("EDATESpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class CHANGE_INFOType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime cDATEField;
+        
+        private long cPOSITION_IDField;
+        
+        private long cUSER_IDField;
+        
+        private System.DateTime uDATEField;
+        
+        private bool uDATEFieldSpecified;
+        
+        private long uPOSITION_IDField;
+        
+        private bool uPOSITION_IDFieldSpecified;
+        
+        private long uUSER_IDField;
+        
+        private bool uUSER_IDFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
+        public System.DateTime CDATE {
+            get {
+                return this.cDATEField;
+            }
+            set {
+                this.cDATEField = value;
+                this.RaisePropertyChanged("CDATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public long CPOSITION_ID {
+            get {
+                return this.cPOSITION_IDField;
+            }
+            set {
+                this.cPOSITION_IDField = value;
+                this.RaisePropertyChanged("CPOSITION_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public long CUSER_ID {
+            get {
+                return this.cUSER_IDField;
+            }
+            set {
+                this.cUSER_IDField = value;
+                this.RaisePropertyChanged("CUSER_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=3)]
+        public System.DateTime UDATE {
+            get {
+                return this.uDATEField;
+            }
+            set {
+                this.uDATEField = value;
+                this.RaisePropertyChanged("UDATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UDATESpecified {
+            get {
+                return this.uDATEFieldSpecified;
+            }
+            set {
+                this.uDATEFieldSpecified = value;
+                this.RaisePropertyChanged("UDATESpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public long UPOSITION_ID {
+            get {
+                return this.uPOSITION_IDField;
+            }
+            set {
+                this.uPOSITION_IDField = value;
+                this.RaisePropertyChanged("UPOSITION_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UPOSITION_IDSpecified {
+            get {
+                return this.uPOSITION_IDFieldSpecified;
+            }
+            set {
+                this.uPOSITION_IDFieldSpecified = value;
+                this.RaisePropertyChanged("UPOSITION_IDSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public long UUSER_ID {
+            get {
+                return this.uUSER_IDField;
+            }
+            set {
+                this.uUSER_IDField = value;
+                this.RaisePropertyChanged("UUSER_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UUSER_IDSpecified {
+            get {
+                return this.uUSER_IDFieldSpecified;
+            }
+            set {
+                this.uUSER_IDFieldSpecified = value;
+                this.RaisePropertyChanged("UUSER_IDSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class COMMENTType : ENTITYBaseType {
+        
+        private long cOMMENT_IDField;
+        
+        private string cOMMENTField;
+        
+        private long iNTL_TXN_IDField;
+        
+        private bool iNTL_TXN_IDFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public long COMMENT_ID {
+            get {
+                return this.cOMMENT_IDField;
+            }
+            set {
+                this.cOMMENT_IDField = value;
+                this.RaisePropertyChanged("COMMENT_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string COMMENT {
+            get {
+                return this.cOMMENTField;
+            }
+            set {
+                this.cOMMENTField = value;
+                this.RaisePropertyChanged("COMMENT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public long INTL_TXN_ID {
+            get {
+                return this.iNTL_TXN_IDField;
+            }
+            set {
+                this.iNTL_TXN_IDField = value;
+                this.RaisePropertyChanged("INTL_TXN_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool INTL_TXN_IDSpecified {
+            get {
+                return this.iNTL_TXN_IDFieldSpecified;
+            }
+            set {
+                this.iNTL_TXN_IDFieldSpecified = value;
+                this.RaisePropertyChanged("INTL_TXN_IDSpecified");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class COMMENTSETType : ENTITYBaseType {
+        
+        private long cOMMENT_SET_IDField;
+        
+        private COMMENTType[] cOMMENTField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public long COMMENT_SET_ID {
+            get {
+                return this.cOMMENT_SET_IDField;
+            }
+            set {
+                this.cOMMENT_SET_IDField = value;
+                this.RaisePropertyChanged("COMMENT_SET_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("COMMENT", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public COMMENTType[] COMMENT {
+            get {
+                return this.cOMMENTField;
+            }
+            set {
+                this.cOMMENTField = value;
+                this.RaisePropertyChanged("COMMENT");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class FILEType : ENTITYBaseType {
+        
+        private FILETypeCREATE_USER_INFO cREATE_USER_INFOField;
+        
+        private string fILENAMEField;
+        
+        private string fILETYPEField;
+        
+        private string oPERATION_CODEField;
+        
+        private object cONTENTField;
+        
+        private long iNTL_TXN_IDField;
+        
+        private bool iNTL_TXN_IDFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public FILETypeCREATE_USER_INFO CREATE_USER_INFO {
+            get {
+                return this.cREATE_USER_INFOField;
+            }
+            set {
+                this.cREATE_USER_INFOField = value;
+                this.RaisePropertyChanged("CREATE_USER_INFO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=1)]
+        public string FILENAME {
+            get {
+                return this.fILENAMEField;
+            }
+            set {
+                this.fILENAMEField = value;
+                this.RaisePropertyChanged("FILENAME");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=2)]
+        public string FILETYPE {
+            get {
+                return this.fILETYPEField;
+            }
+            set {
+                this.fILETYPEField = value;
+                this.RaisePropertyChanged("FILETYPE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=3)]
+        public string OPERATION_CODE {
+            get {
+                return this.oPERATION_CODEField;
+            }
+            set {
+                this.oPERATION_CODEField = value;
+                this.RaisePropertyChanged("OPERATION_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public object CONTENT {
+            get {
+                return this.cONTENTField;
+            }
+            set {
+                this.cONTENTField = value;
+                this.RaisePropertyChanged("CONTENT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public long INTL_TXN_ID {
+            get {
+                return this.iNTL_TXN_IDField;
+            }
+            set {
+                this.iNTL_TXN_IDField = value;
+                this.RaisePropertyChanged("INTL_TXN_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool INTL_TXN_IDSpecified {
+            get {
+                return this.iNTL_TXN_IDFieldSpecified;
+            }
+            set {
+                this.iNTL_TXN_IDFieldSpecified = value;
+                this.RaisePropertyChanged("INTL_TXN_IDSpecified");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class FILETypeCREATE_USER_INFO : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string fIRST_NAMEField;
+        
+        private string lAST_NAMEField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=0)]
+        public string FIRST_NAME {
+            get {
+                return this.fIRST_NAMEField;
+            }
+            set {
+                this.fIRST_NAMEField = value;
+                this.RaisePropertyChanged("FIRST_NAME");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=1)]
+        public string LAST_NAME {
+            get {
+                return this.lAST_NAMEField;
+            }
+            set {
+                this.lAST_NAMEField = value;
+                this.RaisePropertyChanged("LAST_NAME");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class FILESETType : ENTITYBaseType {
+        
+        private long fILE_SET_IDField;
+        
+        private FILEType[] fILEField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public long FILE_SET_ID {
+            get {
+                return this.fILE_SET_IDField;
+            }
+            set {
+                this.fILE_SET_IDField = value;
+                this.RaisePropertyChanged("FILE_SET_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("FILE", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public FILEType[] FILE {
+            get {
+                return this.fILEField;
+            }
+            set {
+                this.fILEField = value;
+                this.RaisePropertyChanged("FILE");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class ENTITYType : ENTITYBaseType {
+        
+        private FILESETType fILESETField;
+        
+        private COMMENTSETType cOMMENTSETField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public FILESETType FILESET {
+            get {
+                return this.fILESETField;
+            }
+            set {
+                this.fILESETField = value;
+                this.RaisePropertyChanged("FILESET");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public COMMENTSETType COMMENTSET {
+            get {
+                return this.cOMMENTSETField;
+            }
+            set {
+                this.cOMMENTSETField = value;
+                this.RaisePropertyChanged("COMMENTSET");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class FIND_KEYType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime dATETIMEField;
+        
+        private bool dATETIMEFieldSpecified;
+        
+        private FIND_KEYTypeVISIBILITY_TYPE vISIBILITY_TYPEField;
+        
+        private bool vISIBILITY_TYPEFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
+        public System.DateTime DATETIME {
+            get {
+                return this.dATETIMEField;
+            }
+            set {
+                this.dATETIMEField = value;
+                this.RaisePropertyChanged("DATETIME");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DATETIMESpecified {
+            get {
+                return this.dATETIMEFieldSpecified;
+            }
+            set {
+                this.dATETIMEFieldSpecified = value;
+                this.RaisePropertyChanged("DATETIMESpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public FIND_KEYTypeVISIBILITY_TYPE VISIBILITY_TYPE {
+            get {
+                return this.vISIBILITY_TYPEField;
+            }
+            set {
+                this.vISIBILITY_TYPEField = value;
+                this.RaisePropertyChanged("VISIBILITY_TYPE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool VISIBILITY_TYPESpecified {
+            get {
+                return this.vISIBILITY_TYPEFieldSpecified;
+            }
+            set {
+                this.vISIBILITY_TYPEFieldSpecified = value;
+                this.RaisePropertyChanged("VISIBILITY_TYPESpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.i2i.com/ei/common")]
+    public enum FIND_KEYTypeVISIBILITY_TYPE {
+        
+        /// <remarks/>
+        PERSON,
+        
+        /// <remarks/>
+        POSITION,
+        
+        /// <remarks/>
+        POSITION_TYPE,
+        
+        /// <remarks/>
+        PEER,
+        
+        /// <remarks/>
+        TEAM,
+        
+        /// <remarks/>
+        ORGANIZATION,
+        
+        /// <remarks/>
+        ADMIN,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class SEARCH_RESULTType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int rOWNUM_TOTALField;
+        
+        private bool rOWNUM_TOTALFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int ROWNUM_TOTAL {
+            get {
+                return this.rOWNUM_TOTALField;
+            }
+            set {
+                this.rOWNUM_TOTALField = value;
+                this.RaisePropertyChanged("ROWNUM_TOTAL");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ROWNUM_TOTALSpecified {
+            get {
+                return this.rOWNUM_TOTALFieldSpecified;
+            }
+            set {
+                this.rOWNUM_TOTALFieldSpecified = value;
+                this.RaisePropertyChanged("ROWNUM_TOTALSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class SEARCH_KEYType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime vALID_FROMField;
+        
+        private bool vALID_FROMFieldSpecified;
+        
+        private System.DateTime vALID_TOField;
+        
+        private bool vALID_TOFieldSpecified;
+        
+        private int rOWNUM_OFFSETField;
+        
+        private bool rOWNUM_OFFSETFieldSpecified;
+        
+        private int rOWNUM_LIMITField;
+        
+        private bool rOWNUM_LIMITFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
+        public System.DateTime VALID_FROM {
+            get {
+                return this.vALID_FROMField;
+            }
+            set {
+                this.vALID_FROMField = value;
+                this.RaisePropertyChanged("VALID_FROM");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool VALID_FROMSpecified {
+            get {
+                return this.vALID_FROMFieldSpecified;
+            }
+            set {
+                this.vALID_FROMFieldSpecified = value;
+                this.RaisePropertyChanged("VALID_FROMSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=1)]
+        public System.DateTime VALID_TO {
+            get {
+                return this.vALID_TOField;
+            }
+            set {
+                this.vALID_TOField = value;
+                this.RaisePropertyChanged("VALID_TO");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool VALID_TOSpecified {
+            get {
+                return this.vALID_TOFieldSpecified;
+            }
+            set {
+                this.vALID_TOFieldSpecified = value;
+                this.RaisePropertyChanged("VALID_TOSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int ROWNUM_OFFSET {
+            get {
+                return this.rOWNUM_OFFSETField;
+            }
+            set {
+                this.rOWNUM_OFFSETField = value;
+                this.RaisePropertyChanged("ROWNUM_OFFSET");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ROWNUM_OFFSETSpecified {
+            get {
+                return this.rOWNUM_OFFSETFieldSpecified;
+            }
+            set {
+                this.rOWNUM_OFFSETFieldSpecified = value;
+                this.RaisePropertyChanged("ROWNUM_OFFSETSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int ROWNUM_LIMIT {
+            get {
+                return this.rOWNUM_LIMITField;
+            }
+            set {
+                this.rOWNUM_LIMITField = value;
+                this.RaisePropertyChanged("ROWNUM_LIMIT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ROWNUM_LIMITSpecified {
+            get {
+                return this.rOWNUM_LIMITFieldSpecified;
+            }
+            set {
+                this.rOWNUM_LIMITFieldSpecified = value;
+                this.RaisePropertyChanged("ROWNUM_LIMITSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ISO_CURRENCY_CODEType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class LOV_VALUEType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private long lOV_IDField;
+        
+        private string lOV_CODEField;
+        
+        public LOV_VALUEType() {
+            this.lOV_CODEField = "\'N\'";
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public long LOV_ID {
+            get {
+                return this.lOV_IDField;
+            }
+            set {
+                this.lOV_IDField = value;
+                this.RaisePropertyChanged("LOV_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=1)]
+        [System.ComponentModel.DefaultValueAttribute("\'N\'")]
+        public string LOV_CODE {
+            get {
+                return this.lOV_CODEField;
+            }
+            set {
+                this.lOV_CODEField = value;
+                this.RaisePropertyChanged("LOV_CODE");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class ISO_CURRENCY_CODEType : LOV_VALUEType {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
+    public partial class AMOUNTType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private double aMOUNTField;
+        
+        private ISO_CURRENCY_CODEType cURRENCY_CODEField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public double AMOUNT {
+            get {
+                return this.aMOUNTField;
+            }
+            set {
+                this.aMOUNTField = value;
+                this.RaisePropertyChanged("AMOUNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public ISO_CURRENCY_CODEType CURRENCY_CODE {
+            get {
+                return this.cURRENCY_CODEField;
+            }
+            set {
+                this.cURRENCY_CODEField = value;
+                this.RaisePropertyChanged("CURRENCY_CODE");
             }
         }
         
@@ -3591,1308 +4893,6 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
             set {
                 this.referenceField = value;
                 this.RaisePropertyChanged("Reference");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
-        public string Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("Id");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(COMMENTType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(COMMENTSETType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FILEType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FILESETType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ENTITYType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class ENTITYBaseType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string eL_ACTIONField;
-        
-        private VALIDITY_PERIODType vALIDITY_PERIODField;
-        
-        private CHANGE_INFOType cHANGE_INFOField;
-        
-        private string aCCESS_CONTROL_INFOField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=0)]
-        public string EL_ACTION {
-            get {
-                return this.eL_ACTIONField;
-            }
-            set {
-                this.eL_ACTIONField = value;
-                this.RaisePropertyChanged("EL_ACTION");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public VALIDITY_PERIODType VALIDITY_PERIOD {
-            get {
-                return this.vALIDITY_PERIODField;
-            }
-            set {
-                this.vALIDITY_PERIODField = value;
-                this.RaisePropertyChanged("VALIDITY_PERIOD");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public CHANGE_INFOType CHANGE_INFO {
-            get {
-                return this.cHANGE_INFOField;
-            }
-            set {
-                this.cHANGE_INFOField = value;
-                this.RaisePropertyChanged("CHANGE_INFO");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string ACCESS_CONTROL_INFO {
-            get {
-                return this.aCCESS_CONTROL_INFOField;
-            }
-            set {
-                this.aCCESS_CONTROL_INFOField = value;
-                this.RaisePropertyChanged("ACCESS_CONTROL_INFO");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class VALIDITY_PERIODType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime sDATEField;
-        
-        private System.DateTime eDATEField;
-        
-        private bool eDATEFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
-        public System.DateTime SDATE {
-            get {
-                return this.sDATEField;
-            }
-            set {
-                this.sDATEField = value;
-                this.RaisePropertyChanged("SDATE");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=1)]
-        public System.DateTime EDATE {
-            get {
-                return this.eDATEField;
-            }
-            set {
-                this.eDATEField = value;
-                this.RaisePropertyChanged("EDATE");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool EDATESpecified {
-            get {
-                return this.eDATEFieldSpecified;
-            }
-            set {
-                this.eDATEFieldSpecified = value;
-                this.RaisePropertyChanged("EDATESpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class CHANGE_INFOType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime cDATEField;
-        
-        private long cPOSITION_IDField;
-        
-        private long cUSER_IDField;
-        
-        private System.DateTime uDATEField;
-        
-        private bool uDATEFieldSpecified;
-        
-        private long uPOSITION_IDField;
-        
-        private bool uPOSITION_IDFieldSpecified;
-        
-        private long uUSER_IDField;
-        
-        private bool uUSER_IDFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
-        public System.DateTime CDATE {
-            get {
-                return this.cDATEField;
-            }
-            set {
-                this.cDATEField = value;
-                this.RaisePropertyChanged("CDATE");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public long CPOSITION_ID {
-            get {
-                return this.cPOSITION_IDField;
-            }
-            set {
-                this.cPOSITION_IDField = value;
-                this.RaisePropertyChanged("CPOSITION_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public long CUSER_ID {
-            get {
-                return this.cUSER_IDField;
-            }
-            set {
-                this.cUSER_IDField = value;
-                this.RaisePropertyChanged("CUSER_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=3)]
-        public System.DateTime UDATE {
-            get {
-                return this.uDATEField;
-            }
-            set {
-                this.uDATEField = value;
-                this.RaisePropertyChanged("UDATE");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool UDATESpecified {
-            get {
-                return this.uDATEFieldSpecified;
-            }
-            set {
-                this.uDATEFieldSpecified = value;
-                this.RaisePropertyChanged("UDATESpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public long UPOSITION_ID {
-            get {
-                return this.uPOSITION_IDField;
-            }
-            set {
-                this.uPOSITION_IDField = value;
-                this.RaisePropertyChanged("UPOSITION_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool UPOSITION_IDSpecified {
-            get {
-                return this.uPOSITION_IDFieldSpecified;
-            }
-            set {
-                this.uPOSITION_IDFieldSpecified = value;
-                this.RaisePropertyChanged("UPOSITION_IDSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public long UUSER_ID {
-            get {
-                return this.uUSER_IDField;
-            }
-            set {
-                this.uUSER_IDField = value;
-                this.RaisePropertyChanged("UUSER_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool UUSER_IDSpecified {
-            get {
-                return this.uUSER_IDFieldSpecified;
-            }
-            set {
-                this.uUSER_IDFieldSpecified = value;
-                this.RaisePropertyChanged("UUSER_IDSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class COMMENTType : ENTITYBaseType {
-        
-        private long cOMMENT_IDField;
-        
-        private string cOMMENTField;
-        
-        private long iNTL_TXN_IDField;
-        
-        private bool iNTL_TXN_IDFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public long COMMENT_ID {
-            get {
-                return this.cOMMENT_IDField;
-            }
-            set {
-                this.cOMMENT_IDField = value;
-                this.RaisePropertyChanged("COMMENT_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string COMMENT {
-            get {
-                return this.cOMMENTField;
-            }
-            set {
-                this.cOMMENTField = value;
-                this.RaisePropertyChanged("COMMENT");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public long INTL_TXN_ID {
-            get {
-                return this.iNTL_TXN_IDField;
-            }
-            set {
-                this.iNTL_TXN_IDField = value;
-                this.RaisePropertyChanged("INTL_TXN_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool INTL_TXN_IDSpecified {
-            get {
-                return this.iNTL_TXN_IDFieldSpecified;
-            }
-            set {
-                this.iNTL_TXN_IDFieldSpecified = value;
-                this.RaisePropertyChanged("INTL_TXN_IDSpecified");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class COMMENTSETType : ENTITYBaseType {
-        
-        private long cOMMENT_SET_IDField;
-        
-        private COMMENTType[] cOMMENTField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public long COMMENT_SET_ID {
-            get {
-                return this.cOMMENT_SET_IDField;
-            }
-            set {
-                this.cOMMENT_SET_IDField = value;
-                this.RaisePropertyChanged("COMMENT_SET_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("COMMENT", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public COMMENTType[] COMMENT {
-            get {
-                return this.cOMMENTField;
-            }
-            set {
-                this.cOMMENTField = value;
-                this.RaisePropertyChanged("COMMENT");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class FILEType : ENTITYBaseType {
-        
-        private FILETypeCREATE_USER_INFO cREATE_USER_INFOField;
-        
-        private string fILENAMEField;
-        
-        private string fILETYPEField;
-        
-        private string oPERATION_CODEField;
-        
-        private object cONTENTField;
-        
-        private long iNTL_TXN_IDField;
-        
-        private bool iNTL_TXN_IDFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public FILETypeCREATE_USER_INFO CREATE_USER_INFO {
-            get {
-                return this.cREATE_USER_INFOField;
-            }
-            set {
-                this.cREATE_USER_INFOField = value;
-                this.RaisePropertyChanged("CREATE_USER_INFO");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=1)]
-        public string FILENAME {
-            get {
-                return this.fILENAMEField;
-            }
-            set {
-                this.fILENAMEField = value;
-                this.RaisePropertyChanged("FILENAME");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=2)]
-        public string FILETYPE {
-            get {
-                return this.fILETYPEField;
-            }
-            set {
-                this.fILETYPEField = value;
-                this.RaisePropertyChanged("FILETYPE");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=3)]
-        public string OPERATION_CODE {
-            get {
-                return this.oPERATION_CODEField;
-            }
-            set {
-                this.oPERATION_CODEField = value;
-                this.RaisePropertyChanged("OPERATION_CODE");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public object CONTENT {
-            get {
-                return this.cONTENTField;
-            }
-            set {
-                this.cONTENTField = value;
-                this.RaisePropertyChanged("CONTENT");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public long INTL_TXN_ID {
-            get {
-                return this.iNTL_TXN_IDField;
-            }
-            set {
-                this.iNTL_TXN_IDField = value;
-                this.RaisePropertyChanged("INTL_TXN_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool INTL_TXN_IDSpecified {
-            get {
-                return this.iNTL_TXN_IDFieldSpecified;
-            }
-            set {
-                this.iNTL_TXN_IDFieldSpecified = value;
-                this.RaisePropertyChanged("INTL_TXN_IDSpecified");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class FILETypeCREATE_USER_INFO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string fIRST_NAMEField;
-        
-        private string lAST_NAMEField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=0)]
-        public string FIRST_NAME {
-            get {
-                return this.fIRST_NAMEField;
-            }
-            set {
-                this.fIRST_NAMEField = value;
-                this.RaisePropertyChanged("FIRST_NAME");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=1)]
-        public string LAST_NAME {
-            get {
-                return this.lAST_NAMEField;
-            }
-            set {
-                this.lAST_NAMEField = value;
-                this.RaisePropertyChanged("LAST_NAME");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class FILESETType : ENTITYBaseType {
-        
-        private long fILE_SET_IDField;
-        
-        private FILEType[] fILEField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public long FILE_SET_ID {
-            get {
-                return this.fILE_SET_IDField;
-            }
-            set {
-                this.fILE_SET_IDField = value;
-                this.RaisePropertyChanged("FILE_SET_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FILE", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public FILEType[] FILE {
-            get {
-                return this.fILEField;
-            }
-            set {
-                this.fILEField = value;
-                this.RaisePropertyChanged("FILE");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class ENTITYType : ENTITYBaseType {
-        
-        private FILESETType fILESETField;
-        
-        private COMMENTSETType cOMMENTSETField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public FILESETType FILESET {
-            get {
-                return this.fILESETField;
-            }
-            set {
-                this.fILESETField = value;
-                this.RaisePropertyChanged("FILESET");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public COMMENTSETType COMMENTSET {
-            get {
-                return this.cOMMENTSETField;
-            }
-            set {
-                this.cOMMENTSETField = value;
-                this.RaisePropertyChanged("COMMENTSET");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class FIND_KEYType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime dATETIMEField;
-        
-        private bool dATETIMEFieldSpecified;
-        
-        private FIND_KEYTypeVISIBILITY_TYPE vISIBILITY_TYPEField;
-        
-        private bool vISIBILITY_TYPEFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
-        public System.DateTime DATETIME {
-            get {
-                return this.dATETIMEField;
-            }
-            set {
-                this.dATETIMEField = value;
-                this.RaisePropertyChanged("DATETIME");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DATETIMESpecified {
-            get {
-                return this.dATETIMEFieldSpecified;
-            }
-            set {
-                this.dATETIMEFieldSpecified = value;
-                this.RaisePropertyChanged("DATETIMESpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public FIND_KEYTypeVISIBILITY_TYPE VISIBILITY_TYPE {
-            get {
-                return this.vISIBILITY_TYPEField;
-            }
-            set {
-                this.vISIBILITY_TYPEField = value;
-                this.RaisePropertyChanged("VISIBILITY_TYPE");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool VISIBILITY_TYPESpecified {
-            get {
-                return this.vISIBILITY_TYPEFieldSpecified;
-            }
-            set {
-                this.vISIBILITY_TYPEFieldSpecified = value;
-                this.RaisePropertyChanged("VISIBILITY_TYPESpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.i2i.com/ei/common")]
-    public enum FIND_KEYTypeVISIBILITY_TYPE {
-        
-        /// <remarks/>
-        PERSON,
-        
-        /// <remarks/>
-        POSITION,
-        
-        /// <remarks/>
-        POSITION_TYPE,
-        
-        /// <remarks/>
-        PEER,
-        
-        /// <remarks/>
-        TEAM,
-        
-        /// <remarks/>
-        ORGANIZATION,
-        
-        /// <remarks/>
-        ADMIN,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class SEARCH_RESULTType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int rOWNUM_TOTALField;
-        
-        private bool rOWNUM_TOTALFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int ROWNUM_TOTAL {
-            get {
-                return this.rOWNUM_TOTALField;
-            }
-            set {
-                this.rOWNUM_TOTALField = value;
-                this.RaisePropertyChanged("ROWNUM_TOTAL");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ROWNUM_TOTALSpecified {
-            get {
-                return this.rOWNUM_TOTALFieldSpecified;
-            }
-            set {
-                this.rOWNUM_TOTALFieldSpecified = value;
-                this.RaisePropertyChanged("ROWNUM_TOTALSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class SEARCH_KEYType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.DateTime vALID_FROMField;
-        
-        private bool vALID_FROMFieldSpecified;
-        
-        private System.DateTime vALID_TOField;
-        
-        private bool vALID_TOFieldSpecified;
-        
-        private int rOWNUM_OFFSETField;
-        
-        private bool rOWNUM_OFFSETFieldSpecified;
-        
-        private int rOWNUM_LIMITField;
-        
-        private bool rOWNUM_LIMITFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=0)]
-        public System.DateTime VALID_FROM {
-            get {
-                return this.vALID_FROMField;
-            }
-            set {
-                this.vALID_FROMField = value;
-                this.RaisePropertyChanged("VALID_FROM");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool VALID_FROMSpecified {
-            get {
-                return this.vALID_FROMFieldSpecified;
-            }
-            set {
-                this.vALID_FROMFieldSpecified = value;
-                this.RaisePropertyChanged("VALID_FROMSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="date", Order=1)]
-        public System.DateTime VALID_TO {
-            get {
-                return this.vALID_TOField;
-            }
-            set {
-                this.vALID_TOField = value;
-                this.RaisePropertyChanged("VALID_TO");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool VALID_TOSpecified {
-            get {
-                return this.vALID_TOFieldSpecified;
-            }
-            set {
-                this.vALID_TOFieldSpecified = value;
-                this.RaisePropertyChanged("VALID_TOSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int ROWNUM_OFFSET {
-            get {
-                return this.rOWNUM_OFFSETField;
-            }
-            set {
-                this.rOWNUM_OFFSETField = value;
-                this.RaisePropertyChanged("ROWNUM_OFFSET");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ROWNUM_OFFSETSpecified {
-            get {
-                return this.rOWNUM_OFFSETFieldSpecified;
-            }
-            set {
-                this.rOWNUM_OFFSETFieldSpecified = value;
-                this.RaisePropertyChanged("ROWNUM_OFFSETSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int ROWNUM_LIMIT {
-            get {
-                return this.rOWNUM_LIMITField;
-            }
-            set {
-                this.rOWNUM_LIMITField = value;
-                this.RaisePropertyChanged("ROWNUM_LIMIT");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ROWNUM_LIMITSpecified {
-            get {
-                return this.rOWNUM_LIMITFieldSpecified;
-            }
-            set {
-                this.rOWNUM_LIMITFieldSpecified = value;
-                this.RaisePropertyChanged("ROWNUM_LIMITSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ISO_CURRENCY_CODEType))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class LOV_VALUEType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private long lOV_IDField;
-        
-        private string lOV_CODEField;
-        
-        public LOV_VALUEType() {
-            this.lOV_CODEField = "\'N\'";
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public long LOV_ID {
-            get {
-                return this.lOV_IDField;
-            }
-            set {
-                this.lOV_IDField = value;
-                this.RaisePropertyChanged("LOV_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=1)]
-        [System.ComponentModel.DefaultValueAttribute("\'N\'")]
-        public string LOV_CODE {
-            get {
-                return this.lOV_CODEField;
-            }
-            set {
-                this.lOV_CODEField = value;
-                this.RaisePropertyChanged("LOV_CODE");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class ISO_CURRENCY_CODEType : LOV_VALUEType {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/common")]
-    public partial class AMOUNTType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private double aMOUNTField;
-        
-        private ISO_CURRENCY_CODEType cURRENCY_CODEField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public double AMOUNT {
-            get {
-                return this.aMOUNTField;
-            }
-            set {
-                this.aMOUNTField = value;
-                this.RaisePropertyChanged("AMOUNT");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public ISO_CURRENCY_CODEType CURRENCY_CODE {
-            get {
-                return this.cURRENCY_CODEField;
-            }
-            set {
-                this.cURRENCY_CODEField = value;
-                this.RaisePropertyChanged("CURRENCY_CODE");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://uri.etsi.org/01903/v1.4.1#")]
-    public partial class ValidationDataType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private CertificateValuesType certificateValuesField;
-        
-        private RevocationValuesType revocationValuesField;
-        
-        private string idField;
-        
-        private string urField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#", Order=0)]
-        public CertificateValuesType CertificateValues {
-            get {
-                return this.certificateValuesField;
-            }
-            set {
-                this.certificateValuesField = value;
-                this.RaisePropertyChanged("CertificateValues");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#", Order=1)]
-        public RevocationValuesType RevocationValues {
-            get {
-                return this.revocationValuesField;
-            }
-            set {
-                this.revocationValuesField = value;
-                this.RaisePropertyChanged("RevocationValues");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
-        public string Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("Id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
-        public string UR {
-            get {
-                return this.urField;
-            }
-            set {
-                this.urField = value;
-                this.RaisePropertyChanged("UR");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-    public partial class CertificateValuesType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private object[] itemsField;
-        
-        private string idField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EncapsulatedX509Certificate", typeof(EncapsulatedPKIDataType), Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("OtherCertificate", typeof(AnyType), Order=0)]
-        public object[] Items {
-            get {
-                return this.itemsField;
-            }
-            set {
-                this.itemsField = value;
-                this.RaisePropertyChanged("Items");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
-        public string Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("Id");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-    public partial class EncapsulatedPKIDataType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idField;
-        
-        private string encodingField;
-        
-        private byte[] valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
-        public string Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("Id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
-        public string Encoding {
-            get {
-                return this.encodingField;
-            }
-            set {
-                this.encodingField = value;
-                this.RaisePropertyChanged("Encoding");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute(DataType="base64Binary")]
-        public byte[] Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("Value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-    public partial class AnyType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.Xml.XmlNode[] anyField;
-        
-        private System.Xml.XmlAttribute[] anyAttrField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        [System.Xml.Serialization.XmlAnyElementAttribute(Order=0)]
-        public System.Xml.XmlNode[] Any {
-            get {
-                return this.anyField;
-            }
-            set {
-                this.anyField = value;
-                this.RaisePropertyChanged("Any");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAnyAttributeAttribute()]
-        public System.Xml.XmlAttribute[] AnyAttr {
-            get {
-                return this.anyAttrField;
-            }
-            set {
-                this.anyAttrField = value;
-                this.RaisePropertyChanged("AnyAttr");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://uri.etsi.org/01903/v1.3.2#")]
-    public partial class RevocationValuesType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private EncapsulatedPKIDataType[] cRLValuesField;
-        
-        private EncapsulatedPKIDataType[] oCSPValuesField;
-        
-        private AnyType[] otherValuesField;
-        
-        private string idField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=0)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("EncapsulatedCRLValue", IsNullable=false)]
-        public EncapsulatedPKIDataType[] CRLValues {
-            get {
-                return this.cRLValuesField;
-            }
-            set {
-                this.cRLValuesField = value;
-                this.RaisePropertyChanged("CRLValues");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=1)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("EncapsulatedOCSPValue", IsNullable=false)]
-        public EncapsulatedPKIDataType[] OCSPValues {
-            get {
-                return this.oCSPValuesField;
-            }
-            set {
-                this.oCSPValuesField = value;
-                this.RaisePropertyChanged("OCSPValues");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Order=2)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("OtherValue", IsNullable=false)]
-        public AnyType[] OtherValues {
-            get {
-                return this.otherValuesField;
-            }
-            set {
-                this.otherValuesField = value;
-                this.RaisePropertyChanged("OtherValues");
             }
         }
         
@@ -12810,20 +12810,20 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         
         // CODEGEN: Generating message contract since the operation WriteToArchive is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -12871,27 +12871,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveResponse WriteToArchive(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveRequest request);
+        Izibiz.EArchiveInvoiceWS.WriteToArchiveResponse WriteToArchive(Izibiz.EArchiveInvoiceWS.WriteToArchiveRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveResponse> WriteToArchiveAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveRequest request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.WriteToArchiveResponse> WriteToArchiveAsync(Izibiz.EArchiveInvoiceWS.WriteToArchiveRequest request);
         
         // CODEGEN: Generating message contract since the operation ReadFromArchive is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -12939,27 +12939,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveResponse ReadFromArchive(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveRequest request);
+        Izibiz.EArchiveInvoiceWS.ReadFromArchiveResponse ReadFromArchive(Izibiz.EArchiveInvoiceWS.ReadFromArchiveRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveResponse> ReadFromArchiveAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveRequest request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ReadFromArchiveResponse> ReadFromArchiveAsync(Izibiz.EArchiveInvoiceWS.ReadFromArchiveRequest request);
         
         // CODEGEN: Generating message contract since the operation CopyToArchive is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13007,27 +13007,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveResponse CopyToArchive(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveRequest request);
+        Izibiz.EArchiveInvoiceWS.CopyToArchiveResponse CopyToArchive(Izibiz.EArchiveInvoiceWS.CopyToArchiveRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveResponse> CopyToArchiveAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveRequest request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.CopyToArchiveResponse> CopyToArchiveAsync(Izibiz.EArchiveInvoiceWS.CopyToArchiveRequest request);
         
         // CODEGEN: Generating message contract since the operation ArchiveGenericDocument is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13075,27 +13075,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1 ArchiveGenericDocument(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 request);
+        Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1 ArchiveGenericDocument(Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1> ArchiveGenericDocumentAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1> ArchiveGenericDocumentAsync(Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GenericRead is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13143,27 +13143,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadResponse1 GenericRead(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest1 request);
+        Izibiz.EArchiveInvoiceWS.GenericReadResponse1 GenericRead(Izibiz.EArchiveInvoiceWS.GenericReadRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadResponse1> GenericReadAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GenericReadResponse1> GenericReadAsync(Izibiz.EArchiveInvoiceWS.GenericReadRequest1 request);
         
         // CODEGEN: Generating message contract since the operation WriteToArchiveExtended is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13211,27 +13211,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedResponse WriteToArchiveExtended(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedRequest request);
+        Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedResponse WriteToArchiveExtended(Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedResponse> WriteToArchiveExtendedAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedRequest request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedResponse> WriteToArchiveExtendedAsync(Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedRequest request);
         
         // CODEGEN: Generating message contract since the operation ArchiveGetInvoiceInfo is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13279,27 +13279,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1 ArchiveGetInvoiceInfo(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 request);
+        Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1 ArchiveGetInvoiceInfo(Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1> ArchiveGetInvoiceInfoAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1> ArchiveGetInvoiceInfoAsync(Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 request);
         
         // CODEGEN: Generating message contract since the operation ReadEArchiveReport is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13347,27 +13347,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportResponse1 ReadEArchiveReport(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest1 request);
+        Izibiz.EArchiveInvoiceWS.ReadEArchiveReportResponse1 ReadEArchiveReport(Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportResponse1> ReadEArchiveReportAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ReadEArchiveReportResponse1> ReadEArchiveReportAsync(Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CancelEArchiveInvoice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13415,27 +13415,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1 CancelEArchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 request);
+        Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1 CancelEArchiveInvoice(Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1> CancelEArchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1> CancelEArchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetEArchiveReport is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13483,27 +13483,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportResponse1 GetEArchiveReport(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest1 request);
+        Izibiz.EArchiveInvoiceWS.GetEArchiveReportResponse1 GetEArchiveReport(Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportResponse1> GetEArchiveReportAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveReportResponse1> GetEArchiveReportAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetEArchiveInvoice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13551,27 +13551,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1 GetEArchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 request);
+        Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1 GetEArchiveInvoice(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1> GetEArchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1> GetEArchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetEArchiveInvoiceStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13619,27 +13619,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1 GetEArchiveInvoiceStatus(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 request);
+        Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1 GetEArchiveInvoiceStatus(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1> GetEArchiveInvoiceStatusAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1> GetEArchiveInvoiceStatusAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CancelEDefter is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13687,27 +13687,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterResponse1 CancelEDefter(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest1 request);
+        Izibiz.EArchiveInvoiceWS.CancelEDefterResponse1 CancelEDefter(Izibiz.EArchiveInvoiceWS.CancelEDefterRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterResponse1> CancelEDefterAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.CancelEDefterResponse1> CancelEDefterAsync(Izibiz.EArchiveInvoiceWS.CancelEDefterRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetGenericArchiveByPeriod is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13755,27 +13755,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1 GetGenericArchiveByPeriod(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 request);
+        Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1 GetGenericArchiveByPeriod(Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1> GetGenericArchiveByPeriodAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1> GetGenericArchiveByPeriodAsync(Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetGenericArchiveStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13823,27 +13823,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1 GetGenericArchiveStatus(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 request);
+        Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1 GetGenericArchiveStatus(Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1> GetGenericArchiveStatusAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1> GetGenericArchiveStatusAsync(Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetEmailEarchiveInvoice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13891,27 +13891,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1 GetEmailEarchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 request);
+        Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1 GetEmailEarchiveInvoice(Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1> GetEmailEarchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1> GetEmailEarchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation SendSmsEarchiveInvoice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -13959,27 +13959,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1 SendSmsEarchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 request);
+        Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1 SendSmsEarchiveInvoice(Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1> SendSmsEarchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1> SendSmsEarchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetEArchiveInvoiceList is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -14027,27 +14027,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1 GetEArchiveInvoiceList(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 request);
+        Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1 GetEArchiveInvoiceList(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1> GetEArchiveInvoiceListAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1> GetEArchiveInvoiceListAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 request);
         
         // CODEGEN: Generating message contract since the operation MarkEArchiveInvoice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -14095,27 +14095,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1 MarkEArchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 request);
+        Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1 MarkEArchiveInvoice(Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1> MarkEArchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1> MarkEArchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation EArchiveInvoiceCount is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -14163,27 +14163,27 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1 EArchiveInvoiceCount(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 request);
+        Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1 EArchiveInvoiceCount(Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1> EArchiveInvoiceCountAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1> EArchiveInvoiceCountAsync(Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetELedgerStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EArchiveInvoiceWS.RequestFaultType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ENTITYBaseType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(FIND_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_RESULTType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SEARCH_KEYType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LOV_VALUEType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(AMOUNTType))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ValidationDataType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(baslikType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaIptalType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(faturaType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SignaturePropertiesType))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ManifestType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST_INFOType))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SPUserNoticeType))]
@@ -14231,10 +14231,10 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ArchiveInvoiceReadRequest))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(OIBOperation))]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusResponse1 GetELedgerStatus(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest1 request);
+        Izibiz.EArchiveInvoiceWS.GetELedgerStatusResponse1 GetELedgerStatus(Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusResponse1> GetELedgerStatusAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetELedgerStatusResponse1> GetELedgerStatusAsync(Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest1 request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14244,12 +14244,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class WriteToArchiveRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceWriteRequest ArchiveInvoiceWriteRequest;
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceWriteRequest ArchiveInvoiceWriteRequest;
         
         public WriteToArchiveRequest() {
         }
         
-        public WriteToArchiveRequest(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceWriteRequest ArchiveInvoiceWriteRequest) {
+        public WriteToArchiveRequest(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceWriteRequest ArchiveInvoiceWriteRequest) {
             this.ArchiveInvoiceWriteRequest = ArchiveInvoiceWriteRequest;
         }
     }
@@ -14261,12 +14261,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class WriteToArchiveResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceWriteResponse ArchiveInvoiceWriteResponse;
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceWriteResponse ArchiveInvoiceWriteResponse;
         
         public WriteToArchiveResponse() {
         }
         
-        public WriteToArchiveResponse(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceWriteResponse ArchiveInvoiceWriteResponse) {
+        public WriteToArchiveResponse(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceWriteResponse ArchiveInvoiceWriteResponse) {
             this.ArchiveInvoiceWriteResponse = ArchiveInvoiceWriteResponse;
         }
     }
@@ -14278,12 +14278,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class ReadFromArchiveRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceReadRequest ArchiveInvoiceReadRequest;
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceReadRequest ArchiveInvoiceReadRequest;
         
         public ReadFromArchiveRequest() {
         }
         
-        public ReadFromArchiveRequest(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceReadRequest ArchiveInvoiceReadRequest) {
+        public ReadFromArchiveRequest(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceReadRequest ArchiveInvoiceReadRequest) {
             this.ArchiveInvoiceReadRequest = ArchiveInvoiceReadRequest;
         }
     }
@@ -14295,12 +14295,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class ReadFromArchiveResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceReadResponse ArchiveInvoiceReadResponse;
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceReadResponse ArchiveInvoiceReadResponse;
         
         public ReadFromArchiveResponse() {
         }
         
-        public ReadFromArchiveResponse(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceReadResponse ArchiveInvoiceReadResponse) {
+        public ReadFromArchiveResponse(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceReadResponse ArchiveInvoiceReadResponse) {
             this.ArchiveInvoiceReadResponse = ArchiveInvoiceReadResponse;
         }
     }
@@ -14312,12 +14312,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class CopyToArchiveRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceCopyRequest ArchiveInvoiceCopyRequest;
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceCopyRequest ArchiveInvoiceCopyRequest;
         
         public CopyToArchiveRequest() {
         }
         
-        public CopyToArchiveRequest(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceCopyRequest ArchiveInvoiceCopyRequest) {
+        public CopyToArchiveRequest(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceCopyRequest ArchiveInvoiceCopyRequest) {
             this.ArchiveInvoiceCopyRequest = ArchiveInvoiceCopyRequest;
         }
     }
@@ -14329,12 +14329,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class CopyToArchiveResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceCopyResponse ArchiveInvoiceCopyResponse;
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceCopyResponse ArchiveInvoiceCopyResponse;
         
         public CopyToArchiveResponse() {
         }
         
-        public CopyToArchiveResponse(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceCopyResponse ArchiveInvoiceCopyResponse) {
+        public CopyToArchiveResponse(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceCopyResponse ArchiveInvoiceCopyResponse) {
             this.ArchiveInvoiceCopyResponse = ArchiveInvoiceCopyResponse;
         }
     }
@@ -14346,12 +14346,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class ArchiveGenericDocumentRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest ArchiveGenericDocumentRequest;
+        public Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest ArchiveGenericDocumentRequest;
         
         public ArchiveGenericDocumentRequest1() {
         }
         
-        public ArchiveGenericDocumentRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest ArchiveGenericDocumentRequest) {
+        public ArchiveGenericDocumentRequest1(Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest ArchiveGenericDocumentRequest) {
             this.ArchiveGenericDocumentRequest = ArchiveGenericDocumentRequest;
         }
     }
@@ -14363,12 +14363,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class ArchiveGenericDocumentResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentResponse ArchiveGenericDocumentResponse;
+        public Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentResponse ArchiveGenericDocumentResponse;
         
         public ArchiveGenericDocumentResponse1() {
         }
         
-        public ArchiveGenericDocumentResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentResponse ArchiveGenericDocumentResponse) {
+        public ArchiveGenericDocumentResponse1(Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentResponse ArchiveGenericDocumentResponse) {
             this.ArchiveGenericDocumentResponse = ArchiveGenericDocumentResponse;
         }
     }
@@ -14380,12 +14380,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GenericReadRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest GenericReadRequest;
+        public Izibiz.EArchiveInvoiceWS.GenericReadRequest GenericReadRequest;
         
         public GenericReadRequest1() {
         }
         
-        public GenericReadRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest GenericReadRequest) {
+        public GenericReadRequest1(Izibiz.EArchiveInvoiceWS.GenericReadRequest GenericReadRequest) {
             this.GenericReadRequest = GenericReadRequest;
         }
     }
@@ -14397,12 +14397,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GenericReadResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadResponse GenericReadResponse;
+        public Izibiz.EArchiveInvoiceWS.GenericReadResponse GenericReadResponse;
         
         public GenericReadResponse1() {
         }
         
-        public GenericReadResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadResponse GenericReadResponse) {
+        public GenericReadResponse1(Izibiz.EArchiveInvoiceWS.GenericReadResponse GenericReadResponse) {
             this.GenericReadResponse = GenericReadResponse;
         }
     }
@@ -14414,12 +14414,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class WriteToArchiveExtendedRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceExtendedRequest ArchiveInvoiceExtendedRequest;
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceExtendedRequest ArchiveInvoiceExtendedRequest;
         
         public WriteToArchiveExtendedRequest() {
         }
         
-        public WriteToArchiveExtendedRequest(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceExtendedRequest ArchiveInvoiceExtendedRequest) {
+        public WriteToArchiveExtendedRequest(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceExtendedRequest ArchiveInvoiceExtendedRequest) {
             this.ArchiveInvoiceExtendedRequest = ArchiveInvoiceExtendedRequest;
         }
     }
@@ -14431,12 +14431,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class WriteToArchiveExtendedResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceExtendedResponse ArchiveInvoiceExtendedResponse;
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceExtendedResponse ArchiveInvoiceExtendedResponse;
         
         public WriteToArchiveExtendedResponse() {
         }
         
-        public WriteToArchiveExtendedResponse(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceExtendedResponse ArchiveInvoiceExtendedResponse) {
+        public WriteToArchiveExtendedResponse(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceExtendedResponse ArchiveInvoiceExtendedResponse) {
             this.ArchiveInvoiceExtendedResponse = ArchiveInvoiceExtendedResponse;
         }
     }
@@ -14448,12 +14448,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class ArchiveGetInvoiceInfoRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest ArchiveGetInvoiceInfoRequest;
+        public Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest ArchiveGetInvoiceInfoRequest;
         
         public ArchiveGetInvoiceInfoRequest1() {
         }
         
-        public ArchiveGetInvoiceInfoRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest ArchiveGetInvoiceInfoRequest) {
+        public ArchiveGetInvoiceInfoRequest1(Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest ArchiveGetInvoiceInfoRequest) {
             this.ArchiveGetInvoiceInfoRequest = ArchiveGetInvoiceInfoRequest;
         }
     }
@@ -14465,12 +14465,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class ArchiveGetInvoiceInfoResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse ArchiveGetInvoiceInfoResponse;
+        public Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse ArchiveGetInvoiceInfoResponse;
         
         public ArchiveGetInvoiceInfoResponse1() {
         }
         
-        public ArchiveGetInvoiceInfoResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse ArchiveGetInvoiceInfoResponse) {
+        public ArchiveGetInvoiceInfoResponse1(Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse ArchiveGetInvoiceInfoResponse) {
             this.ArchiveGetInvoiceInfoResponse = ArchiveGetInvoiceInfoResponse;
         }
     }
@@ -14482,12 +14482,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class ReadEArchiveReportRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest ReadEArchiveReportRequest;
+        public Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest ReadEArchiveReportRequest;
         
         public ReadEArchiveReportRequest1() {
         }
         
-        public ReadEArchiveReportRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest ReadEArchiveReportRequest) {
+        public ReadEArchiveReportRequest1(Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest ReadEArchiveReportRequest) {
             this.ReadEArchiveReportRequest = ReadEArchiveReportRequest;
         }
     }
@@ -14499,12 +14499,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class ReadEArchiveReportResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportResponse ReadEArchiveReportResponse;
+        public Izibiz.EArchiveInvoiceWS.ReadEArchiveReportResponse ReadEArchiveReportResponse;
         
         public ReadEArchiveReportResponse1() {
         }
         
-        public ReadEArchiveReportResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportResponse ReadEArchiveReportResponse) {
+        public ReadEArchiveReportResponse1(Izibiz.EArchiveInvoiceWS.ReadEArchiveReportResponse ReadEArchiveReportResponse) {
             this.ReadEArchiveReportResponse = ReadEArchiveReportResponse;
         }
     }
@@ -14516,12 +14516,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class CancelEArchiveInvoiceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest CancelEArchiveInvoiceRequest;
+        public Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest CancelEArchiveInvoiceRequest;
         
         public CancelEArchiveInvoiceRequest1() {
         }
         
-        public CancelEArchiveInvoiceRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest CancelEArchiveInvoiceRequest) {
+        public CancelEArchiveInvoiceRequest1(Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest CancelEArchiveInvoiceRequest) {
             this.CancelEArchiveInvoiceRequest = CancelEArchiveInvoiceRequest;
         }
     }
@@ -14533,12 +14533,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class CancelEArchiveInvoiceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse CancelEArchiveInvoiceResponse;
+        public Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse CancelEArchiveInvoiceResponse;
         
         public CancelEArchiveInvoiceResponse1() {
         }
         
-        public CancelEArchiveInvoiceResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse CancelEArchiveInvoiceResponse) {
+        public CancelEArchiveInvoiceResponse1(Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse CancelEArchiveInvoiceResponse) {
             this.CancelEArchiveInvoiceResponse = CancelEArchiveInvoiceResponse;
         }
     }
@@ -14550,12 +14550,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetEArchiveReportRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest GetEArchiveReportRequest;
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest GetEArchiveReportRequest;
         
         public GetEArchiveReportRequest1() {
         }
         
-        public GetEArchiveReportRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest GetEArchiveReportRequest) {
+        public GetEArchiveReportRequest1(Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest GetEArchiveReportRequest) {
             this.GetEArchiveReportRequest = GetEArchiveReportRequest;
         }
     }
@@ -14567,12 +14567,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetEArchiveReportResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportResponse GetEArchiveReportResponse;
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveReportResponse GetEArchiveReportResponse;
         
         public GetEArchiveReportResponse1() {
         }
         
-        public GetEArchiveReportResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportResponse GetEArchiveReportResponse) {
+        public GetEArchiveReportResponse1(Izibiz.EArchiveInvoiceWS.GetEArchiveReportResponse GetEArchiveReportResponse) {
             this.GetEArchiveReportResponse = GetEArchiveReportResponse;
         }
     }
@@ -14584,12 +14584,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetEArchiveInvoiceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest GetEArchiveInvoiceRequest;
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest GetEArchiveInvoiceRequest;
         
         public GetEArchiveInvoiceRequest1() {
         }
         
-        public GetEArchiveInvoiceRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest GetEArchiveInvoiceRequest) {
+        public GetEArchiveInvoiceRequest1(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest GetEArchiveInvoiceRequest) {
             this.GetEArchiveInvoiceRequest = GetEArchiveInvoiceRequest;
         }
     }
@@ -14601,12 +14601,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetEArchiveInvoiceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceResponse GetEArchiveInvoiceResponse;
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceResponse GetEArchiveInvoiceResponse;
         
         public GetEArchiveInvoiceResponse1() {
         }
         
-        public GetEArchiveInvoiceResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceResponse GetEArchiveInvoiceResponse) {
+        public GetEArchiveInvoiceResponse1(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceResponse GetEArchiveInvoiceResponse) {
             this.GetEArchiveInvoiceResponse = GetEArchiveInvoiceResponse;
         }
     }
@@ -14618,12 +14618,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetEArchiveInvoiceStatusRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest GetEArchiveInvoiceStatusRequest;
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest GetEArchiveInvoiceStatusRequest;
         
         public GetEArchiveInvoiceStatusRequest1() {
         }
         
-        public GetEArchiveInvoiceStatusRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest GetEArchiveInvoiceStatusRequest) {
+        public GetEArchiveInvoiceStatusRequest1(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest GetEArchiveInvoiceStatusRequest) {
             this.GetEArchiveInvoiceStatusRequest = GetEArchiveInvoiceStatusRequest;
         }
     }
@@ -14635,12 +14635,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetEArchiveInvoiceStatusResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse GetEArchiveInvoiceStatusResponse;
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse GetEArchiveInvoiceStatusResponse;
         
         public GetEArchiveInvoiceStatusResponse1() {
         }
         
-        public GetEArchiveInvoiceStatusResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse GetEArchiveInvoiceStatusResponse) {
+        public GetEArchiveInvoiceStatusResponse1(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse GetEArchiveInvoiceStatusResponse) {
             this.GetEArchiveInvoiceStatusResponse = GetEArchiveInvoiceStatusResponse;
         }
     }
@@ -14652,12 +14652,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class CancelEDefterRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest CancelEDefterRequest;
+        public Izibiz.EArchiveInvoiceWS.CancelEDefterRequest CancelEDefterRequest;
         
         public CancelEDefterRequest1() {
         }
         
-        public CancelEDefterRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest CancelEDefterRequest) {
+        public CancelEDefterRequest1(Izibiz.EArchiveInvoiceWS.CancelEDefterRequest CancelEDefterRequest) {
             this.CancelEDefterRequest = CancelEDefterRequest;
         }
     }
@@ -14669,12 +14669,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class CancelEDefterResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterResponse CancelEDefterResponse;
+        public Izibiz.EArchiveInvoiceWS.CancelEDefterResponse CancelEDefterResponse;
         
         public CancelEDefterResponse1() {
         }
         
-        public CancelEDefterResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterResponse CancelEDefterResponse) {
+        public CancelEDefterResponse1(Izibiz.EArchiveInvoiceWS.CancelEDefterResponse CancelEDefterResponse) {
             this.CancelEDefterResponse = CancelEDefterResponse;
         }
     }
@@ -14686,12 +14686,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetGenericArchiveByPeriodRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest GetGenericArchiveByPeriodRequest;
+        public Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest GetGenericArchiveByPeriodRequest;
         
         public GetGenericArchiveByPeriodRequest1() {
         }
         
-        public GetGenericArchiveByPeriodRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest GetGenericArchiveByPeriodRequest) {
+        public GetGenericArchiveByPeriodRequest1(Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest GetGenericArchiveByPeriodRequest) {
             this.GetGenericArchiveByPeriodRequest = GetGenericArchiveByPeriodRequest;
         }
     }
@@ -14703,12 +14703,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetGenericArchiveByPeriodResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse GetGenericArchiveByPeriodResponse;
+        public Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse GetGenericArchiveByPeriodResponse;
         
         public GetGenericArchiveByPeriodResponse1() {
         }
         
-        public GetGenericArchiveByPeriodResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse GetGenericArchiveByPeriodResponse) {
+        public GetGenericArchiveByPeriodResponse1(Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse GetGenericArchiveByPeriodResponse) {
             this.GetGenericArchiveByPeriodResponse = GetGenericArchiveByPeriodResponse;
         }
     }
@@ -14720,12 +14720,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetGenericArchiveStatusRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest GetGenericArchiveStatusRequest;
+        public Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest GetGenericArchiveStatusRequest;
         
         public GetGenericArchiveStatusRequest1() {
         }
         
-        public GetGenericArchiveStatusRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest GetGenericArchiveStatusRequest) {
+        public GetGenericArchiveStatusRequest1(Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest GetGenericArchiveStatusRequest) {
             this.GetGenericArchiveStatusRequest = GetGenericArchiveStatusRequest;
         }
     }
@@ -14737,12 +14737,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetGenericArchiveStatusResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusResponse GetGenericArchiveStatusResponse;
+        public Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusResponse GetGenericArchiveStatusResponse;
         
         public GetGenericArchiveStatusResponse1() {
         }
         
-        public GetGenericArchiveStatusResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusResponse GetGenericArchiveStatusResponse) {
+        public GetGenericArchiveStatusResponse1(Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusResponse GetGenericArchiveStatusResponse) {
             this.GetGenericArchiveStatusResponse = GetGenericArchiveStatusResponse;
         }
     }
@@ -14754,12 +14754,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetEmailEarchiveInvoiceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest GetEmailEarchiveInvoiceRequest;
+        public Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest GetEmailEarchiveInvoiceRequest;
         
         public GetEmailEarchiveInvoiceRequest1() {
         }
         
-        public GetEmailEarchiveInvoiceRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest GetEmailEarchiveInvoiceRequest) {
+        public GetEmailEarchiveInvoiceRequest1(Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest GetEmailEarchiveInvoiceRequest) {
             this.GetEmailEarchiveInvoiceRequest = GetEmailEarchiveInvoiceRequest;
         }
     }
@@ -14771,12 +14771,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetEmailEarchiveInvoiceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse GetEmailEarchiveInvoiceResponse;
+        public Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse GetEmailEarchiveInvoiceResponse;
         
         public GetEmailEarchiveInvoiceResponse1() {
         }
         
-        public GetEmailEarchiveInvoiceResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse GetEmailEarchiveInvoiceResponse) {
+        public GetEmailEarchiveInvoiceResponse1(Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse GetEmailEarchiveInvoiceResponse) {
             this.GetEmailEarchiveInvoiceResponse = GetEmailEarchiveInvoiceResponse;
         }
     }
@@ -14788,12 +14788,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class SendSmsEarchiveInvoiceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest SendSmsEarchiveInvoiceRequest;
+        public Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest SendSmsEarchiveInvoiceRequest;
         
         public SendSmsEarchiveInvoiceRequest1() {
         }
         
-        public SendSmsEarchiveInvoiceRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest SendSmsEarchiveInvoiceRequest) {
+        public SendSmsEarchiveInvoiceRequest1(Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest SendSmsEarchiveInvoiceRequest) {
             this.SendSmsEarchiveInvoiceRequest = SendSmsEarchiveInvoiceRequest;
         }
     }
@@ -14805,12 +14805,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class SendSmsEarchiveInvoiceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse SendSmsEarchiveInvoiceResponse;
+        public Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse SendSmsEarchiveInvoiceResponse;
         
         public SendSmsEarchiveInvoiceResponse1() {
         }
         
-        public SendSmsEarchiveInvoiceResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse SendSmsEarchiveInvoiceResponse) {
+        public SendSmsEarchiveInvoiceResponse1(Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse SendSmsEarchiveInvoiceResponse) {
             this.SendSmsEarchiveInvoiceResponse = SendSmsEarchiveInvoiceResponse;
         }
     }
@@ -14822,12 +14822,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetEArchiveInvoiceListRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest GetEArchiveInvoiceListRequest;
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest GetEArchiveInvoiceListRequest;
         
         public GetEArchiveInvoiceListRequest1() {
         }
         
-        public GetEArchiveInvoiceListRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest GetEArchiveInvoiceListRequest) {
+        public GetEArchiveInvoiceListRequest1(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest GetEArchiveInvoiceListRequest) {
             this.GetEArchiveInvoiceListRequest = GetEArchiveInvoiceListRequest;
         }
     }
@@ -14839,12 +14839,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetEArchiveInvoiceListResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse GetEArchiveInvoiceListResponse;
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse GetEArchiveInvoiceListResponse;
         
         public GetEArchiveInvoiceListResponse1() {
         }
         
-        public GetEArchiveInvoiceListResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse GetEArchiveInvoiceListResponse) {
+        public GetEArchiveInvoiceListResponse1(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse GetEArchiveInvoiceListResponse) {
             this.GetEArchiveInvoiceListResponse = GetEArchiveInvoiceListResponse;
         }
     }
@@ -14856,12 +14856,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class MarkEArchiveInvoiceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest MarkEArchiveInvoiceRequest;
+        public Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest MarkEArchiveInvoiceRequest;
         
         public MarkEArchiveInvoiceRequest1() {
         }
         
-        public MarkEArchiveInvoiceRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest MarkEArchiveInvoiceRequest) {
+        public MarkEArchiveInvoiceRequest1(Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest MarkEArchiveInvoiceRequest) {
             this.MarkEArchiveInvoiceRequest = MarkEArchiveInvoiceRequest;
         }
     }
@@ -14873,12 +14873,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class MarkEArchiveInvoiceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse MarkEArchiveInvoiceResponse;
+        public Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse MarkEArchiveInvoiceResponse;
         
         public MarkEArchiveInvoiceResponse1() {
         }
         
-        public MarkEArchiveInvoiceResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse MarkEArchiveInvoiceResponse) {
+        public MarkEArchiveInvoiceResponse1(Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse MarkEArchiveInvoiceResponse) {
             this.MarkEArchiveInvoiceResponse = MarkEArchiveInvoiceResponse;
         }
     }
@@ -14890,12 +14890,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class EArchiveInvoiceCountRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest EArchiveInvoiceCountRequest;
+        public Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest EArchiveInvoiceCountRequest;
         
         public EArchiveInvoiceCountRequest1() {
         }
         
-        public EArchiveInvoiceCountRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest EArchiveInvoiceCountRequest) {
+        public EArchiveInvoiceCountRequest1(Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest EArchiveInvoiceCountRequest) {
             this.EArchiveInvoiceCountRequest = EArchiveInvoiceCountRequest;
         }
     }
@@ -14907,12 +14907,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class EArchiveInvoiceCountResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountResponse EArchiveInvoiceCountResponse;
+        public Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountResponse EArchiveInvoiceCountResponse;
         
         public EArchiveInvoiceCountResponse1() {
         }
         
-        public EArchiveInvoiceCountResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountResponse EArchiveInvoiceCountResponse) {
+        public EArchiveInvoiceCountResponse1(Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountResponse EArchiveInvoiceCountResponse) {
             this.EArchiveInvoiceCountResponse = EArchiveInvoiceCountResponse;
         }
     }
@@ -14924,12 +14924,12 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetELedgerStatusRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest GetELedgerStatusRequest;
+        public Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest GetELedgerStatusRequest;
         
         public GetELedgerStatusRequest1() {
         }
         
-        public GetELedgerStatusRequest1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest GetELedgerStatusRequest) {
+        public GetELedgerStatusRequest1(Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest GetELedgerStatusRequest) {
             this.GetELedgerStatusRequest = GetELedgerStatusRequest;
         }
     }
@@ -14941,23 +14941,23 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
     public partial class GetELedgerStatusResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl/archive", Order=0)]
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusResponse GetELedgerStatusResponse;
+        public Izibiz.EArchiveInvoiceWS.GetELedgerStatusResponse GetELedgerStatusResponse;
         
         public GetELedgerStatusResponse1() {
         }
         
-        public GetELedgerStatusResponse1(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusResponse GetELedgerStatusResponse) {
+        public GetELedgerStatusResponse1(Izibiz.EArchiveInvoiceWS.GetELedgerStatusResponse GetELedgerStatusResponse) {
             this.GetELedgerStatusResponse = GetELedgerStatusResponse;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface EFaturaArchivePortChannel : Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort, System.ServiceModel.IClientChannel {
+    public interface EFaturaArchivePortChannel : Izibiz.EArchiveInvoiceWS.EFaturaArchivePort, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EFaturaArchivePortClient : System.ServiceModel.ClientBase<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort>, Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort {
+    public partial class EFaturaArchivePortClient : System.ServiceModel.ClientBase<Izibiz.EArchiveInvoiceWS.EFaturaArchivePort>, Izibiz.EArchiveInvoiceWS.EFaturaArchivePort {
         
         public EFaturaArchivePortClient() {
         }
@@ -14979,486 +14979,486 @@ namespace Izibiz_dotnet_soap_client.EArchiveInvoiceWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveResponse Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.WriteToArchive(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveRequest request) {
+        Izibiz.EArchiveInvoiceWS.WriteToArchiveResponse Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.WriteToArchive(Izibiz.EArchiveInvoiceWS.WriteToArchiveRequest request) {
             return base.Channel.WriteToArchive(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceWriteResponse WriteToArchive(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceWriteRequest ArchiveInvoiceWriteRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveRequest inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveRequest();
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceWriteResponse WriteToArchive(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceWriteRequest ArchiveInvoiceWriteRequest) {
+            Izibiz.EArchiveInvoiceWS.WriteToArchiveRequest inValue = new Izibiz.EArchiveInvoiceWS.WriteToArchiveRequest();
             inValue.ArchiveInvoiceWriteRequest = ArchiveInvoiceWriteRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveResponse retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).WriteToArchive(inValue);
+            Izibiz.EArchiveInvoiceWS.WriteToArchiveResponse retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).WriteToArchive(inValue);
             return retVal.ArchiveInvoiceWriteResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveResponse> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.WriteToArchiveAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveRequest request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.WriteToArchiveResponse> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.WriteToArchiveAsync(Izibiz.EArchiveInvoiceWS.WriteToArchiveRequest request) {
             return base.Channel.WriteToArchiveAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveResponse> WriteToArchiveAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceWriteRequest ArchiveInvoiceWriteRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveRequest inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveRequest();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.WriteToArchiveResponse> WriteToArchiveAsync(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceWriteRequest ArchiveInvoiceWriteRequest) {
+            Izibiz.EArchiveInvoiceWS.WriteToArchiveRequest inValue = new Izibiz.EArchiveInvoiceWS.WriteToArchiveRequest();
             inValue.ArchiveInvoiceWriteRequest = ArchiveInvoiceWriteRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).WriteToArchiveAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).WriteToArchiveAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveResponse Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.ReadFromArchive(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveRequest request) {
+        Izibiz.EArchiveInvoiceWS.ReadFromArchiveResponse Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.ReadFromArchive(Izibiz.EArchiveInvoiceWS.ReadFromArchiveRequest request) {
             return base.Channel.ReadFromArchive(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceReadResponse ReadFromArchive(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceReadRequest ArchiveInvoiceReadRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveRequest inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveRequest();
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceReadResponse ReadFromArchive(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceReadRequest ArchiveInvoiceReadRequest) {
+            Izibiz.EArchiveInvoiceWS.ReadFromArchiveRequest inValue = new Izibiz.EArchiveInvoiceWS.ReadFromArchiveRequest();
             inValue.ArchiveInvoiceReadRequest = ArchiveInvoiceReadRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveResponse retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ReadFromArchive(inValue);
+            Izibiz.EArchiveInvoiceWS.ReadFromArchiveResponse retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ReadFromArchive(inValue);
             return retVal.ArchiveInvoiceReadResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveResponse> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.ReadFromArchiveAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveRequest request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ReadFromArchiveResponse> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.ReadFromArchiveAsync(Izibiz.EArchiveInvoiceWS.ReadFromArchiveRequest request) {
             return base.Channel.ReadFromArchiveAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveResponse> ReadFromArchiveAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceReadRequest ArchiveInvoiceReadRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveRequest inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadFromArchiveRequest();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ReadFromArchiveResponse> ReadFromArchiveAsync(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceReadRequest ArchiveInvoiceReadRequest) {
+            Izibiz.EArchiveInvoiceWS.ReadFromArchiveRequest inValue = new Izibiz.EArchiveInvoiceWS.ReadFromArchiveRequest();
             inValue.ArchiveInvoiceReadRequest = ArchiveInvoiceReadRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ReadFromArchiveAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ReadFromArchiveAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveResponse Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.CopyToArchive(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveRequest request) {
+        Izibiz.EArchiveInvoiceWS.CopyToArchiveResponse Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.CopyToArchive(Izibiz.EArchiveInvoiceWS.CopyToArchiveRequest request) {
             return base.Channel.CopyToArchive(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceCopyResponse CopyToArchive(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceCopyRequest ArchiveInvoiceCopyRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveRequest inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveRequest();
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceCopyResponse CopyToArchive(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceCopyRequest ArchiveInvoiceCopyRequest) {
+            Izibiz.EArchiveInvoiceWS.CopyToArchiveRequest inValue = new Izibiz.EArchiveInvoiceWS.CopyToArchiveRequest();
             inValue.ArchiveInvoiceCopyRequest = ArchiveInvoiceCopyRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveResponse retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CopyToArchive(inValue);
+            Izibiz.EArchiveInvoiceWS.CopyToArchiveResponse retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CopyToArchive(inValue);
             return retVal.ArchiveInvoiceCopyResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveResponse> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.CopyToArchiveAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveRequest request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.CopyToArchiveResponse> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.CopyToArchiveAsync(Izibiz.EArchiveInvoiceWS.CopyToArchiveRequest request) {
             return base.Channel.CopyToArchiveAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveResponse> CopyToArchiveAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceCopyRequest ArchiveInvoiceCopyRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveRequest inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CopyToArchiveRequest();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.CopyToArchiveResponse> CopyToArchiveAsync(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceCopyRequest ArchiveInvoiceCopyRequest) {
+            Izibiz.EArchiveInvoiceWS.CopyToArchiveRequest inValue = new Izibiz.EArchiveInvoiceWS.CopyToArchiveRequest();
             inValue.ArchiveInvoiceCopyRequest = ArchiveInvoiceCopyRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CopyToArchiveAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CopyToArchiveAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.ArchiveGenericDocument(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.ArchiveGenericDocument(Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 request) {
             return base.Channel.ArchiveGenericDocument(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentResponse ArchiveGenericDocument(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest ArchiveGenericDocumentRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1();
+        public Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentResponse ArchiveGenericDocument(Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest ArchiveGenericDocumentRequest) {
+            Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 inValue = new Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1();
             inValue.ArchiveGenericDocumentRequest = ArchiveGenericDocumentRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ArchiveGenericDocument(inValue);
+            Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ArchiveGenericDocument(inValue);
             return retVal.ArchiveGenericDocumentResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.ArchiveGenericDocumentAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.ArchiveGenericDocumentAsync(Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 request) {
             return base.Channel.ArchiveGenericDocumentAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1> ArchiveGenericDocumentAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest ArchiveGenericDocumentRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1> ArchiveGenericDocumentAsync(Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest ArchiveGenericDocumentRequest) {
+            Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1 inValue = new Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentRequest1();
             inValue.ArchiveGenericDocumentRequest = ArchiveGenericDocumentRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ArchiveGenericDocumentAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ArchiveGenericDocumentAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GenericRead(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.GenericReadResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GenericRead(Izibiz.EArchiveInvoiceWS.GenericReadRequest1 request) {
             return base.Channel.GenericRead(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadResponse GenericRead(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest GenericReadRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest1();
+        public Izibiz.EArchiveInvoiceWS.GenericReadResponse GenericRead(Izibiz.EArchiveInvoiceWS.GenericReadRequest GenericReadRequest) {
+            Izibiz.EArchiveInvoiceWS.GenericReadRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GenericReadRequest1();
             inValue.GenericReadRequest = GenericReadRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GenericRead(inValue);
+            Izibiz.EArchiveInvoiceWS.GenericReadResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GenericRead(inValue);
             return retVal.GenericReadResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GenericReadAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GenericReadResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GenericReadAsync(Izibiz.EArchiveInvoiceWS.GenericReadRequest1 request) {
             return base.Channel.GenericReadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadResponse1> GenericReadAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest GenericReadRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GenericReadRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GenericReadResponse1> GenericReadAsync(Izibiz.EArchiveInvoiceWS.GenericReadRequest GenericReadRequest) {
+            Izibiz.EArchiveInvoiceWS.GenericReadRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GenericReadRequest1();
             inValue.GenericReadRequest = GenericReadRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GenericReadAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GenericReadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedResponse Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.WriteToArchiveExtended(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedRequest request) {
+        Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedResponse Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.WriteToArchiveExtended(Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedRequest request) {
             return base.Channel.WriteToArchiveExtended(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceExtendedResponse WriteToArchiveExtended(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceExtendedRequest ArchiveInvoiceExtendedRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedRequest inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedRequest();
+        public Izibiz.EArchiveInvoiceWS.ArchiveInvoiceExtendedResponse WriteToArchiveExtended(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceExtendedRequest ArchiveInvoiceExtendedRequest) {
+            Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedRequest inValue = new Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedRequest();
             inValue.ArchiveInvoiceExtendedRequest = ArchiveInvoiceExtendedRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedResponse retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).WriteToArchiveExtended(inValue);
+            Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedResponse retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).WriteToArchiveExtended(inValue);
             return retVal.ArchiveInvoiceExtendedResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedResponse> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.WriteToArchiveExtendedAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedRequest request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedResponse> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.WriteToArchiveExtendedAsync(Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedRequest request) {
             return base.Channel.WriteToArchiveExtendedAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedResponse> WriteToArchiveExtendedAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveInvoiceExtendedRequest ArchiveInvoiceExtendedRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedRequest inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.WriteToArchiveExtendedRequest();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedResponse> WriteToArchiveExtendedAsync(Izibiz.EArchiveInvoiceWS.ArchiveInvoiceExtendedRequest ArchiveInvoiceExtendedRequest) {
+            Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedRequest inValue = new Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedRequest();
             inValue.ArchiveInvoiceExtendedRequest = ArchiveInvoiceExtendedRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).WriteToArchiveExtendedAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).WriteToArchiveExtendedAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.ArchiveGetInvoiceInfo(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.ArchiveGetInvoiceInfo(Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 request) {
             return base.Channel.ArchiveGetInvoiceInfo(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse ArchiveGetInvoiceInfo(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest ArchiveGetInvoiceInfoRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1();
+        public Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse ArchiveGetInvoiceInfo(Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest ArchiveGetInvoiceInfoRequest) {
+            Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 inValue = new Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1();
             inValue.ArchiveGetInvoiceInfoRequest = ArchiveGetInvoiceInfoRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ArchiveGetInvoiceInfo(inValue);
+            Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ArchiveGetInvoiceInfo(inValue);
             return retVal.ArchiveGetInvoiceInfoResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.ArchiveGetInvoiceInfoAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.ArchiveGetInvoiceInfoAsync(Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 request) {
             return base.Channel.ArchiveGetInvoiceInfoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1> ArchiveGetInvoiceInfoAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest ArchiveGetInvoiceInfoRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1> ArchiveGetInvoiceInfoAsync(Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest ArchiveGetInvoiceInfoRequest) {
+            Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1 inValue = new Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoRequest1();
             inValue.ArchiveGetInvoiceInfoRequest = ArchiveGetInvoiceInfoRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ArchiveGetInvoiceInfoAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ArchiveGetInvoiceInfoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.ReadEArchiveReport(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.ReadEArchiveReportResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.ReadEArchiveReport(Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest1 request) {
             return base.Channel.ReadEArchiveReport(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportResponse ReadEArchiveReport(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest ReadEArchiveReportRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest1();
+        public Izibiz.EArchiveInvoiceWS.ReadEArchiveReportResponse ReadEArchiveReport(Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest ReadEArchiveReportRequest) {
+            Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest1 inValue = new Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest1();
             inValue.ReadEArchiveReportRequest = ReadEArchiveReportRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ReadEArchiveReport(inValue);
+            Izibiz.EArchiveInvoiceWS.ReadEArchiveReportResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ReadEArchiveReport(inValue);
             return retVal.ReadEArchiveReportResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.ReadEArchiveReportAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ReadEArchiveReportResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.ReadEArchiveReportAsync(Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest1 request) {
             return base.Channel.ReadEArchiveReportAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportResponse1> ReadEArchiveReportAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest ReadEArchiveReportRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.ReadEArchiveReportRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.ReadEArchiveReportResponse1> ReadEArchiveReportAsync(Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest ReadEArchiveReportRequest) {
+            Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest1 inValue = new Izibiz.EArchiveInvoiceWS.ReadEArchiveReportRequest1();
             inValue.ReadEArchiveReportRequest = ReadEArchiveReportRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ReadEArchiveReportAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).ReadEArchiveReportAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.CancelEArchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.CancelEArchiveInvoice(Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 request) {
             return base.Channel.CancelEArchiveInvoice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse CancelEArchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest CancelEArchiveInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1();
+        public Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse CancelEArchiveInvoice(Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest CancelEArchiveInvoiceRequest) {
+            Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 inValue = new Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1();
             inValue.CancelEArchiveInvoiceRequest = CancelEArchiveInvoiceRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CancelEArchiveInvoice(inValue);
+            Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CancelEArchiveInvoice(inValue);
             return retVal.CancelEArchiveInvoiceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.CancelEArchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.CancelEArchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 request) {
             return base.Channel.CancelEArchiveInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1> CancelEArchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest CancelEArchiveInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1> CancelEArchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest CancelEArchiveInvoiceRequest) {
+            Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1 inValue = new Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceRequest1();
             inValue.CancelEArchiveInvoiceRequest = CancelEArchiveInvoiceRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CancelEArchiveInvoiceAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CancelEArchiveInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveReport(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.GetEArchiveReportResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveReport(Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest1 request) {
             return base.Channel.GetEArchiveReport(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportResponse GetEArchiveReport(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest GetEArchiveReportRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest1();
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveReportResponse GetEArchiveReport(Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest GetEArchiveReportRequest) {
+            Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest1();
             inValue.GetEArchiveReportRequest = GetEArchiveReportRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveReport(inValue);
+            Izibiz.EArchiveInvoiceWS.GetEArchiveReportResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveReport(inValue);
             return retVal.GetEArchiveReportResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveReportAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveReportResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveReportAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest1 request) {
             return base.Channel.GetEArchiveReportAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportResponse1> GetEArchiveReportAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest GetEArchiveReportRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveReportRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveReportResponse1> GetEArchiveReportAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest GetEArchiveReportRequest) {
+            Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetEArchiveReportRequest1();
             inValue.GetEArchiveReportRequest = GetEArchiveReportRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveReportAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveReportAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoice(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 request) {
             return base.Channel.GetEArchiveInvoice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceResponse GetEArchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest GetEArchiveInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1();
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceResponse GetEArchiveInvoice(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest GetEArchiveInvoiceRequest) {
+            Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1();
             inValue.GetEArchiveInvoiceRequest = GetEArchiveInvoiceRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoice(inValue);
+            Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoice(inValue);
             return retVal.GetEArchiveInvoiceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 request) {
             return base.Channel.GetEArchiveInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1> GetEArchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest GetEArchiveInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1> GetEArchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest GetEArchiveInvoiceRequest) {
+            Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceRequest1();
             inValue.GetEArchiveInvoiceRequest = GetEArchiveInvoiceRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoiceAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoiceStatus(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoiceStatus(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 request) {
             return base.Channel.GetEArchiveInvoiceStatus(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse GetEArchiveInvoiceStatus(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest GetEArchiveInvoiceStatusRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1();
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse GetEArchiveInvoiceStatus(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest GetEArchiveInvoiceStatusRequest) {
+            Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1();
             inValue.GetEArchiveInvoiceStatusRequest = GetEArchiveInvoiceStatusRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoiceStatus(inValue);
+            Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoiceStatus(inValue);
             return retVal.GetEArchiveInvoiceStatusResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoiceStatusAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoiceStatusAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 request) {
             return base.Channel.GetEArchiveInvoiceStatusAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1> GetEArchiveInvoiceStatusAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest GetEArchiveInvoiceStatusRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1> GetEArchiveInvoiceStatusAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest GetEArchiveInvoiceStatusRequest) {
+            Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusRequest1();
             inValue.GetEArchiveInvoiceStatusRequest = GetEArchiveInvoiceStatusRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoiceStatusAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoiceStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.CancelEDefter(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.CancelEDefterResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.CancelEDefter(Izibiz.EArchiveInvoiceWS.CancelEDefterRequest1 request) {
             return base.Channel.CancelEDefter(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterResponse CancelEDefter(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest CancelEDefterRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest1();
+        public Izibiz.EArchiveInvoiceWS.CancelEDefterResponse CancelEDefter(Izibiz.EArchiveInvoiceWS.CancelEDefterRequest CancelEDefterRequest) {
+            Izibiz.EArchiveInvoiceWS.CancelEDefterRequest1 inValue = new Izibiz.EArchiveInvoiceWS.CancelEDefterRequest1();
             inValue.CancelEDefterRequest = CancelEDefterRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CancelEDefter(inValue);
+            Izibiz.EArchiveInvoiceWS.CancelEDefterResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CancelEDefter(inValue);
             return retVal.CancelEDefterResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.CancelEDefterAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.CancelEDefterResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.CancelEDefterAsync(Izibiz.EArchiveInvoiceWS.CancelEDefterRequest1 request) {
             return base.Channel.CancelEDefterAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterResponse1> CancelEDefterAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest CancelEDefterRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.CancelEDefterRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.CancelEDefterResponse1> CancelEDefterAsync(Izibiz.EArchiveInvoiceWS.CancelEDefterRequest CancelEDefterRequest) {
+            Izibiz.EArchiveInvoiceWS.CancelEDefterRequest1 inValue = new Izibiz.EArchiveInvoiceWS.CancelEDefterRequest1();
             inValue.CancelEDefterRequest = CancelEDefterRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CancelEDefterAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).CancelEDefterAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetGenericArchiveByPeriod(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetGenericArchiveByPeriod(Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 request) {
             return base.Channel.GetGenericArchiveByPeriod(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse GetGenericArchiveByPeriod(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest GetGenericArchiveByPeriodRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1();
+        public Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse GetGenericArchiveByPeriod(Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest GetGenericArchiveByPeriodRequest) {
+            Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1();
             inValue.GetGenericArchiveByPeriodRequest = GetGenericArchiveByPeriodRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetGenericArchiveByPeriod(inValue);
+            Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetGenericArchiveByPeriod(inValue);
             return retVal.GetGenericArchiveByPeriodResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetGenericArchiveByPeriodAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetGenericArchiveByPeriodAsync(Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 request) {
             return base.Channel.GetGenericArchiveByPeriodAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1> GetGenericArchiveByPeriodAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest GetGenericArchiveByPeriodRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1> GetGenericArchiveByPeriodAsync(Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest GetGenericArchiveByPeriodRequest) {
+            Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodRequest1();
             inValue.GetGenericArchiveByPeriodRequest = GetGenericArchiveByPeriodRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetGenericArchiveByPeriodAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetGenericArchiveByPeriodAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetGenericArchiveStatus(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetGenericArchiveStatus(Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 request) {
             return base.Channel.GetGenericArchiveStatus(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusResponse GetGenericArchiveStatus(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest GetGenericArchiveStatusRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1();
+        public Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusResponse GetGenericArchiveStatus(Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest GetGenericArchiveStatusRequest) {
+            Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1();
             inValue.GetGenericArchiveStatusRequest = GetGenericArchiveStatusRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetGenericArchiveStatus(inValue);
+            Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetGenericArchiveStatus(inValue);
             return retVal.GetGenericArchiveStatusResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetGenericArchiveStatusAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetGenericArchiveStatusAsync(Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 request) {
             return base.Channel.GetGenericArchiveStatusAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1> GetGenericArchiveStatusAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest GetGenericArchiveStatusRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1> GetGenericArchiveStatusAsync(Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest GetGenericArchiveStatusRequest) {
+            Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusRequest1();
             inValue.GetGenericArchiveStatusRequest = GetGenericArchiveStatusRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetGenericArchiveStatusAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetGenericArchiveStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetEmailEarchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetEmailEarchiveInvoice(Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 request) {
             return base.Channel.GetEmailEarchiveInvoice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse GetEmailEarchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest GetEmailEarchiveInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1();
+        public Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse GetEmailEarchiveInvoice(Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest GetEmailEarchiveInvoiceRequest) {
+            Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1();
             inValue.GetEmailEarchiveInvoiceRequest = GetEmailEarchiveInvoiceRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEmailEarchiveInvoice(inValue);
+            Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEmailEarchiveInvoice(inValue);
             return retVal.GetEmailEarchiveInvoiceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetEmailEarchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetEmailEarchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 request) {
             return base.Channel.GetEmailEarchiveInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1> GetEmailEarchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest GetEmailEarchiveInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1> GetEmailEarchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest GetEmailEarchiveInvoiceRequest) {
+            Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceRequest1();
             inValue.GetEmailEarchiveInvoiceRequest = GetEmailEarchiveInvoiceRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEmailEarchiveInvoiceAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEmailEarchiveInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.SendSmsEarchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.SendSmsEarchiveInvoice(Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 request) {
             return base.Channel.SendSmsEarchiveInvoice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse SendSmsEarchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest SendSmsEarchiveInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1();
+        public Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse SendSmsEarchiveInvoice(Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest SendSmsEarchiveInvoiceRequest) {
+            Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 inValue = new Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1();
             inValue.SendSmsEarchiveInvoiceRequest = SendSmsEarchiveInvoiceRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).SendSmsEarchiveInvoice(inValue);
+            Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).SendSmsEarchiveInvoice(inValue);
             return retVal.SendSmsEarchiveInvoiceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.SendSmsEarchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.SendSmsEarchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 request) {
             return base.Channel.SendSmsEarchiveInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1> SendSmsEarchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest SendSmsEarchiveInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1> SendSmsEarchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest SendSmsEarchiveInvoiceRequest) {
+            Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1 inValue = new Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceRequest1();
             inValue.SendSmsEarchiveInvoiceRequest = SendSmsEarchiveInvoiceRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).SendSmsEarchiveInvoiceAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).SendSmsEarchiveInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoiceList(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoiceList(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 request) {
             return base.Channel.GetEArchiveInvoiceList(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse GetEArchiveInvoiceList(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest GetEArchiveInvoiceListRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1();
+        public Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse GetEArchiveInvoiceList(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest GetEArchiveInvoiceListRequest) {
+            Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1();
             inValue.GetEArchiveInvoiceListRequest = GetEArchiveInvoiceListRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoiceList(inValue);
+            Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoiceList(inValue);
             return retVal.GetEArchiveInvoiceListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoiceListAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetEArchiveInvoiceListAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 request) {
             return base.Channel.GetEArchiveInvoiceListAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1> GetEArchiveInvoiceListAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest GetEArchiveInvoiceListRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1> GetEArchiveInvoiceListAsync(Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest GetEArchiveInvoiceListRequest) {
+            Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListRequest1();
             inValue.GetEArchiveInvoiceListRequest = GetEArchiveInvoiceListRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoiceListAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetEArchiveInvoiceListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.MarkEArchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.MarkEArchiveInvoice(Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 request) {
             return base.Channel.MarkEArchiveInvoice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse MarkEArchiveInvoice(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest MarkEArchiveInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1();
+        public Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse MarkEArchiveInvoice(Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest MarkEArchiveInvoiceRequest) {
+            Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 inValue = new Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1();
             inValue.MarkEArchiveInvoiceRequest = MarkEArchiveInvoiceRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).MarkEArchiveInvoice(inValue);
+            Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).MarkEArchiveInvoice(inValue);
             return retVal.MarkEArchiveInvoiceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.MarkEArchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.MarkEArchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 request) {
             return base.Channel.MarkEArchiveInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1> MarkEArchiveInvoiceAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest MarkEArchiveInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1> MarkEArchiveInvoiceAsync(Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest MarkEArchiveInvoiceRequest) {
+            Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1 inValue = new Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceRequest1();
             inValue.MarkEArchiveInvoiceRequest = MarkEArchiveInvoiceRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).MarkEArchiveInvoiceAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).MarkEArchiveInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.EArchiveInvoiceCount(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.EArchiveInvoiceCount(Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 request) {
             return base.Channel.EArchiveInvoiceCount(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountResponse EArchiveInvoiceCount(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest EArchiveInvoiceCountRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1();
+        public Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountResponse EArchiveInvoiceCount(Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest EArchiveInvoiceCountRequest) {
+            Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 inValue = new Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1();
             inValue.EArchiveInvoiceCountRequest = EArchiveInvoiceCountRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).EArchiveInvoiceCount(inValue);
+            Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).EArchiveInvoiceCount(inValue);
             return retVal.EArchiveInvoiceCountResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.EArchiveInvoiceCountAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.EArchiveInvoiceCountAsync(Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 request) {
             return base.Channel.EArchiveInvoiceCountAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1> EArchiveInvoiceCountAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest EArchiveInvoiceCountRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1> EArchiveInvoiceCountAsync(Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest EArchiveInvoiceCountRequest) {
+            Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1 inValue = new Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountRequest1();
             inValue.EArchiveInvoiceCountRequest = EArchiveInvoiceCountRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).EArchiveInvoiceCountAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).EArchiveInvoiceCountAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusResponse1 Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetELedgerStatus(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest1 request) {
+        Izibiz.EArchiveInvoiceWS.GetELedgerStatusResponse1 Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetELedgerStatus(Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest1 request) {
             return base.Channel.GetELedgerStatus(request);
         }
         
-        public Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusResponse GetELedgerStatus(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest GetELedgerStatusRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest1();
+        public Izibiz.EArchiveInvoiceWS.GetELedgerStatusResponse GetELedgerStatus(Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest GetELedgerStatusRequest) {
+            Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest1();
             inValue.GetELedgerStatusRequest = GetELedgerStatusRequest;
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusResponse1 retVal = ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetELedgerStatus(inValue);
+            Izibiz.EArchiveInvoiceWS.GetELedgerStatusResponse1 retVal = ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetELedgerStatus(inValue);
             return retVal.GetELedgerStatusResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusResponse1> Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort.GetELedgerStatusAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetELedgerStatusResponse1> Izibiz.EArchiveInvoiceWS.EFaturaArchivePort.GetELedgerStatusAsync(Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest1 request) {
             return base.Channel.GetELedgerStatusAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusResponse1> GetELedgerStatusAsync(Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest GetELedgerStatusRequest) {
-            Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EArchiveInvoiceWS.GetELedgerStatusRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EArchiveInvoiceWS.GetELedgerStatusResponse1> GetELedgerStatusAsync(Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest GetELedgerStatusRequest) {
+            Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest1 inValue = new Izibiz.EArchiveInvoiceWS.GetELedgerStatusRequest1();
             inValue.GetELedgerStatusRequest = GetELedgerStatusRequest;
-            return ((Izibiz_dotnet_soap_client.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetELedgerStatusAsync(inValue);
+            return ((Izibiz.EArchiveInvoiceWS.EFaturaArchivePort)(this)).GetELedgerStatusAsync(inValue);
         }
     }
 }

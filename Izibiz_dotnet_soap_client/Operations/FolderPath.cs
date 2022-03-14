@@ -1,4 +1,4 @@
-﻿using Izibiz_dotnet_soap_client.Ubl;
+﻿using Izibiz.Ubl;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Izibiz_dotnet_soap_client.Operations
+namespace Izibiz.Operations
 {
     public class FileOperations
     {

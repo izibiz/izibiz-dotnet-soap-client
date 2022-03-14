@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace Izibiz_dotnet_soap_client.Operations
+namespace Izibiz.Operations
 {
     public static class FilePaths
     {

@@ -1,6 +1,6 @@
-using Izibiz_dotnet_soap_client.AuthenticationWS;
+using Izibiz.AuthenticationWS;
 
-namespace Izibiz_dotnet_soap_client.Adapter
+namespace Izibiz.Adapter
 {
     public class AuthAdapter
     {

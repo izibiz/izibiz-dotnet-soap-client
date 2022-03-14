@@ -4,10 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Izibiz_dotnet_soap_client;
-using Izibiz_dotnet_soap_client.Adapter;
-using Izibiz_dotnet_soap_client.AuthenticationWS;
-using Izibiz_dotnet_soap_client.Operations;
+using Izibiz;
+using Izibiz.Adapter;
+using Izibiz.AuthenticationWS;
+using Izibiz.Operations;
 using NUnit.Framework;
 
 namespace Samples.Authentication
@@ -28,8 +28,8 @@ namespace Samples.Authentication
                    SESSION_ID = "-1",
                     APPLICATION_NAME = "Izibiz_dotnet_soap_client.Application"              
                 },
-                USER_NAME = "KULLANICI ADINI GIRINIZ...",
-                PASSWORD = "SIFRE GIRINIZ..."
+                USER_NAME = "KULLANICI ADINI GİRİNİZ...",
+                PASSWORD = "ŞİFRE GİRİNİZ..."
 
             };
 

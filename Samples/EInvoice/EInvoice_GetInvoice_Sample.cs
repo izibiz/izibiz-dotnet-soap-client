@@ -7,16 +7,16 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using Izibiz_dotnet_soap_client;
-using Izibiz_dotnet_soap_client.Ubl;
-using Izibiz_dotnet_soap_client.Adapter;
-using Izibiz_dotnet_soap_client.AuthenticationWS;
-using Izibiz_dotnet_soap_client.EInvoiceWS;
+using Izibiz;
+using Izibiz.Ubl;
+using Izibiz.Adapter;
+using Izibiz.AuthenticationWS;
+using Izibiz.EInvoiceWS;
 using NUnit.Framework;
 using System.Xml;
 using System.Xml.Xsl;
 using System.Diagnostics;
-using Izibiz_dotnet_soap_client.Operations;
+using Izibiz.Operations;
 using System.Collections;
 
 namespace Samples.EInvoice

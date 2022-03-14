@@ -1,6 +1,6 @@
-using Izibiz_dotnet_soap_client.EArchiveInvoiceWS;
+using Izibiz.EArchiveInvoiceWS;
 
-namespace Izibiz_dotnet_soap_client.Adapter
+namespace Izibiz.Adapter
 {
     public class EArchiveInvoiceAdapter
     {

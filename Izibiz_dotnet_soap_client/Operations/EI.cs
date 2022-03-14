@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Izibiz_dotnet_soap_client.Operations
+namespace Izibiz.Operations
 {
     public partial class EI
     {

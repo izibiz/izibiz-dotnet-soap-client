@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
+namespace Izibiz.EIrsaliyeWS {
     
     
     /// <remarks/>
@@ -3966,147 +3966,147 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
         
         // CODEGEN: Generating message contract since the operation SendDespatchResponse is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchResponseRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchResponseResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchResponse/Fault/Re" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchResponse/Fault/Re" +
             "questFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseResponse1 SendDespatchResponse(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest1 request);
+        Izibiz.EIrsaliyeWS.SendDespatchResponseResponse1 SendDespatchResponse(Izibiz.EIrsaliyeWS.SendDespatchResponseRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchResponseRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchResponseResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseResponse1> SendDespatchResponseAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.SendDespatchResponseResponse1> SendDespatchResponseAsync(Izibiz.EIrsaliyeWS.SendDespatchResponseRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetDespatchAdviceWithStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceWithStatusRe" +
             "quest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceWithStatusRe" +
             "sponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceWithStatus/F" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceWithStatus/F" +
             "ault/RequestFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1 GetDespatchAdviceWithStatus(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 request);
+        Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1 GetDespatchAdviceWithStatus(Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceWithStatusRe" +
             "quest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceWithStatusRe" +
             "sponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1> GetDespatchAdviceWithStatusAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1> GetDespatchAdviceWithStatusAsync(Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 request);
         
         // CODEGEN: Generating message contract since the operation LoadDespatchAdvice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadDespatchAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadDespatchAdviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadDespatchAdvice/Fault/Requ" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadDespatchAdvice/Fault/Requ" +
             "estFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceResponse1 LoadDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest1 request);
+        Izibiz.EIrsaliyeWS.LoadDespatchAdviceResponse1 LoadDespatchAdvice(Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadDespatchAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadDespatchAdviceResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceResponse1> LoadDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.LoadDespatchAdviceResponse1> LoadDespatchAdviceAsync(Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation SendDespatchAdvice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchAdviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchAdvice/Fault/Requ" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchAdvice/Fault/Requ" +
             "estFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceResponse1 SendDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest1 request);
+        Izibiz.EIrsaliyeWS.SendDespatchAdviceResponse1 SendDespatchAdvice(Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendDespatchAdviceResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceResponse1> SendDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.SendDespatchAdviceResponse1> SendDespatchAdviceAsync(Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetDespatchAdviceStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceStatusReques" +
             "t", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceStatusRespon" +
             "se")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceStatus/Fault" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceStatus/Fault" +
             "/RequestFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusResponse1 GetDespatchAdviceStatus(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 request);
+        Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusResponse1 GetDespatchAdviceStatus(Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceStatusReques" +
             "t", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceStatusRespon" +
             "se")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusResponse1> GetDespatchAdviceStatusAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusResponse1> GetDespatchAdviceStatusAsync(Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 request);
         
         // CODEGEN: Generating message contract since the operation MarkDespatchAdvice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkDespatchAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkDespatchAdviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkDespatchAdvice/Fault/Requ" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkDespatchAdvice/Fault/Requ" +
             "estFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceResponse1 MarkDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest1 request);
+        Izibiz.EIrsaliyeWS.MarkDespatchAdviceResponse1 MarkDespatchAdvice(Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkDespatchAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkDespatchAdviceResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceResponse1> MarkDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.MarkDespatchAdviceResponse1> MarkDespatchAdviceAsync(Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation LoadReceiptAdvice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadReceiptAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadReceiptAdviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadReceiptAdvice/Fault/Reque" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadReceiptAdvice/Fault/Reque" +
             "stFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceResponse1 LoadReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest1 request);
+        Izibiz.EIrsaliyeWS.LoadReceiptAdviceResponse1 LoadReceiptAdvice(Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadReceiptAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/LoadReceiptAdviceResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceResponse1> LoadReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.LoadReceiptAdviceResponse1> LoadReceiptAdviceAsync(Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation SendReceiptAdvice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendReceiptAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendReceiptAdviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendReceiptAdvice/Fault/Reque" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendReceiptAdvice/Fault/Reque" +
             "stFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceResponse1 SendReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest1 request);
+        Izibiz.EIrsaliyeWS.SendReceiptAdviceResponse1 SendReceiptAdvice(Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendReceiptAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/SendReceiptAdviceResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceResponse1> SendReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.SendReceiptAdviceResponse1> SendReceiptAdviceAsync(Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetReceiptAdviceStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdviceStatusRequest" +
             "", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdviceStatusRespons" +
             "e")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdviceStatus/Fault/" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdviceStatus/Fault/" +
             "RequestFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusResponse1 GetReceiptAdviceStatus(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 request);
+        Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusResponse1 GetReceiptAdviceStatus(Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdviceStatusRequest" +
             "", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdviceStatusRespons" +
             "e")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusResponse1> GetReceiptAdviceStatusAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusResponse1> GetReceiptAdviceStatusAsync(Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 request);
         
         // CODEGEN: Generating message contract since the operation MarkReceiptAdvice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkReceiptAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkReceiptAdviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkReceiptAdvice/Fault/Reque" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkReceiptAdvice/Fault/Reque" +
             "stFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceResponse1 MarkReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest1 request);
+        Izibiz.EIrsaliyeWS.MarkReceiptAdviceResponse1 MarkReceiptAdvice(Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkReceiptAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/MarkReceiptAdviceResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceResponse1> MarkReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.MarkReceiptAdviceResponse1> MarkReceiptAdviceAsync(Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetDespatchAdvice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdvice/Fault/Reque" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdvice/Fault/Reque" +
             "stFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceResponse1 GetDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest1 request);
+        Izibiz.EIrsaliyeWS.GetDespatchAdviceResponse1 GetDespatchAdvice(Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetDespatchAdviceResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceResponse1> GetDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetDespatchAdviceResponse1> GetDespatchAdviceAsync(Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetReceiptAdvice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdviceResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdvice/Fault/Reques" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EIrsaliyeWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdvice/Fault/Reques" +
             "tFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceResponse1 GetReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest1 request);
+        Izibiz.EIrsaliyeWS.GetReceiptAdviceResponse1 GetReceiptAdvice(Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdviceRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/EIrsaliyeServicePort/GetReceiptAdviceResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceResponse1> GetReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetReceiptAdviceResponse1> GetReceiptAdviceAsync(Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest1 request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4116,12 +4116,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class SendDespatchResponseRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest SendDespatchResponseRequest;
+        public Izibiz.EIrsaliyeWS.SendDespatchResponseRequest SendDespatchResponseRequest;
         
         public SendDespatchResponseRequest1() {
         }
         
-        public SendDespatchResponseRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest SendDespatchResponseRequest) {
+        public SendDespatchResponseRequest1(Izibiz.EIrsaliyeWS.SendDespatchResponseRequest SendDespatchResponseRequest) {
             this.SendDespatchResponseRequest = SendDespatchResponseRequest;
         }
     }
@@ -4133,12 +4133,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class SendDespatchResponseResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseResponse SendDespatchResponseResponse;
+        public Izibiz.EIrsaliyeWS.SendDespatchResponseResponse SendDespatchResponseResponse;
         
         public SendDespatchResponseResponse1() {
         }
         
-        public SendDespatchResponseResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseResponse SendDespatchResponseResponse) {
+        public SendDespatchResponseResponse1(Izibiz.EIrsaliyeWS.SendDespatchResponseResponse SendDespatchResponseResponse) {
             this.SendDespatchResponseResponse = SendDespatchResponseResponse;
         }
     }
@@ -4196,12 +4196,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class GetDespatchAdviceWithStatusRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest GetDespatchAdviceWithStatusRequest;
+        public Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest GetDespatchAdviceWithStatusRequest;
         
         public GetDespatchAdviceWithStatusRequest1() {
         }
         
-        public GetDespatchAdviceWithStatusRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest GetDespatchAdviceWithStatusRequest) {
+        public GetDespatchAdviceWithStatusRequest1(Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest GetDespatchAdviceWithStatusRequest) {
             this.GetDespatchAdviceWithStatusRequest = GetDespatchAdviceWithStatusRequest;
         }
     }
@@ -4213,12 +4213,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class GetDespatchAdviceWithStatusResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse GetDespatchAdviceWithStatusResponse;
+        public Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse GetDespatchAdviceWithStatusResponse;
         
         public GetDespatchAdviceWithStatusResponse1() {
         }
         
-        public GetDespatchAdviceWithStatusResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse GetDespatchAdviceWithStatusResponse) {
+        public GetDespatchAdviceWithStatusResponse1(Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse GetDespatchAdviceWithStatusResponse) {
             this.GetDespatchAdviceWithStatusResponse = GetDespatchAdviceWithStatusResponse;
         }
     }
@@ -4276,12 +4276,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class LoadDespatchAdviceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest LoadDespatchAdviceRequest;
+        public Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest LoadDespatchAdviceRequest;
         
         public LoadDespatchAdviceRequest1() {
         }
         
-        public LoadDespatchAdviceRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest LoadDespatchAdviceRequest) {
+        public LoadDespatchAdviceRequest1(Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest LoadDespatchAdviceRequest) {
             this.LoadDespatchAdviceRequest = LoadDespatchAdviceRequest;
         }
     }
@@ -4293,12 +4293,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class LoadDespatchAdviceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceResponse LoadDespatchAdviceResponse;
+        public Izibiz.EIrsaliyeWS.LoadDespatchAdviceResponse LoadDespatchAdviceResponse;
         
         public LoadDespatchAdviceResponse1() {
         }
         
-        public LoadDespatchAdviceResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceResponse LoadDespatchAdviceResponse) {
+        public LoadDespatchAdviceResponse1(Izibiz.EIrsaliyeWS.LoadDespatchAdviceResponse LoadDespatchAdviceResponse) {
             this.LoadDespatchAdviceResponse = LoadDespatchAdviceResponse;
         }
     }
@@ -4370,12 +4370,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class SendDespatchAdviceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest SendDespatchAdviceRequest;
+        public Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest SendDespatchAdviceRequest;
         
         public SendDespatchAdviceRequest1() {
         }
         
-        public SendDespatchAdviceRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest SendDespatchAdviceRequest) {
+        public SendDespatchAdviceRequest1(Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest SendDespatchAdviceRequest) {
             this.SendDespatchAdviceRequest = SendDespatchAdviceRequest;
         }
     }
@@ -4387,12 +4387,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class SendDespatchAdviceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceResponse SendDespatchAdviceResponse;
+        public Izibiz.EIrsaliyeWS.SendDespatchAdviceResponse SendDespatchAdviceResponse;
         
         public SendDespatchAdviceResponse1() {
         }
         
-        public SendDespatchAdviceResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceResponse SendDespatchAdviceResponse) {
+        public SendDespatchAdviceResponse1(Izibiz.EIrsaliyeWS.SendDespatchAdviceResponse SendDespatchAdviceResponse) {
             this.SendDespatchAdviceResponse = SendDespatchAdviceResponse;
         }
     }
@@ -4450,12 +4450,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class GetDespatchAdviceStatusRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest GetDespatchAdviceStatusRequest;
+        public Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest GetDespatchAdviceStatusRequest;
         
         public GetDespatchAdviceStatusRequest1() {
         }
         
-        public GetDespatchAdviceStatusRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest GetDespatchAdviceStatusRequest) {
+        public GetDespatchAdviceStatusRequest1(Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest GetDespatchAdviceStatusRequest) {
             this.GetDespatchAdviceStatusRequest = GetDespatchAdviceStatusRequest;
         }
     }
@@ -4467,12 +4467,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class GetDespatchAdviceStatusResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusResponse GetDespatchAdviceStatusResponse;
+        public Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusResponse GetDespatchAdviceStatusResponse;
         
         public GetDespatchAdviceStatusResponse1() {
         }
         
-        public GetDespatchAdviceStatusResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusResponse GetDespatchAdviceStatusResponse) {
+        public GetDespatchAdviceStatusResponse1(Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusResponse GetDespatchAdviceStatusResponse) {
             this.GetDespatchAdviceStatusResponse = GetDespatchAdviceStatusResponse;
         }
     }
@@ -4530,12 +4530,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class MarkDespatchAdviceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest MarkDespatchAdviceRequest;
+        public Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest MarkDespatchAdviceRequest;
         
         public MarkDespatchAdviceRequest1() {
         }
         
-        public MarkDespatchAdviceRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest MarkDespatchAdviceRequest) {
+        public MarkDespatchAdviceRequest1(Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest MarkDespatchAdviceRequest) {
             this.MarkDespatchAdviceRequest = MarkDespatchAdviceRequest;
         }
     }
@@ -4547,12 +4547,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class MarkDespatchAdviceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceResponse MarkDespatchAdviceResponse;
+        public Izibiz.EIrsaliyeWS.MarkDespatchAdviceResponse MarkDespatchAdviceResponse;
         
         public MarkDespatchAdviceResponse1() {
         }
         
-        public MarkDespatchAdviceResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceResponse MarkDespatchAdviceResponse) {
+        public MarkDespatchAdviceResponse1(Izibiz.EIrsaliyeWS.MarkDespatchAdviceResponse MarkDespatchAdviceResponse) {
             this.MarkDespatchAdviceResponse = MarkDespatchAdviceResponse;
         }
     }
@@ -4610,12 +4610,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class LoadReceiptAdviceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest LoadReceiptAdviceRequest;
+        public Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest LoadReceiptAdviceRequest;
         
         public LoadReceiptAdviceRequest1() {
         }
         
-        public LoadReceiptAdviceRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest LoadReceiptAdviceRequest) {
+        public LoadReceiptAdviceRequest1(Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest LoadReceiptAdviceRequest) {
             this.LoadReceiptAdviceRequest = LoadReceiptAdviceRequest;
         }
     }
@@ -4627,12 +4627,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class LoadReceiptAdviceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceResponse LoadReceiptAdviceResponse;
+        public Izibiz.EIrsaliyeWS.LoadReceiptAdviceResponse LoadReceiptAdviceResponse;
         
         public LoadReceiptAdviceResponse1() {
         }
         
-        public LoadReceiptAdviceResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceResponse LoadReceiptAdviceResponse) {
+        public LoadReceiptAdviceResponse1(Izibiz.EIrsaliyeWS.LoadReceiptAdviceResponse LoadReceiptAdviceResponse) {
             this.LoadReceiptAdviceResponse = LoadReceiptAdviceResponse;
         }
     }
@@ -4704,12 +4704,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class SendReceiptAdviceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest SendReceiptAdviceRequest;
+        public Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest SendReceiptAdviceRequest;
         
         public SendReceiptAdviceRequest1() {
         }
         
-        public SendReceiptAdviceRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest SendReceiptAdviceRequest) {
+        public SendReceiptAdviceRequest1(Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest SendReceiptAdviceRequest) {
             this.SendReceiptAdviceRequest = SendReceiptAdviceRequest;
         }
     }
@@ -4721,12 +4721,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class SendReceiptAdviceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceResponse SendReceiptAdviceResponse;
+        public Izibiz.EIrsaliyeWS.SendReceiptAdviceResponse SendReceiptAdviceResponse;
         
         public SendReceiptAdviceResponse1() {
         }
         
-        public SendReceiptAdviceResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceResponse SendReceiptAdviceResponse) {
+        public SendReceiptAdviceResponse1(Izibiz.EIrsaliyeWS.SendReceiptAdviceResponse SendReceiptAdviceResponse) {
             this.SendReceiptAdviceResponse = SendReceiptAdviceResponse;
         }
     }
@@ -4784,12 +4784,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class GetReceiptAdviceStatusRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest GetReceiptAdviceStatusRequest;
+        public Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest GetReceiptAdviceStatusRequest;
         
         public GetReceiptAdviceStatusRequest1() {
         }
         
-        public GetReceiptAdviceStatusRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest GetReceiptAdviceStatusRequest) {
+        public GetReceiptAdviceStatusRequest1(Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest GetReceiptAdviceStatusRequest) {
             this.GetReceiptAdviceStatusRequest = GetReceiptAdviceStatusRequest;
         }
     }
@@ -4801,12 +4801,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class GetReceiptAdviceStatusResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusResponse GetReceiptAdviceStatusResponse;
+        public Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusResponse GetReceiptAdviceStatusResponse;
         
         public GetReceiptAdviceStatusResponse1() {
         }
         
-        public GetReceiptAdviceStatusResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusResponse GetReceiptAdviceStatusResponse) {
+        public GetReceiptAdviceStatusResponse1(Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusResponse GetReceiptAdviceStatusResponse) {
             this.GetReceiptAdviceStatusResponse = GetReceiptAdviceStatusResponse;
         }
     }
@@ -4864,12 +4864,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class MarkReceiptAdviceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest MarkReceiptAdviceRequest;
+        public Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest MarkReceiptAdviceRequest;
         
         public MarkReceiptAdviceRequest1() {
         }
         
-        public MarkReceiptAdviceRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest MarkReceiptAdviceRequest) {
+        public MarkReceiptAdviceRequest1(Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest MarkReceiptAdviceRequest) {
             this.MarkReceiptAdviceRequest = MarkReceiptAdviceRequest;
         }
     }
@@ -4881,12 +4881,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class MarkReceiptAdviceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceResponse MarkReceiptAdviceResponse;
+        public Izibiz.EIrsaliyeWS.MarkReceiptAdviceResponse MarkReceiptAdviceResponse;
         
         public MarkReceiptAdviceResponse1() {
         }
         
-        public MarkReceiptAdviceResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceResponse MarkReceiptAdviceResponse) {
+        public MarkReceiptAdviceResponse1(Izibiz.EIrsaliyeWS.MarkReceiptAdviceResponse MarkReceiptAdviceResponse) {
             this.MarkReceiptAdviceResponse = MarkReceiptAdviceResponse;
         }
     }
@@ -4944,12 +4944,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class GetDespatchAdviceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest GetDespatchAdviceRequest;
+        public Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest GetDespatchAdviceRequest;
         
         public GetDespatchAdviceRequest1() {
         }
         
-        public GetDespatchAdviceRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest GetDespatchAdviceRequest) {
+        public GetDespatchAdviceRequest1(Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest GetDespatchAdviceRequest) {
             this.GetDespatchAdviceRequest = GetDespatchAdviceRequest;
         }
     }
@@ -4961,12 +4961,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class GetDespatchAdviceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceResponse GetDespatchAdviceResponse;
+        public Izibiz.EIrsaliyeWS.GetDespatchAdviceResponse GetDespatchAdviceResponse;
         
         public GetDespatchAdviceResponse1() {
         }
         
-        public GetDespatchAdviceResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceResponse GetDespatchAdviceResponse) {
+        public GetDespatchAdviceResponse1(Izibiz.EIrsaliyeWS.GetDespatchAdviceResponse GetDespatchAdviceResponse) {
             this.GetDespatchAdviceResponse = GetDespatchAdviceResponse;
         }
     }
@@ -5024,12 +5024,12 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class GetReceiptAdviceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest GetReceiptAdviceRequest;
+        public Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest GetReceiptAdviceRequest;
         
         public GetReceiptAdviceRequest1() {
         }
         
-        public GetReceiptAdviceRequest1(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest GetReceiptAdviceRequest) {
+        public GetReceiptAdviceRequest1(Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest GetReceiptAdviceRequest) {
             this.GetReceiptAdviceRequest = GetReceiptAdviceRequest;
         }
     }
@@ -5041,23 +5041,23 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
     public partial class GetReceiptAdviceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceResponse GetReceiptAdviceResponse;
+        public Izibiz.EIrsaliyeWS.GetReceiptAdviceResponse GetReceiptAdviceResponse;
         
         public GetReceiptAdviceResponse1() {
         }
         
-        public GetReceiptAdviceResponse1(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceResponse GetReceiptAdviceResponse) {
+        public GetReceiptAdviceResponse1(Izibiz.EIrsaliyeWS.GetReceiptAdviceResponse GetReceiptAdviceResponse) {
             this.GetReceiptAdviceResponse = GetReceiptAdviceResponse;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface EIrsaliyeServicePortChannel : Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort, System.ServiceModel.IClientChannel {
+    public interface EIrsaliyeServicePortChannel : Izibiz.EIrsaliyeWS.EIrsaliyeServicePort, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EIrsaliyeServicePortClient : System.ServiceModel.ClientBase<Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort>, Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort {
+    public partial class EIrsaliyeServicePortClient : System.ServiceModel.ClientBase<Izibiz.EIrsaliyeWS.EIrsaliyeServicePort>, Izibiz.EIrsaliyeWS.EIrsaliyeServicePort {
         
         public EIrsaliyeServicePortClient() {
         }
@@ -5079,279 +5079,279 @@ namespace Izibiz_dotnet_soap_client.EIrsaliyeWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.SendDespatchResponse(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest1 request) {
+        Izibiz.EIrsaliyeWS.SendDespatchResponseResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.SendDespatchResponse(Izibiz.EIrsaliyeWS.SendDespatchResponseRequest1 request) {
             return base.Channel.SendDespatchResponse(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseResponse SendDespatchResponse(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest SendDespatchResponseRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest1();
+        public Izibiz.EIrsaliyeWS.SendDespatchResponseResponse SendDespatchResponse(Izibiz.EIrsaliyeWS.SendDespatchResponseRequest SendDespatchResponseRequest) {
+            Izibiz.EIrsaliyeWS.SendDespatchResponseRequest1 inValue = new Izibiz.EIrsaliyeWS.SendDespatchResponseRequest1();
             inValue.SendDespatchResponseRequest = SendDespatchResponseRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendDespatchResponse(inValue);
+            Izibiz.EIrsaliyeWS.SendDespatchResponseResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendDespatchResponse(inValue);
             return retVal.SendDespatchResponseResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.SendDespatchResponseAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.SendDespatchResponseResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.SendDespatchResponseAsync(Izibiz.EIrsaliyeWS.SendDespatchResponseRequest1 request) {
             return base.Channel.SendDespatchResponseAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseResponse1> SendDespatchResponseAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest SendDespatchResponseRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchResponseRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.SendDespatchResponseResponse1> SendDespatchResponseAsync(Izibiz.EIrsaliyeWS.SendDespatchResponseRequest SendDespatchResponseRequest) {
+            Izibiz.EIrsaliyeWS.SendDespatchResponseRequest1 inValue = new Izibiz.EIrsaliyeWS.SendDespatchResponseRequest1();
             inValue.SendDespatchResponseRequest = SendDespatchResponseRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendDespatchResponseAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendDespatchResponseAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdviceWithStatus(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 request) {
+        Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdviceWithStatus(Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 request) {
             return base.Channel.GetDespatchAdviceWithStatus(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse GetDespatchAdviceWithStatus(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest GetDespatchAdviceWithStatusRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1();
+        public Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse GetDespatchAdviceWithStatus(Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest GetDespatchAdviceWithStatusRequest) {
+            Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 inValue = new Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1();
             inValue.GetDespatchAdviceWithStatusRequest = GetDespatchAdviceWithStatusRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdviceWithStatus(inValue);
+            Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdviceWithStatus(inValue);
             return retVal.GetDespatchAdviceWithStatusResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdviceWithStatusAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdviceWithStatusAsync(Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 request) {
             return base.Channel.GetDespatchAdviceWithStatusAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1> GetDespatchAdviceWithStatusAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest GetDespatchAdviceWithStatusRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1> GetDespatchAdviceWithStatusAsync(Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest GetDespatchAdviceWithStatusRequest) {
+            Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1 inValue = new Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusRequest1();
             inValue.GetDespatchAdviceWithStatusRequest = GetDespatchAdviceWithStatusRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdviceWithStatusAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdviceWithStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.LoadDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest1 request) {
+        Izibiz.EIrsaliyeWS.LoadDespatchAdviceResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.LoadDespatchAdvice(Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest1 request) {
             return base.Channel.LoadDespatchAdvice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceResponse LoadDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest LoadDespatchAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest1();
+        public Izibiz.EIrsaliyeWS.LoadDespatchAdviceResponse LoadDespatchAdvice(Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest LoadDespatchAdviceRequest) {
+            Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest1();
             inValue.LoadDespatchAdviceRequest = LoadDespatchAdviceRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).LoadDespatchAdvice(inValue);
+            Izibiz.EIrsaliyeWS.LoadDespatchAdviceResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).LoadDespatchAdvice(inValue);
             return retVal.LoadDespatchAdviceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.LoadDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.LoadDespatchAdviceResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.LoadDespatchAdviceAsync(Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest1 request) {
             return base.Channel.LoadDespatchAdviceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceResponse1> LoadDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest LoadDespatchAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadDespatchAdviceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.LoadDespatchAdviceResponse1> LoadDespatchAdviceAsync(Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest LoadDespatchAdviceRequest) {
+            Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.LoadDespatchAdviceRequest1();
             inValue.LoadDespatchAdviceRequest = LoadDespatchAdviceRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).LoadDespatchAdviceAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).LoadDespatchAdviceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.SendDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest1 request) {
+        Izibiz.EIrsaliyeWS.SendDespatchAdviceResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.SendDespatchAdvice(Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest1 request) {
             return base.Channel.SendDespatchAdvice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceResponse SendDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest SendDespatchAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest1();
+        public Izibiz.EIrsaliyeWS.SendDespatchAdviceResponse SendDespatchAdvice(Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest SendDespatchAdviceRequest) {
+            Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest1();
             inValue.SendDespatchAdviceRequest = SendDespatchAdviceRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendDespatchAdvice(inValue);
+            Izibiz.EIrsaliyeWS.SendDespatchAdviceResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendDespatchAdvice(inValue);
             return retVal.SendDespatchAdviceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.SendDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.SendDespatchAdviceResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.SendDespatchAdviceAsync(Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest1 request) {
             return base.Channel.SendDespatchAdviceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceResponse1> SendDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest SendDespatchAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.SendDespatchAdviceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.SendDespatchAdviceResponse1> SendDespatchAdviceAsync(Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest SendDespatchAdviceRequest) {
+            Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.SendDespatchAdviceRequest1();
             inValue.SendDespatchAdviceRequest = SendDespatchAdviceRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendDespatchAdviceAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendDespatchAdviceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdviceStatus(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 request) {
+        Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdviceStatus(Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 request) {
             return base.Channel.GetDespatchAdviceStatus(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusResponse GetDespatchAdviceStatus(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest GetDespatchAdviceStatusRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest1();
+        public Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusResponse GetDespatchAdviceStatus(Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest GetDespatchAdviceStatusRequest) {
+            Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 inValue = new Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest1();
             inValue.GetDespatchAdviceStatusRequest = GetDespatchAdviceStatusRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdviceStatus(inValue);
+            Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdviceStatus(inValue);
             return retVal.GetDespatchAdviceStatusResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdviceStatusAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdviceStatusAsync(Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 request) {
             return base.Channel.GetDespatchAdviceStatusAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusResponse1> GetDespatchAdviceStatusAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest GetDespatchAdviceStatusRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceStatusRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusResponse1> GetDespatchAdviceStatusAsync(Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest GetDespatchAdviceStatusRequest) {
+            Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest1 inValue = new Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusRequest1();
             inValue.GetDespatchAdviceStatusRequest = GetDespatchAdviceStatusRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdviceStatusAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdviceStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.MarkDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest1 request) {
+        Izibiz.EIrsaliyeWS.MarkDespatchAdviceResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.MarkDespatchAdvice(Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest1 request) {
             return base.Channel.MarkDespatchAdvice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceResponse MarkDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest MarkDespatchAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest1();
+        public Izibiz.EIrsaliyeWS.MarkDespatchAdviceResponse MarkDespatchAdvice(Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest MarkDespatchAdviceRequest) {
+            Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest1();
             inValue.MarkDespatchAdviceRequest = MarkDespatchAdviceRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).MarkDespatchAdvice(inValue);
+            Izibiz.EIrsaliyeWS.MarkDespatchAdviceResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).MarkDespatchAdvice(inValue);
             return retVal.MarkDespatchAdviceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.MarkDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.MarkDespatchAdviceResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.MarkDespatchAdviceAsync(Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest1 request) {
             return base.Channel.MarkDespatchAdviceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceResponse1> MarkDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest MarkDespatchAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkDespatchAdviceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.MarkDespatchAdviceResponse1> MarkDespatchAdviceAsync(Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest MarkDespatchAdviceRequest) {
+            Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.MarkDespatchAdviceRequest1();
             inValue.MarkDespatchAdviceRequest = MarkDespatchAdviceRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).MarkDespatchAdviceAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).MarkDespatchAdviceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.LoadReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest1 request) {
+        Izibiz.EIrsaliyeWS.LoadReceiptAdviceResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.LoadReceiptAdvice(Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest1 request) {
             return base.Channel.LoadReceiptAdvice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceResponse LoadReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest LoadReceiptAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest1();
+        public Izibiz.EIrsaliyeWS.LoadReceiptAdviceResponse LoadReceiptAdvice(Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest LoadReceiptAdviceRequest) {
+            Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest1();
             inValue.LoadReceiptAdviceRequest = LoadReceiptAdviceRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).LoadReceiptAdvice(inValue);
+            Izibiz.EIrsaliyeWS.LoadReceiptAdviceResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).LoadReceiptAdvice(inValue);
             return retVal.LoadReceiptAdviceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.LoadReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.LoadReceiptAdviceResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.LoadReceiptAdviceAsync(Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest1 request) {
             return base.Channel.LoadReceiptAdviceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceResponse1> LoadReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest LoadReceiptAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.LoadReceiptAdviceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.LoadReceiptAdviceResponse1> LoadReceiptAdviceAsync(Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest LoadReceiptAdviceRequest) {
+            Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.LoadReceiptAdviceRequest1();
             inValue.LoadReceiptAdviceRequest = LoadReceiptAdviceRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).LoadReceiptAdviceAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).LoadReceiptAdviceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.SendReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest1 request) {
+        Izibiz.EIrsaliyeWS.SendReceiptAdviceResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.SendReceiptAdvice(Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest1 request) {
             return base.Channel.SendReceiptAdvice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceResponse SendReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest SendReceiptAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest1();
+        public Izibiz.EIrsaliyeWS.SendReceiptAdviceResponse SendReceiptAdvice(Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest SendReceiptAdviceRequest) {
+            Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest1();
             inValue.SendReceiptAdviceRequest = SendReceiptAdviceRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendReceiptAdvice(inValue);
+            Izibiz.EIrsaliyeWS.SendReceiptAdviceResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendReceiptAdvice(inValue);
             return retVal.SendReceiptAdviceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.SendReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.SendReceiptAdviceResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.SendReceiptAdviceAsync(Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest1 request) {
             return base.Channel.SendReceiptAdviceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceResponse1> SendReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest SendReceiptAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.SendReceiptAdviceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.SendReceiptAdviceResponse1> SendReceiptAdviceAsync(Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest SendReceiptAdviceRequest) {
+            Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.SendReceiptAdviceRequest1();
             inValue.SendReceiptAdviceRequest = SendReceiptAdviceRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendReceiptAdviceAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).SendReceiptAdviceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.GetReceiptAdviceStatus(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 request) {
+        Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.GetReceiptAdviceStatus(Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 request) {
             return base.Channel.GetReceiptAdviceStatus(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusResponse GetReceiptAdviceStatus(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest GetReceiptAdviceStatusRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest1();
+        public Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusResponse GetReceiptAdviceStatus(Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest GetReceiptAdviceStatusRequest) {
+            Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 inValue = new Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest1();
             inValue.GetReceiptAdviceStatusRequest = GetReceiptAdviceStatusRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetReceiptAdviceStatus(inValue);
+            Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetReceiptAdviceStatus(inValue);
             return retVal.GetReceiptAdviceStatusResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.GetReceiptAdviceStatusAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.GetReceiptAdviceStatusAsync(Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 request) {
             return base.Channel.GetReceiptAdviceStatusAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusResponse1> GetReceiptAdviceStatusAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest GetReceiptAdviceStatusRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceStatusRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusResponse1> GetReceiptAdviceStatusAsync(Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest GetReceiptAdviceStatusRequest) {
+            Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest1 inValue = new Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusRequest1();
             inValue.GetReceiptAdviceStatusRequest = GetReceiptAdviceStatusRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetReceiptAdviceStatusAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetReceiptAdviceStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.MarkReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest1 request) {
+        Izibiz.EIrsaliyeWS.MarkReceiptAdviceResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.MarkReceiptAdvice(Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest1 request) {
             return base.Channel.MarkReceiptAdvice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceResponse MarkReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest MarkReceiptAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest1();
+        public Izibiz.EIrsaliyeWS.MarkReceiptAdviceResponse MarkReceiptAdvice(Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest MarkReceiptAdviceRequest) {
+            Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest1();
             inValue.MarkReceiptAdviceRequest = MarkReceiptAdviceRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).MarkReceiptAdvice(inValue);
+            Izibiz.EIrsaliyeWS.MarkReceiptAdviceResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).MarkReceiptAdvice(inValue);
             return retVal.MarkReceiptAdviceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.MarkReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.MarkReceiptAdviceResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.MarkReceiptAdviceAsync(Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest1 request) {
             return base.Channel.MarkReceiptAdviceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceResponse1> MarkReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest MarkReceiptAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.MarkReceiptAdviceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.MarkReceiptAdviceResponse1> MarkReceiptAdviceAsync(Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest MarkReceiptAdviceRequest) {
+            Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.MarkReceiptAdviceRequest1();
             inValue.MarkReceiptAdviceRequest = MarkReceiptAdviceRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).MarkReceiptAdviceAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).MarkReceiptAdviceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest1 request) {
+        Izibiz.EIrsaliyeWS.GetDespatchAdviceResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdvice(Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest1 request) {
             return base.Channel.GetDespatchAdvice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceResponse GetDespatchAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest GetDespatchAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest1();
+        public Izibiz.EIrsaliyeWS.GetDespatchAdviceResponse GetDespatchAdvice(Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest GetDespatchAdviceRequest) {
+            Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest1();
             inValue.GetDespatchAdviceRequest = GetDespatchAdviceRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdvice(inValue);
+            Izibiz.EIrsaliyeWS.GetDespatchAdviceResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdvice(inValue);
             return retVal.GetDespatchAdviceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetDespatchAdviceResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.GetDespatchAdviceAsync(Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest1 request) {
             return base.Channel.GetDespatchAdviceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceResponse1> GetDespatchAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest GetDespatchAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.GetDespatchAdviceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetDespatchAdviceResponse1> GetDespatchAdviceAsync(Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest GetDespatchAdviceRequest) {
+            Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.GetDespatchAdviceRequest1();
             inValue.GetDespatchAdviceRequest = GetDespatchAdviceRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdviceAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetDespatchAdviceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceResponse1 Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.GetReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest1 request) {
+        Izibiz.EIrsaliyeWS.GetReceiptAdviceResponse1 Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.GetReceiptAdvice(Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest1 request) {
             return base.Channel.GetReceiptAdvice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceResponse GetReceiptAdvice(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest GetReceiptAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest1();
+        public Izibiz.EIrsaliyeWS.GetReceiptAdviceResponse GetReceiptAdvice(Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest GetReceiptAdviceRequest) {
+            Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest1();
             inValue.GetReceiptAdviceRequest = GetReceiptAdviceRequest;
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceResponse1 retVal = ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetReceiptAdvice(inValue);
+            Izibiz.EIrsaliyeWS.GetReceiptAdviceResponse1 retVal = ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetReceiptAdvice(inValue);
             return retVal.GetReceiptAdviceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceResponse1> Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort.GetReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetReceiptAdviceResponse1> Izibiz.EIrsaliyeWS.EIrsaliyeServicePort.GetReceiptAdviceAsync(Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest1 request) {
             return base.Channel.GetReceiptAdviceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceResponse1> GetReceiptAdviceAsync(Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest GetReceiptAdviceRequest) {
-            Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest1 inValue = new Izibiz_dotnet_soap_client.EIrsaliyeWS.GetReceiptAdviceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EIrsaliyeWS.GetReceiptAdviceResponse1> GetReceiptAdviceAsync(Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest GetReceiptAdviceRequest) {
+            Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest1 inValue = new Izibiz.EIrsaliyeWS.GetReceiptAdviceRequest1();
             inValue.GetReceiptAdviceRequest = GetReceiptAdviceRequest;
-            return ((Izibiz_dotnet_soap_client.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetReceiptAdviceAsync(inValue);
+            return ((Izibiz.EIrsaliyeWS.EIrsaliyeServicePort)(this)).GetReceiptAdviceAsync(inValue);
         }
     }
 }

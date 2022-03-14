@@ -1,12 +1,12 @@
-using Izibiz_dotnet_soap_client.AuthenticationWS;
+using Izibiz.AuthenticationWS;
 using System;
 using System.Collections.Generic;
-using Izibiz_dotnet_soap_client.EArchiveInvoiceWS;
-using Izibiz_dotnet_soap_client.EIrsaliyeWS;
-using Izibiz_dotnet_soap_client.SmmWs;
-using Izibiz_dotnet_soap_client.Operations;
+using Izibiz.EArchiveInvoiceWS;
+using Izibiz.EIrsaliyeWS;
+using Izibiz.SmmWs;
+using Izibiz.Operations;
 
-namespace Izibiz_dotnet_soap_client.Adapter
+namespace Izibiz.Adapter
 {
     public static class BaseAdapter
     {
@@ -21,8 +21,8 @@ namespace Izibiz_dotnet_soap_client.Adapter
                 {
                     AuthenticationServicePortClient authenticationPortClient = new AuthenticationServicePortClient();
                     LoginRequest loginRequest = new LoginRequest();
-                    loginRequest.USER_NAME = "KULLANICI ADINI GIRINIZ...";
-                    loginRequest.PASSWORD = "SIFRE GIRINIZ...";
+                    loginRequest.USER_NAME = "KULLANICI ADINIZI GÝRÝNÝZ";
+                    loginRequest.PASSWORD = "ÞÝFRE GÝRÝNÝZ";
                     LoginResponse loginResponse = authenticationPortClient.Login(loginRequest);
                     _sessionId = loginResponse.SESSION_ID;
                 }

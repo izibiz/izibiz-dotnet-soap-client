@@ -1,6 +1,6 @@
-using Izibiz_dotnet_soap_client.EIrsaliyeWS;
+using Izibiz.EIrsaliyeWS;
 
-namespace Izibiz_dotnet_soap_client.Adapter
+namespace Izibiz.Adapter
 {
     public class EDespatchAdapter
     {

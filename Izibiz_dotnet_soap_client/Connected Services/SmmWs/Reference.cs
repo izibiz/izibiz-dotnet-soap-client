@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Izibiz_dotnet_soap_client.SmmWs {
+namespace Izibiz.SmmWs {
     
     
     /// <remarks/>
@@ -2040,66 +2040,66 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
         
         // CODEGEN: Generating message contract since the operation GetSmm is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmm/Fault/RequestFaultMessage", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmm/Fault/RequestFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.SmmWs.GetSmmResponse1 GetSmm(Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest1 request);
+        Izibiz.SmmWs.GetSmmResponse1 GetSmm(Izibiz.SmmWs.GetSmmRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.GetSmmResponse1> GetSmmAsync(Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.SmmWs.GetSmmResponse1> GetSmmAsync(Izibiz.SmmWs.GetSmmRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetSmmStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmStatusRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmStatusResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmStatus/Fault/RequestFaultMess" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmStatus/Fault/RequestFaultMess" +
             "age", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse1 GetSmmStatus(Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest1 request);
+        Izibiz.SmmWs.GetSmmStatusResponse1 GetSmmStatus(Izibiz.SmmWs.GetSmmStatusRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmStatusRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmStatusResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse1> GetSmmStatusAsync(Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.SmmWs.GetSmmStatusResponse1> GetSmmStatusAsync(Izibiz.SmmWs.GetSmmStatusRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CancelSmm is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/CancelSmmRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/CancelSmmResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/CancelSmm/Fault/RequestFaultMessage" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/CancelSmm/Fault/RequestFaultMessage" +
             "", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse1 CancelSmm(Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest1 request);
+        Izibiz.SmmWs.CancelSmmResponse1 CancelSmm(Izibiz.SmmWs.CancelSmmRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/CancelSmmRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/CancelSmmResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse1> CancelSmmAsync(Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.SmmWs.CancelSmmResponse1> CancelSmmAsync(Izibiz.SmmWs.CancelSmmRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetSmmReport is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmReportRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmReportResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmReport/Fault/RequestFaultMess" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmReport/Fault/RequestFaultMess" +
             "age", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.SmmWs.GetSmmReportResponse1 GetSmmReport(Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest1 request);
+        Izibiz.SmmWs.GetSmmReportResponse1 GetSmmReport(Izibiz.SmmWs.GetSmmReportRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmReportRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/GetSmmReportResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.GetSmmReportResponse1> GetSmmReportAsync(Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.SmmWs.GetSmmReportResponse1> GetSmmReportAsync(Izibiz.SmmWs.GetSmmReportRequest1 request);
         
         // CODEGEN: Generating message contract since the operation LoadSmm is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/LoadSmmRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/LoadSmmResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/LoadSmm/Fault/RequestFaultMessage", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/LoadSmm/Fault/RequestFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse1 LoadSmm(Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest1 request);
+        Izibiz.SmmWs.LoadSmmResponse1 LoadSmm(Izibiz.SmmWs.LoadSmmRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/LoadSmmRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/LoadSmmResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse1> LoadSmmAsync(Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.SmmWs.LoadSmmResponse1> LoadSmmAsync(Izibiz.SmmWs.LoadSmmRequest1 request);
         
         // CODEGEN: Generating message contract since the operation SendSmm is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/SendSmmRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/SendSmmResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/SendSmm/Fault/RequestFaultMessage", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.SmmWs.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/SendSmm/Fault/RequestFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse1 SendSmm(Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest1 request);
+        Izibiz.SmmWs.SendSmmResponse1 SendSmm(Izibiz.SmmWs.SendSmmRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/SmmServicePort/SendSmmRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/SmmServicePort/SendSmmResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse1> SendSmmAsync(Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.SmmWs.SendSmmResponse1> SendSmmAsync(Izibiz.SmmWs.SendSmmRequest1 request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2109,12 +2109,12 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class GetSmmRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest GetSmmRequest;
+        public Izibiz.SmmWs.GetSmmRequest GetSmmRequest;
         
         public GetSmmRequest1() {
         }
         
-        public GetSmmRequest1(Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest GetSmmRequest) {
+        public GetSmmRequest1(Izibiz.SmmWs.GetSmmRequest GetSmmRequest) {
             this.GetSmmRequest = GetSmmRequest;
         }
     }
@@ -2126,12 +2126,12 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class GetSmmResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.GetSmmResponse GetSmmResponse;
+        public Izibiz.SmmWs.GetSmmResponse GetSmmResponse;
         
         public GetSmmResponse1() {
         }
         
-        public GetSmmResponse1(Izibiz_dotnet_soap_client.SmmWs.GetSmmResponse GetSmmResponse) {
+        public GetSmmResponse1(Izibiz.SmmWs.GetSmmResponse GetSmmResponse) {
             this.GetSmmResponse = GetSmmResponse;
         }
     }
@@ -2189,12 +2189,12 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class GetSmmStatusRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest GetSmmStatusRequest;
+        public Izibiz.SmmWs.GetSmmStatusRequest GetSmmStatusRequest;
         
         public GetSmmStatusRequest1() {
         }
         
-        public GetSmmStatusRequest1(Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest GetSmmStatusRequest) {
+        public GetSmmStatusRequest1(Izibiz.SmmWs.GetSmmStatusRequest GetSmmStatusRequest) {
             this.GetSmmStatusRequest = GetSmmStatusRequest;
         }
     }
@@ -2206,12 +2206,12 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class GetSmmStatusResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse GetSmmStatusResponse;
+        public Izibiz.SmmWs.GetSmmStatusResponse GetSmmStatusResponse;
         
         public GetSmmStatusResponse1() {
         }
         
-        public GetSmmStatusResponse1(Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse GetSmmStatusResponse) {
+        public GetSmmStatusResponse1(Izibiz.SmmWs.GetSmmStatusResponse GetSmmStatusResponse) {
             this.GetSmmStatusResponse = GetSmmStatusResponse;
         }
     }
@@ -2343,12 +2343,12 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class CancelSmmRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest CancelSmmRequest;
+        public Izibiz.SmmWs.CancelSmmRequest CancelSmmRequest;
         
         public CancelSmmRequest1() {
         }
         
-        public CancelSmmRequest1(Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest CancelSmmRequest) {
+        public CancelSmmRequest1(Izibiz.SmmWs.CancelSmmRequest CancelSmmRequest) {
             this.CancelSmmRequest = CancelSmmRequest;
         }
     }
@@ -2360,12 +2360,12 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class CancelSmmResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse CancelSmmResponse;
+        public Izibiz.SmmWs.CancelSmmResponse CancelSmmResponse;
         
         public CancelSmmResponse1() {
         }
         
-        public CancelSmmResponse1(Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse CancelSmmResponse) {
+        public CancelSmmResponse1(Izibiz.SmmWs.CancelSmmResponse CancelSmmResponse) {
             this.CancelSmmResponse = CancelSmmResponse;
         }
     }
@@ -2809,12 +2809,12 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class GetSmmReportRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest GetSmmReportRequest;
+        public Izibiz.SmmWs.GetSmmReportRequest GetSmmReportRequest;
         
         public GetSmmReportRequest1() {
         }
         
-        public GetSmmReportRequest1(Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest GetSmmReportRequest) {
+        public GetSmmReportRequest1(Izibiz.SmmWs.GetSmmReportRequest GetSmmReportRequest) {
             this.GetSmmReportRequest = GetSmmReportRequest;
         }
     }
@@ -2826,12 +2826,12 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class GetSmmReportResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.GetSmmReportResponse GetSmmReportResponse;
+        public Izibiz.SmmWs.GetSmmReportResponse GetSmmReportResponse;
         
         public GetSmmReportResponse1() {
         }
         
-        public GetSmmReportResponse1(Izibiz_dotnet_soap_client.SmmWs.GetSmmReportResponse GetSmmReportResponse) {
+        public GetSmmReportResponse1(Izibiz.SmmWs.GetSmmReportResponse GetSmmReportResponse) {
             this.GetSmmReportResponse = GetSmmReportResponse;
         }
     }
@@ -2889,12 +2889,12 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class LoadSmmRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest LoadSmmRequest;
+        public Izibiz.SmmWs.LoadSmmRequest LoadSmmRequest;
         
         public LoadSmmRequest1() {
         }
         
-        public LoadSmmRequest1(Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest LoadSmmRequest) {
+        public LoadSmmRequest1(Izibiz.SmmWs.LoadSmmRequest LoadSmmRequest) {
             this.LoadSmmRequest = LoadSmmRequest;
         }
     }
@@ -2906,12 +2906,12 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class LoadSmmResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse LoadSmmResponse;
+        public Izibiz.SmmWs.LoadSmmResponse LoadSmmResponse;
         
         public LoadSmmResponse1() {
         }
         
-        public LoadSmmResponse1(Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse LoadSmmResponse) {
+        public LoadSmmResponse1(Izibiz.SmmWs.LoadSmmResponse LoadSmmResponse) {
             this.LoadSmmResponse = LoadSmmResponse;
         }
     }
@@ -2969,12 +2969,12 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class SendSmmRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest SendSmmRequest;
+        public Izibiz.SmmWs.SendSmmRequest SendSmmRequest;
         
         public SendSmmRequest1() {
         }
         
-        public SendSmmRequest1(Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest SendSmmRequest) {
+        public SendSmmRequest1(Izibiz.SmmWs.SendSmmRequest SendSmmRequest) {
             this.SendSmmRequest = SendSmmRequest;
         }
     }
@@ -2986,23 +2986,23 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
     public partial class SendSmmResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse SendSmmResponse;
+        public Izibiz.SmmWs.SendSmmResponse SendSmmResponse;
         
         public SendSmmResponse1() {
         }
         
-        public SendSmmResponse1(Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse SendSmmResponse) {
+        public SendSmmResponse1(Izibiz.SmmWs.SendSmmResponse SendSmmResponse) {
             this.SendSmmResponse = SendSmmResponse;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface SmmServicePortChannel : Izibiz_dotnet_soap_client.SmmWs.SmmServicePort, System.ServiceModel.IClientChannel {
+    public interface SmmServicePortChannel : Izibiz.SmmWs.SmmServicePort, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SmmServicePortClient : System.ServiceModel.ClientBase<Izibiz_dotnet_soap_client.SmmWs.SmmServicePort>, Izibiz_dotnet_soap_client.SmmWs.SmmServicePort {
+    public partial class SmmServicePortClient : System.ServiceModel.ClientBase<Izibiz.SmmWs.SmmServicePort>, Izibiz.SmmWs.SmmServicePort {
         
         public SmmServicePortClient() {
         }
@@ -3024,141 +3024,141 @@ namespace Izibiz_dotnet_soap_client.SmmWs {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.SmmWs.GetSmmResponse1 Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.GetSmm(Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest1 request) {
+        Izibiz.SmmWs.GetSmmResponse1 Izibiz.SmmWs.SmmServicePort.GetSmm(Izibiz.SmmWs.GetSmmRequest1 request) {
             return base.Channel.GetSmm(request);
         }
         
-        public Izibiz_dotnet_soap_client.SmmWs.GetSmmResponse GetSmm(Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest GetSmmRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest1();
+        public Izibiz.SmmWs.GetSmmResponse GetSmm(Izibiz.SmmWs.GetSmmRequest GetSmmRequest) {
+            Izibiz.SmmWs.GetSmmRequest1 inValue = new Izibiz.SmmWs.GetSmmRequest1();
             inValue.GetSmmRequest = GetSmmRequest;
-            Izibiz_dotnet_soap_client.SmmWs.GetSmmResponse1 retVal = ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).GetSmm(inValue);
+            Izibiz.SmmWs.GetSmmResponse1 retVal = ((Izibiz.SmmWs.SmmServicePort)(this)).GetSmm(inValue);
             return retVal.GetSmmResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.GetSmmResponse1> Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.GetSmmAsync(Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.SmmWs.GetSmmResponse1> Izibiz.SmmWs.SmmServicePort.GetSmmAsync(Izibiz.SmmWs.GetSmmRequest1 request) {
             return base.Channel.GetSmmAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.GetSmmResponse1> GetSmmAsync(Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest GetSmmRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.GetSmmRequest1();
+        public System.Threading.Tasks.Task<Izibiz.SmmWs.GetSmmResponse1> GetSmmAsync(Izibiz.SmmWs.GetSmmRequest GetSmmRequest) {
+            Izibiz.SmmWs.GetSmmRequest1 inValue = new Izibiz.SmmWs.GetSmmRequest1();
             inValue.GetSmmRequest = GetSmmRequest;
-            return ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).GetSmmAsync(inValue);
+            return ((Izibiz.SmmWs.SmmServicePort)(this)).GetSmmAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse1 Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.GetSmmStatus(Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest1 request) {
+        Izibiz.SmmWs.GetSmmStatusResponse1 Izibiz.SmmWs.SmmServicePort.GetSmmStatus(Izibiz.SmmWs.GetSmmStatusRequest1 request) {
             return base.Channel.GetSmmStatus(request);
         }
         
-        public Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse GetSmmStatus(Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest GetSmmStatusRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest1();
+        public Izibiz.SmmWs.GetSmmStatusResponse GetSmmStatus(Izibiz.SmmWs.GetSmmStatusRequest GetSmmStatusRequest) {
+            Izibiz.SmmWs.GetSmmStatusRequest1 inValue = new Izibiz.SmmWs.GetSmmStatusRequest1();
             inValue.GetSmmStatusRequest = GetSmmStatusRequest;
-            Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse1 retVal = ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).GetSmmStatus(inValue);
+            Izibiz.SmmWs.GetSmmStatusResponse1 retVal = ((Izibiz.SmmWs.SmmServicePort)(this)).GetSmmStatus(inValue);
             return retVal.GetSmmStatusResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse1> Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.GetSmmStatusAsync(Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.SmmWs.GetSmmStatusResponse1> Izibiz.SmmWs.SmmServicePort.GetSmmStatusAsync(Izibiz.SmmWs.GetSmmStatusRequest1 request) {
             return base.Channel.GetSmmStatusAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse1> GetSmmStatusAsync(Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest GetSmmStatusRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusRequest1();
+        public System.Threading.Tasks.Task<Izibiz.SmmWs.GetSmmStatusResponse1> GetSmmStatusAsync(Izibiz.SmmWs.GetSmmStatusRequest GetSmmStatusRequest) {
+            Izibiz.SmmWs.GetSmmStatusRequest1 inValue = new Izibiz.SmmWs.GetSmmStatusRequest1();
             inValue.GetSmmStatusRequest = GetSmmStatusRequest;
-            return ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).GetSmmStatusAsync(inValue);
+            return ((Izibiz.SmmWs.SmmServicePort)(this)).GetSmmStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse1 Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.CancelSmm(Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest1 request) {
+        Izibiz.SmmWs.CancelSmmResponse1 Izibiz.SmmWs.SmmServicePort.CancelSmm(Izibiz.SmmWs.CancelSmmRequest1 request) {
             return base.Channel.CancelSmm(request);
         }
         
-        public Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse CancelSmm(Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest CancelSmmRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest1();
+        public Izibiz.SmmWs.CancelSmmResponse CancelSmm(Izibiz.SmmWs.CancelSmmRequest CancelSmmRequest) {
+            Izibiz.SmmWs.CancelSmmRequest1 inValue = new Izibiz.SmmWs.CancelSmmRequest1();
             inValue.CancelSmmRequest = CancelSmmRequest;
-            Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse1 retVal = ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).CancelSmm(inValue);
+            Izibiz.SmmWs.CancelSmmResponse1 retVal = ((Izibiz.SmmWs.SmmServicePort)(this)).CancelSmm(inValue);
             return retVal.CancelSmmResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse1> Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.CancelSmmAsync(Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.SmmWs.CancelSmmResponse1> Izibiz.SmmWs.SmmServicePort.CancelSmmAsync(Izibiz.SmmWs.CancelSmmRequest1 request) {
             return base.Channel.CancelSmmAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse1> CancelSmmAsync(Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest CancelSmmRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.CancelSmmRequest1();
+        public System.Threading.Tasks.Task<Izibiz.SmmWs.CancelSmmResponse1> CancelSmmAsync(Izibiz.SmmWs.CancelSmmRequest CancelSmmRequest) {
+            Izibiz.SmmWs.CancelSmmRequest1 inValue = new Izibiz.SmmWs.CancelSmmRequest1();
             inValue.CancelSmmRequest = CancelSmmRequest;
-            return ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).CancelSmmAsync(inValue);
+            return ((Izibiz.SmmWs.SmmServicePort)(this)).CancelSmmAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.SmmWs.GetSmmReportResponse1 Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.GetSmmReport(Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest1 request) {
+        Izibiz.SmmWs.GetSmmReportResponse1 Izibiz.SmmWs.SmmServicePort.GetSmmReport(Izibiz.SmmWs.GetSmmReportRequest1 request) {
             return base.Channel.GetSmmReport(request);
         }
         
-        public Izibiz_dotnet_soap_client.SmmWs.GetSmmReportResponse GetSmmReport(Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest GetSmmReportRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest1();
+        public Izibiz.SmmWs.GetSmmReportResponse GetSmmReport(Izibiz.SmmWs.GetSmmReportRequest GetSmmReportRequest) {
+            Izibiz.SmmWs.GetSmmReportRequest1 inValue = new Izibiz.SmmWs.GetSmmReportRequest1();
             inValue.GetSmmReportRequest = GetSmmReportRequest;
-            Izibiz_dotnet_soap_client.SmmWs.GetSmmReportResponse1 retVal = ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).GetSmmReport(inValue);
+            Izibiz.SmmWs.GetSmmReportResponse1 retVal = ((Izibiz.SmmWs.SmmServicePort)(this)).GetSmmReport(inValue);
             return retVal.GetSmmReportResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.GetSmmReportResponse1> Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.GetSmmReportAsync(Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.SmmWs.GetSmmReportResponse1> Izibiz.SmmWs.SmmServicePort.GetSmmReportAsync(Izibiz.SmmWs.GetSmmReportRequest1 request) {
             return base.Channel.GetSmmReportAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.GetSmmReportResponse1> GetSmmReportAsync(Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest GetSmmReportRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.GetSmmReportRequest1();
+        public System.Threading.Tasks.Task<Izibiz.SmmWs.GetSmmReportResponse1> GetSmmReportAsync(Izibiz.SmmWs.GetSmmReportRequest GetSmmReportRequest) {
+            Izibiz.SmmWs.GetSmmReportRequest1 inValue = new Izibiz.SmmWs.GetSmmReportRequest1();
             inValue.GetSmmReportRequest = GetSmmReportRequest;
-            return ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).GetSmmReportAsync(inValue);
+            return ((Izibiz.SmmWs.SmmServicePort)(this)).GetSmmReportAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse1 Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.LoadSmm(Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest1 request) {
+        Izibiz.SmmWs.LoadSmmResponse1 Izibiz.SmmWs.SmmServicePort.LoadSmm(Izibiz.SmmWs.LoadSmmRequest1 request) {
             return base.Channel.LoadSmm(request);
         }
         
-        public Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse LoadSmm(Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest LoadSmmRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest1();
+        public Izibiz.SmmWs.LoadSmmResponse LoadSmm(Izibiz.SmmWs.LoadSmmRequest LoadSmmRequest) {
+            Izibiz.SmmWs.LoadSmmRequest1 inValue = new Izibiz.SmmWs.LoadSmmRequest1();
             inValue.LoadSmmRequest = LoadSmmRequest;
-            Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse1 retVal = ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).LoadSmm(inValue);
+            Izibiz.SmmWs.LoadSmmResponse1 retVal = ((Izibiz.SmmWs.SmmServicePort)(this)).LoadSmm(inValue);
             return retVal.LoadSmmResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse1> Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.LoadSmmAsync(Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.SmmWs.LoadSmmResponse1> Izibiz.SmmWs.SmmServicePort.LoadSmmAsync(Izibiz.SmmWs.LoadSmmRequest1 request) {
             return base.Channel.LoadSmmAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse1> LoadSmmAsync(Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest LoadSmmRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.LoadSmmRequest1();
+        public System.Threading.Tasks.Task<Izibiz.SmmWs.LoadSmmResponse1> LoadSmmAsync(Izibiz.SmmWs.LoadSmmRequest LoadSmmRequest) {
+            Izibiz.SmmWs.LoadSmmRequest1 inValue = new Izibiz.SmmWs.LoadSmmRequest1();
             inValue.LoadSmmRequest = LoadSmmRequest;
-            return ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).LoadSmmAsync(inValue);
+            return ((Izibiz.SmmWs.SmmServicePort)(this)).LoadSmmAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse1 Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.SendSmm(Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest1 request) {
+        Izibiz.SmmWs.SendSmmResponse1 Izibiz.SmmWs.SmmServicePort.SendSmm(Izibiz.SmmWs.SendSmmRequest1 request) {
             return base.Channel.SendSmm(request);
         }
         
-        public Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse SendSmm(Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest SendSmmRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest1();
+        public Izibiz.SmmWs.SendSmmResponse SendSmm(Izibiz.SmmWs.SendSmmRequest SendSmmRequest) {
+            Izibiz.SmmWs.SendSmmRequest1 inValue = new Izibiz.SmmWs.SendSmmRequest1();
             inValue.SendSmmRequest = SendSmmRequest;
-            Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse1 retVal = ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).SendSmm(inValue);
+            Izibiz.SmmWs.SendSmmResponse1 retVal = ((Izibiz.SmmWs.SmmServicePort)(this)).SendSmm(inValue);
             return retVal.SendSmmResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse1> Izibiz_dotnet_soap_client.SmmWs.SmmServicePort.SendSmmAsync(Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.SmmWs.SendSmmResponse1> Izibiz.SmmWs.SmmServicePort.SendSmmAsync(Izibiz.SmmWs.SendSmmRequest1 request) {
             return base.Channel.SendSmmAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse1> SendSmmAsync(Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest SendSmmRequest) {
-            Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest1 inValue = new Izibiz_dotnet_soap_client.SmmWs.SendSmmRequest1();
+        public System.Threading.Tasks.Task<Izibiz.SmmWs.SendSmmResponse1> SendSmmAsync(Izibiz.SmmWs.SendSmmRequest SendSmmRequest) {
+            Izibiz.SmmWs.SendSmmRequest1 inValue = new Izibiz.SmmWs.SendSmmRequest1();
             inValue.SendSmmRequest = SendSmmRequest;
-            return ((Izibiz_dotnet_soap_client.SmmWs.SmmServicePort)(this)).SendSmmAsync(inValue);
+            return ((Izibiz.SmmWs.SmmServicePort)(this)).SendSmmAsync(inValue);
         }
     }
 }

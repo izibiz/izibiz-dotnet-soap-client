@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Izibiz_dotnet_soap_client.EInvoiceWS {
+namespace Izibiz.EInvoiceWS {
     
     
     /// <remarks/>
@@ -5609,7 +5609,7 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         
         // CODEGEN: Generating message contract since the operation Login is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -5638,14 +5638,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.LoginResponse1 Login(Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest1 request);
+        Izibiz.EInvoiceWS.LoginResponse1 Login(Izibiz.EInvoiceWS.LoginRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.LoginResponse1> LoginAsync(Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.LoginResponse1> LoginAsync(Izibiz.EInvoiceWS.LoginRequest1 request);
         
         // CODEGEN: Generating message contract since the operation Logout is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -5674,14 +5674,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.LogoutResponse1 Logout(Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest1 request);
+        Izibiz.EInvoiceWS.LogoutResponse1 Logout(Izibiz.EInvoiceWS.LogoutRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.LogoutResponse1> LogoutAsync(Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.LogoutResponse1> LogoutAsync(Izibiz.EInvoiceWS.LogoutRequest1 request);
         
         // CODEGEN: Generating message contract since the operation LoadInvoice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -5710,14 +5710,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceResponse1 LoadInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest1 request);
+        Izibiz.EInvoiceWS.LoadInvoiceResponse1 LoadInvoice(Izibiz.EInvoiceWS.LoadInvoiceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceResponse1> LoadInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.LoadInvoiceResponse1> LoadInvoiceAsync(Izibiz.EInvoiceWS.LoadInvoiceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation SendInvoice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -5746,14 +5746,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponse1 SendInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest1 request);
+        Izibiz.EInvoiceWS.SendInvoiceResponse1 SendInvoice(Izibiz.EInvoiceWS.SendInvoiceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponse1> SendInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.SendInvoiceResponse1> SendInvoiceAsync(Izibiz.EInvoiceWS.SendInvoiceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetInvoice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -5782,14 +5782,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceResponse1 GetInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest1 request);
+        Izibiz.EInvoiceWS.GetInvoiceResponse1 GetInvoice(Izibiz.EInvoiceWS.GetInvoiceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceResponse1> GetInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceResponse1> GetInvoiceAsync(Izibiz.EInvoiceWS.GetInvoiceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation MarkInvoice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -5818,14 +5818,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceResponse1 MarkInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest1 request);
+        Izibiz.EInvoiceWS.MarkInvoiceResponse1 MarkInvoice(Izibiz.EInvoiceWS.MarkInvoiceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceResponse1> MarkInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.MarkInvoiceResponse1> MarkInvoiceAsync(Izibiz.EInvoiceWS.MarkInvoiceRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetUserList is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -5854,14 +5854,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListResponse1 GetUserList(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest1 request);
+        Izibiz.EInvoiceWS.GetUserListResponse1 GetUserList(Izibiz.EInvoiceWS.GetUserListRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListResponse1> GetUserListAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetUserListResponse1> GetUserListAsync(Izibiz.EInvoiceWS.GetUserListRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetUserListBinary is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -5890,14 +5890,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryResponse1 GetUserListBinary(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest1 request);
+        Izibiz.EInvoiceWS.GetUserListBinaryResponse1 GetUserListBinary(Izibiz.EInvoiceWS.GetUserListBinaryRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryResponse1> GetUserListBinaryAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetUserListBinaryResponse1> GetUserListBinaryAsync(Izibiz.EInvoiceWS.GetUserListBinaryRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CheckUser is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -5926,14 +5926,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserResponse1 CheckUser(Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest1 request);
+        Izibiz.EInvoiceWS.CheckUserResponse1 CheckUser(Izibiz.EInvoiceWS.CheckUserRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserResponse1> CheckUserAsync(Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.CheckUserResponse1> CheckUserAsync(Izibiz.EInvoiceWS.CheckUserRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetInvoiceStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -5962,14 +5962,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusResponse1 GetInvoiceStatus(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest1 request);
+        Izibiz.EInvoiceWS.GetInvoiceStatusResponse1 GetInvoiceStatus(Izibiz.EInvoiceWS.GetInvoiceStatusRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusResponse1> GetInvoiceStatusAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceStatusResponse1> GetInvoiceStatusAsync(Izibiz.EInvoiceWS.GetInvoiceStatusRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetInvoiceStatusAll is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -5998,14 +5998,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllResponse1 GetInvoiceStatusAll(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest1 request);
+        Izibiz.EInvoiceWS.GetInvoiceStatusAllResponse1 GetInvoiceStatusAll(Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllResponse1> GetInvoiceStatusAllAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceStatusAllResponse1> GetInvoiceStatusAllAsync(Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest1 request);
         
         // CODEGEN: Generating message contract since the operation PrepareInvoiceResponse is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -6034,14 +6034,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseResponse1 PrepareInvoiceResponse(Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest1 request);
+        Izibiz.EInvoiceWS.PrepareInvoiceResponseResponse1 PrepareInvoiceResponse(Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseResponse1> PrepareInvoiceResponseAsync(Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.PrepareInvoiceResponseResponse1> PrepareInvoiceResponseAsync(Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest1 request);
         
         // CODEGEN: Generating message contract since the operation SendInvoiceResponse is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -6070,14 +6070,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseResponse1 SendInvoiceResponse(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest1 request);
+        Izibiz.EInvoiceWS.SendInvoiceResponseResponse1 SendInvoiceResponse(Izibiz.EInvoiceWS.SendInvoiceResponseRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseResponse1> SendInvoiceResponseAsync(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.SendInvoiceResponseResponse1> SendInvoiceResponseAsync(Izibiz.EInvoiceWS.SendInvoiceResponseRequest1 request);
         
         // CODEGEN: Generating message contract since the operation SendInvoiceResponseWithServerSign is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -6106,14 +6106,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1 SendInvoiceResponseWithServerSign(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 request);
+        Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1 SendInvoiceResponseWithServerSign(Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1> SendInvoiceResponseWithServerSignAsync(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1> SendInvoiceResponseWithServerSignAsync(Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetEnvelope is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -6142,14 +6142,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeResponse1 GetEnvelope(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest1 request);
+        Izibiz.EInvoiceWS.GetEnvelopeResponse1 GetEnvelope(Izibiz.EInvoiceWS.GetEnvelopeRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeResponse1> GetEnvelopeAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetEnvelopeResponse1> GetEnvelopeAsync(Izibiz.EInvoiceWS.GetEnvelopeRequest1 request);
         
         // CODEGEN: Generating message contract since the operation MarkEnvelope is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -6178,14 +6178,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeResponse1 MarkEnvelope(Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest1 request);
+        Izibiz.EInvoiceWS.MarkEnvelopeResponse1 MarkEnvelope(Izibiz.EInvoiceWS.MarkEnvelopeRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeResponse1> MarkEnvelopeAsync(Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.MarkEnvelopeResponse1> MarkEnvelopeAsync(Izibiz.EInvoiceWS.MarkEnvelopeRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetEnvelopeStatus is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -6214,14 +6214,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusResponse1 GetEnvelopeStatus(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest1 request);
+        Izibiz.EInvoiceWS.GetEnvelopeStatusResponse1 GetEnvelopeStatus(Izibiz.EInvoiceWS.GetEnvelopeStatusRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusResponse1> GetEnvelopeStatusAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetEnvelopeStatusResponse1> GetEnvelopeStatusAsync(Izibiz.EInvoiceWS.GetEnvelopeStatusRequest1 request);
         
         // CODEGEN: Generating message contract since the operation getApplicationResponse is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -6250,14 +6250,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseResponse getApplicationResponse(Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseRequest request);
+        Izibiz.EInvoiceWS.getApplicationResponseResponse getApplicationResponse(Izibiz.EInvoiceWS.getApplicationResponseRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseResponse> getApplicationResponseAsync(Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseRequest request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.getApplicationResponseResponse> getApplicationResponseAsync(Izibiz.EInvoiceWS.getApplicationResponseRequest request);
         
         // CODEGEN: Generating message contract since the operation GetInvoiceWithType is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -6286,14 +6286,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeResponse1 GetInvoiceWithType(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest1 request);
+        Izibiz.EInvoiceWS.GetInvoiceWithTypeResponse1 GetInvoiceWithType(Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeResponse1> GetInvoiceWithTypeAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceWithTypeResponse1> GetInvoiceWithTypeAsync(Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetInvoiceCount is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -6322,14 +6322,14 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountResponse1 GetInvoiceCount(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest1 request);
+        Izibiz.EInvoiceWS.GetInvoiceCountResponse1 GetInvoiceCount(Izibiz.EInvoiceWS.GetInvoiceCountRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountResponse1> GetInvoiceCountAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceCountResponse1> GetInvoiceCountAsync(Izibiz.EInvoiceWS.GetInvoiceCountRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CancelDraftInvoice is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.EInvoiceWS.REQUEST_ERRORType), Action="", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(CUSTOMER))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(PARTINFO))]
@@ -6358,10 +6358,10 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(LogoutResponse))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(USERCONTENT[]))]
-        Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceResponse1 CancelDraftInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest1 request);
+        Izibiz.EInvoiceWS.CancelDraftInvoiceResponse1 CancelDraftInvoice(Izibiz.EInvoiceWS.CancelDraftInvoiceRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceResponse1> CancelDraftInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.CancelDraftInvoiceResponse1> CancelDraftInvoiceAsync(Izibiz.EInvoiceWS.CancelDraftInvoiceRequest1 request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6371,12 +6371,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class LoginRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest LoginRequest;
+        public Izibiz.EInvoiceWS.LoginRequest LoginRequest;
         
         public LoginRequest1() {
         }
         
-        public LoginRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest LoginRequest) {
+        public LoginRequest1(Izibiz.EInvoiceWS.LoginRequest LoginRequest) {
             this.LoginRequest = LoginRequest;
         }
     }
@@ -6388,12 +6388,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class LoginResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.LoginResponse LoginResponse;
+        public Izibiz.EInvoiceWS.LoginResponse LoginResponse;
         
         public LoginResponse1() {
         }
         
-        public LoginResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.LoginResponse LoginResponse) {
+        public LoginResponse1(Izibiz.EInvoiceWS.LoginResponse LoginResponse) {
             this.LoginResponse = LoginResponse;
         }
     }
@@ -6405,12 +6405,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class LogoutRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest LogoutRequest;
+        public Izibiz.EInvoiceWS.LogoutRequest LogoutRequest;
         
         public LogoutRequest1() {
         }
         
-        public LogoutRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest LogoutRequest) {
+        public LogoutRequest1(Izibiz.EInvoiceWS.LogoutRequest LogoutRequest) {
             this.LogoutRequest = LogoutRequest;
         }
     }
@@ -6422,12 +6422,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class LogoutResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.LogoutResponse LogoutResponse;
+        public Izibiz.EInvoiceWS.LogoutResponse LogoutResponse;
         
         public LogoutResponse1() {
         }
         
-        public LogoutResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.LogoutResponse LogoutResponse) {
+        public LogoutResponse1(Izibiz.EInvoiceWS.LogoutResponse LogoutResponse) {
             this.LogoutResponse = LogoutResponse;
         }
     }
@@ -6439,12 +6439,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class LoadInvoiceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest LoadInvoiceRequest;
+        public Izibiz.EInvoiceWS.LoadInvoiceRequest LoadInvoiceRequest;
         
         public LoadInvoiceRequest1() {
         }
         
-        public LoadInvoiceRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest LoadInvoiceRequest) {
+        public LoadInvoiceRequest1(Izibiz.EInvoiceWS.LoadInvoiceRequest LoadInvoiceRequest) {
             this.LoadInvoiceRequest = LoadInvoiceRequest;
         }
     }
@@ -6456,12 +6456,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class LoadInvoiceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceResponse LoadInvoiceResponse;
+        public Izibiz.EInvoiceWS.LoadInvoiceResponse LoadInvoiceResponse;
         
         public LoadInvoiceResponse1() {
         }
         
-        public LoadInvoiceResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceResponse LoadInvoiceResponse) {
+        public LoadInvoiceResponse1(Izibiz.EInvoiceWS.LoadInvoiceResponse LoadInvoiceResponse) {
             this.LoadInvoiceResponse = LoadInvoiceResponse;
         }
     }
@@ -6473,12 +6473,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class SendInvoiceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest SendInvoiceRequest;
+        public Izibiz.EInvoiceWS.SendInvoiceRequest SendInvoiceRequest;
         
         public SendInvoiceRequest1() {
         }
         
-        public SendInvoiceRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest SendInvoiceRequest) {
+        public SendInvoiceRequest1(Izibiz.EInvoiceWS.SendInvoiceRequest SendInvoiceRequest) {
             this.SendInvoiceRequest = SendInvoiceRequest;
         }
     }
@@ -6490,12 +6490,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class SendInvoiceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponse SendInvoiceResponse;
+        public Izibiz.EInvoiceWS.SendInvoiceResponse SendInvoiceResponse;
         
         public SendInvoiceResponse1() {
         }
         
-        public SendInvoiceResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponse SendInvoiceResponse) {
+        public SendInvoiceResponse1(Izibiz.EInvoiceWS.SendInvoiceResponse SendInvoiceResponse) {
             this.SendInvoiceResponse = SendInvoiceResponse;
         }
     }
@@ -6507,12 +6507,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetInvoiceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest GetInvoiceRequest;
+        public Izibiz.EInvoiceWS.GetInvoiceRequest GetInvoiceRequest;
         
         public GetInvoiceRequest1() {
         }
         
-        public GetInvoiceRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest GetInvoiceRequest) {
+        public GetInvoiceRequest1(Izibiz.EInvoiceWS.GetInvoiceRequest GetInvoiceRequest) {
             this.GetInvoiceRequest = GetInvoiceRequest;
         }
     }
@@ -6524,12 +6524,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetInvoiceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceResponse GetInvoiceResponse;
+        public Izibiz.EInvoiceWS.GetInvoiceResponse GetInvoiceResponse;
         
         public GetInvoiceResponse1() {
         }
         
-        public GetInvoiceResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceResponse GetInvoiceResponse) {
+        public GetInvoiceResponse1(Izibiz.EInvoiceWS.GetInvoiceResponse GetInvoiceResponse) {
             this.GetInvoiceResponse = GetInvoiceResponse;
         }
     }
@@ -6541,12 +6541,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class MarkInvoiceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest MarkInvoiceRequest;
+        public Izibiz.EInvoiceWS.MarkInvoiceRequest MarkInvoiceRequest;
         
         public MarkInvoiceRequest1() {
         }
         
-        public MarkInvoiceRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest MarkInvoiceRequest) {
+        public MarkInvoiceRequest1(Izibiz.EInvoiceWS.MarkInvoiceRequest MarkInvoiceRequest) {
             this.MarkInvoiceRequest = MarkInvoiceRequest;
         }
     }
@@ -6558,12 +6558,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class MarkInvoiceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceResponse MarkInvoiceResponse;
+        public Izibiz.EInvoiceWS.MarkInvoiceResponse MarkInvoiceResponse;
         
         public MarkInvoiceResponse1() {
         }
         
-        public MarkInvoiceResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceResponse MarkInvoiceResponse) {
+        public MarkInvoiceResponse1(Izibiz.EInvoiceWS.MarkInvoiceResponse MarkInvoiceResponse) {
             this.MarkInvoiceResponse = MarkInvoiceResponse;
         }
     }
@@ -6575,12 +6575,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetUserListRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest GetUserListRequest;
+        public Izibiz.EInvoiceWS.GetUserListRequest GetUserListRequest;
         
         public GetUserListRequest1() {
         }
         
-        public GetUserListRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest GetUserListRequest) {
+        public GetUserListRequest1(Izibiz.EInvoiceWS.GetUserListRequest GetUserListRequest) {
             this.GetUserListRequest = GetUserListRequest;
         }
     }
@@ -6592,12 +6592,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetUserListResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListResponse GetUserListResponse;
+        public Izibiz.EInvoiceWS.GetUserListResponse GetUserListResponse;
         
         public GetUserListResponse1() {
         }
         
-        public GetUserListResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListResponse GetUserListResponse) {
+        public GetUserListResponse1(Izibiz.EInvoiceWS.GetUserListResponse GetUserListResponse) {
             this.GetUserListResponse = GetUserListResponse;
         }
     }
@@ -6609,12 +6609,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetUserListBinaryRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest GetUserListBinaryRequest;
+        public Izibiz.EInvoiceWS.GetUserListBinaryRequest GetUserListBinaryRequest;
         
         public GetUserListBinaryRequest1() {
         }
         
-        public GetUserListBinaryRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest GetUserListBinaryRequest) {
+        public GetUserListBinaryRequest1(Izibiz.EInvoiceWS.GetUserListBinaryRequest GetUserListBinaryRequest) {
             this.GetUserListBinaryRequest = GetUserListBinaryRequest;
         }
     }
@@ -6626,12 +6626,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetUserListBinaryResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryResponse GetUserListBinaryResponse;
+        public Izibiz.EInvoiceWS.GetUserListBinaryResponse GetUserListBinaryResponse;
         
         public GetUserListBinaryResponse1() {
         }
         
-        public GetUserListBinaryResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryResponse GetUserListBinaryResponse) {
+        public GetUserListBinaryResponse1(Izibiz.EInvoiceWS.GetUserListBinaryResponse GetUserListBinaryResponse) {
             this.GetUserListBinaryResponse = GetUserListBinaryResponse;
         }
     }
@@ -6643,12 +6643,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class CheckUserRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest CheckUserRequest;
+        public Izibiz.EInvoiceWS.CheckUserRequest CheckUserRequest;
         
         public CheckUserRequest1() {
         }
         
-        public CheckUserRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest CheckUserRequest) {
+        public CheckUserRequest1(Izibiz.EInvoiceWS.CheckUserRequest CheckUserRequest) {
             this.CheckUserRequest = CheckUserRequest;
         }
     }
@@ -6660,12 +6660,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class CheckUserResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserResponse CheckUserResponse;
+        public Izibiz.EInvoiceWS.CheckUserResponse CheckUserResponse;
         
         public CheckUserResponse1() {
         }
         
-        public CheckUserResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserResponse CheckUserResponse) {
+        public CheckUserResponse1(Izibiz.EInvoiceWS.CheckUserResponse CheckUserResponse) {
             this.CheckUserResponse = CheckUserResponse;
         }
     }
@@ -6677,12 +6677,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetInvoiceStatusRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest GetInvoiceStatusRequest;
+        public Izibiz.EInvoiceWS.GetInvoiceStatusRequest GetInvoiceStatusRequest;
         
         public GetInvoiceStatusRequest1() {
         }
         
-        public GetInvoiceStatusRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest GetInvoiceStatusRequest) {
+        public GetInvoiceStatusRequest1(Izibiz.EInvoiceWS.GetInvoiceStatusRequest GetInvoiceStatusRequest) {
             this.GetInvoiceStatusRequest = GetInvoiceStatusRequest;
         }
     }
@@ -6694,12 +6694,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetInvoiceStatusResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusResponse GetInvoiceStatusResponse;
+        public Izibiz.EInvoiceWS.GetInvoiceStatusResponse GetInvoiceStatusResponse;
         
         public GetInvoiceStatusResponse1() {
         }
         
-        public GetInvoiceStatusResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusResponse GetInvoiceStatusResponse) {
+        public GetInvoiceStatusResponse1(Izibiz.EInvoiceWS.GetInvoiceStatusResponse GetInvoiceStatusResponse) {
             this.GetInvoiceStatusResponse = GetInvoiceStatusResponse;
         }
     }
@@ -6711,12 +6711,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetInvoiceStatusAllRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest GetInvoiceStatusAllRequest;
+        public Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest GetInvoiceStatusAllRequest;
         
         public GetInvoiceStatusAllRequest1() {
         }
         
-        public GetInvoiceStatusAllRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest GetInvoiceStatusAllRequest) {
+        public GetInvoiceStatusAllRequest1(Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest GetInvoiceStatusAllRequest) {
             this.GetInvoiceStatusAllRequest = GetInvoiceStatusAllRequest;
         }
     }
@@ -6728,12 +6728,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetInvoiceStatusAllResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllResponse GetInvoiceStatusAllResponse;
+        public Izibiz.EInvoiceWS.GetInvoiceStatusAllResponse GetInvoiceStatusAllResponse;
         
         public GetInvoiceStatusAllResponse1() {
         }
         
-        public GetInvoiceStatusAllResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllResponse GetInvoiceStatusAllResponse) {
+        public GetInvoiceStatusAllResponse1(Izibiz.EInvoiceWS.GetInvoiceStatusAllResponse GetInvoiceStatusAllResponse) {
             this.GetInvoiceStatusAllResponse = GetInvoiceStatusAllResponse;
         }
     }
@@ -6745,12 +6745,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class PrepareInvoiceResponseRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest PrepareInvoiceResponseRequest;
+        public Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest PrepareInvoiceResponseRequest;
         
         public PrepareInvoiceResponseRequest1() {
         }
         
-        public PrepareInvoiceResponseRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest PrepareInvoiceResponseRequest) {
+        public PrepareInvoiceResponseRequest1(Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest PrepareInvoiceResponseRequest) {
             this.PrepareInvoiceResponseRequest = PrepareInvoiceResponseRequest;
         }
     }
@@ -6762,12 +6762,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class PrepareInvoiceResponseResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseResponse PrepareInvoiceResponseResponse;
+        public Izibiz.EInvoiceWS.PrepareInvoiceResponseResponse PrepareInvoiceResponseResponse;
         
         public PrepareInvoiceResponseResponse1() {
         }
         
-        public PrepareInvoiceResponseResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseResponse PrepareInvoiceResponseResponse) {
+        public PrepareInvoiceResponseResponse1(Izibiz.EInvoiceWS.PrepareInvoiceResponseResponse PrepareInvoiceResponseResponse) {
             this.PrepareInvoiceResponseResponse = PrepareInvoiceResponseResponse;
         }
     }
@@ -6779,12 +6779,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class SendInvoiceResponseRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest SendInvoiceResponseRequest;
+        public Izibiz.EInvoiceWS.SendInvoiceResponseRequest SendInvoiceResponseRequest;
         
         public SendInvoiceResponseRequest1() {
         }
         
-        public SendInvoiceResponseRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest SendInvoiceResponseRequest) {
+        public SendInvoiceResponseRequest1(Izibiz.EInvoiceWS.SendInvoiceResponseRequest SendInvoiceResponseRequest) {
             this.SendInvoiceResponseRequest = SendInvoiceResponseRequest;
         }
     }
@@ -6796,12 +6796,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class SendInvoiceResponseResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseResponse SendInvoiceResponseResponse;
+        public Izibiz.EInvoiceWS.SendInvoiceResponseResponse SendInvoiceResponseResponse;
         
         public SendInvoiceResponseResponse1() {
         }
         
-        public SendInvoiceResponseResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseResponse SendInvoiceResponseResponse) {
+        public SendInvoiceResponseResponse1(Izibiz.EInvoiceWS.SendInvoiceResponseResponse SendInvoiceResponseResponse) {
             this.SendInvoiceResponseResponse = SendInvoiceResponseResponse;
         }
     }
@@ -6813,12 +6813,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class SendInvoiceResponseWithServerSignRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest SendInvoiceResponseWithServerSignRequest;
+        public Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest SendInvoiceResponseWithServerSignRequest;
         
         public SendInvoiceResponseWithServerSignRequest1() {
         }
         
-        public SendInvoiceResponseWithServerSignRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest SendInvoiceResponseWithServerSignRequest) {
+        public SendInvoiceResponseWithServerSignRequest1(Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest SendInvoiceResponseWithServerSignRequest) {
             this.SendInvoiceResponseWithServerSignRequest = SendInvoiceResponseWithServerSignRequest;
         }
     }
@@ -6830,12 +6830,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class SendInvoiceResponseWithServerSignResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignResponse SendInvoiceResponseWithServerSignResponse;
+        public Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignResponse SendInvoiceResponseWithServerSignResponse;
         
         public SendInvoiceResponseWithServerSignResponse1() {
         }
         
-        public SendInvoiceResponseWithServerSignResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignResponse SendInvoiceResponseWithServerSignResponse) {
+        public SendInvoiceResponseWithServerSignResponse1(Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignResponse SendInvoiceResponseWithServerSignResponse) {
             this.SendInvoiceResponseWithServerSignResponse = SendInvoiceResponseWithServerSignResponse;
         }
     }
@@ -6847,12 +6847,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetEnvelopeRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest GetEnvelopeRequest;
+        public Izibiz.EInvoiceWS.GetEnvelopeRequest GetEnvelopeRequest;
         
         public GetEnvelopeRequest1() {
         }
         
-        public GetEnvelopeRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest GetEnvelopeRequest) {
+        public GetEnvelopeRequest1(Izibiz.EInvoiceWS.GetEnvelopeRequest GetEnvelopeRequest) {
             this.GetEnvelopeRequest = GetEnvelopeRequest;
         }
     }
@@ -6864,12 +6864,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetEnvelopeResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeResponse GetEnvelopeResponse;
+        public Izibiz.EInvoiceWS.GetEnvelopeResponse GetEnvelopeResponse;
         
         public GetEnvelopeResponse1() {
         }
         
-        public GetEnvelopeResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeResponse GetEnvelopeResponse) {
+        public GetEnvelopeResponse1(Izibiz.EInvoiceWS.GetEnvelopeResponse GetEnvelopeResponse) {
             this.GetEnvelopeResponse = GetEnvelopeResponse;
         }
     }
@@ -6881,12 +6881,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class MarkEnvelopeRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest MarkEnvelopeRequest;
+        public Izibiz.EInvoiceWS.MarkEnvelopeRequest MarkEnvelopeRequest;
         
         public MarkEnvelopeRequest1() {
         }
         
-        public MarkEnvelopeRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest MarkEnvelopeRequest) {
+        public MarkEnvelopeRequest1(Izibiz.EInvoiceWS.MarkEnvelopeRequest MarkEnvelopeRequest) {
             this.MarkEnvelopeRequest = MarkEnvelopeRequest;
         }
     }
@@ -6898,12 +6898,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class MarkEnvelopeResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeResponse MarkEnvelopeResponse;
+        public Izibiz.EInvoiceWS.MarkEnvelopeResponse MarkEnvelopeResponse;
         
         public MarkEnvelopeResponse1() {
         }
         
-        public MarkEnvelopeResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeResponse MarkEnvelopeResponse) {
+        public MarkEnvelopeResponse1(Izibiz.EInvoiceWS.MarkEnvelopeResponse MarkEnvelopeResponse) {
             this.MarkEnvelopeResponse = MarkEnvelopeResponse;
         }
     }
@@ -6915,12 +6915,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetEnvelopeStatusRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest GetEnvelopeStatusRequest;
+        public Izibiz.EInvoiceWS.GetEnvelopeStatusRequest GetEnvelopeStatusRequest;
         
         public GetEnvelopeStatusRequest1() {
         }
         
-        public GetEnvelopeStatusRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest GetEnvelopeStatusRequest) {
+        public GetEnvelopeStatusRequest1(Izibiz.EInvoiceWS.GetEnvelopeStatusRequest GetEnvelopeStatusRequest) {
             this.GetEnvelopeStatusRequest = GetEnvelopeStatusRequest;
         }
     }
@@ -6932,12 +6932,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetEnvelopeStatusResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusResponse GetEnvelopeStatusResponse;
+        public Izibiz.EInvoiceWS.GetEnvelopeStatusResponse GetEnvelopeStatusResponse;
         
         public GetEnvelopeStatusResponse1() {
         }
         
-        public GetEnvelopeStatusResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusResponse GetEnvelopeStatusResponse) {
+        public GetEnvelopeStatusResponse1(Izibiz.EInvoiceWS.GetEnvelopeStatusResponse GetEnvelopeStatusResponse) {
             this.GetEnvelopeStatusResponse = GetEnvelopeStatusResponse;
         }
     }
@@ -6949,12 +6949,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class getApplicationResponseRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://gib.gov.tr/vedop3/eFatura", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.getAppRespRequestType getAppRespRequest;
+        public Izibiz.EInvoiceWS.getAppRespRequestType getAppRespRequest;
         
         public getApplicationResponseRequest() {
         }
         
-        public getApplicationResponseRequest(Izibiz_dotnet_soap_client.EInvoiceWS.getAppRespRequestType getAppRespRequest) {
+        public getApplicationResponseRequest(Izibiz.EInvoiceWS.getAppRespRequestType getAppRespRequest) {
             this.getAppRespRequest = getAppRespRequest;
         }
     }
@@ -6966,12 +6966,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class getApplicationResponseResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://gib.gov.tr/vedop3/eFatura", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.getAppRespResponseType getAppRespResponse;
+        public Izibiz.EInvoiceWS.getAppRespResponseType getAppRespResponse;
         
         public getApplicationResponseResponse() {
         }
         
-        public getApplicationResponseResponse(Izibiz_dotnet_soap_client.EInvoiceWS.getAppRespResponseType getAppRespResponse) {
+        public getApplicationResponseResponse(Izibiz.EInvoiceWS.getAppRespResponseType getAppRespResponse) {
             this.getAppRespResponse = getAppRespResponse;
         }
     }
@@ -6983,12 +6983,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetInvoiceWithTypeRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest GetInvoiceWithTypeRequest;
+        public Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest GetInvoiceWithTypeRequest;
         
         public GetInvoiceWithTypeRequest1() {
         }
         
-        public GetInvoiceWithTypeRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest GetInvoiceWithTypeRequest) {
+        public GetInvoiceWithTypeRequest1(Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest GetInvoiceWithTypeRequest) {
             this.GetInvoiceWithTypeRequest = GetInvoiceWithTypeRequest;
         }
     }
@@ -7000,12 +7000,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetInvoiceWithTypeResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeResponse GetInvoiceWithTypeResponse;
+        public Izibiz.EInvoiceWS.GetInvoiceWithTypeResponse GetInvoiceWithTypeResponse;
         
         public GetInvoiceWithTypeResponse1() {
         }
         
-        public GetInvoiceWithTypeResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeResponse GetInvoiceWithTypeResponse) {
+        public GetInvoiceWithTypeResponse1(Izibiz.EInvoiceWS.GetInvoiceWithTypeResponse GetInvoiceWithTypeResponse) {
             this.GetInvoiceWithTypeResponse = GetInvoiceWithTypeResponse;
         }
     }
@@ -7017,12 +7017,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetInvoiceCountRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest GetInvoiceCountRequest;
+        public Izibiz.EInvoiceWS.GetInvoiceCountRequest GetInvoiceCountRequest;
         
         public GetInvoiceCountRequest1() {
         }
         
-        public GetInvoiceCountRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest GetInvoiceCountRequest) {
+        public GetInvoiceCountRequest1(Izibiz.EInvoiceWS.GetInvoiceCountRequest GetInvoiceCountRequest) {
             this.GetInvoiceCountRequest = GetInvoiceCountRequest;
         }
     }
@@ -7034,12 +7034,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class GetInvoiceCountResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountResponse GetInvoiceCountResponse;
+        public Izibiz.EInvoiceWS.GetInvoiceCountResponse GetInvoiceCountResponse;
         
         public GetInvoiceCountResponse1() {
         }
         
-        public GetInvoiceCountResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountResponse GetInvoiceCountResponse) {
+        public GetInvoiceCountResponse1(Izibiz.EInvoiceWS.GetInvoiceCountResponse GetInvoiceCountResponse) {
             this.GetInvoiceCountResponse = GetInvoiceCountResponse;
         }
     }
@@ -7051,12 +7051,12 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class CancelDraftInvoiceRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest CancelDraftInvoiceRequest;
+        public Izibiz.EInvoiceWS.CancelDraftInvoiceRequest CancelDraftInvoiceRequest;
         
         public CancelDraftInvoiceRequest1() {
         }
         
-        public CancelDraftInvoiceRequest1(Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest CancelDraftInvoiceRequest) {
+        public CancelDraftInvoiceRequest1(Izibiz.EInvoiceWS.CancelDraftInvoiceRequest CancelDraftInvoiceRequest) {
             this.CancelDraftInvoiceRequest = CancelDraftInvoiceRequest;
         }
     }
@@ -7068,23 +7068,23 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
     public partial class CancelDraftInvoiceResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceResponse CancelDraftInvoiceResponse;
+        public Izibiz.EInvoiceWS.CancelDraftInvoiceResponse CancelDraftInvoiceResponse;
         
         public CancelDraftInvoiceResponse1() {
         }
         
-        public CancelDraftInvoiceResponse1(Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceResponse CancelDraftInvoiceResponse) {
+        public CancelDraftInvoiceResponse1(Izibiz.EInvoiceWS.CancelDraftInvoiceResponse CancelDraftInvoiceResponse) {
             this.CancelDraftInvoiceResponse = CancelDraftInvoiceResponse;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface EInvoiceWSPortChannel : Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort, System.ServiceModel.IClientChannel {
+    public interface EInvoiceWSPortChannel : Izibiz.EInvoiceWS.EInvoiceWSPort, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EInvoiceWSPortClient : System.ServiceModel.ClientBase<Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort>, Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort {
+    public partial class EInvoiceWSPortClient : System.ServiceModel.ClientBase<Izibiz.EInvoiceWS.EInvoiceWSPort>, Izibiz.EInvoiceWS.EInvoiceWSPort {
         
         public EInvoiceWSPortClient() {
         }
@@ -7106,486 +7106,486 @@ namespace Izibiz_dotnet_soap_client.EInvoiceWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.LoginResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.Login(Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest1 request) {
+        Izibiz.EInvoiceWS.LoginResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.Login(Izibiz.EInvoiceWS.LoginRequest1 request) {
             return base.Channel.Login(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.LoginResponse Login(Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest LoginRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest1();
+        public Izibiz.EInvoiceWS.LoginResponse Login(Izibiz.EInvoiceWS.LoginRequest LoginRequest) {
+            Izibiz.EInvoiceWS.LoginRequest1 inValue = new Izibiz.EInvoiceWS.LoginRequest1();
             inValue.LoginRequest = LoginRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.LoginResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).Login(inValue);
+            Izibiz.EInvoiceWS.LoginResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).Login(inValue);
             return retVal.LoginResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.LoginResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.LoginAsync(Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.LoginResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.LoginAsync(Izibiz.EInvoiceWS.LoginRequest1 request) {
             return base.Channel.LoginAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.LoginResponse1> LoginAsync(Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest LoginRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.LoginRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.LoginResponse1> LoginAsync(Izibiz.EInvoiceWS.LoginRequest LoginRequest) {
+            Izibiz.EInvoiceWS.LoginRequest1 inValue = new Izibiz.EInvoiceWS.LoginRequest1();
             inValue.LoginRequest = LoginRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).LoginAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).LoginAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.LogoutResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.Logout(Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest1 request) {
+        Izibiz.EInvoiceWS.LogoutResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.Logout(Izibiz.EInvoiceWS.LogoutRequest1 request) {
             return base.Channel.Logout(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.LogoutResponse Logout(Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest LogoutRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest1();
+        public Izibiz.EInvoiceWS.LogoutResponse Logout(Izibiz.EInvoiceWS.LogoutRequest LogoutRequest) {
+            Izibiz.EInvoiceWS.LogoutRequest1 inValue = new Izibiz.EInvoiceWS.LogoutRequest1();
             inValue.LogoutRequest = LogoutRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.LogoutResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).Logout(inValue);
+            Izibiz.EInvoiceWS.LogoutResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).Logout(inValue);
             return retVal.LogoutResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.LogoutResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.LogoutAsync(Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.LogoutResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.LogoutAsync(Izibiz.EInvoiceWS.LogoutRequest1 request) {
             return base.Channel.LogoutAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.LogoutResponse1> LogoutAsync(Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest LogoutRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.LogoutRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.LogoutResponse1> LogoutAsync(Izibiz.EInvoiceWS.LogoutRequest LogoutRequest) {
+            Izibiz.EInvoiceWS.LogoutRequest1 inValue = new Izibiz.EInvoiceWS.LogoutRequest1();
             inValue.LogoutRequest = LogoutRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).LogoutAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).LogoutAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.LoadInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest1 request) {
+        Izibiz.EInvoiceWS.LoadInvoiceResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.LoadInvoice(Izibiz.EInvoiceWS.LoadInvoiceRequest1 request) {
             return base.Channel.LoadInvoice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceResponse LoadInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest LoadInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest1();
+        public Izibiz.EInvoiceWS.LoadInvoiceResponse LoadInvoice(Izibiz.EInvoiceWS.LoadInvoiceRequest LoadInvoiceRequest) {
+            Izibiz.EInvoiceWS.LoadInvoiceRequest1 inValue = new Izibiz.EInvoiceWS.LoadInvoiceRequest1();
             inValue.LoadInvoiceRequest = LoadInvoiceRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).LoadInvoice(inValue);
+            Izibiz.EInvoiceWS.LoadInvoiceResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).LoadInvoice(inValue);
             return retVal.LoadInvoiceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.LoadInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.LoadInvoiceResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.LoadInvoiceAsync(Izibiz.EInvoiceWS.LoadInvoiceRequest1 request) {
             return base.Channel.LoadInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceResponse1> LoadInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest LoadInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.LoadInvoiceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.LoadInvoiceResponse1> LoadInvoiceAsync(Izibiz.EInvoiceWS.LoadInvoiceRequest LoadInvoiceRequest) {
+            Izibiz.EInvoiceWS.LoadInvoiceRequest1 inValue = new Izibiz.EInvoiceWS.LoadInvoiceRequest1();
             inValue.LoadInvoiceRequest = LoadInvoiceRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).LoadInvoiceAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).LoadInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.SendInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest1 request) {
+        Izibiz.EInvoiceWS.SendInvoiceResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.SendInvoice(Izibiz.EInvoiceWS.SendInvoiceRequest1 request) {
             return base.Channel.SendInvoice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponse SendInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest SendInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest1();
+        public Izibiz.EInvoiceWS.SendInvoiceResponse SendInvoice(Izibiz.EInvoiceWS.SendInvoiceRequest SendInvoiceRequest) {
+            Izibiz.EInvoiceWS.SendInvoiceRequest1 inValue = new Izibiz.EInvoiceWS.SendInvoiceRequest1();
             inValue.SendInvoiceRequest = SendInvoiceRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoice(inValue);
+            Izibiz.EInvoiceWS.SendInvoiceResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoice(inValue);
             return retVal.SendInvoiceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.SendInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.SendInvoiceResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.SendInvoiceAsync(Izibiz.EInvoiceWS.SendInvoiceRequest1 request) {
             return base.Channel.SendInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponse1> SendInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest SendInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.SendInvoiceResponse1> SendInvoiceAsync(Izibiz.EInvoiceWS.SendInvoiceRequest SendInvoiceRequest) {
+            Izibiz.EInvoiceWS.SendInvoiceRequest1 inValue = new Izibiz.EInvoiceWS.SendInvoiceRequest1();
             inValue.SendInvoiceRequest = SendInvoiceRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoiceAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest1 request) {
+        Izibiz.EInvoiceWS.GetInvoiceResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.GetInvoice(Izibiz.EInvoiceWS.GetInvoiceRequest1 request) {
             return base.Channel.GetInvoice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceResponse GetInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest GetInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest1();
+        public Izibiz.EInvoiceWS.GetInvoiceResponse GetInvoice(Izibiz.EInvoiceWS.GetInvoiceRequest GetInvoiceRequest) {
+            Izibiz.EInvoiceWS.GetInvoiceRequest1 inValue = new Izibiz.EInvoiceWS.GetInvoiceRequest1();
             inValue.GetInvoiceRequest = GetInvoiceRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoice(inValue);
+            Izibiz.EInvoiceWS.GetInvoiceResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoice(inValue);
             return retVal.GetInvoiceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.GetInvoiceAsync(Izibiz.EInvoiceWS.GetInvoiceRequest1 request) {
             return base.Channel.GetInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceResponse1> GetInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest GetInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceResponse1> GetInvoiceAsync(Izibiz.EInvoiceWS.GetInvoiceRequest GetInvoiceRequest) {
+            Izibiz.EInvoiceWS.GetInvoiceRequest1 inValue = new Izibiz.EInvoiceWS.GetInvoiceRequest1();
             inValue.GetInvoiceRequest = GetInvoiceRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.MarkInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest1 request) {
+        Izibiz.EInvoiceWS.MarkInvoiceResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.MarkInvoice(Izibiz.EInvoiceWS.MarkInvoiceRequest1 request) {
             return base.Channel.MarkInvoice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceResponse MarkInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest MarkInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest1();
+        public Izibiz.EInvoiceWS.MarkInvoiceResponse MarkInvoice(Izibiz.EInvoiceWS.MarkInvoiceRequest MarkInvoiceRequest) {
+            Izibiz.EInvoiceWS.MarkInvoiceRequest1 inValue = new Izibiz.EInvoiceWS.MarkInvoiceRequest1();
             inValue.MarkInvoiceRequest = MarkInvoiceRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).MarkInvoice(inValue);
+            Izibiz.EInvoiceWS.MarkInvoiceResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).MarkInvoice(inValue);
             return retVal.MarkInvoiceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.MarkInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.MarkInvoiceResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.MarkInvoiceAsync(Izibiz.EInvoiceWS.MarkInvoiceRequest1 request) {
             return base.Channel.MarkInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceResponse1> MarkInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest MarkInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.MarkInvoiceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.MarkInvoiceResponse1> MarkInvoiceAsync(Izibiz.EInvoiceWS.MarkInvoiceRequest MarkInvoiceRequest) {
+            Izibiz.EInvoiceWS.MarkInvoiceRequest1 inValue = new Izibiz.EInvoiceWS.MarkInvoiceRequest1();
             inValue.MarkInvoiceRequest = MarkInvoiceRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).MarkInvoiceAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).MarkInvoiceAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetUserList(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest1 request) {
+        Izibiz.EInvoiceWS.GetUserListResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.GetUserList(Izibiz.EInvoiceWS.GetUserListRequest1 request) {
             return base.Channel.GetUserList(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListResponse GetUserList(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest GetUserListRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest1();
+        public Izibiz.EInvoiceWS.GetUserListResponse GetUserList(Izibiz.EInvoiceWS.GetUserListRequest GetUserListRequest) {
+            Izibiz.EInvoiceWS.GetUserListRequest1 inValue = new Izibiz.EInvoiceWS.GetUserListRequest1();
             inValue.GetUserListRequest = GetUserListRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetUserList(inValue);
+            Izibiz.EInvoiceWS.GetUserListResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetUserList(inValue);
             return retVal.GetUserListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetUserListAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetUserListResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.GetUserListAsync(Izibiz.EInvoiceWS.GetUserListRequest1 request) {
             return base.Channel.GetUserListAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListResponse1> GetUserListAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest GetUserListRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetUserListResponse1> GetUserListAsync(Izibiz.EInvoiceWS.GetUserListRequest GetUserListRequest) {
+            Izibiz.EInvoiceWS.GetUserListRequest1 inValue = new Izibiz.EInvoiceWS.GetUserListRequest1();
             inValue.GetUserListRequest = GetUserListRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetUserListAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetUserListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetUserListBinary(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest1 request) {
+        Izibiz.EInvoiceWS.GetUserListBinaryResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.GetUserListBinary(Izibiz.EInvoiceWS.GetUserListBinaryRequest1 request) {
             return base.Channel.GetUserListBinary(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryResponse GetUserListBinary(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest GetUserListBinaryRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest1();
+        public Izibiz.EInvoiceWS.GetUserListBinaryResponse GetUserListBinary(Izibiz.EInvoiceWS.GetUserListBinaryRequest GetUserListBinaryRequest) {
+            Izibiz.EInvoiceWS.GetUserListBinaryRequest1 inValue = new Izibiz.EInvoiceWS.GetUserListBinaryRequest1();
             inValue.GetUserListBinaryRequest = GetUserListBinaryRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetUserListBinary(inValue);
+            Izibiz.EInvoiceWS.GetUserListBinaryResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetUserListBinary(inValue);
             return retVal.GetUserListBinaryResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetUserListBinaryAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetUserListBinaryResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.GetUserListBinaryAsync(Izibiz.EInvoiceWS.GetUserListBinaryRequest1 request) {
             return base.Channel.GetUserListBinaryAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryResponse1> GetUserListBinaryAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest GetUserListBinaryRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetUserListBinaryRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetUserListBinaryResponse1> GetUserListBinaryAsync(Izibiz.EInvoiceWS.GetUserListBinaryRequest GetUserListBinaryRequest) {
+            Izibiz.EInvoiceWS.GetUserListBinaryRequest1 inValue = new Izibiz.EInvoiceWS.GetUserListBinaryRequest1();
             inValue.GetUserListBinaryRequest = GetUserListBinaryRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetUserListBinaryAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetUserListBinaryAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.CheckUser(Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest1 request) {
+        Izibiz.EInvoiceWS.CheckUserResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.CheckUser(Izibiz.EInvoiceWS.CheckUserRequest1 request) {
             return base.Channel.CheckUser(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserResponse CheckUser(Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest CheckUserRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest1();
+        public Izibiz.EInvoiceWS.CheckUserResponse CheckUser(Izibiz.EInvoiceWS.CheckUserRequest CheckUserRequest) {
+            Izibiz.EInvoiceWS.CheckUserRequest1 inValue = new Izibiz.EInvoiceWS.CheckUserRequest1();
             inValue.CheckUserRequest = CheckUserRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).CheckUser(inValue);
+            Izibiz.EInvoiceWS.CheckUserResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).CheckUser(inValue);
             return retVal.CheckUserResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.CheckUserAsync(Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.CheckUserResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.CheckUserAsync(Izibiz.EInvoiceWS.CheckUserRequest1 request) {
             return base.Channel.CheckUserAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserResponse1> CheckUserAsync(Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest CheckUserRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.CheckUserRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.CheckUserResponse1> CheckUserAsync(Izibiz.EInvoiceWS.CheckUserRequest CheckUserRequest) {
+            Izibiz.EInvoiceWS.CheckUserRequest1 inValue = new Izibiz.EInvoiceWS.CheckUserRequest1();
             inValue.CheckUserRequest = CheckUserRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).CheckUserAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).CheckUserAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetInvoiceStatus(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest1 request) {
+        Izibiz.EInvoiceWS.GetInvoiceStatusResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.GetInvoiceStatus(Izibiz.EInvoiceWS.GetInvoiceStatusRequest1 request) {
             return base.Channel.GetInvoiceStatus(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusResponse GetInvoiceStatus(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest GetInvoiceStatusRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest1();
+        public Izibiz.EInvoiceWS.GetInvoiceStatusResponse GetInvoiceStatus(Izibiz.EInvoiceWS.GetInvoiceStatusRequest GetInvoiceStatusRequest) {
+            Izibiz.EInvoiceWS.GetInvoiceStatusRequest1 inValue = new Izibiz.EInvoiceWS.GetInvoiceStatusRequest1();
             inValue.GetInvoiceStatusRequest = GetInvoiceStatusRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceStatus(inValue);
+            Izibiz.EInvoiceWS.GetInvoiceStatusResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceStatus(inValue);
             return retVal.GetInvoiceStatusResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetInvoiceStatusAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceStatusResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.GetInvoiceStatusAsync(Izibiz.EInvoiceWS.GetInvoiceStatusRequest1 request) {
             return base.Channel.GetInvoiceStatusAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusResponse1> GetInvoiceStatusAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest GetInvoiceStatusRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceStatusResponse1> GetInvoiceStatusAsync(Izibiz.EInvoiceWS.GetInvoiceStatusRequest GetInvoiceStatusRequest) {
+            Izibiz.EInvoiceWS.GetInvoiceStatusRequest1 inValue = new Izibiz.EInvoiceWS.GetInvoiceStatusRequest1();
             inValue.GetInvoiceStatusRequest = GetInvoiceStatusRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceStatusAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetInvoiceStatusAll(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest1 request) {
+        Izibiz.EInvoiceWS.GetInvoiceStatusAllResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.GetInvoiceStatusAll(Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest1 request) {
             return base.Channel.GetInvoiceStatusAll(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllResponse GetInvoiceStatusAll(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest GetInvoiceStatusAllRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest1();
+        public Izibiz.EInvoiceWS.GetInvoiceStatusAllResponse GetInvoiceStatusAll(Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest GetInvoiceStatusAllRequest) {
+            Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest1 inValue = new Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest1();
             inValue.GetInvoiceStatusAllRequest = GetInvoiceStatusAllRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceStatusAll(inValue);
+            Izibiz.EInvoiceWS.GetInvoiceStatusAllResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceStatusAll(inValue);
             return retVal.GetInvoiceStatusAllResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetInvoiceStatusAllAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceStatusAllResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.GetInvoiceStatusAllAsync(Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest1 request) {
             return base.Channel.GetInvoiceStatusAllAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllResponse1> GetInvoiceStatusAllAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest GetInvoiceStatusAllRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceStatusAllRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceStatusAllResponse1> GetInvoiceStatusAllAsync(Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest GetInvoiceStatusAllRequest) {
+            Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest1 inValue = new Izibiz.EInvoiceWS.GetInvoiceStatusAllRequest1();
             inValue.GetInvoiceStatusAllRequest = GetInvoiceStatusAllRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceStatusAllAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceStatusAllAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.PrepareInvoiceResponse(Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest1 request) {
+        Izibiz.EInvoiceWS.PrepareInvoiceResponseResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.PrepareInvoiceResponse(Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest1 request) {
             return base.Channel.PrepareInvoiceResponse(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseResponse PrepareInvoiceResponse(Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest PrepareInvoiceResponseRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest1();
+        public Izibiz.EInvoiceWS.PrepareInvoiceResponseResponse PrepareInvoiceResponse(Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest PrepareInvoiceResponseRequest) {
+            Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest1 inValue = new Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest1();
             inValue.PrepareInvoiceResponseRequest = PrepareInvoiceResponseRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).PrepareInvoiceResponse(inValue);
+            Izibiz.EInvoiceWS.PrepareInvoiceResponseResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).PrepareInvoiceResponse(inValue);
             return retVal.PrepareInvoiceResponseResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.PrepareInvoiceResponseAsync(Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.PrepareInvoiceResponseResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.PrepareInvoiceResponseAsync(Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest1 request) {
             return base.Channel.PrepareInvoiceResponseAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseResponse1> PrepareInvoiceResponseAsync(Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest PrepareInvoiceResponseRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.PrepareInvoiceResponseRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.PrepareInvoiceResponseResponse1> PrepareInvoiceResponseAsync(Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest PrepareInvoiceResponseRequest) {
+            Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest1 inValue = new Izibiz.EInvoiceWS.PrepareInvoiceResponseRequest1();
             inValue.PrepareInvoiceResponseRequest = PrepareInvoiceResponseRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).PrepareInvoiceResponseAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).PrepareInvoiceResponseAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.SendInvoiceResponse(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest1 request) {
+        Izibiz.EInvoiceWS.SendInvoiceResponseResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.SendInvoiceResponse(Izibiz.EInvoiceWS.SendInvoiceResponseRequest1 request) {
             return base.Channel.SendInvoiceResponse(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseResponse SendInvoiceResponse(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest SendInvoiceResponseRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest1();
+        public Izibiz.EInvoiceWS.SendInvoiceResponseResponse SendInvoiceResponse(Izibiz.EInvoiceWS.SendInvoiceResponseRequest SendInvoiceResponseRequest) {
+            Izibiz.EInvoiceWS.SendInvoiceResponseRequest1 inValue = new Izibiz.EInvoiceWS.SendInvoiceResponseRequest1();
             inValue.SendInvoiceResponseRequest = SendInvoiceResponseRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoiceResponse(inValue);
+            Izibiz.EInvoiceWS.SendInvoiceResponseResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoiceResponse(inValue);
             return retVal.SendInvoiceResponseResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.SendInvoiceResponseAsync(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.SendInvoiceResponseResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.SendInvoiceResponseAsync(Izibiz.EInvoiceWS.SendInvoiceResponseRequest1 request) {
             return base.Channel.SendInvoiceResponseAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseResponse1> SendInvoiceResponseAsync(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest SendInvoiceResponseRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.SendInvoiceResponseResponse1> SendInvoiceResponseAsync(Izibiz.EInvoiceWS.SendInvoiceResponseRequest SendInvoiceResponseRequest) {
+            Izibiz.EInvoiceWS.SendInvoiceResponseRequest1 inValue = new Izibiz.EInvoiceWS.SendInvoiceResponseRequest1();
             inValue.SendInvoiceResponseRequest = SendInvoiceResponseRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoiceResponseAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoiceResponseAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.SendInvoiceResponseWithServerSign(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 request) {
+        Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.SendInvoiceResponseWithServerSign(Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 request) {
             return base.Channel.SendInvoiceResponseWithServerSign(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignResponse SendInvoiceResponseWithServerSign(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest SendInvoiceResponseWithServerSignRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1();
+        public Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignResponse SendInvoiceResponseWithServerSign(Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest SendInvoiceResponseWithServerSignRequest) {
+            Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 inValue = new Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1();
             inValue.SendInvoiceResponseWithServerSignRequest = SendInvoiceResponseWithServerSignRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoiceResponseWithServerSign(inValue);
+            Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoiceResponseWithServerSign(inValue);
             return retVal.SendInvoiceResponseWithServerSignResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.SendInvoiceResponseWithServerSignAsync(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.SendInvoiceResponseWithServerSignAsync(Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 request) {
             return base.Channel.SendInvoiceResponseWithServerSignAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1> SendInvoiceResponseWithServerSignAsync(Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest SendInvoiceResponseWithServerSignRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1> SendInvoiceResponseWithServerSignAsync(Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest SendInvoiceResponseWithServerSignRequest) {
+            Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1 inValue = new Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignRequest1();
             inValue.SendInvoiceResponseWithServerSignRequest = SendInvoiceResponseWithServerSignRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoiceResponseWithServerSignAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).SendInvoiceResponseWithServerSignAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetEnvelope(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest1 request) {
+        Izibiz.EInvoiceWS.GetEnvelopeResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.GetEnvelope(Izibiz.EInvoiceWS.GetEnvelopeRequest1 request) {
             return base.Channel.GetEnvelope(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeResponse GetEnvelope(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest GetEnvelopeRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest1();
+        public Izibiz.EInvoiceWS.GetEnvelopeResponse GetEnvelope(Izibiz.EInvoiceWS.GetEnvelopeRequest GetEnvelopeRequest) {
+            Izibiz.EInvoiceWS.GetEnvelopeRequest1 inValue = new Izibiz.EInvoiceWS.GetEnvelopeRequest1();
             inValue.GetEnvelopeRequest = GetEnvelopeRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetEnvelope(inValue);
+            Izibiz.EInvoiceWS.GetEnvelopeResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetEnvelope(inValue);
             return retVal.GetEnvelopeResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetEnvelopeAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetEnvelopeResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.GetEnvelopeAsync(Izibiz.EInvoiceWS.GetEnvelopeRequest1 request) {
             return base.Channel.GetEnvelopeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeResponse1> GetEnvelopeAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest GetEnvelopeRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetEnvelopeResponse1> GetEnvelopeAsync(Izibiz.EInvoiceWS.GetEnvelopeRequest GetEnvelopeRequest) {
+            Izibiz.EInvoiceWS.GetEnvelopeRequest1 inValue = new Izibiz.EInvoiceWS.GetEnvelopeRequest1();
             inValue.GetEnvelopeRequest = GetEnvelopeRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetEnvelopeAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetEnvelopeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.MarkEnvelope(Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest1 request) {
+        Izibiz.EInvoiceWS.MarkEnvelopeResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.MarkEnvelope(Izibiz.EInvoiceWS.MarkEnvelopeRequest1 request) {
             return base.Channel.MarkEnvelope(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeResponse MarkEnvelope(Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest MarkEnvelopeRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest1();
+        public Izibiz.EInvoiceWS.MarkEnvelopeResponse MarkEnvelope(Izibiz.EInvoiceWS.MarkEnvelopeRequest MarkEnvelopeRequest) {
+            Izibiz.EInvoiceWS.MarkEnvelopeRequest1 inValue = new Izibiz.EInvoiceWS.MarkEnvelopeRequest1();
             inValue.MarkEnvelopeRequest = MarkEnvelopeRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).MarkEnvelope(inValue);
+            Izibiz.EInvoiceWS.MarkEnvelopeResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).MarkEnvelope(inValue);
             return retVal.MarkEnvelopeResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.MarkEnvelopeAsync(Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.MarkEnvelopeResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.MarkEnvelopeAsync(Izibiz.EInvoiceWS.MarkEnvelopeRequest1 request) {
             return base.Channel.MarkEnvelopeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeResponse1> MarkEnvelopeAsync(Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest MarkEnvelopeRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.MarkEnvelopeRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.MarkEnvelopeResponse1> MarkEnvelopeAsync(Izibiz.EInvoiceWS.MarkEnvelopeRequest MarkEnvelopeRequest) {
+            Izibiz.EInvoiceWS.MarkEnvelopeRequest1 inValue = new Izibiz.EInvoiceWS.MarkEnvelopeRequest1();
             inValue.MarkEnvelopeRequest = MarkEnvelopeRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).MarkEnvelopeAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).MarkEnvelopeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetEnvelopeStatus(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest1 request) {
+        Izibiz.EInvoiceWS.GetEnvelopeStatusResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.GetEnvelopeStatus(Izibiz.EInvoiceWS.GetEnvelopeStatusRequest1 request) {
             return base.Channel.GetEnvelopeStatus(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusResponse GetEnvelopeStatus(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest GetEnvelopeStatusRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest1();
+        public Izibiz.EInvoiceWS.GetEnvelopeStatusResponse GetEnvelopeStatus(Izibiz.EInvoiceWS.GetEnvelopeStatusRequest GetEnvelopeStatusRequest) {
+            Izibiz.EInvoiceWS.GetEnvelopeStatusRequest1 inValue = new Izibiz.EInvoiceWS.GetEnvelopeStatusRequest1();
             inValue.GetEnvelopeStatusRequest = GetEnvelopeStatusRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetEnvelopeStatus(inValue);
+            Izibiz.EInvoiceWS.GetEnvelopeStatusResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetEnvelopeStatus(inValue);
             return retVal.GetEnvelopeStatusResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetEnvelopeStatusAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetEnvelopeStatusResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.GetEnvelopeStatusAsync(Izibiz.EInvoiceWS.GetEnvelopeStatusRequest1 request) {
             return base.Channel.GetEnvelopeStatusAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusResponse1> GetEnvelopeStatusAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest GetEnvelopeStatusRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetEnvelopeStatusRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetEnvelopeStatusResponse1> GetEnvelopeStatusAsync(Izibiz.EInvoiceWS.GetEnvelopeStatusRequest GetEnvelopeStatusRequest) {
+            Izibiz.EInvoiceWS.GetEnvelopeStatusRequest1 inValue = new Izibiz.EInvoiceWS.GetEnvelopeStatusRequest1();
             inValue.GetEnvelopeStatusRequest = GetEnvelopeStatusRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetEnvelopeStatusAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetEnvelopeStatusAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseResponse Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.getApplicationResponse(Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseRequest request) {
+        Izibiz.EInvoiceWS.getApplicationResponseResponse Izibiz.EInvoiceWS.EInvoiceWSPort.getApplicationResponse(Izibiz.EInvoiceWS.getApplicationResponseRequest request) {
             return base.Channel.getApplicationResponse(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.getAppRespResponseType getApplicationResponse(Izibiz_dotnet_soap_client.EInvoiceWS.getAppRespRequestType getAppRespRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseRequest inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseRequest();
+        public Izibiz.EInvoiceWS.getAppRespResponseType getApplicationResponse(Izibiz.EInvoiceWS.getAppRespRequestType getAppRespRequest) {
+            Izibiz.EInvoiceWS.getApplicationResponseRequest inValue = new Izibiz.EInvoiceWS.getApplicationResponseRequest();
             inValue.getAppRespRequest = getAppRespRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseResponse retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).getApplicationResponse(inValue);
+            Izibiz.EInvoiceWS.getApplicationResponseResponse retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).getApplicationResponse(inValue);
             return retVal.getAppRespResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseResponse> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.getApplicationResponseAsync(Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseRequest request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.getApplicationResponseResponse> Izibiz.EInvoiceWS.EInvoiceWSPort.getApplicationResponseAsync(Izibiz.EInvoiceWS.getApplicationResponseRequest request) {
             return base.Channel.getApplicationResponseAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseResponse> getApplicationResponseAsync(Izibiz_dotnet_soap_client.EInvoiceWS.getAppRespRequestType getAppRespRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseRequest inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.getApplicationResponseRequest();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.getApplicationResponseResponse> getApplicationResponseAsync(Izibiz.EInvoiceWS.getAppRespRequestType getAppRespRequest) {
+            Izibiz.EInvoiceWS.getApplicationResponseRequest inValue = new Izibiz.EInvoiceWS.getApplicationResponseRequest();
             inValue.getAppRespRequest = getAppRespRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).getApplicationResponseAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).getApplicationResponseAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetInvoiceWithType(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest1 request) {
+        Izibiz.EInvoiceWS.GetInvoiceWithTypeResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.GetInvoiceWithType(Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest1 request) {
             return base.Channel.GetInvoiceWithType(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeResponse GetInvoiceWithType(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest GetInvoiceWithTypeRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest1();
+        public Izibiz.EInvoiceWS.GetInvoiceWithTypeResponse GetInvoiceWithType(Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest GetInvoiceWithTypeRequest) {
+            Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest1 inValue = new Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest1();
             inValue.GetInvoiceWithTypeRequest = GetInvoiceWithTypeRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceWithType(inValue);
+            Izibiz.EInvoiceWS.GetInvoiceWithTypeResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceWithType(inValue);
             return retVal.GetInvoiceWithTypeResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetInvoiceWithTypeAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceWithTypeResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.GetInvoiceWithTypeAsync(Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest1 request) {
             return base.Channel.GetInvoiceWithTypeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeResponse1> GetInvoiceWithTypeAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest GetInvoiceWithTypeRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceWithTypeRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceWithTypeResponse1> GetInvoiceWithTypeAsync(Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest GetInvoiceWithTypeRequest) {
+            Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest1 inValue = new Izibiz.EInvoiceWS.GetInvoiceWithTypeRequest1();
             inValue.GetInvoiceWithTypeRequest = GetInvoiceWithTypeRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceWithTypeAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceWithTypeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetInvoiceCount(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest1 request) {
+        Izibiz.EInvoiceWS.GetInvoiceCountResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.GetInvoiceCount(Izibiz.EInvoiceWS.GetInvoiceCountRequest1 request) {
             return base.Channel.GetInvoiceCount(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountResponse GetInvoiceCount(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest GetInvoiceCountRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest1();
+        public Izibiz.EInvoiceWS.GetInvoiceCountResponse GetInvoiceCount(Izibiz.EInvoiceWS.GetInvoiceCountRequest GetInvoiceCountRequest) {
+            Izibiz.EInvoiceWS.GetInvoiceCountRequest1 inValue = new Izibiz.EInvoiceWS.GetInvoiceCountRequest1();
             inValue.GetInvoiceCountRequest = GetInvoiceCountRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceCount(inValue);
+            Izibiz.EInvoiceWS.GetInvoiceCountResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceCount(inValue);
             return retVal.GetInvoiceCountResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.GetInvoiceCountAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceCountResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.GetInvoiceCountAsync(Izibiz.EInvoiceWS.GetInvoiceCountRequest1 request) {
             return base.Channel.GetInvoiceCountAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountResponse1> GetInvoiceCountAsync(Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest GetInvoiceCountRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.GetInvoiceCountRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.GetInvoiceCountResponse1> GetInvoiceCountAsync(Izibiz.EInvoiceWS.GetInvoiceCountRequest GetInvoiceCountRequest) {
+            Izibiz.EInvoiceWS.GetInvoiceCountRequest1 inValue = new Izibiz.EInvoiceWS.GetInvoiceCountRequest1();
             inValue.GetInvoiceCountRequest = GetInvoiceCountRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceCountAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).GetInvoiceCountAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceResponse1 Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.CancelDraftInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest1 request) {
+        Izibiz.EInvoiceWS.CancelDraftInvoiceResponse1 Izibiz.EInvoiceWS.EInvoiceWSPort.CancelDraftInvoice(Izibiz.EInvoiceWS.CancelDraftInvoiceRequest1 request) {
             return base.Channel.CancelDraftInvoice(request);
         }
         
-        public Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceResponse CancelDraftInvoice(Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest CancelDraftInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest1();
+        public Izibiz.EInvoiceWS.CancelDraftInvoiceResponse CancelDraftInvoice(Izibiz.EInvoiceWS.CancelDraftInvoiceRequest CancelDraftInvoiceRequest) {
+            Izibiz.EInvoiceWS.CancelDraftInvoiceRequest1 inValue = new Izibiz.EInvoiceWS.CancelDraftInvoiceRequest1();
             inValue.CancelDraftInvoiceRequest = CancelDraftInvoiceRequest;
-            Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceResponse1 retVal = ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).CancelDraftInvoice(inValue);
+            Izibiz.EInvoiceWS.CancelDraftInvoiceResponse1 retVal = ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).CancelDraftInvoice(inValue);
             return retVal.CancelDraftInvoiceResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceResponse1> Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort.CancelDraftInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.EInvoiceWS.CancelDraftInvoiceResponse1> Izibiz.EInvoiceWS.EInvoiceWSPort.CancelDraftInvoiceAsync(Izibiz.EInvoiceWS.CancelDraftInvoiceRequest1 request) {
             return base.Channel.CancelDraftInvoiceAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceResponse1> CancelDraftInvoiceAsync(Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest CancelDraftInvoiceRequest) {
-            Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest1 inValue = new Izibiz_dotnet_soap_client.EInvoiceWS.CancelDraftInvoiceRequest1();
+        public System.Threading.Tasks.Task<Izibiz.EInvoiceWS.CancelDraftInvoiceResponse1> CancelDraftInvoiceAsync(Izibiz.EInvoiceWS.CancelDraftInvoiceRequest CancelDraftInvoiceRequest) {
+            Izibiz.EInvoiceWS.CancelDraftInvoiceRequest1 inValue = new Izibiz.EInvoiceWS.CancelDraftInvoiceRequest1();
             inValue.CancelDraftInvoiceRequest = CancelDraftInvoiceRequest;
-            return ((Izibiz_dotnet_soap_client.EInvoiceWS.EInvoiceWSPort)(this)).CancelDraftInvoiceAsync(inValue);
+            return ((Izibiz.EInvoiceWS.EInvoiceWSPort)(this)).CancelDraftInvoiceAsync(inValue);
         }
     }
 }

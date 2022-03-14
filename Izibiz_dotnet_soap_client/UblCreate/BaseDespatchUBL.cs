@@ -1,5 +1,5 @@
-﻿using Izibiz_dotnet_soap_client;
-using Izibiz_dotnet_soap_client.Ubl;
+﻿using Izibiz;
+using Izibiz.Ubl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using UblDespatch;
 
 
-namespace Izibiz_dotnet_soap_client.UblCreate
+namespace Izibiz.UblCreate
 {
     public class BaseDespatchUBL
     {

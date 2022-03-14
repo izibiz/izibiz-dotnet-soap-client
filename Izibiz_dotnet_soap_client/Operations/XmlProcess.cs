@@ -1,4 +1,4 @@
-﻿using Izibiz_dotnet_soap_client.Ubl;
+﻿using Izibiz.Ubl;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +9,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Xsl;
 
-namespace Izibiz_dotnet_soap_client.Operations
+namespace Izibiz.Operations
 {
     public class XmlProcess
     {

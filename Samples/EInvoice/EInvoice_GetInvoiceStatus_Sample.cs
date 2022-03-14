@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using Izibiz_dotnet_soap_client;
-using Izibiz_dotnet_soap_client.Adapter;
-using Izibiz_dotnet_soap_client.EInvoiceWS;
+using Izibiz;
+using Izibiz.Adapter;
+using Izibiz.EInvoiceWS;
 using NUnit.Framework;
 
 namespace Samples.EInvoice

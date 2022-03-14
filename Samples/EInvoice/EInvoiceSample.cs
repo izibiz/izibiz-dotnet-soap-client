@@ -7,14 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
-using Izibiz_dotnet_soap_client;
-using Izibiz_dotnet_soap_client.UblCreate;
-using Izibiz_dotnet_soap_client.Adapter;
-using Izibiz_dotnet_soap_client.EInvoiceWS;
+using Izibiz;
+using Izibiz.UblCreate;
+using Izibiz.Adapter;
+using Izibiz.EInvoiceWS;
 using NUnit.Framework;
 using UblInvoice;
-using Izibiz_dotnet_soap_client.UblSerializer;
-using Izibiz_dotnet_soap_client.Operations;
+using Izibiz.UblSerializer;
+using Izibiz.Operations;
 
 namespace Samples.EInvoice
 {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Izibiz_dotnet_soap_client.AuthenticationWS {
+namespace Izibiz.AuthenticationWS {
     
     
     /// <remarks/>
@@ -146,96 +146,22 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/entity")]
-    public partial class REQUEST_RETURNType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private long iNTL_TXN_IDField;
-        
-        private string cLIENT_TXN_IDField;
-        
-        private int rETURN_CODEField;
-        
-        private string[] wARNINGSField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public long INTL_TXN_ID {
-            get {
-                return this.iNTL_TXN_IDField;
-            }
-            set {
-                this.iNTL_TXN_IDField = value;
-                this.RaisePropertyChanged("INTL_TXN_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=1)]
-        public string CLIENT_TXN_ID {
-            get {
-                return this.cLIENT_TXN_IDField;
-            }
-            set {
-                this.cLIENT_TXN_IDField = value;
-                this.RaisePropertyChanged("CLIENT_TXN_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int RETURN_CODE {
-            get {
-                return this.rETURN_CODEField;
-            }
-            set {
-                this.rETURN_CODEField = value;
-                this.RaisePropertyChanged("RETURN_CODE");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("WARNINGS", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string[] WARNINGS {
-            get {
-                return this.wARNINGSField;
-            }
-            set {
-                this.wARNINGSField = value;
-                this.RaisePropertyChanged("WARNINGS");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/wsdl")]
-    public partial class LogoutResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class LoginResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private REQUEST_RETURNType rEQUEST_RETURNField;
+        private string sESSION_IDField;
         
         private REQUEST_ERRORType eRROR_TYPEField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public REQUEST_RETURNType REQUEST_RETURN {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=0)]
+        public string SESSION_ID {
             get {
-                return this.rEQUEST_RETURNField;
+                return this.sESSION_IDField;
             }
             set {
-                this.rEQUEST_RETURNField = value;
-                this.RaisePropertyChanged("REQUEST_RETURN");
+                this.sESSION_IDField = value;
+                this.RaisePropertyChanged("SESSION_ID");
             }
         }
         
@@ -1242,155 +1168,75 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", ConfigurationName="AuthenticationWS.AuthenticationServicePort")]
     public interface AuthenticationServicePort {
         
-        // CODEGEN: Generating message contract since the operation Logout is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LogoutRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LogoutResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/Logout/Fault/RequestFaul" +
-            "tMessage", Name="RequestFault")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.AuthenticationWS.LogoutResponse1 Logout(Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LogoutRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LogoutResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.LogoutResponse1> LogoutAsync(Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest1 request);
-        
         // CODEGEN: Generating message contract since the operation Login is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LoginRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LoginResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/Login/Fault/RequestFault" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/Login/Fault/RequestFault" +
             "Message", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.AuthenticationWS.LoginResponse1 Login(Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest1 request);
+        Izibiz.AuthenticationWS.LoginResponse1 Login(Izibiz.AuthenticationWS.LoginRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LoginRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LoginResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.LoginResponse1> LoginAsync(Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.LoginResponse1> LoginAsync(Izibiz.AuthenticationWS.LoginRequest1 request);
         
         // CODEGEN: Generating message contract since the operation CheckUser is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/CheckUserRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/CheckUserResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/CheckUser/Fault/RequestF" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/CheckUser/Fault/RequestF" +
             "aultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserResponse1 CheckUser(Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest1 request);
+        Izibiz.AuthenticationWS.CheckUserResponse1 CheckUser(Izibiz.AuthenticationWS.CheckUserRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/CheckUserRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/CheckUserResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserResponse1> CheckUserAsync(Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.CheckUserResponse1> CheckUserAsync(Izibiz.AuthenticationWS.CheckUserRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetUserAuthorization is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetUserAuthorizationRequ" +
             "est", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetUserAuthorizationResp" +
             "onse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetUserAuthorization/Fau" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetUserAuthorization/Fau" +
             "lt/RequestFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationResponse1 GetUserAuthorization(Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest1 request);
+        Izibiz.AuthenticationWS.GetUserAuthorizationResponse1 GetUserAuthorization(Izibiz.AuthenticationWS.GetUserAuthorizationRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetUserAuthorizationRequ" +
             "est", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetUserAuthorizationResp" +
             "onse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationResponse1> GetUserAuthorizationAsync(Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.GetUserAuthorizationResponse1> GetUserAuthorizationAsync(Izibiz.AuthenticationWS.GetUserAuthorizationRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetGibUserList is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetGibUserListRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetGibUserListResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetGibUserList/Fault/Req" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetGibUserList/Fault/Req" +
             "uestFaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListResponse1 GetGibUserList(Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest1 request);
+        Izibiz.AuthenticationWS.GetGibUserListResponse1 GetGibUserList(Izibiz.AuthenticationWS.GetGibUserListRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetGibUserListRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetGibUserListResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListResponse1> GetGibUserListAsync(Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest1 request);
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.GetGibUserListResponse1> GetGibUserListAsync(Izibiz.AuthenticationWS.GetGibUserListRequest1 request);
         
         // CODEGEN: Generating message contract since the operation GetAccount is neither RPC nor document wrapped.
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetAccountRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetAccountResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz_dotnet_soap_client.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetAccount/Fault/Request" +
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetAccount/Fault/Request" +
             "FaultMessage", Name="RequestFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
-        Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountResponse1 GetAccount(Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest1 request);
+        Izibiz.AuthenticationWS.GetAccountResponse1 GetAccount(Izibiz.AuthenticationWS.GetAccountRequest1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetAccountRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/GetAccountResponse")]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountResponse1> GetAccountAsync(Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest1 request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LogoutRequest1 {
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.GetAccountResponse1> GetAccountAsync(Izibiz.AuthenticationWS.GetAccountRequest1 request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest LogoutRequest;
+        // CODEGEN: Generating message contract since the operation Logout is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LogoutRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LogoutResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Izibiz.AuthenticationWS.REQUEST_ERRORType), Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/Logout/Fault/RequestFaul" +
+            "tMessage", Name="RequestFault")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(REQUEST))]
+        Izibiz.AuthenticationWS.LogoutResponse1 Logout(Izibiz.AuthenticationWS.LogoutRequest1 request);
         
-        public LogoutRequest1() {
-        }
-        
-        public LogoutRequest1(Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest LogoutRequest) {
-            this.LogoutRequest = LogoutRequest;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LogoutResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.LogoutResponse LogoutResponse;
-        
-        public LogoutResponse1() {
-        }
-        
-        public LogoutResponse1(Izibiz_dotnet_soap_client.AuthenticationWS.LogoutResponse LogoutResponse) {
-            this.LogoutResponse = LogoutResponse;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/wsdl")]
-    public partial class LoginResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string sESSION_IDField;
-        
-        private REQUEST_ERRORType eRROR_TYPEField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=0)]
-        public string SESSION_ID {
-            get {
-                return this.sESSION_IDField;
-            }
-            set {
-                this.sESSION_IDField = value;
-                this.RaisePropertyChanged("SESSION_ID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public REQUEST_ERRORType ERROR_TYPE {
-            get {
-                return this.eRROR_TYPEField;
-            }
-            set {
-                this.eRROR_TYPEField = value;
-                this.RaisePropertyChanged("ERROR_TYPE");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LogoutRequest", ReplyAction="http://schemas.i2i.com/ei/wsdl/AuthenticationServicePort/LogoutResponse")]
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.LogoutResponse1> LogoutAsync(Izibiz.AuthenticationWS.LogoutRequest1 request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1400,12 +1246,12 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     public partial class LoginRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest LoginRequest;
+        public Izibiz.AuthenticationWS.LoginRequest LoginRequest;
         
         public LoginRequest1() {
         }
         
-        public LoginRequest1(Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest LoginRequest) {
+        public LoginRequest1(Izibiz.AuthenticationWS.LoginRequest LoginRequest) {
             this.LoginRequest = LoginRequest;
         }
     }
@@ -1417,12 +1263,12 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     public partial class LoginResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.LoginResponse LoginResponse;
+        public Izibiz.AuthenticationWS.LoginResponse LoginResponse;
         
         public LoginResponse1() {
         }
         
-        public LoginResponse1(Izibiz_dotnet_soap_client.AuthenticationWS.LoginResponse LoginResponse) {
+        public LoginResponse1(Izibiz.AuthenticationWS.LoginResponse LoginResponse) {
             this.LoginResponse = LoginResponse;
         }
     }
@@ -1480,12 +1326,12 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     public partial class CheckUserRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest CheckUserRequest;
+        public Izibiz.AuthenticationWS.CheckUserRequest CheckUserRequest;
         
         public CheckUserRequest1() {
         }
         
-        public CheckUserRequest1(Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest CheckUserRequest) {
+        public CheckUserRequest1(Izibiz.AuthenticationWS.CheckUserRequest CheckUserRequest) {
             this.CheckUserRequest = CheckUserRequest;
         }
     }
@@ -1497,12 +1343,12 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     public partial class CheckUserResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserResponse CheckUserResponse;
+        public Izibiz.AuthenticationWS.CheckUserResponse CheckUserResponse;
         
         public CheckUserResponse1() {
         }
         
-        public CheckUserResponse1(Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserResponse CheckUserResponse) {
+        public CheckUserResponse1(Izibiz.AuthenticationWS.CheckUserResponse CheckUserResponse) {
             this.CheckUserResponse = CheckUserResponse;
         }
     }
@@ -1602,12 +1448,12 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     public partial class GetUserAuthorizationRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest GetUserAuthorizationRequest;
+        public Izibiz.AuthenticationWS.GetUserAuthorizationRequest GetUserAuthorizationRequest;
         
         public GetUserAuthorizationRequest1() {
         }
         
-        public GetUserAuthorizationRequest1(Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest GetUserAuthorizationRequest) {
+        public GetUserAuthorizationRequest1(Izibiz.AuthenticationWS.GetUserAuthorizationRequest GetUserAuthorizationRequest) {
             this.GetUserAuthorizationRequest = GetUserAuthorizationRequest;
         }
     }
@@ -1619,12 +1465,12 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     public partial class GetUserAuthorizationResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationResponse GetUserAuthorizationResponse;
+        public Izibiz.AuthenticationWS.GetUserAuthorizationResponse GetUserAuthorizationResponse;
         
         public GetUserAuthorizationResponse1() {
         }
         
-        public GetUserAuthorizationResponse1(Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationResponse GetUserAuthorizationResponse) {
+        public GetUserAuthorizationResponse1(Izibiz.AuthenticationWS.GetUserAuthorizationResponse GetUserAuthorizationResponse) {
             this.GetUserAuthorizationResponse = GetUserAuthorizationResponse;
         }
     }
@@ -1728,12 +1574,12 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     public partial class GetGibUserListRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest GetGibUserListRequest;
+        public Izibiz.AuthenticationWS.GetGibUserListRequest GetGibUserListRequest;
         
         public GetGibUserListRequest1() {
         }
         
-        public GetGibUserListRequest1(Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest GetGibUserListRequest) {
+        public GetGibUserListRequest1(Izibiz.AuthenticationWS.GetGibUserListRequest GetGibUserListRequest) {
             this.GetGibUserListRequest = GetGibUserListRequest;
         }
     }
@@ -1745,12 +1591,12 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     public partial class GetGibUserListResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListResponse GetGibUserListResponse;
+        public Izibiz.AuthenticationWS.GetGibUserListResponse GetGibUserListResponse;
         
         public GetGibUserListResponse1() {
         }
         
-        public GetGibUserListResponse1(Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListResponse GetGibUserListResponse) {
+        public GetGibUserListResponse1(Izibiz.AuthenticationWS.GetGibUserListResponse GetGibUserListResponse) {
             this.GetGibUserListResponse = GetGibUserListResponse;
         }
     }
@@ -2134,12 +1980,12 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     public partial class GetAccountRequest1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest GetAccountRequest;
+        public Izibiz.AuthenticationWS.GetAccountRequest GetAccountRequest;
         
         public GetAccountRequest1() {
         }
         
-        public GetAccountRequest1(Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest GetAccountRequest) {
+        public GetAccountRequest1(Izibiz.AuthenticationWS.GetAccountRequest GetAccountRequest) {
             this.GetAccountRequest = GetAccountRequest;
         }
     }
@@ -2151,23 +1997,177 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
     public partial class GetAccountResponse1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
-        public Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountResponse GetAccountResponse;
+        public Izibiz.AuthenticationWS.GetAccountResponse GetAccountResponse;
         
         public GetAccountResponse1() {
         }
         
-        public GetAccountResponse1(Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountResponse GetAccountResponse) {
+        public GetAccountResponse1(Izibiz.AuthenticationWS.GetAccountResponse GetAccountResponse) {
             this.GetAccountResponse = GetAccountResponse;
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface AuthenticationServicePortChannel : Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort, System.ServiceModel.IClientChannel {
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/wsdl")]
+    public partial class LogoutResponse : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private REQUEST_RETURNType rEQUEST_RETURNField;
+        
+        private REQUEST_ERRORType eRROR_TYPEField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public REQUEST_RETURNType REQUEST_RETURN {
+            get {
+                return this.rEQUEST_RETURNField;
+            }
+            set {
+                this.rEQUEST_RETURNField = value;
+                this.RaisePropertyChanged("REQUEST_RETURN");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public REQUEST_ERRORType ERROR_TYPE {
+            get {
+                return this.eRROR_TYPEField;
+            }
+            set {
+                this.eRROR_TYPEField = value;
+                this.RaisePropertyChanged("ERROR_TYPE");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.i2i.com/ei/entity")]
+    public partial class REQUEST_RETURNType : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private long iNTL_TXN_IDField;
+        
+        private string cLIENT_TXN_IDField;
+        
+        private int rETURN_CODEField;
+        
+        private string[] wARNINGSField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public long INTL_TXN_ID {
+            get {
+                return this.iNTL_TXN_IDField;
+            }
+            set {
+                this.iNTL_TXN_IDField = value;
+                this.RaisePropertyChanged("INTL_TXN_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="token", Order=1)]
+        public string CLIENT_TXN_ID {
+            get {
+                return this.cLIENT_TXN_IDField;
+            }
+            set {
+                this.cLIENT_TXN_IDField = value;
+                this.RaisePropertyChanged("CLIENT_TXN_ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int RETURN_CODE {
+            get {
+                return this.rETURN_CODEField;
+            }
+            set {
+                this.rETURN_CODEField = value;
+                this.RaisePropertyChanged("RETURN_CODE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("WARNINGS", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string[] WARNINGS {
+            get {
+                return this.wARNINGSField;
+            }
+            set {
+                this.wARNINGSField = value;
+                this.RaisePropertyChanged("WARNINGS");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AuthenticationServicePortClient : System.ServiceModel.ClientBase<Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort>, Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort {
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class LogoutRequest1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
+        public Izibiz.AuthenticationWS.LogoutRequest LogoutRequest;
+        
+        public LogoutRequest1() {
+        }
+        
+        public LogoutRequest1(Izibiz.AuthenticationWS.LogoutRequest LogoutRequest) {
+            this.LogoutRequest = LogoutRequest;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class LogoutResponse1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://schemas.i2i.com/ei/wsdl", Order=0)]
+        public Izibiz.AuthenticationWS.LogoutResponse LogoutResponse;
+        
+        public LogoutResponse1() {
+        }
+        
+        public LogoutResponse1(Izibiz.AuthenticationWS.LogoutResponse LogoutResponse) {
+            this.LogoutResponse = LogoutResponse;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface AuthenticationServicePortChannel : Izibiz.AuthenticationWS.AuthenticationServicePort, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class AuthenticationServicePortClient : System.ServiceModel.ClientBase<Izibiz.AuthenticationWS.AuthenticationServicePort>, Izibiz.AuthenticationWS.AuthenticationServicePort {
         
         public AuthenticationServicePortClient() {
         }
@@ -2189,141 +2189,141 @@ namespace Izibiz_dotnet_soap_client.AuthenticationWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.AuthenticationWS.LogoutResponse1 Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.Logout(Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest1 request) {
-            return base.Channel.Logout(request);
-        }
-        
-        public Izibiz_dotnet_soap_client.AuthenticationWS.LogoutResponse Logout(Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest LogoutRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest1();
-            inValue.LogoutRequest = LogoutRequest;
-            Izibiz_dotnet_soap_client.AuthenticationWS.LogoutResponse1 retVal = ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).Logout(inValue);
-            return retVal.LogoutResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.LogoutResponse1> Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.LogoutAsync(Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest1 request) {
-            return base.Channel.LogoutAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.LogoutResponse1> LogoutAsync(Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest LogoutRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.LogoutRequest1();
-            inValue.LogoutRequest = LogoutRequest;
-            return ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).LogoutAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.AuthenticationWS.LoginResponse1 Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.Login(Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest1 request) {
+        Izibiz.AuthenticationWS.LoginResponse1 Izibiz.AuthenticationWS.AuthenticationServicePort.Login(Izibiz.AuthenticationWS.LoginRequest1 request) {
             return base.Channel.Login(request);
         }
         
-        public Izibiz_dotnet_soap_client.AuthenticationWS.LoginResponse Login(Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest LoginRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest1();
+        public Izibiz.AuthenticationWS.LoginResponse Login(Izibiz.AuthenticationWS.LoginRequest LoginRequest) {
+            Izibiz.AuthenticationWS.LoginRequest1 inValue = new Izibiz.AuthenticationWS.LoginRequest1();
             inValue.LoginRequest = LoginRequest;
-            Izibiz_dotnet_soap_client.AuthenticationWS.LoginResponse1 retVal = ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).Login(inValue);
+            Izibiz.AuthenticationWS.LoginResponse1 retVal = ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).Login(inValue);
             return retVal.LoginResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.LoginResponse1> Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.LoginAsync(Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.LoginResponse1> Izibiz.AuthenticationWS.AuthenticationServicePort.LoginAsync(Izibiz.AuthenticationWS.LoginRequest1 request) {
             return base.Channel.LoginAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.LoginResponse1> LoginAsync(Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest LoginRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.LoginRequest1();
+        public System.Threading.Tasks.Task<Izibiz.AuthenticationWS.LoginResponse1> LoginAsync(Izibiz.AuthenticationWS.LoginRequest LoginRequest) {
+            Izibiz.AuthenticationWS.LoginRequest1 inValue = new Izibiz.AuthenticationWS.LoginRequest1();
             inValue.LoginRequest = LoginRequest;
-            return ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).LoginAsync(inValue);
+            return ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).LoginAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserResponse1 Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.CheckUser(Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest1 request) {
+        Izibiz.AuthenticationWS.CheckUserResponse1 Izibiz.AuthenticationWS.AuthenticationServicePort.CheckUser(Izibiz.AuthenticationWS.CheckUserRequest1 request) {
             return base.Channel.CheckUser(request);
         }
         
-        public Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserResponse CheckUser(Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest CheckUserRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest1();
+        public Izibiz.AuthenticationWS.CheckUserResponse CheckUser(Izibiz.AuthenticationWS.CheckUserRequest CheckUserRequest) {
+            Izibiz.AuthenticationWS.CheckUserRequest1 inValue = new Izibiz.AuthenticationWS.CheckUserRequest1();
             inValue.CheckUserRequest = CheckUserRequest;
-            Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserResponse1 retVal = ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).CheckUser(inValue);
+            Izibiz.AuthenticationWS.CheckUserResponse1 retVal = ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).CheckUser(inValue);
             return retVal.CheckUserResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserResponse1> Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.CheckUserAsync(Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.CheckUserResponse1> Izibiz.AuthenticationWS.AuthenticationServicePort.CheckUserAsync(Izibiz.AuthenticationWS.CheckUserRequest1 request) {
             return base.Channel.CheckUserAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserResponse1> CheckUserAsync(Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest CheckUserRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.CheckUserRequest1();
+        public System.Threading.Tasks.Task<Izibiz.AuthenticationWS.CheckUserResponse1> CheckUserAsync(Izibiz.AuthenticationWS.CheckUserRequest CheckUserRequest) {
+            Izibiz.AuthenticationWS.CheckUserRequest1 inValue = new Izibiz.AuthenticationWS.CheckUserRequest1();
             inValue.CheckUserRequest = CheckUserRequest;
-            return ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).CheckUserAsync(inValue);
+            return ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).CheckUserAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationResponse1 Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.GetUserAuthorization(Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest1 request) {
+        Izibiz.AuthenticationWS.GetUserAuthorizationResponse1 Izibiz.AuthenticationWS.AuthenticationServicePort.GetUserAuthorization(Izibiz.AuthenticationWS.GetUserAuthorizationRequest1 request) {
             return base.Channel.GetUserAuthorization(request);
         }
         
-        public Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationResponse GetUserAuthorization(Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest GetUserAuthorizationRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest1();
+        public Izibiz.AuthenticationWS.GetUserAuthorizationResponse GetUserAuthorization(Izibiz.AuthenticationWS.GetUserAuthorizationRequest GetUserAuthorizationRequest) {
+            Izibiz.AuthenticationWS.GetUserAuthorizationRequest1 inValue = new Izibiz.AuthenticationWS.GetUserAuthorizationRequest1();
             inValue.GetUserAuthorizationRequest = GetUserAuthorizationRequest;
-            Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationResponse1 retVal = ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).GetUserAuthorization(inValue);
+            Izibiz.AuthenticationWS.GetUserAuthorizationResponse1 retVal = ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).GetUserAuthorization(inValue);
             return retVal.GetUserAuthorizationResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationResponse1> Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.GetUserAuthorizationAsync(Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.GetUserAuthorizationResponse1> Izibiz.AuthenticationWS.AuthenticationServicePort.GetUserAuthorizationAsync(Izibiz.AuthenticationWS.GetUserAuthorizationRequest1 request) {
             return base.Channel.GetUserAuthorizationAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationResponse1> GetUserAuthorizationAsync(Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest GetUserAuthorizationRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.GetUserAuthorizationRequest1();
+        public System.Threading.Tasks.Task<Izibiz.AuthenticationWS.GetUserAuthorizationResponse1> GetUserAuthorizationAsync(Izibiz.AuthenticationWS.GetUserAuthorizationRequest GetUserAuthorizationRequest) {
+            Izibiz.AuthenticationWS.GetUserAuthorizationRequest1 inValue = new Izibiz.AuthenticationWS.GetUserAuthorizationRequest1();
             inValue.GetUserAuthorizationRequest = GetUserAuthorizationRequest;
-            return ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).GetUserAuthorizationAsync(inValue);
+            return ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).GetUserAuthorizationAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListResponse1 Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.GetGibUserList(Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest1 request) {
+        Izibiz.AuthenticationWS.GetGibUserListResponse1 Izibiz.AuthenticationWS.AuthenticationServicePort.GetGibUserList(Izibiz.AuthenticationWS.GetGibUserListRequest1 request) {
             return base.Channel.GetGibUserList(request);
         }
         
-        public Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListResponse GetGibUserList(Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest GetGibUserListRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest1();
+        public Izibiz.AuthenticationWS.GetGibUserListResponse GetGibUserList(Izibiz.AuthenticationWS.GetGibUserListRequest GetGibUserListRequest) {
+            Izibiz.AuthenticationWS.GetGibUserListRequest1 inValue = new Izibiz.AuthenticationWS.GetGibUserListRequest1();
             inValue.GetGibUserListRequest = GetGibUserListRequest;
-            Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListResponse1 retVal = ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).GetGibUserList(inValue);
+            Izibiz.AuthenticationWS.GetGibUserListResponse1 retVal = ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).GetGibUserList(inValue);
             return retVal.GetGibUserListResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListResponse1> Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.GetGibUserListAsync(Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.GetGibUserListResponse1> Izibiz.AuthenticationWS.AuthenticationServicePort.GetGibUserListAsync(Izibiz.AuthenticationWS.GetGibUserListRequest1 request) {
             return base.Channel.GetGibUserListAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListResponse1> GetGibUserListAsync(Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest GetGibUserListRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.GetGibUserListRequest1();
+        public System.Threading.Tasks.Task<Izibiz.AuthenticationWS.GetGibUserListResponse1> GetGibUserListAsync(Izibiz.AuthenticationWS.GetGibUserListRequest GetGibUserListRequest) {
+            Izibiz.AuthenticationWS.GetGibUserListRequest1 inValue = new Izibiz.AuthenticationWS.GetGibUserListRequest1();
             inValue.GetGibUserListRequest = GetGibUserListRequest;
-            return ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).GetGibUserListAsync(inValue);
+            return ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).GetGibUserListAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountResponse1 Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.GetAccount(Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest1 request) {
+        Izibiz.AuthenticationWS.GetAccountResponse1 Izibiz.AuthenticationWS.AuthenticationServicePort.GetAccount(Izibiz.AuthenticationWS.GetAccountRequest1 request) {
             return base.Channel.GetAccount(request);
         }
         
-        public Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountResponse GetAccount(Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest GetAccountRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest1();
+        public Izibiz.AuthenticationWS.GetAccountResponse GetAccount(Izibiz.AuthenticationWS.GetAccountRequest GetAccountRequest) {
+            Izibiz.AuthenticationWS.GetAccountRequest1 inValue = new Izibiz.AuthenticationWS.GetAccountRequest1();
             inValue.GetAccountRequest = GetAccountRequest;
-            Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountResponse1 retVal = ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).GetAccount(inValue);
+            Izibiz.AuthenticationWS.GetAccountResponse1 retVal = ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).GetAccount(inValue);
             return retVal.GetAccountResponse;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountResponse1> Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort.GetAccountAsync(Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest1 request) {
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.GetAccountResponse1> Izibiz.AuthenticationWS.AuthenticationServicePort.GetAccountAsync(Izibiz.AuthenticationWS.GetAccountRequest1 request) {
             return base.Channel.GetAccountAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountResponse1> GetAccountAsync(Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest GetAccountRequest) {
-            Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest1 inValue = new Izibiz_dotnet_soap_client.AuthenticationWS.GetAccountRequest1();
+        public System.Threading.Tasks.Task<Izibiz.AuthenticationWS.GetAccountResponse1> GetAccountAsync(Izibiz.AuthenticationWS.GetAccountRequest GetAccountRequest) {
+            Izibiz.AuthenticationWS.GetAccountRequest1 inValue = new Izibiz.AuthenticationWS.GetAccountRequest1();
             inValue.GetAccountRequest = GetAccountRequest;
-            return ((Izibiz_dotnet_soap_client.AuthenticationWS.AuthenticationServicePort)(this)).GetAccountAsync(inValue);
+            return ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).GetAccountAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Izibiz.AuthenticationWS.LogoutResponse1 Izibiz.AuthenticationWS.AuthenticationServicePort.Logout(Izibiz.AuthenticationWS.LogoutRequest1 request) {
+            return base.Channel.Logout(request);
+        }
+        
+        public Izibiz.AuthenticationWS.LogoutResponse Logout(Izibiz.AuthenticationWS.LogoutRequest LogoutRequest) {
+            Izibiz.AuthenticationWS.LogoutRequest1 inValue = new Izibiz.AuthenticationWS.LogoutRequest1();
+            inValue.LogoutRequest = LogoutRequest;
+            Izibiz.AuthenticationWS.LogoutResponse1 retVal = ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).Logout(inValue);
+            return retVal.LogoutResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Izibiz.AuthenticationWS.LogoutResponse1> Izibiz.AuthenticationWS.AuthenticationServicePort.LogoutAsync(Izibiz.AuthenticationWS.LogoutRequest1 request) {
+            return base.Channel.LogoutAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Izibiz.AuthenticationWS.LogoutResponse1> LogoutAsync(Izibiz.AuthenticationWS.LogoutRequest LogoutRequest) {
+            Izibiz.AuthenticationWS.LogoutRequest1 inValue = new Izibiz.AuthenticationWS.LogoutRequest1();
+            inValue.LogoutRequest = LogoutRequest;
+            return ((Izibiz.AuthenticationWS.AuthenticationServicePort)(this)).LogoutAsync(inValue);
         }
     }
 }

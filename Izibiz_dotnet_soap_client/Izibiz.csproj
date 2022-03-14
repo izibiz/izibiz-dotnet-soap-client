@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.4.2.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.4.2.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.13.2\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.13.2\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EDCE3EE-0DD4-48CA-9278-57711DEC0D67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Izibiz</RootNamespace>
+    <AssemblyName>Izibiz</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.13.2.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.13.2\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\CreditNoteAdapter.cs" />
+    <Compile Include="Adapter\EDespatchAdapter.cs" />
+    <Compile Include="Adapter\EArchiveInvoiceAdapter.cs" />
+    <Compile Include="Adapter\SmmAdapter.cs" />
+    <Compile Include="Adapter\EInvoiceAdapter.cs" />
+    <Compile Include="Adapter\AuthAdapter.cs" />
+    <Compile Include="Adapter\BaseAdapter.cs" />
+    <Compile Include="Connected Services\AuthenticationWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CreditNoteWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EArchiveInvoiceWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EInvoiceWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EIrsaliyeWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SmmWs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Operations\EI.cs" />
+    <Compile Include="IzibizClient.cs" />
+    <Compile Include="Operations\FilePaths.cs" />
+    <Compile Include="Operations\Compress.cs" />
+    <Compile Include="Operations\FolderPath.cs" />
+    <Compile Include="Operations\XmlProcess.cs" />
+    <Compile Include="Operations\XmlSerializerr.cs" />
+    <Compile Include="Operations\Utf8StringWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UblCreate\BaseESmmUBL.cs" />
+    <Compile Include="UblCreate\SmmUBL.cs" />
+    <Compile Include="UblCreate\BaseReceiptUBL .cs" />
+    <Compile Include="UblCreate\CreditNoteUBL .cs" />
+    <Compile Include="UblCreate\ArchiveUBL.cs" />
+    <Compile Include="UblCreate\BaseCreditNoteUBL.cs" />
+    <Compile Include="UblCreate\BaseDespatchUBL.cs" />
+    <Compile Include="UblCreate\ReceiptUBL.cs" />
+    <Compile Include="UblCreate\DespatchUBL.cs" />
+    <Compile Include="UblCreate\InvoiceUbl.cs" />
+    <Compile Include="UblCreate\BaseInvoiceUBL.cs" />
+    <Compile Include="UblSerializer\CreditNoteSerializer.cs" />
+    <Compile Include="UblSerializer\ReceiptSerializer.cs" />
+    <Compile Include="UblSerializer\DespatchSerializer.cs" />
+    <Compile Include="UblSerializer\InvoiceSerializer.cs" />
+    <Compile Include="Ubl\UblCreditNote.cs" />
+    <Compile Include="Ubl\UblDespatch.cs" />
+    <Compile Include="Ubl\UblReceipt.cs" />
+    <Compile Include="Ubl\UblInvoice.cs" />
+    <Compile Include="Ubl\Xslt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\AuthenticationWS\AuthenticationWS.wsdl" />
+    <None Include="Connected Services\AuthenticationWS\AuthenticationWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\AuthenticationWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\AuthenticationWS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\AuthenticationWS3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.CheckUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.CheckUserResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.GetAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.GetAccountResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.GetGibUserListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.GetGibUserListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.GetUserAuthorizationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.GetUserAuthorizationResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.LoginResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.LogoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AuthenticationWS\Izibiz.AuthenticationWS.LogoutResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\CreditNote.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\CreditNote1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\CreditNote2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\CreditNote3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\CreditNoteWS.wsdl" />
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.CancelCreditNoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.CancelCreditNoteResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.GetCreditNoteReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.GetCreditNoteReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.GetCreditNoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.GetCreditNoteResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.GetCreditNoteStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.GetCreditNoteStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.LoadCreditNoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.LoadCreditNoteResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.MarkCreditNoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.MarkCreditNoteResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.SendCreditNoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CreditNoteWS\Izibiz.CreditNoteWS.SendCreditNoteResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\EFaturaArchive.wsdl" />
+    <None Include="Connected Services\EArchiveInvoiceWS\EFaturaArchive.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\EFaturaArchive1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\EFaturaArchive2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\EFaturaArchive3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\EFaturaArchive4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\EFaturaArchive5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\EFaturaArchive6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\EFaturaArchive7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.ArchiveGenericDocumentResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.ArchiveGetInvoiceInfoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.ArchiveInvoiceCopyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.ArchiveInvoiceExtendedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.ArchiveInvoiceReadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.ArchiveInvoiceWriteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.CancelEArchiveInvoiceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.CancelEDefterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.CancelEDefterResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.CopyToArchiveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.EArchiveInvoiceCountResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GenericReadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GenericReadResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetEArchiveInvoiceStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetEArchiveReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetEArchiveReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetELedgerStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetELedgerStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetEmailEarchiveInvoiceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetGenericArchiveByPeriodResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.GetGenericArchiveStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.MarkEArchiveInvoiceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.ReadEArchiveReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.ReadEArchiveReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.ReadFromArchiveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.SendSmsEarchiveInvoiceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.WriteToArchiveExtendedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EArchiveInvoiceWS\Izibiz.EArchiveInvoiceWS.WriteToArchiveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\EInvoiceWS.wsdl" />
+    <None Include="Connected Services\EInvoiceWS\EInvoiceWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\EInvoiceWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\EInvoiceWS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\EInvoiceWS3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.CancelDraftInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.CancelDraftInvoiceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.CheckUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.CheckUserResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.getApplicationResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.getAppRespResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetEnvelopeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetEnvelopeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetEnvelopeStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetEnvelopeStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetInvoiceCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetInvoiceCountResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetInvoiceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetInvoiceStatusAllResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetInvoiceStatusAllResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetInvoiceStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetInvoiceStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetInvoiceWithTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetInvoiceWithTypeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetUserListBinaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetUserListBinaryResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetUserListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.GetUserListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.LoadInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.LoadInvoiceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.LoginResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.LogoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.LogoutResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.MarkEnvelopeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.MarkEnvelopeResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.MarkInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.MarkInvoiceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.PrepareInvoiceResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.PrepareInvoiceResponseResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.SendInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.SendInvoiceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.SendInvoiceResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.SendInvoiceResponseResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EInvoiceWS\Izibiz.EInvoiceWS.SendInvoiceResponseWithServerSignResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\EIrsaliye.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\EIrsaliye1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\EIrsaliye2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\EIrsaliye3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\EIrsaliyeWS.wsdl" />
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.GetDespatchAdviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.GetDespatchAdviceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.GetDespatchAdviceStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.GetDespatchAdviceWithStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.GetReceiptAdviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.GetReceiptAdviceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.GetReceiptAdviceStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.LoadDespatchAdviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.LoadDespatchAdviceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.LoadReceiptAdviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.LoadReceiptAdviceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.MarkDespatchAdviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.MarkDespatchAdviceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.MarkReceiptAdviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.MarkReceiptAdviceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.SendDespatchAdviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.SendDespatchAdviceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.SendDespatchResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.SendDespatchResponseResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.SendReceiptAdviceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EIrsaliyeWS\Izibiz.EIrsaliyeWS.SendReceiptAdviceResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.CancelSmmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.CancelSmmResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.GetSmmReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.GetSmmReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.GetSmmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.GetSmmResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.GetSmmStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.GetSmmStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.LoadSmmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.LoadSmmResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.SendSmmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz.SmmWs.SendSmmResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.CancelSmmResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.GetSmmStatusResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.LoadSmmResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\Izibiz_dotnet_soap_client.SmmWs.SendSmmResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmmWs\SmmWS.wsdl" />
+    <None Include="Connected Services\SmmWs\SmmWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmmWs\SmmWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmmWs\SmmWS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmmWs\SmmWS3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AuthenticationWS\" />
+    <WCFMetadataStorage Include="Connected Services\CreditNoteWS\" />
+    <WCFMetadataStorage Include="Connected Services\EArchiveInvoiceWS\" />
+    <WCFMetadataStorage Include="Connected Services\EInvoiceWS\" />
+    <WCFMetadataStorage Include="Connected Services\EIrsaliyeWS\" />
+    <WCFMetadataStorage Include="Connected Services\SmmWs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AuthenticationWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AuthenticationWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AuthenticationWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EInvoiceWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EInvoiceWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EInvoiceWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EArchiveInvoiceWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EArchiveInvoiceWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EArchiveInvoiceWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EIrsaliyeWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EIrsaliyeWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EIrsaliyeWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Connected Services\CreditNoteWS\configuration91.svcinfo" />
+    <None Include="Connected Services\CreditNoteWS\configuration.svcinfo" />
+    <None Include="Connected Services\CreditNoteWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\SmmWs\configuration91.svcinfo" />
+    <None Include="Connected Services\SmmWs\configuration.svcinfo" />
+    <None Include="Connected Services\SmmWs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.13.2\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.13.2\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.4.2.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.4.2.0\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+</Project>
