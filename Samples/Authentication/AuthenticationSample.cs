@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -126,6 +127,20 @@ namespace Samples.Authentication
             LogoutResponse response = _izibizClient.Auth().Logout(request);       
             Assert.Null(response.ERROR_TYPE);
             
+        }
+
+        [Test, Order(6)]
+        public void ExpireToken()
+        {
+            var handler = new JwtSecurityTokenHandler();
+            var jwtSecurityToken = handler.ReadJwtToken(BaseAdapter.SessionId);
+            var handlerr = new JwtSecurityTokenHandler();
+            var jsonToken = handlerr.ReadToken(BaseAdapter.SessionId);
+            var tokenS = jsonToken as JwtSecurityToken;
+            var tokenExp = tokenS.Claims.First(x => x.Type.Equals("exp")).Value;
+            var tokenDate = DateTimeOffset.FromUnixTimeSeconds(long.Parse(tokenExp)).UtcDateTime;
+            var expireTime = DateTime.Now > tokenDate ? false : true;
+            Assert.IsTrue(expireTime);
         }
 
     }
